@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_page_property">
+    <sys_ux_page_property action="INSERT_OR_UPDATE">
+        <choices>tab</choices>
+        <description>Workspace level navigation mode</description>
+        <name>ws_navigation_mode</name>
+        <page display_value="PNL Management">e178e27ddbd46090389b84d86896193c</page>
+        <suffix/>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2020-11-06 12:21:50</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e178e6bddbd46090389b84d8689619a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ws_navigation_mode</sys_name>
+        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name>sys_ux_page_property_e178e6bddbd46090389b84d8689619a2</sys_update_name>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2020-11-06 12:21:50</sys_updated_on>
+        <type>choicelist</type>
+        <unique_name>x_aaro2_pnl_mgmt.ws_navigation_mode</unique_name>
+        <value>tab</value>
+    </sys_ux_page_property>
+    <sys_translated_text action="delete_multiple" query="documentkey=e178e6bddbd46090389b84d8689619a2"/>
+</record_update>

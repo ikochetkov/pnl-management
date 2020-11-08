@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent">
+    <sys_ux_macroponent action="INSERT_OR_UPDATE">
+        <associated_types>d8899a0473000010f7353c78caf6a750</associated_types>
+        <component_dependencies/>
+        <composition>[]</composition>
+        <data/>
+        <events/>
+        <extends/>
+        <interactions/>
+        <layout>{}</layout>
+        <macroponent_dependencies/>
+        <name>PnL Management</name>
+        <props>[]</props>
+        <root_component display_value="aaro2-pnl-mgmt">02b59d9e9030f6675ce4a6a2135b228a</root_component>
+        <root_component_config>{}</root_component_config>
+        <schema_version>1.0.0</schema_version>
+        <sys_class_name>sys_ux_macroponent</sys_class_name>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2020-11-06 14:59:56</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>2db29cc322ce61638e4fcdf3e0696d0c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PnL Management</sys_name>
+        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name>sys_ux_macroponent_2db29cc322ce61638e4fcdf3e0696d0c</sys_update_name>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2020-11-06 14:59:56</sys_updated_on>
+    </sys_ux_macroponent>
+</record_update>
