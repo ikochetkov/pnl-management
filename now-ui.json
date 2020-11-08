@@ -1,0 +1,15 @@
+{
+	"components": {
+	    "aaro2-pnl-mgmt": {
+					"innerComponents": [],
+					"uiBuilder": {
+						"associatedTypes": ["global.core", "global.landing-page"],
+						"label": "PnL Management",
+						"icon": "document-outline",
+						"description": "PNL MANAGEMENT",
+						"category": "primitives"
+					}
+	    }
+	},
+	"scopeName": "x_aaro2_pnl_mgmt"
+}
