@@ -1,7 +1,7 @@
 {
   "development": {
     "proxy": {
-      "proxies": ["/api"],
+      "proxies": ["/api", "/amb", "/*.jpg"],
       "origin": "https://aaronsdev.service-now.com"
     }
   },

@@ -21,6 +21,8 @@
 		"@servicenow/now-button": "orlando",
 		"@servicenow/now-dropdown": "orlando",
 		"@servicenow/now-icon": "orlando",
+		"@servicenow/now-loader": "^17.0.1",
+		"@servicenow/now-split-button": "^17.0.1",
 		"@servicenow/now-tooltip": "orlando",
 		"@servicenow/sass-kit": "orlando",
 		"@servicenow/sass-theme": "orlando",

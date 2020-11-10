@@ -1,0 +1,50 @@
+@import '@servicenow/sass-kit/host';
+
+.data-table, .data-table__header{
+    border: 1px solid #e5e5e5;
+    border-collapse: collapse
+}
+.data-table{
+    tr{
+        border: 1px solid #e5e5e5
+    }
+}
+.data-table__header{
+    padding: 1rem
+}
+.data-table__cell{
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    text-align: right;
+    &.description{
+        font-size: 0.9rem;
+        font-weight: 100;
+        text-align: left;
+    }
+    &.percentage{
+        font-weight: 600;
+    }
+    &.currency{
+        font-weight: 100;
+    }
+    &.up{
+        color: green
+    }
+    &.down{
+        color: red
+    }
+
+}
+.data-table__row{
+    &.summary{
+        background-color: #555;
+        color: white;
+        border-bottom: 2px solid black;
+        .up{
+            color: rgb(180, 255, 180)
+        }
+        .down{
+            color: rgb(255, 182, 182)
+        }
+    }
+}
