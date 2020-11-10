@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Get PNL Accounting Question Deadline &#13;
+Http Method :: GET&#13;
+Request Query Params &#13;
+FiscalYear&#13;
+Accounting Period</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_aaro2_pnl_mgmt.GetPNLAccountingQuestionDeadline_endpoint</name>
+        <read_roles/>
+        <suffix>GetPNLAccountingQuestionDeadline_endpoint</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>xxsbhuvan</sys_created_by>
+        <sys_created_on>2020-11-10 13:03:17</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ebd7d707dbdce0105884eb184b961966</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_aaro2_pnl_mgmt.GetPNLAccountingQuestionDeadline_endpoint</sys_name>
+        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name>sys_properties_ebd7d707dbdce0105884eb184b961966</sys_update_name>
+        <sys_updated_by>xxsbhuvan</sys_updated_by>
+        <sys_updated_on>2020-11-10 13:05:04</sys_updated_on>
+        <type>string</type>
+        <value>https://pnldataservicedev.aarons.com/api/GetPNLAccountingQuestionDeadline?FiscalYear=2020&amp;AccountingPeriod=2</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=ebd7d707dbdce0105884eb184b961966"/>
+</record_update>

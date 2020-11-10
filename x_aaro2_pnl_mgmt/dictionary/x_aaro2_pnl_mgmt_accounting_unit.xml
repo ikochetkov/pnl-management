@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Accounting Units" max_length="40" name="x_aaro2_pnl_mgmt_accounting_unit" sizeclass="6" type="collection">
+        <element label="ID" max_length="40" name="id" type="string"/>
+        <element label="Label" max_length="40" name="label" type="string"/>
+    </element>
+</database>
