@@ -3,20 +3,20 @@ import snabbdom from '@servicenow/ui-renderer-snabbdom';
 import actions from './actions';
 import styles from './styles.scss';
 import view from './view';
-import { getCurrentYear, getMonth } from './utils';
 
 
-createCustomElement('pnl-unit-search-filters', {
+createCustomElement('pnl-statements-filters', {
 	renderer: { type: snabbdom },
 	view,
 	styles,
 	properties: {
-		fiscalYear: { default: getCurrentYear() },
-		accountingPeriod: { default: getMonth() },
+		fiscalYear: {},
+		accountingPeriod: {},
 		refreshType: { default: 2 },
 		selectedAccountingSubUnit: {},
 		selectedAccountingUnit: {},
-		selectedSubUnitSort: { default: 1 }
+		selectedSubUnitSort: { default: 1 },
+		tableLoading: {default: false}
 	},
 	initialState: {
 		loading: true,

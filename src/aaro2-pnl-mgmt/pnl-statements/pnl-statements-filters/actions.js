@@ -1,19 +1,27 @@
 import { actionTypes } from '@servicenow/ui-core';
-const { COMPONENT_BOOTSTRAPPED } = actionTypes;
+const { COMPONENT_BOOTSTRAPPED, COMPONENT_PROPERTY_CHANGED } = actionTypes;
 import { createHttpEffect } from '@servicenow/ui-effect-http';
-import { openCloseMonthPicker } from './utils';
 
 
 export default {
 
   [COMPONENT_BOOTSTRAPPED]: (coeffects) => {
-    console.log("COMPONENT_BOOTSTRAPPED");
+    console.log("BOOTSTRAPPED COMPONENT: pnl-statements-filters");
     const { dispatch } = coeffects;
     dispatch('FETCH_ACCOUNTING_UNITS', {
       sysparm_fields: "label,id",
       sysparm_table: "x_aaro2_pnl_mgmt_accounting_unit"
     });
   },
+
+  [COMPONENT_PROPERTY_CHANGED]: (coeffects) => {
+    const { updateState, action: { payload: { name } } } = coeffects;
+    console.log('COMPONENT_PROPERTY_CHANGED: ' + name);
+    if (name == 'tableLoading') {
+      updateState({ loading: name.value });
+    }
+  },
+
 
   /* FETCH ACCOUNTING UNITS */
 
@@ -66,17 +74,16 @@ export default {
 
 
 
-
   'NOW_DROPDOWN#ITEM_CLICKED': (coeffects) => {
     const { dispatch, properties, updateProperties, action: { meta: { id }, payload: { item } } } = coeffects;
     console.log('COMPONENT PICKER CLICKED: ' + id);
     if (id == 'accountingUnitsPicker') {
-      updateProperties({ selectedAccountingUnit: Number(item.id) });
+      updateProperties({ selectedAccountingUnit: item.id, selectedAccountingSubUnit: null });
       dispatch('FETCH_ACCOUNTING_SUB_UNITS', {
         FiscalYear: properties.fiscalYear,
-        AccountingPeriod: properties.accountingPeriod.value,
+        AccountingPeriod: properties.accountingPeriod,
         RefreshType: 2,
-        Company: Number(item.id), //check
+        Company: item.id, //check
         SortType: properties.selectedSubUnitSort
       });
       console.log(properties.selectedAccountingUnit);
@@ -89,29 +96,30 @@ export default {
     }
   },
 
-  'NOW_SPLIT_BUTTON#OPENED_SET': (coeffects) => {
-    const { updateState, action: { meta: { id } } } = coeffects;
-    console.log('SPLIT BUTTON CLIKED: ' + id);
-    if (id == 'monthPicker') {
-      openCloseMonthPicker();
-    }
-  },
-
-  'NOW_BUTTON_ICONIC#CLICKED': (coeffects) => {
-    const { state, properties, updateProperties, updateState, action: { meta: { id } } } = coeffects;
-    if (id == "prevYear") {
-      updateProperties({ fiscalYear: properties.fiscalYear - 1 });
-    }
-    if (id == "nextYear") {
-      updateProperties({ fiscalYear: properties.fiscalYear + 1 });
-    }
-  },
 
   'NOW_BUTTON#CLICKED': (coeffects) => {
-    const { state, properties, updateProperties, updateState, action: { meta: { id } } } = coeffects;
-    if(id == 'run'){
-      console.log(properties);
+    const { properties, dispatch, action: { meta: { id } } } = coeffects;
+    if (id == 'run') {
+      const { selectedAccountingSubUnit, fiscalYear, accountingPeriod, refreshType } = properties;
+      console.log('OW_BUTTON#CLICKED -> RUN', {
+        ObjectId: selectedAccountingSubUnit,
+        FiscalYear: fiscalYear,
+        AccountingPeriod: accountingPeriod,
+        RefreshType: refreshType
+      });
+      dispatch('STATEMENTS_FETCH_TRIGGERED', {
+        ObjectId: selectedAccountingSubUnit,
+        FiscalYear: fiscalYear,
+        AccountingPeriod: accountingPeriod,
+        RefreshType: refreshType
+      })
     }
+  },
+
+  'MONTH_YEAR_PICKER_VALUES_CHANGED': (coeffects) => {
+    const { action: { payload: { year, month } }, updateProperties } = coeffects;
+    console.log('MONTH_YEAR_PICKER_CHANGED in parent : ' + month + ' , ' + year);
+    updateProperties({ fiscalYear: year, accountingPeriod: month });
   }
 
 }

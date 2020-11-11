@@ -1,0 +1,410 @@
+@import "@servicenow/sass-kit/host";
+
+.filters {
+  text-align: center;
+  display:inline-block;
+
+}
+
+.picker-margin {
+  margin: 0 0.5rem 0 0;
+  display:inline-block;
+}
+
+.year-picker-section {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.year-display {
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  line-height: 1.25;
+  font-family: inherit;
+  white-space: nowrap;
+  margin: 0 1rem .5rem;
+  border-width: 1px;
+  border-style: solid;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: 2rem;
+  font-size: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border-color: RGB(var(--now-color--neutral-5, 172, 180, 181));
+  color: RGB(var(--now-color--neutral-18, 22, 27, 28));
+  background-color: RGB(var(--now-color--neutral-2, 228, 230, 231));
+  text-align: center;
+  cursor:default;
+}
+
+.popup {
+  position: absolute;
+  top: 45px;
+  margin: auto;
+
+  display: none;
+  margin: auto;
+  border: 3px solid #f1f1f1;
+  word-break: break-all;
+  padding: 10px;
+  background-color: white;
+  z-index: 1011;
+}
+
+.popup-icon {
+  position: relative;
+  top: 3px;
+}
+
+.popup-open {
+  display: block;
+}
+
+.popup-item {
+  text-align: center;
+  padding: 5px;
+  margin-left: 1px;
+  cursor: pointer;
+}
+
+.popup-item:hover {
+  background-color: #1e856d98;
+}
+
+.popup-item-selected {
+  background-color: #1e856d4b;
+  outline: 0.35em solid #1e856d4b;
+}
+
+.popup-item:hover,
+.popup-item-hover {
+  background-color: #1e856d98;
+  outline: 0.35em solid #1e856d98;
+}
+
+.popup-month-wrapper {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+}
+
+.popup-year-wrapper {
+  display: grid;
+  grid-template-columns: 60px 60px 60px;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+}
+
+.popup-wrapper {
+  display: grid;
+  grid-template-columns: 35px 35px 35px 35px 35px 35px 35px;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+  text-align: center;
+}
+
+.popup-week-wrapper {
+  display: grid;
+  grid-template-columns: 35px 35px 35px 35px 35px 35px 35px;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+  text-align: center;
+}
+
+.popup-day-wrapper {
+  display: grid;
+  grid-template-columns: 35px 35px 35px 35px 35px 35px 35px;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+  text-align: center;
+}
+
+.popup-item-another-month {
+  color: gray !important;
+  cursor: not-allowed !important;
+}
+
+
+// .sidebar {
+//   width: 1px;
+// }
+
+// .calendar-container {
+//   position: relative;
+// }
+
+// .control__wrapper {
+//   display: grid;
+//   width: 100%;
+//   grid-template-columns: 1fr 1fr;
+//   overflow: hidden;
+// }
+
+// .date-view {
+//   width: 95vw;
+//   transition: all 0.3s ease-in-out;
+// }
+
+// .--with-side-bar {
+//     width: 100%;
+//     grid-template-columns: 1fr 1fr;
+//     height: 90vh;
+// }
+// .--with-side-bar .sidebar {
+//   width: 100%;
+// }
+
+// .--with-side-bar .date-view {
+//   width: 64vw;
+// }
+
+// .calendar--header {
+//   display: flex;
+//   position: relative;
+//   padding: 10px 0 10px 10px;
+//   width: 95vw;
+//   transition: all 0.3s ease-in-out 0s;
+
+//   .navigation-now-buttons {
+//     display: inline-block;
+//     min-width: 270px;
+//     padding-bottom: 3px;
+//     position: relative;
+//     top: 3px;
+//   }
+
+//   .calendar__buttons {
+//     display: inline-block;
+//     border-bottom: 1px solid rgb(172, 180, 181);
+//     width: 100%;
+//     font-size: 16px;
+//     padding-right: 0.5em;
+//     font-size: 16px;
+
+//     .calendar-button {
+//       margin-right: 10px;
+//     }
+
+//     .calendar-arrow-button {
+//       margin: 0 10px;
+//     }
+
+//     .task-list-button {
+//       float: right;
+//       cursor: pointer;
+//       position: relative;
+//       top: 5px;
+//     }
+
+//     .calendar-global-search {
+//       align-items: center;
+//       background: transparent;
+//       border: 0;
+//       color: inherit;
+//       cursor: text;
+//       display: inline-flex;
+//       flex: 1 1 auto;
+//       height: 2rem;
+//       margin: 0;
+//       min-width: 1px;
+//       position: relative;
+//       width: 100%;
+//       border-bottom: 2ps solid black;
+//       width: 150px;
+
+//       float: right;
+//       text-align: end;
+
+//       &:focus,
+//       &:hover {
+//         background: RGB(var(--now-color--primary-0, 221, 237, 233));
+//         outline: none;
+//         border-bottom: 2px solid rgb(30,133,109);
+//       }
+//     }
+
+//     .calendar-data {
+//       display: inline;
+//       cursor: pointer;
+
+//       .calendar-data-icon {
+//         position: relative;
+//         right: 1px;
+//       }
+//     }
+
+//     // .tooltip {
+//     //   color: #000000;
+//     //   cursor: pointer;
+//     //   position: relative;
+//     // }
+//     // .tooltip span {
+//     //   display: none;
+//     //   font-weight: normal;
+//     //   font-size: 0.8em;
+//     // }
+//     // .tooltip:hover span {
+//     //   display: block;
+//     //   line-height: 25px;
+
+//     //   position: absolute;
+//     //   top: 1.75em;
+//     //   left: 1.5em;
+
+//     //   margin-left: 0;
+//     //   height: 25px;
+
+//     //   border: 1.5px solid #7a7575;
+//     //   background-color: white;
+//     //   opacity: 1;
+//     //   width: 140px;
+//     //   z-index: 99;
+//     // }
+//   }
+// }
+
+// .--with-side-bar-header {
+//   width: 64vw;
+// }
+
+// .calendar--month {
+//   display: grid;
+//   grid-template-rows: 0.01fr 0.9fr;
+//   grid-template-columns: auto;
+
+//   .calendar__header {
+//     display: grid;
+//     grid-template-columns: 0.19fr repeat(7, 1fr);
+//     padding: 10px;
+
+//     .header__item {
+//       padding: 1em 0;
+//     }
+
+//     .header__item:not(:nth-child(1)) {
+//       padding: 1em;
+//       border: 1px solid #e5e5e5;
+//     }
+//   }
+
+//   .calendar__body {
+//     display: grid;
+//     grid-template-columns: 0.02fr 1fr;
+
+//     .week-number {
+//       .number {
+//         height: calc(88vh / 6);
+//         padding: 1em;
+//       }
+//     }
+
+//     .days {
+//       display: grid;
+//       grid-template-columns: repeat(7, 1fr);
+
+//       .day {
+//         height: calc(88vh / 6);
+//         border: 1px solid #e5e5e5;
+//         padding: 1em;
+
+//         &.wrong {
+//           background: #e5e5e5;
+//         }
+
+//         .current {
+//           background: red;
+//           color: #fff;
+//           padding: 0.2em;
+//           border-radius: 50%;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .calendar--week {
+//   display: grid;
+//   grid-template-columns: 0.02fr 1fr;
+//   grid-template-rows: 14vh 1fr;
+//   grid-template-areas:
+//     ". header"
+//     "body header";
+
+//   .calendar__header {
+//     display: grid;
+//     grid-template-columns: repeat(7, 1fr);
+//     grid-area: header;
+
+//     .date-container {
+//       border-left: 1px solid #e5e5e5;
+//       border-right: 1px solid #e5e5e5;
+
+//       .dates {
+//         position: relative;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         padding: 1em;
+//         border-bottom: 1px solid #e5e5e5;
+//         height: 7vh;
+//         cursor: pointer;
+
+//         &:after {
+//           content: "";
+//           position: absolute;
+//           top: 0;
+//           left: 0;
+//           height: 100%;
+//         }
+
+//         &:hover {
+//           color: RGB(var(--now-color--alert-positive-5, 15, 52, 17));
+//           background-color: RGB(
+//             var(--now-color--alert-positive-0, 201, 224, 202)
+//           );
+//         }
+
+//         .date {
+//           font-size: 1.5em;
+//         }
+
+//         .day {
+//           font-size: 0.8em;
+//         }
+//       }
+//     }
+//   }
+
+//   .calendar__body {
+//     display: grid;
+//     grid-template-rows: auto;
+//     height: 200vh;
+//     font-size: 0.7em;
+//     grid-area: body;
+
+//     .time {
+//       position: relative;
+
+//       &:after {
+//         content: "";
+//         position: absolute;
+//         background-color: #e5e5e5;
+//         width: 95vw;
+//         height: 1px;
+//         top: 7px;
+//         left: 80%;
+//       }
+//     }
+//   }
+//}

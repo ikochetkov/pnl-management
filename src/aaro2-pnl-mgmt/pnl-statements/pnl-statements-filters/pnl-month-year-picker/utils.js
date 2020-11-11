@@ -1,4 +1,8 @@
-export const getCurrentYear = () => {
+import { createRef } from '@servicenow/ui-renderer-snabbdom';
+
+export const MYP_REF = createRef();
+
+export const getYear = () => {
 	const currentYear = new Date().getFullYear();
 	return currentYear;
 }
@@ -12,12 +16,12 @@ export const getMonth = (m) => {
 	};
 }
 
-export const openCloseMonthPicker = () => {
-	const popupRefClassList = document.popupRef.current.classList;
-	if (popupRefClassList.contains('popup-open')) {
-		popupRefClassList.remove('popup-open');
+export const toggleMYP = () => {
+	const MYP_REFclassList = MYP_REF.current.classList;
+	if (MYP_REFclassList.contains('popup-open')) {
+		MYP_REFclassList.remove('popup-open');
 	} else {
-		popupRefClassList.add('popup-open');
+		MYP_REFclassList.add('popup-open');
 	}
 }
 

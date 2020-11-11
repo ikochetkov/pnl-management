@@ -6,13 +6,13 @@ import loader from './views/loader'
 import noDataMessage from './views/no-data-message'
 export default (state) => {
   const { properties: { data, fetchState } } = state
+  
+  if (fetchState == 'STATEMENTS_FETCH_NOT_STATRED') return (<div>Select filters</div>)
+  if (fetchState == 'STATEMENTS_FETCH_STATRED') return loader()
+  if (fetchState == 'STATEMENTS_FETCH_FAILED') return failureMessage()
+  if (!data.Rows) return noDataMessage()
   const { AccountingPeriod, FiscalYear } = data
-
-  if (fetchState == 'loading') return loader()
-  if (fetchState == 'failure') return failureMessage()
-  if (data.Rows.length == 0) return noDataMessage()
-
-  return (
+  if(data.Rows)return (
     <table className="data-table">
       {tableHeader({ AccountingPeriod, FiscalYear })}
       {data.Rows.map(row => (
