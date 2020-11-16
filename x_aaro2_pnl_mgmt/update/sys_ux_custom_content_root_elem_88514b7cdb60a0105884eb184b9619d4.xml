@@ -10,8 +10,8 @@
         <layout/>
         <macroponent/>
         <macroponent_config/>
-        <name>Home Button</name>
-        <order>0</order>
+        <name>Statements Button</name>
+        <order>200</order>
         <page display_value="Workspace Core">b70867ad0f603300bb57f4a1ff767e15</page>
         <parent/>
         <parent_slot/>
@@ -20,63 +20,63 @@
         <placeholder display_value="Workspace Toolbar Buttons">1232bfb5730c330075e8f358caf6a7ca</placeholder>
         <sys_class_name>sys_ux_custom_content_root_elem</sys_class_name>
         <sys_created_by>xxikochet</sys_created_by>
-        <sys_created_on>2020-11-06 12:21:50</sys_created_on>
+        <sys_created_on>2020-11-15 21:52:13</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
-        <sys_id>a578e6bddbd46090389b84d8689619c1</sys_id>
+        <sys_id>88514b7cdb60a0105884eb184b9619d4</sys_id>
         <sys_mod_count>4</sys_mod_count>
-        <sys_name>Home Button</sys_name>
+        <sys_name>Statements Button</sys_name>
         <sys_overrides/>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name>sys_ux_custom_content_root_elem_a578e6bddbd46090389b84d8689619c1</sys_update_name>
+        <sys_update_name>sys_ux_custom_content_root_elem_88514b7cdb60a0105884eb184b9619d4</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2020-11-11 18:21:11</sys_updated_on>
+        <sys_updated_on>2020-11-15 21:55:45</sys_updated_on>
         <tree_root/>
     </sys_ux_custom_content_root_elem>
-    <sys_variable_value action="delete_multiple" query="document_key=a578e6bddbd46090389b84d8689619c1"/>
+    <sys_variable_value action="delete_multiple" query="document_key=88514b7cdb60a0105884eb184b9619d4"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_ux_custom_content_root_elem</document>
-        <document_key>a578e6bddbd46090389b84d8689619c1</document_key>
+        <document_key>88514b7cdb60a0105884eb184b9619d4</document_key>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>xxikochet</sys_created_by>
-        <sys_created_on>2020-11-06 12:21:50</sys_created_on>
-        <sys_id>2978e6bddbd46090389b84d8689619d9</sys_id>
+        <sys_created_on>2020-11-15 21:52:13</sys_created_on>
+        <sys_id>14514b7cdb60a0105884eb184b9619e0</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2020-11-06 12:21:50</sys_updated_on>
-        <value>home-outline</value>
-        <variable display_value="">674bdc908b8ed17eb631bec92971a228</variable>
+        <sys_updated_on>2020-11-15 21:52:13</sys_updated_on>
+        <value>statements</value>
+        <variable display_value="">f497a95e69778d0f72f3f0d2df450266</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_ux_custom_content_root_elem</document>
-        <document_key>a578e6bddbd46090389b84d8689619c1</document_key>
+        <document_key>88514b7cdb60a0105884eb184b9619d4</document_key>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>xxikochet</sys_created_by>
-        <sys_created_on>2020-11-06 12:21:50</sys_created_on>
-        <sys_id>e978e6bddbd46090389b84d8689619d9</sys_id>
+        <sys_created_on>2020-11-15 21:52:13</sys_created_on>
+        <sys_id>50518b7cdb60a0105884eb184b96191f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2020-11-06 12:21:50</sys_updated_on>
-        <value>Home</value>
+        <sys_updated_on>2020-11-15 21:52:13</sys_updated_on>
+        <value>Statements</value>
         <variable display_value="">b5b65fd20c3c13fbd299dce1ef797184</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_ux_custom_content_root_elem</document>
-        <document_key>a578e6bddbd46090389b84d8689619c1</document_key>
+        <document_key>88514b7cdb60a0105884eb184b9619d4</document_key>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>xxikochet</sys_created_by>
-        <sys_created_on>2020-11-06 12:21:50</sys_created_on>
-        <sys_id>ed78e6bddbd46090389b84d8689619d8</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_created_on>2020-11-15 21:52:13</sys_created_on>
+        <sys_id>9c518b7cdb60a0105884eb184b96191e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2020-11-06 12:21:50</sys_updated_on>
-        <value>home</value>
-        <variable display_value="">f497a95e69778d0f72f3f0d2df450266</variable>
+        <sys_updated_on>2020-11-15 21:55:45</sys_updated_on>
+        <value>analytics-center-fill</value>
+        <variable display_value="">674bdc908b8ed17eb631bec92971a228</variable>
     </sys_variable_value>
 </record_update>

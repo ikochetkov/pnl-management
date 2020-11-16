@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_toolbox_component">
     <sys_uib_toolbox_component action="INSERT_OR_UPDATE">
         <description>PNL MANAGEMENT</description>
-        <icon>document-outline</icon>
+        <icon>grid-three-outline</icon>
         <label>PnL Management</label>
         <macroponent display_value="PnL Management">2db29cc322ce61638e4fcdf3e0696d0c</macroponent>
         <sys_class_name>sys_uib_toolbox_component</sys_class_name>
         <sys_created_by>xxikochet</sys_created_by>
-        <sys_created_on>2020-11-06 14:59:57</sys_created_on>
+        <sys_created_on>2020-11-15 22:04:20</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>47878b5d16c7543c71a723ede1b541fd</sys_id>
         <sys_mod_count>0</sys_mod_count>
@@ -17,6 +17,6 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_uib_toolbox_component_47878b5d16c7543c71a723ede1b541fd</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2020-11-06 14:59:57</sys_updated_on>
+        <sys_updated_on>2020-11-15 22:04:20</sys_updated_on>
     </sys_uib_toolbox_component>
 </record_update>

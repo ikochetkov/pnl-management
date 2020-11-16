@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_aw_master_config">
     <sys_aw_master_config action="INSERT_OR_UPDATE">
         <active>true</active>
-        <brand_color/>
+        <brand_color>#0069C8</brand_color>
         <compiled_page display_value="Workspace Core">b70867ad0f603300bb57f4a1ff767e15</compiled_page>
         <compiled_page_registry display_value="PNL Management">e178e27ddbd46090389b84d86896193c</compiled_page_registry>
-        <description/>
+        <description>Application for both viewing organizational P&amp;L data as well as submitting questions to accounting regarding P&amp;L statements.</description>
         <global_search display_value="Default search settings">97a574ea53c0130084acddeeff7b12a6</global_search>
         <global_search_data display_value="PNL Management Search Context Config">5178e27ddbd46090389b84d868961939</global_search_data>
         <name>PNL Management</name>
         <navigation_type>tab</navigation_type>
         <notifications_enabled>true</notifications_enabled>
-        <primary_color/>
+        <primary_color>#91C712</primary_color>
         <search_enabled>true</search_enabled>
         <sys_class_name>sys_aw_master_config</sys_class_name>
         <sys_created_by>xxikochet</sys_created_by>
         <sys_created_on>2020-11-06 12:21:50</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>9978e27ddbd46090389b84d86896193b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>PNL Management</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -25,9 +25,9 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_aw_master_config_9978e27ddbd46090389b84d86896193b</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2020-11-06 12:21:50</sys_updated_on>
+        <sys_updated_on>2020-11-15 21:25:43</sys_updated_on>
         <user_preference_controls_enabled>true</user_preference_controls_enabled>
-        <workspace_logo/>
+        <workspace_logo>5e1b32b0db60a0105884eb184b961977</workspace_logo>
         <workspace_url>pnl_management</workspace_url>
     </sys_aw_master_config>
 </record_update>
