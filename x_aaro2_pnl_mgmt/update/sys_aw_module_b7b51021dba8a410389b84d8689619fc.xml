@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_aw_module">
     <sys_aw_module action="INSERT_OR_UPDATE">
         <active>true</active>
-        <content display_value="Statements Module Content">31b51421dba8a410389b84d86896193f</content>
+        <content display_value="Questions Module Content">7f60ac69dbe8a410389b84d8689619c4</content>
         <content_attrs/>
-        <content_component display_value="aaro2-pnl-statements">33a585ce2b6468c5609283a53703d5dc</content_component>
+        <content_component display_value="aaro2-pnl-questions">0048e99dd71d2c883b084aabac7a0365</content_component>
         <content_tag/>
         <detail/>
         <detail_attrs/>
         <detail_component/>
         <detail_tag/>
         <hide_until_ready>false</hide_until_ready>
-        <icon>analytics-center-fill</icon>
-        <id>statements</id>
-        <label>Statements</label>
-        <order>200</order>
+        <icon>circle-question-fill</icon>
+        <id>questions</id>
+        <label>Questions</label>
+        <order>300</order>
         <roles/>
         <sys_class_name>sys_aw_module</sys_class_name>
         <sys_created_by>xxikochet</sys_created_by>
-        <sys_created_on>2020-11-15 21:52:13</sys_created_on>
+        <sys_created_on>2020-11-17 17:19:00</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
-        <sys_id>5690473cdb60a0105884eb184b961996</sys_id>
+        <sys_id>b7b51021dba8a410389b84d8689619fc</sys_id>
         <sys_mod_count>5</sys_mod_count>
-        <sys_name>statements</sys_name>
+        <sys_name>questions</sys_name>
         <sys_overrides/>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_props/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name>sys_aw_module_5690473cdb60a0105884eb184b961996</sys_update_name>
+        <sys_update_name>sys_aw_module_b7b51021dba8a410389b84d8689619fc</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2020-11-17 17:17:55</sys_updated_on>
-        <toolbar_button display_value="Statements Button">88514b7cdb60a0105884eb184b9619d4</toolbar_button>
+        <sys_updated_on>2020-11-17 18:05:07</sys_updated_on>
+        <toolbar_button display_value="Questions Button">2df51421dba8a410389b84d8689619b2</toolbar_button>
         <type>full</type>
         <workspace_config display_value="PNL Management">9978e27ddbd46090389b84d86896193b</workspace_config>
     </sys_aw_module>
-    <sys_variable_value action="delete_multiple" query="document_key=5690473cdb60a0105884eb184b961996"/>
+    <sys_variable_value action="delete_multiple" query="document_key=b7b51021dba8a410389b84d8689619fc"/>
 </record_update>

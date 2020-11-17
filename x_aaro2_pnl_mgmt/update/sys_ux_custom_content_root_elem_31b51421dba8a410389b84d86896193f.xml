@@ -5,7 +5,7 @@
         <applicable_page display_value="PNL Management">e178e27ddbd46090389b84d86896193c</applicable_page>
         <attrs/>
         <children/>
-        <component display_value="aaro2-pnl-mgmt">02b59d9e9030f6675ce4a6a2135b228a</component>
+        <component display_value="aaro2-pnl-statements">33a585ce2b6468c5609283a53703d5dc</component>
         <is_root>true</is_root>
         <layout/>
         <macroponent/>
@@ -20,10 +20,10 @@
         <placeholder display_value="Workspace Module Primary Content">123513475300330030c3ddeeff7b122f</placeholder>
         <sys_class_name>sys_ux_custom_content_root_elem</sys_class_name>
         <sys_created_by>xxikochet</sys_created_by>
-        <sys_created_on>2020-11-15 21:54:23</sys_created_on>
+        <sys_created_on>2020-11-17 17:17:55</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
-        <sys_id>0cd1c7bcdb60a0105884eb184b9619ae</sys_id>
+        <sys_id>31b51421dba8a410389b84d86896193f</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name>Statements Module Content</sys_name>
         <sys_overrides/>
@@ -31,23 +31,23 @@
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name>sys_ux_custom_content_root_elem_0cd1c7bcdb60a0105884eb184b9619ae</sys_update_name>
+        <sys_update_name>sys_ux_custom_content_root_elem_31b51421dba8a410389b84d86896193f</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2020-11-15 21:54:23</sys_updated_on>
+        <sys_updated_on>2020-11-17 17:17:55</sys_updated_on>
         <tree_root/>
     </sys_ux_custom_content_root_elem>
-    <sys_variable_value action="delete_multiple" query="document_key=0cd1c7bcdb60a0105884eb184b9619ae"/>
+    <sys_variable_value action="delete_multiple" query="document_key=31b51421dba8a410389b84d86896193f"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_ux_custom_content_root_elem</document>
-        <document_key>0cd1c7bcdb60a0105884eb184b9619ae</document_key>
+        <document_key>31b51421dba8a410389b84d86896193f</document_key>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>xxikochet</sys_created_by>
-        <sys_created_on>2020-11-15 21:54:23</sys_created_on>
-        <sys_id>40d1c7bcdb60a0105884eb184b9619b4</sys_id>
+        <sys_created_on>2020-11-17 17:17:56</sys_created_on>
+        <sys_id>7db51421dba8a410389b84d868961946</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2020-11-15 21:54:23</sys_updated_on>
+        <sys_updated_on>2020-11-17 17:17:56</sys_updated_on>
         <value>statements</value>
         <variable display_value="">1be7ac060f603300bb57f4a1ff767e52</variable>
     </sys_variable_value>
