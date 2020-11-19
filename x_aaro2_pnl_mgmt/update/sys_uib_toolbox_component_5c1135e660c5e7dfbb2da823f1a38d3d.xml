@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_toolbox_component">
     <sys_uib_toolbox_component action="INSERT_OR_UPDATE">
-        <description>PNL MANAGEMENT Questions view</description>
-        <icon>grid-three-outline</icon>
-        <label>PnL Questions</label>
-        <macroponent display_value="PnL Questions">1d9209e6d99acc502331e311e44e642e</macroponent>
+        <description>PNL MANAGEMENT User profile view</description>
+        <icon>user-outline</icon>
+        <label>PNL User profile</label>
+        <macroponent display_value="PNL User profile">b42cc276f7a76fcfdf83b88392399e42</macroponent>
         <sys_class_name>sys_uib_toolbox_component</sys_class_name>
         <sys_created_by>xxikochet</sys_created_by>
-        <sys_created_on>2020-11-19 10:38:35</sys_created_on>
+        <sys_created_on>2020-11-19 10:38:38</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>9c62846cf9f335aea413f5e5bed2eb40</sys_id>
+        <sys_id>5c1135e660c5e7dfbb2da823f1a38d3d</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>PnL Questions</sys_name>
+        <sys_name>PNL User profile</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name>sys_uib_toolbox_component_9c62846cf9f335aea413f5e5bed2eb40</sys_update_name>
+        <sys_update_name>sys_uib_toolbox_component_5c1135e660c5e7dfbb2da823f1a38d3d</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2020-11-19 10:38:35</sys_updated_on>
+        <sys_updated_on>2020-11-19 10:38:38</sys_updated_on>
     </sys_uib_toolbox_component>
 </record_update>
