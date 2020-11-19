@@ -11,22 +11,22 @@
         <macroponent_dependencies/>
         <name>PNL User profile</name>
         <props>[]</props>
-        <root_component display_value="aaro2-user-profile">a0fabefd919cfb054dccd378a680252d</root_component>
+        <root_component display_value="aaro2-pnl-user-profile">d3b8df9263de1cf9c6751f0f0c81bf84</root_component>
         <root_component_config>{}</root_component_config>
         <schema_version>1.0.0</schema_version>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
         <sys_created_by>xxikochet</sys_created_by>
-        <sys_created_on>2020-11-19 10:38:37</sys_created_on>
+        <sys_created_on>2020-11-19 16:05:50</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>b42cc276f7a76fcfdf83b88392399e42</sys_id>
+        <sys_id>f01f10043deae3862bb3eb964321c6d6</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>PNL User profile</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name>sys_ux_macroponent_b42cc276f7a76fcfdf83b88392399e42</sys_update_name>
+        <sys_update_name>sys_ux_macroponent_f01f10043deae3862bb3eb964321c6d6</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2020-11-19 10:38:37</sys_updated_on>
+        <sys_updated_on>2020-11-19 16:05:50</sys_updated_on>
     </sys_ux_macroponent>
 </record_update>
