@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_aaro2_pnl_mgmt.SneakPeekUtil</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>SneakPeekUtil</name>
+        <script><![CDATA[var SneakPeekUtil = Class.create();
+SneakPeekUtil.prototype = {
+	initialize: function () {
+		this.SNEAK_PEEK_EVENT_TABLE = 'x_aaro2_pnl_mgmt_sneak_peek_event';
+		this.SNEAK_PEEK_PARTICIPANT_TABLE = 'x_aaro2_pnl_mgmt_m2m_sneak_peek_participant'
+		this.__getSneakPeekDates()
+	},
+	getNextSneakPeek: function () {
+		return this.__getSneakPeekOfMonth(this.currentSneakPeekDate)
+	},
+
+	getCurrentMonthSneakPeekDate: function () {
+		return this.thisMonthBDay6;
+	},
+	getCurrentSneakPeekDate: function () {
+		return this.currentSneakPeekDate
+	},
+	getNextMonthSneakPeekDate: function () {
+		return this.nextMonthBDay6;
+	},
+
+	getPrevMonthSneakPeekDate: function () {
+		return this.prevMonthBDay6;
+	},
+	getPrevSneakPeekDate: function () {
+		return this.prevSneakPeekDate;
+	},
+	updateSneakPeek: function (eventSysId, participants) {
+		var participantsGr = new GlideRecord(this.SNEAK_PEEK_PARTICIPANT_TABLE);
+		participantsGr.addQuery('sneak_peek_event', eventSysId);
+		participantsGr.query()
+		participantsGr.deleteMultiple()
+		var e = this;
+		participants.forEach(function (participant, index) {
+			var participantsGrNew = new GlideRecord(e.SNEAK_PEEK_PARTICIPANT_TABLE);
+			participantsGrNew.initialize();
+			participantsGrNew.sneak_peek_event = eventSysId;
+			participantsGrNew.user = participant;
+			participantsGrNew.insert()
+		})
+	},
+	__getSneakPeekOfMonth: function (date) {
+		sneakPeek = {}
+		var sneakPeekGr = new GlideRecord(this.SNEAK_PEEK_EVENT_TABLE);
+		var query = this.__getDateQuery(date)
+		sneakPeekGr.addEncodedQuery(query);
+		sneakPeekGr.query();
+		if (sneakPeekGr.next()) {
+			sneakPeek.participants = this.__getParticipants(sneakPeekGr.getUniqueValue())
+			sneakPeek.event_date = sneakPeekGr.getValue('event_date');
+			sneakPeek.sys_id = sneakPeekGr.getUniqueValue()
+		} else
+			sneakPeek = this.__getNewSneakPeek(this.currentSneakPeekDate)
+		return sneakPeek
+	},
+
+	__getNewSneakPeek: function (date) {
+		var sneakPeek = {}
+		sneakPeek.participants = [];
+		sneakPeek.sys_id = ''
+		var sneakPeekGr = new GlideRecord(this.SNEAK_PEEK_EVENT_TABLE);
+		sneakPeekGr.initialize();
+		sneakPeekGr.setValue('event_date', date);
+		sneakPeekSysId = sneakPeekGr.insert();
+		sneakPeek.sys_id = sneakPeekSysId;
+		sneakPeek.event_date = this.__getDateString(date);
+
+		var prevMonthSneakPeekGr = new GlideRecord(this.SNEAK_PEEK_EVENT_TABLE);
+		var query = this.__getDateQuery(this.prevSneakPeekDate)
+		prevMonthSneakPeekGr.addEncodedQuery(query)
+		prevMonthSneakPeekGr.query();
+
+		if (!prevMonthSneakPeekGr.next())
+			return sneakPeek
+
+		var prevMonthParticipantGr = new GlideRecord(this.SNEAK_PEEK_PARTICIPANT_TABLE);
+		prevMonthParticipantGr.addQuery('sneak_peek_event', prevMonthSneakPeekGr.getUniqueValue())
+		prevMonthParticipantGr.query()
+
+		while (prevMonthParticipantGr.next()) {
+
+			var thisMonthParticipantGr = new GlideRecord(this.SNEAK_PEEK_PARTICIPANT_TABLE)
+			var userGr = prevMonthParticipantGr.user.getRefRecord();
+			thisMonthParticipantGr.initialize();
+			thisMonthParticipantGr.sneak_peek_event = sneakPeekSysId;
+			thisMonthParticipantGr.user = userGr.getUniqueValue();
+			thisMonthParticipantGr.insert();
+			sneakPeek.participants.push(this.__getUserObject(userGr))
+		}
+		return sneakPeek
+	},
+	__getSneakPeekDates: function () {
+		this.currentDate = new GlideDateTime();
+		this.currentDayOfMonth = this.currentDate.getDayOfMonthUTC();
+		var currentMonth = this.currentDate.getMonthUTC();
+		var currentYear = this.currentDate.getYearUTC();
+		var startOfThisMonthString = currentYear + '-' + currentMonth + '-01';
+		var schedule = new GlideSchedule('090eecae0a0a0b260077e1dfa71da828'); //8-5 weekdays excluding holidays
+		var startOfThisMonth = new GlideDateTime(startOfThisMonthString);
+		var startOfNextMonth = new GlideDateTime(startOfThisMonthString)
+		startOfNextMonth.addMonthsUTC(1);
+		var startOfPrevMonth = new GlideDateTime(startOfThisMonthString)
+		startOfPrevMonth.addMonthsUTC(-1);
+		var businessDays = 6;
+		var dur = new GlideDuration(60 * 60 * 8 * 1000 * businessDays);
+		this.thisMonthBDay6 = schedule.add(startOfThisMonth, dur);
+		this.nextMonthBDay6 = schedule.add(startOfNextMonth, dur);
+		this.prevMonthBDay6 = schedule.add(startOfPrevMonth, dur);
+		this.thisMonthBDay6Day = this.thisMonthBDay6.getDayOfMonthUTC()
+
+		this.currentSneakPeekDate = ''
+		this.prevSneakPeekDate = ''
+
+		if (this.currentDayOfMonth >= this.thisMonthBDay6Day) {
+			this.currentSneakPeekDate = this.nextMonthBDay6
+			this.prevSneakPeekDate = this.thisMonthBDay6
+		}
+		else {
+			this.currentSneakPeekDate = this.thisMonthBDay6
+			this.prevSneakPeekDate = this.prevMonthBDay6
+		}
+
+	},
+	__getParticipants: function (eventSysId) {
+		var participants = []
+		var participantGr = new GlideRecord(this.SNEAK_PEEK_PARTICIPANT_TABLE);
+		participantGr.addQuery('sneak_peek_event', eventSysId);
+		participantGr.query()
+
+		while (participantGr.next()) {
+			var userGr = participantGr.user.getRefRecord();
+			participants.push(this.__getUserObject(userGr));
+		}
+		return participants;
+	},
+
+	__getUserObject: function (userGr) {
+		return {
+			name: userGr.getValue('name'),
+			sys_id: userGr.getUniqueValue(),
+			picture: this.__getAvatarLink(userGr.getValue('avatar')),
+			email: userGr.getValue('email')
+		}
+	},
+
+	__getAvatarLink: function (avatarId) {
+		return avatarId ?
+			('https://' + gs.getProperty("instance_name") + '.service-now.com/' + avatarId + '.iix') :
+			'';
+	},
+
+	__getDateQuery: function (date) {
+		var dateStr = this.__getDateString(date)
+		return 'event_dateON' + dateStr +
+			'@javascript:gs.dateGenerate(\'' + dateStr + '\',\'start\')' +
+			'@javascript:gs.dateGenerate(\'' + dateStr + '\',\'end\')';
+	},
+
+	__getDateString: function (gdt) {
+		var year = gdt.getYearUTC();
+		var month = gdt.getMonthUTC();
+		var day = gdt.getDayOfMonthUTC();
+		return year + '-' + month + '-' + day
+	},
+
+	__getDate: function (gdt) {
+		return new GlideDate(this.__getDateString(gdt))
+	},
+
+	type: 'SneakPeekUtil'
+}; ]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2020-12-03 16:03:47</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>12f75a2edb38a090389b84d868961930</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_name>SneakPeekUtil</sys_name>
+        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name>sys_script_include_12f75a2edb38a090389b84d868961930</sys_update_name>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2020-12-08 12:04:24</sys_updated_on>
+    </sys_script_include>
+</record_update>

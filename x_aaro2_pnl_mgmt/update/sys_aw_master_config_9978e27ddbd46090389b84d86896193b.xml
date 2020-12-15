@@ -6,7 +6,8 @@
         <compiled_page_registry display_value="PNL Management">e178e27ddbd46090389b84d86896193c</compiled_page_registry>
         <description>Application for both viewing organizational P&amp;L data as well as submitting questions to accounting regarding P&amp;L statements.</description>
         <global_search display_value="Default search settings">97a574ea53c0130084acddeeff7b12a6</global_search>
-        <global_search_data display_value="PNL Management Search Context Config">5178e27ddbd46090389b84d868961939</global_search_data>
+        <global_search_data display_value="">5178e27ddbd46090389b84d868961939</global_search_data>
+        <hide_search_results_count>false</hide_search_results_count>
         <name>PNL Management</name>
         <navigation_type>tab</navigation_type>
         <notifications_enabled>true</notifications_enabled>
