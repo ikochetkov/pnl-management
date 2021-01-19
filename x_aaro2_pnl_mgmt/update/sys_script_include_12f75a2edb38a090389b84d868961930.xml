@@ -186,8 +186,9 @@ SneakPeekUtil.prototype = {
 	__getClosestSneakPeekDate: function(date) {
 		var day = date.getDayOfMonthUTC()
 		var startOfMonthDate = this.__getStartOfMonth(date)
-
-		if (day >= this.SNEAK_PEEK_B_DAY)
+		var spDate = this.__addDays(startOfMonthDate, this.SNEAK_PEEK_B_DAY)
+		var spDateDay = spDate.getDayOfMonthUTC()
+		if (day >= spDateDay)
 			startOfMonthDate.addMonthsUTC(1)
 
 		closestSeakPeekDate = this.__addDays(startOfMonthDate, this.SNEAK_PEEK_B_DAY)
@@ -312,7 +313,7 @@ SneakPeekUtil.prototype = {
         <sys_created_on>2020-12-03 16:03:47</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>12f75a2edb38a090389b84d868961930</sys_id>
-        <sys_mod_count>83</sys_mod_count>
+        <sys_mod_count>85</sys_mod_count>
         <sys_name>SneakPeekUtil</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -320,6 +321,6 @@ SneakPeekUtil.prototype = {
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_12f75a2edb38a090389b84d868961930</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-21 15:33:38</sys_updated_on>
+        <sys_updated_on>2021-01-18 16:18:08</sys_updated_on>
     </sys_script_include>
 </record_update>
