@@ -11,13 +11,13 @@
         <copied_from_name/>
         <description/>
         <internal_name>send_sneak_peek_mails</internal_name>
-        <label_cache>[{"name":"34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item.user.email","label":"3➛Sneak Peek Participant Record➛User➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item.user","label":"3➛Sneak Peek Participant Record➛User","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_aaro2_pnl_mgmt_m2m_sneak_peek_participant","column_name":"user"},{"name":"2afe20e4-8ec0-4e33-9775-10ccb8c67335.email","label":"4➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item","label":"3➛Sneak Peek Participant Record","reference":"x_aaro2_pnl_mgmt_m2m_sneak_peek_participant","reference_display":"Sneak Peek Participant","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"Created_1.current.sys_id","label":"Trigger➛Sneak Peek Event Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_aaro2_pnl_mgmt_sneak_peek_event","column_name":"sys_id"},{"name":"45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Count","label":"2➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Table","label":"2➛Sneak Peek Participant Table","reference":"x_aaro2_pnl_mgmt_m2m_sneak_peek_participant","reference_display":"Sneak Peek Participant","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Records","label":"2➛Sneak Peek Participant Records","reference":"x_aaro2_pnl_mgmt_m2m_sneak_peek_participant","reference_display":"Sneak Peek Participant","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2e01e51f-77df-43d0-9d04-c1eaf4999d9d.email","label":"5➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current","label":"Trigger➛Sneak Peek Event Record","reference":"x_aaro2_pnl_mgmt_sneak_peek_event","reference_display":"Sneak Peek Event","type":"reference","base_type":"reference","attributes":{}},{"name":"c8038d76-9695-491b-9902-7a90921daebc.state","label":"1➛State","reference_display":"State","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"Created_1.current.event_date","label":"Trigger➛Sneak Peek Event Record➛Event Date","reference":"","reference_display":"Event Date","type":"glide_date","base_type":"glide_date","parent_table_name":"x_aaro2_pnl_mgmt_sneak_peek_event","column_name":"event_date"},{"name":"ff75c2ee-9492-443d-898e-bdc9bec55c3b.total_duration","label":"1➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"ff75c2ee-9492-443d-898e-bdc9bec55c3b.scheduled_end_date_time","label":"1➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}}]</label_cache>
-        <latest_snapshot>3fdc5f11db79a4505884eb184b9619f9</latest_snapshot>
+        <label_cache>[{"name":"15a38a0f-0db6-4c16-b0ea-99c6d4763cb4.state","label":"4➛State","reference_display":"State","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"87ccf2c2-c0f3-4eca-a487-5f7ae766f409.current_date","label":"2➛Current Date","reference_display":"Current Date","type":"glide_date_time","base_type":"glide_date_time","attributes":{"uiType":"glide_date_time","uiTypeLabel":"Date/Time","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"8c152286-6f01-4347-bcad-984dad454a5c"}},{"name":"Created or Updated_1.current.early_access_end","label":"Trigger➛Deadline Record➛Early Access End","reference":"","reference_display":"Early Access End","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"early_access_end"},{"name":"Created or Updated_1.current","label":"Trigger➛Deadline Record","reference":"x_aaro2_pnl_mgmt_deadline","reference_display":"Deadline","type":"reference","base_type":"reference","attributes":{}},{"name":"Created or Updated_1.current.early_access_start","label":"Trigger➛Deadline Record➛Early Access Start","reference":"","reference_display":"Early Access Start","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"early_access_start"},{"name":"ff75c2ee-9492-443d-898e-bdc9bec55c3b.scheduled_end_date_time","label":"4➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"ff75c2ee-9492-443d-898e-bdc9bec55c3b.total_duration","label":"4➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"Created_1.current.event_date","label":"Trigger➛Sneak Peek Event Record➛Event Date","reference":"","reference_display":"Event Date","type":"glide_date","base_type":"glide_date","parent_table_name":"x_aaro2_pnl_mgmt_sneak_peek_event","column_name":"event_date"},{"name":"c8038d76-9695-491b-9902-7a90921daebc.state","label":"1➛State","reference_display":"State","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"Created_1.current","label":"Trigger➛Sneak Peek Event Record","reference":"x_aaro2_pnl_mgmt_sneak_peek_event","reference_display":"Sneak Peek Event","type":"reference","base_type":"reference","attributes":{}},{"name":"2e01e51f-77df-43d0-9d04-c1eaf4999d9d.email","label":"5➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Records","label":"5➛Pnl Mgmt M2m Sneak Peek User Records","reference":"x_aaro2_pnl_mgmt_m2m_sneak_peek_user","reference_display":"Pnl Mgmt M2m Sneak Peek User","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Table","label":"5➛Pnl Mgmt M2m Sneak Peek User Table","reference":"x_aaro2_pnl_mgmt_m2m_sneak_peek_user","reference_display":"Pnl Mgmt M2m Sneak Peek User","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Count","label":"5➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.sys_id","label":"Trigger➛Sneak Peek Event Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_aaro2_pnl_mgmt_sneak_peek_event","column_name":"sys_id"},{"name":"34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item","label":"6➛Pnl Mgmt M2m Sneak Peek User Record","reference":"x_aaro2_pnl_mgmt_m2m_sneak_peek_user","reference_display":"Pnl Mgmt M2m Sneak Peek User","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"2afe20e4-8ec0-4e33-9775-10ccb8c67335.email","label":"5➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item.user","label":"6➛Pnl Mgmt M2m Sneak Peek User Record➛User","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_aaro2_pnl_mgmt_m2m_sneak_peek_user","column_name":"user"},{"name":"34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item.user.email","label":"6➛Pnl Mgmt M2m Sneak Peek User Record➛User➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"c1900124-8bef-4f2b-a238-f4db71e4555a.month","label":"5➛Month","reference_display":"Month","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b2b9ea98-f43e-42f7-8212-5b193e343a42"}},{"name":"c1900124-8bef-4f2b-a238-f4db71e4555a.dayofweek","label":"5➛Day Of Week","reference_display":"Day Of Week","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"2cb5dd9f-9e7d-438d-a859-8730c4ed0c37"}},{"name":"c1900124-8bef-4f2b-a238-f4db71e4555a.year","label":"5➛Year","reference_display":"Year","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"a9d19794-4d43-42ea-9017-3f3e130237a2"}},{"name":"c1900124-8bef-4f2b-a238-f4db71e4555a.day","label":"5➛Day","reference_display":"Day","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"4914cfe8-cccb-420f-b0bc-5ee0bb8fb5f8"}},{"name":"Created_1.run_start_time","label":"Trigger➛Run Start Time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"test_input_hidden":"true"}},{"name":"075bdd86-f83e-43f9-a1a5-e76cf6147c7f.emails","label":"6➛Emails","reference_display":"Emails","type":"array.string","base_type":"array.string","attributes":{"uiTypeLabel":"Array.String","co_type_name":"FD867898c8150eec1040a17c198d1be593","child_label":"Emails_child0","child_type_label":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.string","child_type":"string","child_name":"Emails_child0","child_uiUniqueId":"c06f6508-51b8-45ee-8f8d-28e912492a5b","uiUniqueId":"a7901aff-c4e5-4da4-9e44-131f46b7870e"}}]</label_cache>
+        <latest_snapshot>5b4d0b34db8a2850389b84d868961989</latest_snapshot>
         <master_snapshot>32779fdddbf9a450389b84d868961924</master_snapshot>
         <name>Send Sneak Peek Mails</name>
         <natlang/>
         <outputs/>
-        <remote_trigger_id>c79c93d9db3da450389b84d8689619e0</remote_trigger_id>
+        <remote_trigger_id>e5fccbf0db8a2850389b84d86896190f</remote_trigger_id>
         <run_as>system</run_as>
         <run_with_roles/>
         <sc_callable>false</sc_callable>
@@ -30,7 +30,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>343d36ffdbb8e810389b84d868961994</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name>Send Sneak Peek Mails</sys_name>
         <sys_overrides/>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
@@ -39,18 +39,18 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_hub_flow_343d36ffdbb8e810389b84d868961994</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:56</sys_updated_on>
+        <sys_updated_on>2021-01-29 12:17:17</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_variable_value action="delete_multiple" query="document_key=343d36ffdbb8e810389b84d868961994"/>
     <sys_flow_record_trigger action="INSERT_OR_UPDATE">
         <active>true</active>
-        <condition table="x_aaro2_pnl_mgmt_sneak_peek_event">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        <condition table="x_aaro2_pnl_mgmt_deadline">early_access_startVALCHANGES<item endquery="false" field="early_access_start" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
         </condition>
         <name/>
         <on_delete>false</on_delete>
         <on_insert>true</on_insert>
-        <on_update>false</on_update>
+        <on_update>true</on_update>
         <run_flow_in>background</run_flow_in>
         <run_on_extended>false</run_on_extended>
         <run_when_setting>both</run_when_setting>
@@ -58,10 +58,10 @@
         <run_when_user_setting>any</run_when_user_setting>
         <sys_class_name>sys_flow_record_trigger</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:26:54</sys_created_on>
+        <sys_created_on>2021-01-29 12:17:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
-        <sys_id>c79c93d9db3da450389b84d8689619e0</sys_id>
+        <sys_id>e5fccbf0db8a2850389b84d86896190f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
@@ -71,166 +71,35 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:54</sys_updated_on>
-        <table>x_aaro2_pnl_mgmt_sneak_peek_event</table>
+        <sys_updated_on>2021-01-29 12:17:16</sys_updated_on>
+        <table>x_aaro2_pnl_mgmt_deadline</table>
     </sys_flow_record_trigger>
     <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
         <active>true</active>
-        <data>{"table":"sys_trigger_runner_mapping","id":"439c93d9db3da450389b84d8689619e1","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
+        <data>{"table":"sys_trigger_runner_mapping","id":"a1fccbf0db8a2850389b84d868961910","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
         <identifier>343d36ffdbb8e810389b84d868961994</identifier>
         <runner>FDTriggerRunner</runner>
         <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:26:54</sys_created_on>
-        <sys_id>439c93d9db3da450389b84d8689619e1</sys_id>
+        <sys_created_on>2021-01-29 12:17:16</sys_created_on>
+        <sys_id>a1fccbf0db8a2850389b84d868961910</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:54</sys_updated_on>
-        <trigger display_value="">c79c93d9db3da450389b84d8689619e0</trigger>
+        <sys_updated_on>2021-01-29 12:17:16</sys_updated_on>
+        <trigger display_value="">e5fccbf0db8a2850389b84d86896190f</trigger>
     </sys_trigger_runner_mapping>
     <sys_json_chunk action="INSERT_OR_UPDATE">
         <data>H4sIAAAAAAAAAGXLWwqAIBBA0b3MdytwKxGD5fggGUFHLKK99yAo6Pce7ga5MtqYGgYGBaOeZpdTZQPdTc0TYy2UMYYioPrh0wuJBHbXl8T/jpc1r48mRlqE2JA5u9WxEOwH5v2lw4YAAAA=</data>
-        <document_id>439c93d9db3da450389b84d8689619e1</document_id>
+        <document_id>a1fccbf0db8a2850389b84d868961910</document_id>
         <field>trigger_runner</field>
         <length>144</length>
         <position>0</position>
         <source_table>sys_trigger_runner_mapping</source_table>
         <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:26:54</sys_created_on>
-        <sys_id>0b9c93d9db3da450389b84d8689619e1</sys_id>
+        <sys_created_on>2021-01-29 12:17:16</sys_created_on>
+        <sys_id>69fccbf0db8a2850389b84d868961910</sys_id>
     </sys_json_chunk>
-    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=343d36ffdbb8e810389b84d868961994^sys_idNOT IN439c93d9db3da450389b84d8689619e1"/>
-    <sys_hub_flow_component action="delete_multiple" query="flow=343d36ffdbb8e810389b84d868961994^sys_idNOT IN2a5fba77dbf8e810389b84d8689619bb,665fba77dbf8e810389b84d8689619a2,a25fba77dbf8e810389b84d8689619b2,bc7cf1f0db816450389b84d86896195d"/>
-    <sys_hub_action_instance action="INSERT_OR_UPDATE">
-        <action_inputs/>
-        <action_inputs/>
-        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
-        <action_type_parent/>
-        <comment/>
-        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
-        <display_text/>
-        <flow display_value="Send Sneak Peek Mails">343d36ffdbb8e810389b84d868961994</flow>
-        <order>4</order>
-        <parent_ui_id>34f10bfd-8dc2-4e45-b45c-1751bf2a0337</parent_ui_id>
-        <sys_class_name>sys_hub_action_instance</sys_class_name>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>2a5fba77dbf8e810389b84d8689619bb</sys_id>
-        <sys_mod_count>24</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:28:05</sys_updated_on>
-        <ui_id>2afe20e4-8ec0-4e33-9775-10ccb8c67335</ui_id>
-    </sys_hub_action_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=2a5fba77dbf8e810389b84d8689619bb"/>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_action_instance</document>
-        <document_key>2a5fba77dbf8e810389b84d8689619bb</document_key>
-        <order>6</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
-        <sys_id>2e5fba77dbf8e810389b84d8689619d7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-07 15:41:05</sys_updated_on>
-        <value>PnL Statements Data is available for review now!</value>
-        <variable display_value="">5d806bf4a70323008299b39f087901ec</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_action_instance</document>
-        <document_key>2a5fba77dbf8e810389b84d8689619bb</document_key>
-        <order>1</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
-        <sys_id>6a5fba77dbf8e810389b84d8689619d7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-07 15:41:05</sys_updated_on>
-        <value>x_aaro2_pnl_mgmt_sneak_peek_event</value>
-        <variable display_value="">19806bf4a70323008299b39f087901d4</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_action_instance</document>
-        <document_key>2a5fba77dbf8e810389b84d8689619bb</document_key>
-        <order>7</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
-        <sys_id>a65fba77dbf8e810389b84d8689619d7</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-10 13:24:11</sys_updated_on>
-        <value>&lt;p data-tinymcerootblock=""&gt;&lt;span style="white-space: pre;" data-slate-fragment="JTdCJTIyb2JqZWN0JTIyJTNBJTIyZG9jdW1lbnQlMjIlMkMlMjJkYXRhJTIyJTNBJTdCJTdEJTJDJTIybm9kZXMlMjIlM0ElNUIlN0IlMjJvYmplY3QlMjIlM0ElMjJibG9jayUyMiUyQyUyMnR5cGUlMjIlM0ElMjJwYXJhZ3JhcGglMjIlMkMlMjJkYXRhJTIyJTNBJTdCJTdEJTJDJTIybm9kZXMlMjIlM0ElNUIlN0IlMjJvYmplY3QlMjIlM0ElMjJ0ZXh0JTIyJTJDJTIybGVhdmVzJTIyJTNBJTVCJTdCJTIyb2JqZWN0JTIyJTNBJTIybGVhZiUyMiUyQyUyMnRleHQlMjIlM0ElMjJQbkwlMjBTdGF0ZW1lbnRzJTIwRGF0YSUyMGlzJTIwYXZhaWx2YWJsZSUyMGZvciUyMHJldmlldyUyMG5vdyElMjIlMkMlMjJtYXJrcyUyMiUzQSU1QiU1RCU3RCU1RCU3RCU1RCU3RCU1RCU3RA=="&gt;PnL Statements Data is available for review now!&lt;br /&gt;&lt;/span&gt;you can navigate to &lt;a title="" href="x/aaro2/workspace/pnl_management/questions" target="_blank" data-original-title="Statements page"&gt;Statements page&lt;/a&gt;&amp;nbsp;to look at data and ask questions&lt;/p&gt;</value>
-        <variable display_value="">ad806bf4a70323008299b39f087901f2</variable>
-    </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="id=2a5fba77dbf8e810389b84d8689619bb"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>ah_body</field>
-        <id>2a5fba77dbf8e810389b84d8689619bb</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
-        <sys_id>ea5fba77dbf8e810389b84d8689619d6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-07 15:41:05</sys_updated_on>
-        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>ah_subject</field>
-        <id>2a5fba77dbf8e810389b84d8689619bb</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
-        <sys_id>265fba77dbf8e810389b84d8689619d7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-07 15:41:05</sys_updated_on>
-        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>ah_to</field>
-        <id>2a5fba77dbf8e810389b84d8689619bb</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
-        <sys_id>aa5fba77dbf8e810389b84d8689619bd</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-10 13:30:40</sys_updated_on>
-        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
-        <value>{{34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item.user.email}} </value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>record</field>
-        <id>2a5fba77dbf8e810389b84d8689619bb</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
-        <sys_id>ae5fba77dbf8e810389b84d8689619d6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-07 15:41:05</sys_updated_on>
-        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
-        <value>{{Created_1.current}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>table_name</field>
-        <id>2a5fba77dbf8e810389b84d8689619bb</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
-        <sys_id>625fba77dbf8e810389b84d8689619d7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-07 15:41:05</sys_updated_on>
-        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
-        <value/>
-    </sys_element_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=343d36ffdbb8e810389b84d868961994^sys_idNOT INa1fccbf0db8a2850389b84d868961910"/>
+    <sys_hub_flow_component action="delete_multiple" query="flow=343d36ffdbb8e810389b84d868961994^sys_idNOT IN665fba77dbf8e810389b84d8689619a2,81cdc15cdbc6a050389b84d8689619e2,8dec87f0db8a2850389b84d868961905,bc7cf1f0db816450389b84d86896195d,c9ec47f0db8a2850389b84d8689619d2,e4f410c0db0eec10389b84d868961927,ecf410c0db0eec10389b84d86896192d"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
@@ -240,14 +109,14 @@
         <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
         <display_text/>
         <flow display_value="Send Sneak Peek Mails">343d36ffdbb8e810389b84d868961994</flow>
-        <order>2</order>
-        <parent_ui_id/>
+        <order>5</order>
+        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2020-12-07 15:41:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>665fba77dbf8e810389b84d8689619a2</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>78</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -255,7 +124,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:28:05</sys_updated_on>
+        <sys_updated_on>2021-01-29 12:18:49</sys_updated_on>
         <ui_id>45c120a7-eee0-4d43-b70c-0ea44b8bb13f</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=665fba77dbf8e810389b84d8689619a2"/>
@@ -267,10 +136,10 @@
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2020-12-07 15:41:05</sys_created_on>
         <sys_id>a65fba77dbf8e810389b84d8689619a4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-07 15:41:05</sys_updated_on>
-        <value>x_aaro2_pnl_mgmt_m2m_sneak_peek_participant</value>
+        <sys_updated_on>2021-01-26 14:46:15</sys_updated_on>
+        <value>x_aaro2_pnl_mgmt_m2m_sneak_peek_user</value>
         <variable display_value="">8f400a1587003300663ca1bb36cb0b4b</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=665fba77dbf8e810389b84d8689619a2"/>
@@ -280,11 +149,11 @@
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2020-12-07 15:41:05</sys_created_on>
         <sys_id>625fba77dbf8e810389b84d8689619a4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-07 15:41:05</sys_updated_on>
+        <sys_updated_on>2021-01-26 14:46:15</sys_updated_on>
         <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
-        <value>sneak_peek_event={{Created_1.current.sys_id}}</value>
+        <value>deadline={{Created or Updated_1.current}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>table</field>
@@ -298,8 +167,49 @@
         <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
         <value/>
     </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Drop previous flow">d0dc81d8dbc6a050389b84d868961938</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>d0dc81d8dbc6a050389b84d868961938</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Send Sneak Peek Mails">343d36ffdbb8e810389b84d868961994</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-27 13:44:34</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>81cdc15cdbc6a050389b84d8689619e2</sys_id>
+        <sys_mod_count>36</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2021-01-29 12:18:49</sys_updated_on>
+        <ui_id>2e219cb0-f993-47e3-88d4-49877e834ba3</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=81cdc15cdbc6a050389b84d8689619e2"/>
+    <sys_element_mapping action="delete_multiple" query="id=81cdc15cdbc6a050389b84d8689619e2"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>current</field>
+        <id>81cdc15cdbc6a050389b84d8689619e2</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-27 13:44:35</sys_created_on>
+        <sys_id>c5cd055cdbc6a050389b84d868961909</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-27 13:44:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d0dc81d8dbc6a050389b84d868961938</table>
+        <value>{{Created or Updated_1.current}}</value>
+    </sys_element_mapping>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">2e5fba77dbf8e810389b84d8689619a4</block>
+        <block display_value="">c5ec47f0db8a2850389b84d8689619d3</block>
         <comment/>
         <connected_to/>
         <decision_table/>
@@ -309,17 +219,17 @@
         <flow display_value="Send Sneak Peek Mails">343d36ffdbb8e810389b84d868961994</flow>
         <inputs/>
         <inputs/>
-        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>3</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id/>
         <sys_class_name>sys_hub_flow_logic</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
+        <sys_created_on>2021-01-29 12:16:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>a25fba77dbf8e810389b84d8689619b2</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_id>8dec87f0db8a2850389b84d868961905</sys_id>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -327,24 +237,50 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:55</sys_updated_on>
-        <ui_id>34f10bfd-8dc2-4e45-b45c-1751bf2a0337</ui_id>
+        <sys_updated_on>2021-01-29 12:17:17</sys_updated_on>
+        <ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
     </sys_hub_flow_logic>
-    <sys_variable_value action="delete_multiple" query="document_key=a25fba77dbf8e810389b84d8689619b2"/>
-    <sys_element_mapping action="delete_multiple" query="id=a25fba77dbf8e810389b84d8689619b2"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>items</field>
-        <id>a25fba77dbf8e810389b84d8689619b2</id>
+    <sys_variable_value action="delete_multiple" query="document_key=8dec87f0db8a2850389b84d868961905"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>8dec87f0db8a2850389b84d868961905</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
-        <sys_id>a65fba77dbf8e810389b84d8689619b5</sys_id>
+        <sys_created_on>2021-01-29 12:16:58</sys_created_on>
+        <sys_id>cdec87f0db8a2850389b84d868961909</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-07 15:41:05</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
-        <value>{{45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Records}}</value>
+        <sys_updated_on>2021-01-29 12:16:58</sys_updated_on>
+        <value>Date is after now</value>
+        <variable display_value="">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=8dec87f0db8a2850389b84d868961905"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>8dec87f0db8a2850389b84d868961905</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-29 12:16:58</sys_created_on>
+        <sys_id>4dec87f0db8a2850389b84d868961909</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-29 12:16:58</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{Created or Updated_1.current.early_access_start}}&gt;{{87ccf2c2-c0f3-4eca-a487-5f7ae766f409.current_date}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>8dec87f0db8a2850389b84d868961905</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-29 12:16:58</sys_created_on>
+        <sys_id>85ec87f0db8a2850389b84d868961909</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-29 12:16:58</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
     </sys_element_mapping>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
         <block display_value="">7c7cf1f0db816450389b84d86896195c</block>
@@ -358,16 +294,16 @@
         <inputs/>
         <inputs/>
         <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
-        <order>1</order>
+        <order>4</order>
         <outputs_assigned/>
         <outputs_to_assign/>
-        <parent_ui_id/>
+        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
         <sys_class_name>sys_hub_flow_logic</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2020-12-10 13:22:43</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>bc7cf1f0db816450389b84d86896195d</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>31</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -375,7 +311,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:55</sys_updated_on>
+        <sys_updated_on>2021-01-29 12:17:17</sys_updated_on>
         <ui_id>ff75c2ee-9492-443d-898e-bdc9bec55c3b</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -403,10 +339,10 @@
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2020-12-10 13:22:43</sys_created_on>
         <sys_id>387cf1f0db816450389b84d868961964</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:40</sys_updated_on>
-        <value>1970-01-01 01:00:00</value>
+        <sys_updated_on>2021-01-26 14:46:15</sys_updated_on>
+        <value>1970-01-01 00:00:00</value>
         <variable display_value="">ef145c1473031300b61e66476bf6a7be</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -468,11 +404,11 @@
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2020-12-10 13:22:43</sys_created_on>
         <sys_id>f07cf1f0db816450389b84d868961964</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-10 13:22:43</sys_updated_on>
+        <sys_updated_on>2021-01-26 14:46:15</sys_updated_on>
         <table>var__m_sys_hub_flow_logic_input_fdb2541473031300b61e66476bf6a70e</table>
-        <value>{{Created_1.current.event_date}}</value>
+        <value>{{Created or Updated_1.current.early_access_start}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>timer_schedule</field>
@@ -486,19 +422,166 @@
         <table>var__m_sys_hub_flow_logic_input_fdb2541473031300b61e66476bf6a70e</table>
         <value/>
     </sys_element_mapping>
-    <sys_hub_trigger_instance action="delete_multiple" query="flow=343d36ffdbb8e810389b84d868961994^sys_idNOT IN9a5fba77dbf8e810389b84d868961977"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Get Current Date">356c43b0db8a2850389b84d86896199a</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>356c43b0db8a2850389b84d86896199a</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Send Sneak Peek Mails">343d36ffdbb8e810389b84d868961994</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-29 12:16:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c9ec47f0db8a2850389b84d8689619d2</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2021-01-29 12:18:49</sys_updated_on>
+        <ui_id>87ccf2c2-c0f3-4eca-a487-5f7ae766f409</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c9ec47f0db8a2850389b84d8689619d2"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="GetRecipientEmail">ea54d840db0eec10389b84d868961984</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>ea54d840db0eec10389b84d868961984</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Send Sneak Peek Mails">343d36ffdbb8e810389b84d868961994</flow>
+        <order>6</order>
+        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 14:57:51</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e4f410c0db0eec10389b84d868961927</sys_id>
+        <sys_mod_count>46</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2021-01-29 12:18:49</sys_updated_on>
+        <ui_id>075bdd86-f83e-43f9-a1a5-e76cf6147c7f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e4f410c0db0eec10389b84d868961927"/>
+    <sys_element_mapping action="delete_multiple" query="id=e4f410c0db0eec10389b84d868961927"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>records</field>
+        <id>e4f410c0db0eec10389b84d868961927</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 14:57:51</sys_created_on>
+        <sys_id>ecf410c0db0eec10389b84d868961928</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 14:57:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ea54d840db0eec10389b84d868961984</table>
+        <value>{{45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Records}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Generate Event">b56604bfdb3b48145f65ba03e296195e</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>b56604bfdb3b48145f65ba03e296195e</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Send Sneak Peek Mails">343d36ffdbb8e810389b84d868961994</flow>
+        <order>7</order>
+        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 14:57:51</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ecf410c0db0eec10389b84d86896192d</sys_id>
+        <sys_mod_count>46</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2021-01-29 12:18:49</sys_updated_on>
+        <ui_id>0f33a204-d06d-4fdd-a29c-499df443201a</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ecf410c0db0eec10389b84d86896192d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ecf410c0db0eec10389b84d86896192d</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 14:57:51</sys_created_on>
+        <sys_id>acf410c0db0eec10389b84d86896192f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 14:57:51</sys_updated_on>
+        <value>x_aaro2_pnl_mgmt.sneak_peek_invitation</value>
+        <variable display_value="">f56604bfdb3b48145f65ba03e296195f</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ecf410c0db0eec10389b84d86896192d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>event_name</field>
+        <id>ecf410c0db0eec10389b84d86896192d</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 14:57:51</sys_created_on>
+        <sys_id>a4f410c0db0eec10389b84d86896192f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 14:57:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>parm1</field>
+        <id>ecf410c0db0eec10389b84d86896192d</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 14:57:51</sys_created_on>
+        <sys_id>68f410c0db0eec10389b84d86896192f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 14:57:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
+        <value>{{075bdd86-f83e-43f9-a1a5-e76cf6147c7f.emails}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>ecf410c0db0eec10389b84d86896192d</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 14:57:51</sys_created_on>
+        <sys_id>2cf410c0db0eec10389b84d86896192f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 14:57:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
+        <value>{{Created or Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=343d36ffdbb8e810389b84d868961994^sys_idNOT IN6242184cdbcaec10389b84d868961924"/>
     <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
         <comment/>
         <display_text/>
         <flow display_value="Send Sneak Peek Mails">343d36ffdbb8e810389b84d868961994</flow>
-        <name>Created</name>
+        <name>Created or Updated</name>
         <remote_sys_id/>
         <sys_class_name>sys_hub_trigger_instance</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
+        <sys_created_on>2021-01-26 14:46:14</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>9a5fba77dbf8e810389b84d868961977</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_id>6242184cdbcaec10389b84d868961924</sys_id>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -506,40 +589,68 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:55</sys_updated_on>
-        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <sys_updated_on>2021-01-29 12:17:17</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
-        <trigger_type>record_create</trigger_type>
+        <trigger_type>record_create_or_update</trigger_type>
     </sys_hub_trigger_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=9a5fba77dbf8e810389b84d868961977"/>
+    <sys_variable_value action="delete_multiple" query="document_key=6242184cdbcaec10389b84d868961924"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_trigger_instance</document>
-        <document_key>9a5fba77dbf8e810389b84d868961977</document_key>
-        <order>100</order>
+        <document_key>6242184cdbcaec10389b84d868961924</document_key>
+        <order>200</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
-        <sys_id>5e5fba77dbf8e810389b84d868961978</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_created_on>2021-01-26 14:46:14</sys_created_on>
+        <sys_id>2642184cdbcaec10389b84d868961925</sys_id>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-07 15:41:05</sys_updated_on>
-        <value>^EQ</value>
-        <variable display_value="">66aadea0c31322002841b63b12d3aebf</variable>
+        <sys_updated_on>2021-01-28 16:09:44</sys_updated_on>
+        <value>unique_changes</value>
+        <variable display_value="">2b9def50c31132002841b63b12d3ae5b</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_trigger_instance</document>
-        <document_key>9a5fba77dbf8e810389b84d868961977</document_key>
+        <document_key>6242184cdbcaec10389b84d868961924</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 14:46:14</sys_created_on>
+        <sys_id>2e42184cdbcaec10389b84d868961925</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 14:46:14</sys_updated_on>
+        <value>early_access_startVALCHANGES</value>
+        <variable display_value="">707dd180c32222002841b63b12d3aecb</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>6242184cdbcaec10389b84d868961924</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
-        <sys_id>d65fba77dbf8e810389b84d868961979</sys_id>
+        <sys_created_on>2021-01-26 14:46:14</sys_created_on>
+        <sys_id>a242184cdbcaec10389b84d868961926</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-07 15:41:05</sys_updated_on>
-        <value>x_aaro2_pnl_mgmt_sneak_peek_event</value>
-        <variable display_value="">cfca92e0c31322002841b63b12d3ae00</variable>
+        <sys_updated_on>2021-01-26 14:46:14</sys_updated_on>
+        <value>x_aaro2_pnl_mgmt_deadline</value>
+        <variable display_value="">cf1e1980c32222002841b63b12d3aea0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>6242184cdbcaec10389b84d868961924</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 14:46:14</sys_created_on>
+        <sys_id>ee42184cdbcaec10389b84d868961925</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 14:46:14</sys_updated_on>
+        <value/>
+        <variable display_value="">231e76460f103300b599bca2ff767e11</variable>
     </sys_variable_value>
     <sys_flow_cat_variable_model action="delete_multiple" query="id=343d36ffdbb8e810389b84d868961994^sys_idNOT IN783d36ffdbb8e810389b84d868961996"/>
     <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
@@ -560,7 +671,7 @@
         <sys_updated_by>xxamirony</sys_updated_by>
         <sys_updated_on>2020-12-07 15:31:42</sys_updated_on>
     </sys_flow_cat_variable_model>
-    <sys_hub_flow_input action="delete_multiple" query="model=343d36ffdbb8e810389b84d868961994^sys_idNOT IN1a5fba77dbf8e810389b84d868961964,965fba77dbf8e810389b84d86896195b"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=343d36ffdbb8e810389b84d868961994^sys_idNOT IN1a5fba77dbf8e810389b84d868961964,1e42184cdbcaec10389b84d868961901,965fba77dbf8e810389b84d86896195b"/>
     <sys_hub_flow_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -624,7 +735,7 @@
         <sys_created_on>2020-12-07 15:41:04</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>1a5fba77dbf8e810389b84d868961964</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -632,7 +743,90 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:55</sys_updated_on>
+        <sys_updated_on>2021-01-29 12:17:16</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDacfc8bf0378a2850e5036ecd1f623827,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation>(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);</calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Send Sneak Peek Mails">343d36ffdbb8e810389b84d868961994</model>
+        <model_id>343d36ffdbb8e810389b84d868961994</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_343d36ffdbb8e810389b84d868961994</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 14:46:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1e42184cdbcaec10389b84d868961901</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-29 12:17:16</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -707,7 +901,7 @@
         <sys_created_on>2020-12-07 15:41:04</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>965fba77dbf8e810389b84d86896195b</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -715,7 +909,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:55</sys_updated_on>
+        <sys_updated_on>2021-01-29 12:17:16</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -727,138 +921,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
-    <sys_hub_action_instance action="delete_multiple" query="flow=343d36ffdbb8e810389b84d868961994^sys_idNOT IN2a5fba77dbf8e810389b84d8689619bb,665fba77dbf8e810389b84d8689619a2"/>
-    <sys_hub_action_instance action="INSERT_OR_UPDATE">
-        <action_inputs/>
-        <action_inputs/>
-        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
-        <action_type_parent/>
-        <comment/>
-        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
-        <display_text/>
-        <flow display_value="Send Sneak Peek Mails">343d36ffdbb8e810389b84d868961994</flow>
-        <order>4</order>
-        <parent_ui_id>34f10bfd-8dc2-4e45-b45c-1751bf2a0337</parent_ui_id>
-        <sys_class_name>sys_hub_action_instance</sys_class_name>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>2a5fba77dbf8e810389b84d8689619bb</sys_id>
-        <sys_mod_count>24</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:28:05</sys_updated_on>
-        <ui_id>2afe20e4-8ec0-4e33-9775-10ccb8c67335</ui_id>
-    </sys_hub_action_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=2a5fba77dbf8e810389b84d8689619bb"/>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_action_instance</document>
-        <document_key>2a5fba77dbf8e810389b84d8689619bb</document_key>
-        <order>6</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
-        <sys_id>2e5fba77dbf8e810389b84d8689619d7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-07 15:41:05</sys_updated_on>
-        <value>PnL Statements Data is available for review now!</value>
-        <variable display_value="">5d806bf4a70323008299b39f087901ec</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_action_instance</document>
-        <document_key>2a5fba77dbf8e810389b84d8689619bb</document_key>
-        <order>1</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
-        <sys_id>6a5fba77dbf8e810389b84d8689619d7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-07 15:41:05</sys_updated_on>
-        <value>x_aaro2_pnl_mgmt_sneak_peek_event</value>
-        <variable display_value="">19806bf4a70323008299b39f087901d4</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_action_instance</document>
-        <document_key>2a5fba77dbf8e810389b84d8689619bb</document_key>
-        <order>7</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
-        <sys_id>a65fba77dbf8e810389b84d8689619d7</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-10 13:24:11</sys_updated_on>
-        <value>&lt;p data-tinymcerootblock=""&gt;&lt;span style="white-space: pre;" data-slate-fragment="JTdCJTIyb2JqZWN0JTIyJTNBJTIyZG9jdW1lbnQlMjIlMkMlMjJkYXRhJTIyJTNBJTdCJTdEJTJDJTIybm9kZXMlMjIlM0ElNUIlN0IlMjJvYmplY3QlMjIlM0ElMjJibG9jayUyMiUyQyUyMnR5cGUlMjIlM0ElMjJwYXJhZ3JhcGglMjIlMkMlMjJkYXRhJTIyJTNBJTdCJTdEJTJDJTIybm9kZXMlMjIlM0ElNUIlN0IlMjJvYmplY3QlMjIlM0ElMjJ0ZXh0JTIyJTJDJTIybGVhdmVzJTIyJTNBJTVCJTdCJTIyb2JqZWN0JTIyJTNBJTIybGVhZiUyMiUyQyUyMnRleHQlMjIlM0ElMjJQbkwlMjBTdGF0ZW1lbnRzJTIwRGF0YSUyMGlzJTIwYXZhaWx2YWJsZSUyMGZvciUyMHJldmlldyUyMG5vdyElMjIlMkMlMjJtYXJrcyUyMiUzQSU1QiU1RCU3RCU1RCU3RCU1RCU3RCU1RCU3RA=="&gt;PnL Statements Data is available for review now!&lt;br /&gt;&lt;/span&gt;you can navigate to &lt;a title="" href="x/aaro2/workspace/pnl_management/questions" target="_blank" data-original-title="Statements page"&gt;Statements page&lt;/a&gt;&amp;nbsp;to look at data and ask questions&lt;/p&gt;</value>
-        <variable display_value="">ad806bf4a70323008299b39f087901f2</variable>
-    </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="id=2a5fba77dbf8e810389b84d8689619bb"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>ah_body</field>
-        <id>2a5fba77dbf8e810389b84d8689619bb</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
-        <sys_id>ea5fba77dbf8e810389b84d8689619d6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-07 15:41:05</sys_updated_on>
-        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>ah_subject</field>
-        <id>2a5fba77dbf8e810389b84d8689619bb</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
-        <sys_id>265fba77dbf8e810389b84d8689619d7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-07 15:41:05</sys_updated_on>
-        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>ah_to</field>
-        <id>2a5fba77dbf8e810389b84d8689619bb</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
-        <sys_id>aa5fba77dbf8e810389b84d8689619bd</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-10 13:30:40</sys_updated_on>
-        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
-        <value>{{34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item.user.email}} </value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>record</field>
-        <id>2a5fba77dbf8e810389b84d8689619bb</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
-        <sys_id>ae5fba77dbf8e810389b84d8689619d6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-07 15:41:05</sys_updated_on>
-        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
-        <value>{{Created_1.current}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>table_name</field>
-        <id>2a5fba77dbf8e810389b84d8689619bb</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
-        <sys_id>625fba77dbf8e810389b84d8689619d7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-07 15:41:05</sys_updated_on>
-        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
-        <value/>
-    </sys_element_mapping>
+    <sys_hub_action_instance action="delete_multiple" query="flow=343d36ffdbb8e810389b84d868961994^sys_idNOT IN665fba77dbf8e810389b84d8689619a2,81cdc15cdbc6a050389b84d8689619e2,c9ec47f0db8a2850389b84d8689619d2,e4f410c0db0eec10389b84d868961927,ecf410c0db0eec10389b84d86896192d"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
@@ -868,14 +931,14 @@
         <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
         <display_text/>
         <flow display_value="Send Sneak Peek Mails">343d36ffdbb8e810389b84d868961994</flow>
-        <order>2</order>
-        <parent_ui_id/>
+        <order>5</order>
+        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2020-12-07 15:41:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>665fba77dbf8e810389b84d8689619a2</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>78</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -883,7 +946,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:28:05</sys_updated_on>
+        <sys_updated_on>2021-01-29 12:18:49</sys_updated_on>
         <ui_id>45c120a7-eee0-4d43-b70c-0ea44b8bb13f</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=665fba77dbf8e810389b84d8689619a2"/>
@@ -895,10 +958,10 @@
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2020-12-07 15:41:05</sys_created_on>
         <sys_id>a65fba77dbf8e810389b84d8689619a4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-07 15:41:05</sys_updated_on>
-        <value>x_aaro2_pnl_mgmt_m2m_sneak_peek_participant</value>
+        <sys_updated_on>2021-01-26 14:46:15</sys_updated_on>
+        <value>x_aaro2_pnl_mgmt_m2m_sneak_peek_user</value>
         <variable display_value="">8f400a1587003300663ca1bb36cb0b4b</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=665fba77dbf8e810389b84d8689619a2"/>
@@ -908,11 +971,11 @@
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2020-12-07 15:41:05</sys_created_on>
         <sys_id>625fba77dbf8e810389b84d8689619a4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-07 15:41:05</sys_updated_on>
+        <sys_updated_on>2021-01-26 14:46:15</sys_updated_on>
         <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
-        <value>sneak_peek_event={{Created_1.current.sys_id}}</value>
+        <value>deadline={{Created or Updated_1.current}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>table</field>
@@ -926,9 +989,197 @@
         <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
         <value/>
     </sys_element_mapping>
-    <sys_hub_flow_logic action="delete_multiple" query="flow=343d36ffdbb8e810389b84d868961994^sys_idNOT INa25fba77dbf8e810389b84d8689619b2,bc7cf1f0db816450389b84d86896195d"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Drop previous flow">d0dc81d8dbc6a050389b84d868961938</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>d0dc81d8dbc6a050389b84d868961938</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Send Sneak Peek Mails">343d36ffdbb8e810389b84d868961994</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-27 13:44:34</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>81cdc15cdbc6a050389b84d8689619e2</sys_id>
+        <sys_mod_count>36</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2021-01-29 12:18:49</sys_updated_on>
+        <ui_id>2e219cb0-f993-47e3-88d4-49877e834ba3</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=81cdc15cdbc6a050389b84d8689619e2"/>
+    <sys_element_mapping action="delete_multiple" query="id=81cdc15cdbc6a050389b84d8689619e2"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>current</field>
+        <id>81cdc15cdbc6a050389b84d8689619e2</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-27 13:44:35</sys_created_on>
+        <sys_id>c5cd055cdbc6a050389b84d868961909</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-27 13:44:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d0dc81d8dbc6a050389b84d868961938</table>
+        <value>{{Created or Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Get Current Date">356c43b0db8a2850389b84d86896199a</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>356c43b0db8a2850389b84d86896199a</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Send Sneak Peek Mails">343d36ffdbb8e810389b84d868961994</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-29 12:16:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c9ec47f0db8a2850389b84d8689619d2</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2021-01-29 12:18:49</sys_updated_on>
+        <ui_id>87ccf2c2-c0f3-4eca-a487-5f7ae766f409</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c9ec47f0db8a2850389b84d8689619d2"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="GetRecipientEmail">ea54d840db0eec10389b84d868961984</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>ea54d840db0eec10389b84d868961984</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Send Sneak Peek Mails">343d36ffdbb8e810389b84d868961994</flow>
+        <order>6</order>
+        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 14:57:51</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e4f410c0db0eec10389b84d868961927</sys_id>
+        <sys_mod_count>46</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2021-01-29 12:18:49</sys_updated_on>
+        <ui_id>075bdd86-f83e-43f9-a1a5-e76cf6147c7f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e4f410c0db0eec10389b84d868961927"/>
+    <sys_element_mapping action="delete_multiple" query="id=e4f410c0db0eec10389b84d868961927"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>records</field>
+        <id>e4f410c0db0eec10389b84d868961927</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 14:57:51</sys_created_on>
+        <sys_id>ecf410c0db0eec10389b84d868961928</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 14:57:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ea54d840db0eec10389b84d868961984</table>
+        <value>{{45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Records}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Generate Event">b56604bfdb3b48145f65ba03e296195e</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>b56604bfdb3b48145f65ba03e296195e</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Send Sneak Peek Mails">343d36ffdbb8e810389b84d868961994</flow>
+        <order>7</order>
+        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 14:57:51</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ecf410c0db0eec10389b84d86896192d</sys_id>
+        <sys_mod_count>46</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2021-01-29 12:18:49</sys_updated_on>
+        <ui_id>0f33a204-d06d-4fdd-a29c-499df443201a</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ecf410c0db0eec10389b84d86896192d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ecf410c0db0eec10389b84d86896192d</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 14:57:51</sys_created_on>
+        <sys_id>acf410c0db0eec10389b84d86896192f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 14:57:51</sys_updated_on>
+        <value>x_aaro2_pnl_mgmt.sneak_peek_invitation</value>
+        <variable display_value="">f56604bfdb3b48145f65ba03e296195f</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ecf410c0db0eec10389b84d86896192d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>event_name</field>
+        <id>ecf410c0db0eec10389b84d86896192d</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 14:57:51</sys_created_on>
+        <sys_id>a4f410c0db0eec10389b84d86896192f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 14:57:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>parm1</field>
+        <id>ecf410c0db0eec10389b84d86896192d</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 14:57:51</sys_created_on>
+        <sys_id>68f410c0db0eec10389b84d86896192f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 14:57:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
+        <value>{{075bdd86-f83e-43f9-a1a5-e76cf6147c7f.emails}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>ecf410c0db0eec10389b84d86896192d</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 14:57:51</sys_created_on>
+        <sys_id>2cf410c0db0eec10389b84d86896192f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 14:57:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
+        <value>{{Created or Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=343d36ffdbb8e810389b84d868961994^sys_idNOT IN8dec87f0db8a2850389b84d868961905,bc7cf1f0db816450389b84d86896195d"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">2e5fba77dbf8e810389b84d8689619a4</block>
+        <block display_value="">c5ec47f0db8a2850389b84d8689619d3</block>
         <comment/>
         <connected_to/>
         <decision_table/>
@@ -938,17 +1189,17 @@
         <flow display_value="Send Sneak Peek Mails">343d36ffdbb8e810389b84d868961994</flow>
         <inputs/>
         <inputs/>
-        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>3</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id/>
         <sys_class_name>sys_hub_flow_logic</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
+        <sys_created_on>2021-01-29 12:16:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>a25fba77dbf8e810389b84d8689619b2</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_id>8dec87f0db8a2850389b84d868961905</sys_id>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -956,24 +1207,50 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:55</sys_updated_on>
-        <ui_id>34f10bfd-8dc2-4e45-b45c-1751bf2a0337</ui_id>
+        <sys_updated_on>2021-01-29 12:17:17</sys_updated_on>
+        <ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
     </sys_hub_flow_logic>
-    <sys_variable_value action="delete_multiple" query="document_key=a25fba77dbf8e810389b84d8689619b2"/>
-    <sys_element_mapping action="delete_multiple" query="id=a25fba77dbf8e810389b84d8689619b2"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>items</field>
-        <id>a25fba77dbf8e810389b84d8689619b2</id>
+    <sys_variable_value action="delete_multiple" query="document_key=8dec87f0db8a2850389b84d868961905"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>8dec87f0db8a2850389b84d868961905</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-07 15:41:05</sys_created_on>
-        <sys_id>a65fba77dbf8e810389b84d8689619b5</sys_id>
+        <sys_created_on>2021-01-29 12:16:58</sys_created_on>
+        <sys_id>cdec87f0db8a2850389b84d868961909</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-07 15:41:05</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
-        <value>{{45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Records}}</value>
+        <sys_updated_on>2021-01-29 12:16:58</sys_updated_on>
+        <value>Date is after now</value>
+        <variable display_value="">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=8dec87f0db8a2850389b84d868961905"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>8dec87f0db8a2850389b84d868961905</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-29 12:16:58</sys_created_on>
+        <sys_id>4dec87f0db8a2850389b84d868961909</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-29 12:16:58</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{Created or Updated_1.current.early_access_start}}&gt;{{87ccf2c2-c0f3-4eca-a487-5f7ae766f409.current_date}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>8dec87f0db8a2850389b84d868961905</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-29 12:16:58</sys_created_on>
+        <sys_id>85ec87f0db8a2850389b84d868961909</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-29 12:16:58</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
     </sys_element_mapping>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
         <block display_value="">7c7cf1f0db816450389b84d86896195c</block>
@@ -987,16 +1264,16 @@
         <inputs/>
         <inputs/>
         <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
-        <order>1</order>
+        <order>4</order>
         <outputs_assigned/>
         <outputs_to_assign/>
-        <parent_ui_id/>
+        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
         <sys_class_name>sys_hub_flow_logic</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2020-12-10 13:22:43</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>bc7cf1f0db816450389b84d86896195d</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>31</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1004,7 +1281,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:55</sys_updated_on>
+        <sys_updated_on>2021-01-29 12:17:17</sys_updated_on>
         <ui_id>ff75c2ee-9492-443d-898e-bdc9bec55c3b</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1032,10 +1309,10 @@
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2020-12-10 13:22:43</sys_created_on>
         <sys_id>387cf1f0db816450389b84d868961964</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:40</sys_updated_on>
-        <value>1970-01-01 01:00:00</value>
+        <sys_updated_on>2021-01-26 14:46:15</sys_updated_on>
+        <value>1970-01-01 00:00:00</value>
         <variable display_value="">ef145c1473031300b61e66476bf6a7be</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1097,11 +1374,11 @@
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2020-12-10 13:22:43</sys_created_on>
         <sys_id>f07cf1f0db816450389b84d868961964</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-10 13:22:43</sys_updated_on>
+        <sys_updated_on>2021-01-26 14:46:15</sys_updated_on>
         <table>var__m_sys_hub_flow_logic_input_fdb2541473031300b61e66476bf6a70e</table>
-        <value>{{Created_1.current.event_date}}</value>
+        <value>{{Created or Updated_1.current.early_access_start}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>timer_schedule</field>
@@ -1115,7 +1392,7 @@
         <table>var__m_sys_hub_flow_logic_input_fdb2541473031300b61e66476bf6a70e</table>
         <value/>
     </sys_element_mapping>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_343d36ffdbb8e810389b84d868961994^sys_idNOT IN9e5fba77dbf8e810389b84d868961974,da5fba77dbf8e810389b84d868961962"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_343d36ffdbb8e810389b84d868961994^sys_idNOT IN9e5fba77dbf8e810389b84d868961974,da5fba77dbf8e810389b84d868961962,e642184cdbcaec10389b84d86896191f"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>table_name</element>
         <help/>
@@ -1166,19 +1443,44 @@
         <url/>
         <url_target/>
     </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_343d36ffdbb8e810389b84d868961994</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 14:46:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e642184cdbcaec10389b84d86896191f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 14:46:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
     <sys_flow_trigger_plan action="delete_multiple" query="plan_id=343d36ffdbb8e810389b84d868961994^sys_idNOT INd777dfdddbf9a450389b84d86896190e"/>
     <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
-        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerUniqueChange</binding_strategy>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"d777dfdddbf9a450389b84d86896190e","name":"plan"}}</plan>
         <plan_id>343d36ffdbb8e810389b84d868961994</plan_id>
-        <snapshot>3fdc5f11db79a4505884eb184b9619f9</snapshot>
+        <snapshot>5b4d0b34db8a2850389b84d868961989</snapshot>
         <sys_class_name>sys_flow_trigger_plan</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-01-18 16:04:32</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>d777dfdddbf9a450389b84d86896190e</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1187,8 +1489,8 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:54</sys_updated_on>
-        <trigger display_value="">c79c93d9db3da450389b84d8689619e0</trigger>
+        <sys_updated_on>2021-01-29 12:17:16</sys_updated_on>
+        <trigger display_value="">e5fccbf0db8a2850389b84d86896190f</trigger>
     </sys_flow_trigger_plan>
     <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1201,7 +1503,7 @@
         <copied_from_name/>
         <description/>
         <internal_name>send_sneak_peek_mails</internal_name>
-        <label_cache>[{"name":"34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item.user.email","label":"3➛Sneak Peek Participant Record➛User➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item.user","label":"3➛Sneak Peek Participant Record➛User","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_aaro2_pnl_mgmt_m2m_sneak_peek_participant","column_name":"user"},{"name":"2afe20e4-8ec0-4e33-9775-10ccb8c67335.email","label":"4➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item","label":"3➛Sneak Peek Participant Record","reference":"x_aaro2_pnl_mgmt_m2m_sneak_peek_participant","reference_display":"Sneak Peek Participant","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"Created_1.current.sys_id","label":"Trigger➛Sneak Peek Event Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_aaro2_pnl_mgmt_sneak_peek_event","column_name":"sys_id"},{"name":"45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Count","label":"2➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Table","label":"2➛Sneak Peek Participant Table","reference":"x_aaro2_pnl_mgmt_m2m_sneak_peek_participant","reference_display":"Sneak Peek Participant","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Records","label":"2➛Sneak Peek Participant Records","reference":"x_aaro2_pnl_mgmt_m2m_sneak_peek_participant","reference_display":"Sneak Peek Participant","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2e01e51f-77df-43d0-9d04-c1eaf4999d9d.email","label":"5➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current","label":"Trigger➛Sneak Peek Event Record","reference":"x_aaro2_pnl_mgmt_sneak_peek_event","reference_display":"Sneak Peek Event","type":"reference","base_type":"reference","attributes":{}},{"name":"c8038d76-9695-491b-9902-7a90921daebc.state","label":"1➛State","reference_display":"State","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"Created_1.current.event_date","label":"Trigger➛Sneak Peek Event Record➛Event Date","reference":"","reference_display":"Event Date","type":"glide_date","base_type":"glide_date","parent_table_name":"x_aaro2_pnl_mgmt_sneak_peek_event","column_name":"event_date"},{"name":"ff75c2ee-9492-443d-898e-bdc9bec55c3b.total_duration","label":"1➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"ff75c2ee-9492-443d-898e-bdc9bec55c3b.scheduled_end_date_time","label":"1➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}}]</label_cache>
+        <label_cache>[{"name":"15a38a0f-0db6-4c16-b0ea-99c6d4763cb4.state","label":"4➛State","reference_display":"State","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"87ccf2c2-c0f3-4eca-a487-5f7ae766f409.current_date","label":"2➛Current Date","reference_display":"Current Date","type":"glide_date_time","base_type":"glide_date_time","attributes":{"uiType":"glide_date_time","uiTypeLabel":"Date/Time","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"8c152286-6f01-4347-bcad-984dad454a5c"}},{"name":"Created or Updated_1.current.early_access_end","label":"Trigger➛Deadline Record➛Early Access End","reference":"","reference_display":"Early Access End","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"early_access_end"},{"name":"Created or Updated_1.current","label":"Trigger➛Deadline Record","reference":"x_aaro2_pnl_mgmt_deadline","reference_display":"Deadline","type":"reference","base_type":"reference","attributes":{}},{"name":"Created or Updated_1.current.early_access_start","label":"Trigger➛Deadline Record➛Early Access Start","reference":"","reference_display":"Early Access Start","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"early_access_start"},{"name":"ff75c2ee-9492-443d-898e-bdc9bec55c3b.scheduled_end_date_time","label":"4➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"ff75c2ee-9492-443d-898e-bdc9bec55c3b.total_duration","label":"4➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"Created_1.current.event_date","label":"Trigger➛Sneak Peek Event Record➛Event Date","reference":"","reference_display":"Event Date","type":"glide_date","base_type":"glide_date","parent_table_name":"x_aaro2_pnl_mgmt_sneak_peek_event","column_name":"event_date"},{"name":"c8038d76-9695-491b-9902-7a90921daebc.state","label":"1➛State","reference_display":"State","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"Created_1.current","label":"Trigger➛Sneak Peek Event Record","reference":"x_aaro2_pnl_mgmt_sneak_peek_event","reference_display":"Sneak Peek Event","type":"reference","base_type":"reference","attributes":{}},{"name":"2e01e51f-77df-43d0-9d04-c1eaf4999d9d.email","label":"5➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Records","label":"5➛Pnl Mgmt M2m Sneak Peek User Records","reference":"x_aaro2_pnl_mgmt_m2m_sneak_peek_user","reference_display":"Pnl Mgmt M2m Sneak Peek User","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Table","label":"5➛Pnl Mgmt M2m Sneak Peek User Table","reference":"x_aaro2_pnl_mgmt_m2m_sneak_peek_user","reference_display":"Pnl Mgmt M2m Sneak Peek User","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Count","label":"5➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.sys_id","label":"Trigger➛Sneak Peek Event Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_aaro2_pnl_mgmt_sneak_peek_event","column_name":"sys_id"},{"name":"34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item","label":"6➛Pnl Mgmt M2m Sneak Peek User Record","reference":"x_aaro2_pnl_mgmt_m2m_sneak_peek_user","reference_display":"Pnl Mgmt M2m Sneak Peek User","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"2afe20e4-8ec0-4e33-9775-10ccb8c67335.email","label":"5➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item.user","label":"6➛Pnl Mgmt M2m Sneak Peek User Record➛User","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_aaro2_pnl_mgmt_m2m_sneak_peek_user","column_name":"user"},{"name":"34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item.user.email","label":"6➛Pnl Mgmt M2m Sneak Peek User Record➛User➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"c1900124-8bef-4f2b-a238-f4db71e4555a.month","label":"5➛Month","reference_display":"Month","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b2b9ea98-f43e-42f7-8212-5b193e343a42"}},{"name":"c1900124-8bef-4f2b-a238-f4db71e4555a.dayofweek","label":"5➛Day Of Week","reference_display":"Day Of Week","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"2cb5dd9f-9e7d-438d-a859-8730c4ed0c37"}},{"name":"c1900124-8bef-4f2b-a238-f4db71e4555a.year","label":"5➛Year","reference_display":"Year","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"a9d19794-4d43-42ea-9017-3f3e130237a2"}},{"name":"c1900124-8bef-4f2b-a238-f4db71e4555a.day","label":"5➛Day","reference_display":"Day","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"4914cfe8-cccb-420f-b0bc-5ee0bb8fb5f8"}},{"name":"Created_1.run_start_time","label":"Trigger➛Run Start Time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"test_input_hidden":"true"}},{"name":"075bdd86-f83e-43f9-a1a5-e76cf6147c7f.emails","label":"6➛Emails","reference_display":"Emails","type":"array.string","base_type":"array.string","attributes":{"uiTypeLabel":"Array.String","co_type_name":"FD867898c8150eec1040a17c198d1be593","child_label":"Emails_child0","child_type_label":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.string","child_type":"string","child_name":"Emails_child0","child_uiUniqueId":"c06f6508-51b8-45ee-8f8d-28e912492a5b","uiUniqueId":"a7901aff-c4e5-4da4-9e44-131f46b7870e"}}]</label_cache>
         <master>true</master>
         <name>Send Sneak Peek Mails</name>
         <natlang/>
@@ -1218,7 +1520,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>32779fdddbf9a450389b84d868961924</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1227,28 +1529,27 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:52</sys_updated_on>
+        <sys_updated_on>2021-01-29 12:17:14</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow_snapshot>
     <sys_variable_value action="delete_multiple" query="document_key=32779fdddbf9a450389b84d868961924"/>
-    <sys_hub_flow_component action="delete_multiple" query="flow=32779fdddbf9a450389b84d868961924^sys_idNOT IN0f779fdddbf9a450389b84d8689619b6,47779fdddbf9a450389b84d868961993,4f779fdddbf9a450389b84d868961988,83779fdddbf9a450389b84d868961980"/>
+    <sys_hub_flow_component action="delete_multiple" query="flow=32779fdddbf9a450389b84d868961924^sys_idNOT IN18fc4bf0db8a2850389b84d8689619ea,47779fdddbf9a450389b84d868961993,6cfc4bf0db8a2850389b84d8689619f0,74dd095cdbc6a050389b84d86896195f,83779fdddbf9a450389b84d868961980,89a51044db0eec10389b84d868961901,c5a51044db0eec10389b84d868961915"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
-        <action_inputs/>
-        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
-        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <action_type display_value="Get Current Date">356c43b0db8a2850389b84d86896199a</action_type>
+        <action_type_parent display_value="Get Current Date">781c07fcdb4a2850389b84d86896196b</action_type_parent>
         <comment/>
-        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <compiled_snapshot>356c43b0db8a2850389b84d86896199a</compiled_snapshot>
         <display_text/>
         <flow display_value="Send Sneak Peek Mails">32779fdddbf9a450389b84d868961924</flow>
-        <order>4</order>
-        <parent_ui_id>34f10bfd-8dc2-4e45-b45c-1751bf2a0337</parent_ui_id>
+        <order>2</order>
+        <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:04:31</sys_created_on>
+        <sys_created_on>2021-01-29 12:17:11</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>0f779fdddbf9a450389b84d8689619b6</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_id>18fc4bf0db8a2850389b84d8689619ea</sys_id>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1256,113 +1557,10 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:52</sys_updated_on>
-        <ui_id>2afe20e4-8ec0-4e33-9775-10ccb8c67335</ui_id>
+        <sys_updated_on>2021-01-29 12:17:13</sys_updated_on>
+        <ui_id>87ccf2c2-c0f3-4eca-a487-5f7ae766f409</ui_id>
     </sys_hub_action_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=0f779fdddbf9a450389b84d8689619b6"/>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_action_instance</document>
-        <document_key>0f779fdddbf9a450389b84d8689619b6</document_key>
-        <order>1</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:04:31</sys_created_on>
-        <sys_id>0f779fdddbf9a450389b84d8689619d2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:04:31</sys_updated_on>
-        <value>x_aaro2_pnl_mgmt_sneak_peek_event</value>
-        <variable display_value="">19806bf4a70323008299b39f087901d4</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_action_instance</document>
-        <document_key>0f779fdddbf9a450389b84d8689619b6</document_key>
-        <order>7</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:04:31</sys_created_on>
-        <sys_id>4b779fdddbf9a450389b84d8689619d2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:04:31</sys_updated_on>
-        <value>&lt;p data-tinymcerootblock=""&gt;&lt;span style="white-space: pre;" data-slate-fragment="JTdCJTIyb2JqZWN0JTIyJTNBJTIyZG9jdW1lbnQlMjIlMkMlMjJkYXRhJTIyJTNBJTdCJTdEJTJDJTIybm9kZXMlMjIlM0ElNUIlN0IlMjJvYmplY3QlMjIlM0ElMjJibG9jayUyMiUyQyUyMnR5cGUlMjIlM0ElMjJwYXJhZ3JhcGglMjIlMkMlMjJkYXRhJTIyJTNBJTdCJTdEJTJDJTIybm9kZXMlMjIlM0ElNUIlN0IlMjJvYmplY3QlMjIlM0ElMjJ0ZXh0JTIyJTJDJTIybGVhdmVzJTIyJTNBJTVCJTdCJTIyb2JqZWN0JTIyJTNBJTIybGVhZiUyMiUyQyUyMnRleHQlMjIlM0ElMjJQbkwlMjBTdGF0ZW1lbnRzJTIwRGF0YSUyMGlzJTIwYXZhaWx2YWJsZSUyMGZvciUyMHJldmlldyUyMG5vdyElMjIlMkMlMjJtYXJrcyUyMiUzQSU1QiU1RCU3RCU1RCU3RCU1RCU3RCU1RCU3RA=="&gt;PnL Statements Data is available for review now!&lt;br /&gt;&lt;/span&gt;you can navigate to &lt;a title="" href="x/aaro2/workspace/pnl_management/questions" target="_blank" data-original-title="Statements page"&gt;Statements page&lt;/a&gt;&amp;nbsp;to look at data and ask questions&lt;/p&gt;</value>
-        <variable display_value="">ad806bf4a70323008299b39f087901f2</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_action_instance</document>
-        <document_key>0f779fdddbf9a450389b84d8689619b6</document_key>
-        <order>6</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:04:31</sys_created_on>
-        <sys_id>cf779fdddbf9a450389b84d8689619d2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:04:31</sys_updated_on>
-        <value>PnL Statements Data is available for review now!</value>
-        <variable display_value="">5d806bf4a70323008299b39f087901ec</variable>
-    </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="id=0f779fdddbf9a450389b84d8689619b6"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>ah_body</field>
-        <id>0f779fdddbf9a450389b84d8689619b6</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:04:31</sys_created_on>
-        <sys_id>8f779fdddbf9a450389b84d8689619d1</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:04:31</sys_updated_on>
-        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>ah_subject</field>
-        <id>0f779fdddbf9a450389b84d8689619b6</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:04:31</sys_created_on>
-        <sys_id>c7779fdddbf9a450389b84d8689619d2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:04:31</sys_updated_on>
-        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>ah_to</field>
-        <id>0f779fdddbf9a450389b84d8689619b6</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:04:31</sys_created_on>
-        <sys_id>cb779fdddbf9a450389b84d8689619d1</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:04:31</sys_updated_on>
-        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
-        <value>{{34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item.user.email}} </value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>record</field>
-        <id>0f779fdddbf9a450389b84d8689619b6</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:04:31</sys_created_on>
-        <sys_id>43779fdddbf9a450389b84d8689619d2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:04:31</sys_updated_on>
-        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
-        <value>{{Created_1.current}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>table_name</field>
-        <id>0f779fdddbf9a450389b84d8689619b6</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:04:31</sys_created_on>
-        <sys_id>07779fdddbf9a450389b84d8689619d2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:04:31</sys_updated_on>
-        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
-        <value/>
-    </sys_element_mapping>
+    <sys_variable_value action="delete_multiple" query="document_key=18fc4bf0db8a2850389b84d8689619ea"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
@@ -1372,14 +1570,14 @@
         <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
         <display_text/>
         <flow display_value="Send Sneak Peek Mails">32779fdddbf9a450389b84d868961924</flow>
-        <order>2</order>
-        <parent_ui_id/>
+        <order>5</order>
+        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-01-18 16:04:31</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>47779fdddbf9a450389b84d868961993</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1387,7 +1585,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:52</sys_updated_on>
+        <sys_updated_on>2021-01-29 12:17:13</sys_updated_on>
         <ui_id>45c120a7-eee0-4d43-b70c-0ea44b8bb13f</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=47779fdddbf9a450389b84d868961993"/>
@@ -1399,10 +1597,10 @@
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-01-18 16:04:31</sys_created_on>
         <sys_id>c7779fdddbf9a450389b84d8689619ae</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:04:31</sys_updated_on>
-        <value>x_aaro2_pnl_mgmt_m2m_sneak_peek_participant</value>
+        <sys_updated_on>2021-01-26 15:00:53</sys_updated_on>
+        <value>x_aaro2_pnl_mgmt_m2m_sneak_peek_user</value>
         <variable display_value="">8f400a1587003300663ca1bb36cb0b4b</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=47779fdddbf9a450389b84d868961993"/>
@@ -1412,11 +1610,11 @@
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-01-18 16:04:31</sys_created_on>
         <sys_id>83779fdddbf9a450389b84d8689619ae</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:04:31</sys_updated_on>
+        <sys_updated_on>2021-01-26 15:00:53</sys_updated_on>
         <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
-        <value>sneak_peek_event={{Created_1.current.sys_id}}</value>
+        <value>deadline={{Created or Updated_1.current}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>table</field>
@@ -1431,7 +1629,7 @@
         <value/>
     </sys_element_mapping>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">2e5fba77dbf8e810389b84d8689619a4</block>
+        <block display_value="">c5ec47f0db8a2850389b84d8689619d3</block>
         <comment/>
         <connected_to/>
         <decision_table/>
@@ -1441,17 +1639,17 @@
         <flow display_value="Send Sneak Peek Mails">32779fdddbf9a450389b84d868961924</flow>
         <inputs/>
         <inputs/>
-        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>3</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id/>
         <sys_class_name>sys_hub_flow_logic</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:04:30</sys_created_on>
+        <sys_created_on>2021-01-29 12:17:12</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>4f779fdddbf9a450389b84d868961988</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_id>6cfc4bf0db8a2850389b84d8689619f0</sys_id>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1459,24 +1657,91 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:52</sys_updated_on>
-        <ui_id>34f10bfd-8dc2-4e45-b45c-1751bf2a0337</ui_id>
+        <sys_updated_on>2021-01-29 12:17:13</sys_updated_on>
+        <ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
     </sys_hub_flow_logic>
-    <sys_variable_value action="delete_multiple" query="document_key=4f779fdddbf9a450389b84d868961988"/>
-    <sys_element_mapping action="delete_multiple" query="id=4f779fdddbf9a450389b84d868961988"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>items</field>
-        <id>4f779fdddbf9a450389b84d868961988</id>
+    <sys_variable_value action="delete_multiple" query="document_key=6cfc4bf0db8a2850389b84d8689619f0"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>6cfc4bf0db8a2850389b84d8689619f0</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:04:31</sys_created_on>
-        <sys_id>4b779fdddbf9a450389b84d86896198b</sys_id>
+        <sys_created_on>2021-01-29 12:17:12</sys_created_on>
+        <sys_id>20fc4bf0db8a2850389b84d8689619f4</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:04:31</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
-        <value>{{45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Records}}</value>
+        <sys_updated_on>2021-01-29 12:17:12</sys_updated_on>
+        <value>Date is after now</value>
+        <variable display_value="">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=6cfc4bf0db8a2850389b84d8689619f0"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>6cfc4bf0db8a2850389b84d8689619f0</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-29 12:17:12</sys_created_on>
+        <sys_id>acfc4bf0db8a2850389b84d8689619f3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-29 12:17:12</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{Created or Updated_1.current.early_access_start}}&gt;{{87ccf2c2-c0f3-4eca-a487-5f7ae766f409.current_date}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>6cfc4bf0db8a2850389b84d8689619f0</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-29 12:17:12</sys_created_on>
+        <sys_id>e8fc4bf0db8a2850389b84d8689619f3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-29 12:17:12</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Drop previous flow">d0dc81d8dbc6a050389b84d868961938</action_type>
+        <action_type_parent display_value="Drop previous flow">3e4c4dd4db86a050389b84d8689619cc</action_type_parent>
+        <comment/>
+        <compiled_snapshot>d0dc81d8dbc6a050389b84d868961938</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Send Sneak Peek Mails">32779fdddbf9a450389b84d868961924</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-27 13:44:50</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>74dd095cdbc6a050389b84d86896195f</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-29 12:17:13</sys_updated_on>
+        <ui_id>2e219cb0-f993-47e3-88d4-49877e834ba3</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=74dd095cdbc6a050389b84d86896195f"/>
+    <sys_element_mapping action="delete_multiple" query="id=74dd095cdbc6a050389b84d86896195f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>current</field>
+        <id>74dd095cdbc6a050389b84d86896195f</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-27 13:44:50</sys_created_on>
+        <sys_id>b0dd095cdbc6a050389b84d868961960</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-27 13:44:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d0dc81d8dbc6a050389b84d868961938</table>
+        <value>{{Created or Updated_1.current}}</value>
     </sys_element_mapping>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
         <block display_value="">7c7cf1f0db816450389b84d86896195c</block>
@@ -1490,16 +1755,16 @@
         <inputs/>
         <inputs/>
         <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
-        <order>1</order>
+        <order>4</order>
         <outputs_assigned/>
         <outputs_to_assign/>
-        <parent_ui_id/>
+        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
         <sys_class_name>sys_hub_flow_logic</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-01-18 16:04:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>83779fdddbf9a450389b84d868961980</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1507,7 +1772,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:52</sys_updated_on>
+        <sys_updated_on>2021-01-29 12:17:13</sys_updated_on>
         <ui_id>ff75c2ee-9492-443d-898e-bdc9bec55c3b</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1521,10 +1786,10 @@
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-01-18 16:04:30</sys_created_on>
         <sys_id>03779fdddbf9a450389b84d868961987</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:51</sys_updated_on>
-        <value>1970-01-01 01:00:00</value>
+        <sys_updated_on>2021-01-26 15:00:54</sys_updated_on>
+        <value>1970-01-01 00:00:00</value>
         <variable display_value="">ef145c1473031300b61e66476bf6a7be</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1600,11 +1865,11 @@
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-01-18 16:04:30</sys_created_on>
         <sys_id>cb779fdddbf9a450389b84d868961986</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:04:30</sys_updated_on>
+        <sys_updated_on>2021-01-26 15:00:54</sys_updated_on>
         <table>var__m_sys_hub_flow_logic_input_fdb2541473031300b61e66476bf6a70e</table>
-        <value>{{Created_1.current.event_date}}</value>
+        <value>{{Created or Updated_1.current.early_access_start}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>timer_schedule</field>
@@ -1618,19 +1883,23 @@
         <table>var__m_sys_hub_flow_logic_input_fdb2541473031300b61e66476bf6a70e</table>
         <value/>
     </sys_element_mapping>
-    <sys_hub_trigger_instance action="delete_multiple" query="flow=32779fdddbf9a450389b84d868961924^sys_idNOT IN47779fdddbf9a450389b84d8689619d3"/>
-    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="GetRecipientEmail">ea54d840db0eec10389b84d868961984</action_type>
+        <action_type_parent display_value="GetRecipientEmail">cad2108cdbcaec10389b84d86896197f</action_type_parent>
         <comment/>
+        <compiled_snapshot>ea54d840db0eec10389b84d868961984</compiled_snapshot>
         <display_text/>
         <flow display_value="Send Sneak Peek Mails">32779fdddbf9a450389b84d868961924</flow>
-        <name>Created</name>
-        <remote_sys_id/>
-        <sys_class_name>sys_hub_trigger_instance</sys_class_name>
+        <order>6</order>
+        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:04:31</sys_created_on>
+        <sys_created_on>2021-01-26 15:00:54</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>47779fdddbf9a450389b84d8689619d3</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_id>89a51044db0eec10389b84d868961901</sys_id>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1638,13 +1907,171 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:54</sys_updated_on>
-        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <sys_updated_on>2021-01-29 12:17:13</sys_updated_on>
+        <ui_id>075bdd86-f83e-43f9-a1a5-e76cf6147c7f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=89a51044db0eec10389b84d868961901"/>
+    <sys_element_mapping action="delete_multiple" query="id=89a51044db0eec10389b84d868961901"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>records</field>
+        <id>89a51044db0eec10389b84d868961901</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 15:00:54</sys_created_on>
+        <sys_id>c9a51044db0eec10389b84d868961902</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 15:00:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ea54d840db0eec10389b84d868961984</table>
+        <value>{{45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Records}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Generate Event">b56604bfdb3b48145f65ba03e296195e</action_type>
+        <action_type_parent display_value="Generate Event">1df4083bdb3b48145f65ba03e29619f1</action_type_parent>
+        <comment/>
+        <compiled_snapshot>b56604bfdb3b48145f65ba03e296195e</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Send Sneak Peek Mails">32779fdddbf9a450389b84d868961924</flow>
+        <order>7</order>
+        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 15:00:54</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c5a51044db0eec10389b84d868961915</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-29 12:17:13</sys_updated_on>
+        <ui_id>0f33a204-d06d-4fdd-a29c-499df443201a</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c5a51044db0eec10389b84d868961915"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c5a51044db0eec10389b84d868961915</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 15:00:54</sys_created_on>
+        <sys_id>85a51044db0eec10389b84d868961917</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 15:00:54</sys_updated_on>
+        <value>x_aaro2_pnl_mgmt.sneak_peek_invitation</value>
+        <variable display_value="">f56604bfdb3b48145f65ba03e296195f</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=c5a51044db0eec10389b84d868961915"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>event_name</field>
+        <id>c5a51044db0eec10389b84d868961915</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 15:00:54</sys_created_on>
+        <sys_id>8da51044db0eec10389b84d868961916</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 15:00:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>parm1</field>
+        <id>c5a51044db0eec10389b84d868961915</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 15:00:54</sys_created_on>
+        <sys_id>41a51044db0eec10389b84d868961917</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 15:00:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
+        <value>{{075bdd86-f83e-43f9-a1a5-e76cf6147c7f.emails}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>c5a51044db0eec10389b84d868961915</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 15:00:54</sys_created_on>
+        <sys_id>05a51044db0eec10389b84d868961917</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 15:00:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
+        <value>{{Created or Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=32779fdddbf9a450389b84d868961924^sys_idNOT IN47779fdddbf9a450389b84d8689619d3"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Send Sneak Peek Mails">32779fdddbf9a450389b84d868961924</flow>
+        <name>Created or Updated</name>
+        <remote_sys_id/>
+        <sys_class_name>sys_hub_trigger_instance</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-18 16:04:31</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>47779fdddbf9a450389b84d8689619d3</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-29 12:17:16</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
-        <trigger_type>record_create</trigger_type>
+        <trigger_type>record_create_or_update</trigger_type>
     </sys_hub_trigger_instance>
     <sys_variable_value action="delete_multiple" query="document_key=47779fdddbf9a450389b84d8689619d3"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>47779fdddbf9a450389b84d8689619d3</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 15:00:53</sys_created_on>
+        <sys_id>09a5dc04db0eec10389b84d8689619ee</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-28 16:10:02</sys_updated_on>
+        <value>unique_changes</value>
+        <variable display_value="">2b9def50c31132002841b63b12d3ae5b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>47779fdddbf9a450389b84d8689619d3</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 15:00:53</sys_created_on>
+        <sys_id>45a5dc04db0eec10389b84d8689619ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 15:00:53</sys_updated_on>
+        <value>x_aaro2_pnl_mgmt_deadline</value>
+        <variable display_value="">cf1e1980c32222002841b63b12d3aea0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>47779fdddbf9a450389b84d8689619d3</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 15:00:53</sys_created_on>
+        <sys_id>81a5dc04db0eec10389b84d8689619ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 15:00:53</sys_updated_on>
+        <value/>
+        <variable display_value="">231e76460f103300b599bca2ff767e11</variable>
+    </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_trigger_instance</document>
         <document_key>47779fdddbf9a450389b84d8689619d3</document_key>
@@ -1658,6 +2085,20 @@
         <sys_updated_on>2021-01-18 16:04:31</sys_updated_on>
         <value>x_aaro2_pnl_mgmt_sneak_peek_event</value>
         <variable display_value="">cfca92e0c31322002841b63b12d3ae00</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>47779fdddbf9a450389b84d8689619d3</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 15:00:53</sys_created_on>
+        <sys_id>cda5dc04db0eec10389b84d8689619ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 15:00:53</sys_updated_on>
+        <value>early_access_startVALCHANGES</value>
+        <variable display_value="">707dd180c32222002841b63b12d3aecb</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_trigger_instance</document>
@@ -1692,7 +2133,7 @@
         <sys_updated_by>xxamirony</sys_updated_by>
         <sys_updated_on>2021-01-18 16:04:30</sys_updated_on>
     </sys_flow_cat_variable_model>
-    <sys_hub_flow_input action="delete_multiple" query="model=32779fdddbf9a450389b84d868961924^sys_idNOT IN07779fdddbf9a450389b84d868961942,3a779fdddbf9a450389b84d868961926"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=32779fdddbf9a450389b84d868961924^sys_idNOT IN07779fdddbf9a450389b84d868961942,3a779fdddbf9a450389b84d868961926,fca5dc04db0eec10389b84d8689619c7"/>
     <sys_hub_flow_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -1756,7 +2197,7 @@
         <sys_created_on>2021-01-18 16:04:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>07779fdddbf9a450389b84d868961942</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1764,7 +2205,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:52</sys_updated_on>
+        <sys_updated_on>2021-01-29 12:17:12</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1839,7 +2280,7 @@
         <sys_created_on>2021-01-18 16:04:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3a779fdddbf9a450389b84d868961926</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1847,7 +2288,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:51</sys_updated_on>
+        <sys_updated_on>2021-01-29 12:17:12</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1859,24 +2300,70 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
-    <sys_hub_action_instance action="delete_multiple" query="flow=32779fdddbf9a450389b84d868961924^sys_idNOT IN0f779fdddbf9a450389b84d8689619b6,47779fdddbf9a450389b84d868961993"/>
-    <sys_hub_action_instance action="INSERT_OR_UPDATE">
-        <action_inputs/>
-        <action_inputs/>
-        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
-        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
-        <comment/>
-        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
-        <display_text/>
-        <flow display_value="Send Sneak Peek Mails">32779fdddbf9a450389b84d868961924</flow>
-        <order>4</order>
-        <parent_ui_id>34f10bfd-8dc2-4e45-b45c-1751bf2a0337</parent_ui_id>
-        <sys_class_name>sys_hub_action_instance</sys_class_name>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDacfc8bf0378a2850e5036ecd1f623827,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation>(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);</calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Send Sneak Peek Mails">32779fdddbf9a450389b84d868961924</model>
+        <model_id>32779fdddbf9a450389b84d868961924</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_32779fdddbf9a450389b84d868961924</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:04:31</sys_created_on>
+        <sys_created_on>2021-01-26 15:00:53</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>0f779fdddbf9a450389b84d8689619b6</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_id>fca5dc04db0eec10389b84d8689619c7</sys_id>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1884,113 +2371,46 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:52</sys_updated_on>
-        <ui_id>2afe20e4-8ec0-4e33-9775-10ccb8c67335</ui_id>
+        <sys_updated_on>2021-01-29 12:17:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=32779fdddbf9a450389b84d868961924^sys_idNOT IN18fc4bf0db8a2850389b84d8689619ea,47779fdddbf9a450389b84d868961993,74dd095cdbc6a050389b84d86896195f,89a51044db0eec10389b84d868961901,c5a51044db0eec10389b84d868961915"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Get Current Date">356c43b0db8a2850389b84d86896199a</action_type>
+        <action_type_parent display_value="Get Current Date">781c07fcdb4a2850389b84d86896196b</action_type_parent>
+        <comment/>
+        <compiled_snapshot>356c43b0db8a2850389b84d86896199a</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Send Sneak Peek Mails">32779fdddbf9a450389b84d868961924</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-29 12:17:11</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>18fc4bf0db8a2850389b84d8689619ea</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-29 12:17:13</sys_updated_on>
+        <ui_id>87ccf2c2-c0f3-4eca-a487-5f7ae766f409</ui_id>
     </sys_hub_action_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=0f779fdddbf9a450389b84d8689619b6"/>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_action_instance</document>
-        <document_key>0f779fdddbf9a450389b84d8689619b6</document_key>
-        <order>1</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:04:31</sys_created_on>
-        <sys_id>0f779fdddbf9a450389b84d8689619d2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:04:31</sys_updated_on>
-        <value>x_aaro2_pnl_mgmt_sneak_peek_event</value>
-        <variable display_value="">19806bf4a70323008299b39f087901d4</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_action_instance</document>
-        <document_key>0f779fdddbf9a450389b84d8689619b6</document_key>
-        <order>7</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:04:31</sys_created_on>
-        <sys_id>4b779fdddbf9a450389b84d8689619d2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:04:31</sys_updated_on>
-        <value>&lt;p data-tinymcerootblock=""&gt;&lt;span style="white-space: pre;" data-slate-fragment="JTdCJTIyb2JqZWN0JTIyJTNBJTIyZG9jdW1lbnQlMjIlMkMlMjJkYXRhJTIyJTNBJTdCJTdEJTJDJTIybm9kZXMlMjIlM0ElNUIlN0IlMjJvYmplY3QlMjIlM0ElMjJibG9jayUyMiUyQyUyMnR5cGUlMjIlM0ElMjJwYXJhZ3JhcGglMjIlMkMlMjJkYXRhJTIyJTNBJTdCJTdEJTJDJTIybm9kZXMlMjIlM0ElNUIlN0IlMjJvYmplY3QlMjIlM0ElMjJ0ZXh0JTIyJTJDJTIybGVhdmVzJTIyJTNBJTVCJTdCJTIyb2JqZWN0JTIyJTNBJTIybGVhZiUyMiUyQyUyMnRleHQlMjIlM0ElMjJQbkwlMjBTdGF0ZW1lbnRzJTIwRGF0YSUyMGlzJTIwYXZhaWx2YWJsZSUyMGZvciUyMHJldmlldyUyMG5vdyElMjIlMkMlMjJtYXJrcyUyMiUzQSU1QiU1RCU3RCU1RCU3RCU1RCU3RCU1RCU3RA=="&gt;PnL Statements Data is available for review now!&lt;br /&gt;&lt;/span&gt;you can navigate to &lt;a title="" href="x/aaro2/workspace/pnl_management/questions" target="_blank" data-original-title="Statements page"&gt;Statements page&lt;/a&gt;&amp;nbsp;to look at data and ask questions&lt;/p&gt;</value>
-        <variable display_value="">ad806bf4a70323008299b39f087901f2</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_action_instance</document>
-        <document_key>0f779fdddbf9a450389b84d8689619b6</document_key>
-        <order>6</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:04:31</sys_created_on>
-        <sys_id>cf779fdddbf9a450389b84d8689619d2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:04:31</sys_updated_on>
-        <value>PnL Statements Data is available for review now!</value>
-        <variable display_value="">5d806bf4a70323008299b39f087901ec</variable>
-    </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="id=0f779fdddbf9a450389b84d8689619b6"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>ah_body</field>
-        <id>0f779fdddbf9a450389b84d8689619b6</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:04:31</sys_created_on>
-        <sys_id>8f779fdddbf9a450389b84d8689619d1</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:04:31</sys_updated_on>
-        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>ah_subject</field>
-        <id>0f779fdddbf9a450389b84d8689619b6</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:04:31</sys_created_on>
-        <sys_id>c7779fdddbf9a450389b84d8689619d2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:04:31</sys_updated_on>
-        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>ah_to</field>
-        <id>0f779fdddbf9a450389b84d8689619b6</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:04:31</sys_created_on>
-        <sys_id>cb779fdddbf9a450389b84d8689619d1</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:04:31</sys_updated_on>
-        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
-        <value>{{34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item.user.email}} </value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>record</field>
-        <id>0f779fdddbf9a450389b84d8689619b6</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:04:31</sys_created_on>
-        <sys_id>43779fdddbf9a450389b84d8689619d2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:04:31</sys_updated_on>
-        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
-        <value>{{Created_1.current}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>table_name</field>
-        <id>0f779fdddbf9a450389b84d8689619b6</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:04:31</sys_created_on>
-        <sys_id>07779fdddbf9a450389b84d8689619d2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:04:31</sys_updated_on>
-        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
-        <value/>
-    </sys_element_mapping>
+    <sys_variable_value action="delete_multiple" query="document_key=18fc4bf0db8a2850389b84d8689619ea"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
@@ -2000,14 +2420,14 @@
         <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
         <display_text/>
         <flow display_value="Send Sneak Peek Mails">32779fdddbf9a450389b84d868961924</flow>
-        <order>2</order>
-        <parent_ui_id/>
+        <order>5</order>
+        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-01-18 16:04:31</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>47779fdddbf9a450389b84d868961993</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2015,7 +2435,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:52</sys_updated_on>
+        <sys_updated_on>2021-01-29 12:17:13</sys_updated_on>
         <ui_id>45c120a7-eee0-4d43-b70c-0ea44b8bb13f</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=47779fdddbf9a450389b84d868961993"/>
@@ -2027,10 +2447,10 @@
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-01-18 16:04:31</sys_created_on>
         <sys_id>c7779fdddbf9a450389b84d8689619ae</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:04:31</sys_updated_on>
-        <value>x_aaro2_pnl_mgmt_m2m_sneak_peek_participant</value>
+        <sys_updated_on>2021-01-26 15:00:53</sys_updated_on>
+        <value>x_aaro2_pnl_mgmt_m2m_sneak_peek_user</value>
         <variable display_value="">8f400a1587003300663ca1bb36cb0b4b</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=47779fdddbf9a450389b84d868961993"/>
@@ -2040,11 +2460,11 @@
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-01-18 16:04:31</sys_created_on>
         <sys_id>83779fdddbf9a450389b84d8689619ae</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:04:31</sys_updated_on>
+        <sys_updated_on>2021-01-26 15:00:53</sys_updated_on>
         <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
-        <value>sneak_peek_event={{Created_1.current.sys_id}}</value>
+        <value>deadline={{Created or Updated_1.current}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>table</field>
@@ -2058,9 +2478,170 @@
         <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
         <value/>
     </sys_element_mapping>
-    <sys_hub_flow_logic action="delete_multiple" query="flow=32779fdddbf9a450389b84d868961924^sys_idNOT IN4f779fdddbf9a450389b84d868961988,83779fdddbf9a450389b84d868961980"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Drop previous flow">d0dc81d8dbc6a050389b84d868961938</action_type>
+        <action_type_parent display_value="Drop previous flow">3e4c4dd4db86a050389b84d8689619cc</action_type_parent>
+        <comment/>
+        <compiled_snapshot>d0dc81d8dbc6a050389b84d868961938</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Send Sneak Peek Mails">32779fdddbf9a450389b84d868961924</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-27 13:44:50</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>74dd095cdbc6a050389b84d86896195f</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-29 12:17:13</sys_updated_on>
+        <ui_id>2e219cb0-f993-47e3-88d4-49877e834ba3</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=74dd095cdbc6a050389b84d86896195f"/>
+    <sys_element_mapping action="delete_multiple" query="id=74dd095cdbc6a050389b84d86896195f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>current</field>
+        <id>74dd095cdbc6a050389b84d86896195f</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-27 13:44:50</sys_created_on>
+        <sys_id>b0dd095cdbc6a050389b84d868961960</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-27 13:44:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d0dc81d8dbc6a050389b84d868961938</table>
+        <value>{{Created or Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="GetRecipientEmail">ea54d840db0eec10389b84d868961984</action_type>
+        <action_type_parent display_value="GetRecipientEmail">cad2108cdbcaec10389b84d86896197f</action_type_parent>
+        <comment/>
+        <compiled_snapshot>ea54d840db0eec10389b84d868961984</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Send Sneak Peek Mails">32779fdddbf9a450389b84d868961924</flow>
+        <order>6</order>
+        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 15:00:54</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>89a51044db0eec10389b84d868961901</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-29 12:17:13</sys_updated_on>
+        <ui_id>075bdd86-f83e-43f9-a1a5-e76cf6147c7f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=89a51044db0eec10389b84d868961901"/>
+    <sys_element_mapping action="delete_multiple" query="id=89a51044db0eec10389b84d868961901"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>records</field>
+        <id>89a51044db0eec10389b84d868961901</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 15:00:54</sys_created_on>
+        <sys_id>c9a51044db0eec10389b84d868961902</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 15:00:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ea54d840db0eec10389b84d868961984</table>
+        <value>{{45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Records}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Generate Event">b56604bfdb3b48145f65ba03e296195e</action_type>
+        <action_type_parent display_value="Generate Event">1df4083bdb3b48145f65ba03e29619f1</action_type_parent>
+        <comment/>
+        <compiled_snapshot>b56604bfdb3b48145f65ba03e296195e</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Send Sneak Peek Mails">32779fdddbf9a450389b84d868961924</flow>
+        <order>7</order>
+        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 15:00:54</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c5a51044db0eec10389b84d868961915</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-29 12:17:13</sys_updated_on>
+        <ui_id>0f33a204-d06d-4fdd-a29c-499df443201a</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c5a51044db0eec10389b84d868961915"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c5a51044db0eec10389b84d868961915</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 15:00:54</sys_created_on>
+        <sys_id>85a51044db0eec10389b84d868961917</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 15:00:54</sys_updated_on>
+        <value>x_aaro2_pnl_mgmt.sneak_peek_invitation</value>
+        <variable display_value="">f56604bfdb3b48145f65ba03e296195f</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=c5a51044db0eec10389b84d868961915"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>event_name</field>
+        <id>c5a51044db0eec10389b84d868961915</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 15:00:54</sys_created_on>
+        <sys_id>8da51044db0eec10389b84d868961916</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 15:00:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>parm1</field>
+        <id>c5a51044db0eec10389b84d868961915</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 15:00:54</sys_created_on>
+        <sys_id>41a51044db0eec10389b84d868961917</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 15:00:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
+        <value>{{075bdd86-f83e-43f9-a1a5-e76cf6147c7f.emails}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>c5a51044db0eec10389b84d868961915</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 15:00:54</sys_created_on>
+        <sys_id>05a51044db0eec10389b84d868961917</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 15:00:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
+        <value>{{Created or Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=32779fdddbf9a450389b84d868961924^sys_idNOT IN6cfc4bf0db8a2850389b84d8689619f0,83779fdddbf9a450389b84d868961980"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">2e5fba77dbf8e810389b84d8689619a4</block>
+        <block display_value="">c5ec47f0db8a2850389b84d8689619d3</block>
         <comment/>
         <connected_to/>
         <decision_table/>
@@ -2070,17 +2651,17 @@
         <flow display_value="Send Sneak Peek Mails">32779fdddbf9a450389b84d868961924</flow>
         <inputs/>
         <inputs/>
-        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>3</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id/>
         <sys_class_name>sys_hub_flow_logic</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:04:30</sys_created_on>
+        <sys_created_on>2021-01-29 12:17:12</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>4f779fdddbf9a450389b84d868961988</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_id>6cfc4bf0db8a2850389b84d8689619f0</sys_id>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2088,24 +2669,50 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:52</sys_updated_on>
-        <ui_id>34f10bfd-8dc2-4e45-b45c-1751bf2a0337</ui_id>
+        <sys_updated_on>2021-01-29 12:17:13</sys_updated_on>
+        <ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
     </sys_hub_flow_logic>
-    <sys_variable_value action="delete_multiple" query="document_key=4f779fdddbf9a450389b84d868961988"/>
-    <sys_element_mapping action="delete_multiple" query="id=4f779fdddbf9a450389b84d868961988"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>items</field>
-        <id>4f779fdddbf9a450389b84d868961988</id>
+    <sys_variable_value action="delete_multiple" query="document_key=6cfc4bf0db8a2850389b84d8689619f0"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>6cfc4bf0db8a2850389b84d8689619f0</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-18 16:04:31</sys_created_on>
-        <sys_id>4b779fdddbf9a450389b84d86896198b</sys_id>
+        <sys_created_on>2021-01-29 12:17:12</sys_created_on>
+        <sys_id>20fc4bf0db8a2850389b84d8689619f4</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:04:31</sys_updated_on>
-        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
-        <value>{{45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Records}}</value>
+        <sys_updated_on>2021-01-29 12:17:12</sys_updated_on>
+        <value>Date is after now</value>
+        <variable display_value="">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=6cfc4bf0db8a2850389b84d8689619f0"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>6cfc4bf0db8a2850389b84d8689619f0</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-29 12:17:12</sys_created_on>
+        <sys_id>acfc4bf0db8a2850389b84d8689619f3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-29 12:17:12</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{Created or Updated_1.current.early_access_start}}&gt;{{87ccf2c2-c0f3-4eca-a487-5f7ae766f409.current_date}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>6cfc4bf0db8a2850389b84d8689619f0</id>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-29 12:17:12</sys_created_on>
+        <sys_id>e8fc4bf0db8a2850389b84d8689619f3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-29 12:17:12</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
     </sys_element_mapping>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
         <block display_value="">7c7cf1f0db816450389b84d86896195c</block>
@@ -2119,16 +2726,16 @@
         <inputs/>
         <inputs/>
         <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
-        <order>1</order>
+        <order>4</order>
         <outputs_assigned/>
         <outputs_to_assign/>
-        <parent_ui_id/>
+        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
         <sys_class_name>sys_hub_flow_logic</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-01-18 16:04:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>83779fdddbf9a450389b84d868961980</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -2136,7 +2743,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:52</sys_updated_on>
+        <sys_updated_on>2021-01-29 12:17:13</sys_updated_on>
         <ui_id>ff75c2ee-9492-443d-898e-bdc9bec55c3b</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2150,10 +2757,10 @@
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-01-18 16:04:30</sys_created_on>
         <sys_id>03779fdddbf9a450389b84d868961987</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:26:51</sys_updated_on>
-        <value>1970-01-01 01:00:00</value>
+        <sys_updated_on>2021-01-26 15:00:54</sys_updated_on>
+        <value>1970-01-01 00:00:00</value>
         <variable display_value="">ef145c1473031300b61e66476bf6a7be</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2229,11 +2836,11 @@
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-01-18 16:04:30</sys_created_on>
         <sys_id>cb779fdddbf9a450389b84d868961986</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:04:30</sys_updated_on>
+        <sys_updated_on>2021-01-26 15:00:54</sys_updated_on>
         <table>var__m_sys_hub_flow_logic_input_fdb2541473031300b61e66476bf6a70e</table>
-        <value>{{Created_1.current.event_date}}</value>
+        <value>{{Created or Updated_1.current.early_access_start}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>timer_schedule</field>
@@ -2247,7 +2854,32 @@
         <table>var__m_sys_hub_flow_logic_input_fdb2541473031300b61e66476bf6a70e</table>
         <value/>
     </sys_element_mapping>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_32779fdddbf9a450389b84d868961924^sys_idNOT IN87779fdddbf9a450389b84d868961947,b2779fdddbf9a450389b84d86896193e"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_32779fdddbf9a450389b84d868961924^sys_idNOT IN3ca5dc04db0eec10389b84d8689619cd,87779fdddbf9a450389b84d868961947,b2779fdddbf9a450389b84d86896193e"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_32779fdddbf9a450389b84d868961924</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-26 15:00:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3ca5dc04db0eec10389b84d8689619cd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-26 15:00:53</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>table_name</element>
         <help/>

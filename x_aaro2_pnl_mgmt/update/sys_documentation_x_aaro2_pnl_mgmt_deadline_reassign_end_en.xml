@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="reassign_end" label="Reassign End" language="en" table="x_aaro2_pnl_mgmt_deadline">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>reassign_end</element>
+            <help/>
+            <hint/>
+            <label>Reassign End</label>
+            <language>en</language>
+            <name>x_aaro2_pnl_mgmt_deadline</name>
+            <plural>Reassign Ends</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>xxamirony</sys_created_by>
+            <sys_created_on>2021-01-21 14:01:22</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>181816dadb75ec505884eb184b961967</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Reassign End</sys_name>
+            <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+            <sys_update_name>sys_documentation_x_aaro2_pnl_mgmt_deadline_reassign_end_en</sys_update_name>
+            <sys_updated_by>xxamirony</sys_updated_by>
+            <sys_updated_on>2021-01-21 14:01:22</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

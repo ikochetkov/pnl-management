@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Deadline" max_length="40" name="x_aaro2_pnl_mgmt_deadline" sizeclass="2" type="collection">
+        <element label="Answer End" max_length="40" name="answer_end" type="glide_date_time"/>
+        <element label="Answer Start" max_length="40" name="answer_start" type="glide_date_time"/>
+        <element label="Early Access End" max_length="40" name="early_access_end" type="glide_date_time"/>
+        <element label="Early Access Start" max_length="40" name="early_access_start" type="glide_date_time"/>
+        <element choice="1" default="javascript: (new SneakPeekUtil()).getMonth('',-1).month" display="true" label="Month" max_length="40" name="month" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="January" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="February" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="March" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="April" sequence="3" value="4"/>
+                <element inactive_on_update="false" label="May" sequence="4" value="5"/>
+                <element inactive_on_update="false" label="June" sequence="5" value="6"/>
+                <element inactive_on_update="false" label="July" sequence="6" value="7"/>
+                <element inactive_on_update="false" label="August" sequence="7" value="8"/>
+                <element inactive_on_update="false" label="September" sequence="8" value="9"/>
+                <element inactive_on_update="false" label="October" sequence="9" value="10"/>
+                <element inactive_on_update="false" label="November" sequence="10" value="11"/>
+                <element inactive_on_update="false" label="December" sequence="11" value="12"/>
+            </choice>
+        </element>
+        <element label="One day(Answer)" max_length="40" name="one_day_answer" type="boolean"/>
+        <element label="One day (Early Access)" max_length="40" name="one_day_early_access" type="boolean"/>
+        <element label="One day (Question)" max_length="40" name="one_day_question" type="boolean"/>
+        <element label="One day (Reassign)" max_length="40" name="one_day_reassign" type="boolean"/>
+        <element label="One day (Review)" max_length="40" name="one_day_review" type="boolean"/>
+        <element label="Question End" max_length="40" name="question_end" type="glide_date_time"/>
+        <element label="Question Start" max_length="40" name="question_start" type="glide_date_time"/>
+        <element label="Reassign End" max_length="40" name="reassign_end" type="glide_date_time"/>
+        <element label="Reassign Start" max_length="40" name="reassign_start" type="glide_date_time"/>
+        <element label="Review End" max_length="40" name="review_end" type="glide_date_time"/>
+        <element label="Review Start" max_length="40" name="review_start" type="glide_date_time"/>
+        <element default="javascript: (new SneakPeekUtil()).getMonth('',-1).year" label="Year" max_length="40" name="year" type="string"/>
+    </element>
+</database>

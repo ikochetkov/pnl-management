@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_aw_module">
     <sys_aw_module action="INSERT_OR_UPDATE">
         <active>true</active>
-        <content display_value="Sneak Peek Module Content">39d26682db896090389b84d868961932</content>
+        <content display_value="Early Access">39d26682db896090389b84d868961932</content>
         <content_attrs/>
         <content_component display_value="aaro2-pnl-sneak-peek-view">9a60813479870d2335a80dc9d3d661c8</content_component>
         <content_tag/>
@@ -12,7 +12,7 @@
         <hide_until_ready>false</hide_until_ready>
         <icon>calendar-clock-fill</icon>
         <id>sneak-peek</id>
-        <label>Sneak Peek</label>
+        <label>Early Access</label>
         <order>200</order>
         <roles/>
         <sys_class_name>sys_aw_module</sys_class_name>
@@ -21,7 +21,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>a7f5d7c9dbc52850389b84d868961976</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>sneak-peek</sys_name>
         <sys_overrides/>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
@@ -31,8 +31,8 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_aw_module_a7f5d7c9dbc52850389b84d868961976</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-14 13:22:51</sys_updated_on>
-        <toolbar_button display_value="Sneak Peek Button">aff5d7c9dbc52850389b84d868961976</toolbar_button>
+        <sys_updated_on>2021-01-19 16:01:45</sys_updated_on>
+        <toolbar_button display_value="Early Access Button">aff5d7c9dbc52850389b84d868961976</toolbar_button>
         <type>full</type>
         <workspace_config display_value="PNL Management">9978e27ddbd46090389b84d86896193b</workspace_config>
     </sys_aw_module>

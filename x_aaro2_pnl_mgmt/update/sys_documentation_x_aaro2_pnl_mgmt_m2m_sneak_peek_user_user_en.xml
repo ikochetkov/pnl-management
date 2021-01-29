@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="user" label="User" language="en" table="x_aaro2_pnl_mgmt_m2m_sneak_peek_user">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>user</element>
+            <help/>
+            <hint/>
+            <label>User</label>
+            <language>en</language>
+            <name>x_aaro2_pnl_mgmt_m2m_sneak_peek_user</name>
+            <plural>Users</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>xxamirony</sys_created_by>
+            <sys_created_on>2021-01-26 13:18:38</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>9b3e7f37db79ec10389b84d868961983</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>User</sys_name>
+            <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+            <sys_update_name>sys_documentation_x_aaro2_pnl_mgmt_m2m_sneak_peek_user_user_en</sys_update_name>
+            <sys_updated_by>xxamirony</sys_updated_by>
+            <sys_updated_on>2021-01-26 13:18:38</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

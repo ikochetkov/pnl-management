@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>false</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Task_SLA" name="Task_SLA">c97d83137f4432005f58108c3ffa917a</category>
+        <collection>x_aaro2_pnl_mgmt_deadline</collection>
+        <condition/>
+        <content_type>text/html</content_type>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<br><hr><br>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digestable>false</digestable>
+        <event_name>x_aaro2_pnl_mgmt.sneak_peek_invitation</event_name>
+        <event_parm_1>true</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>event</generation_type>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p data-tinymcerootblock=""><span style="white-space: pre;">Hello, All DVPs And ADs!</span><span style="white-space: pre;"><br />We have refreshed PALMS with a sneak peek of your ${current.month} ${current.year} P&amp;L's.</span></p>
+<p data-tinymcerootblock=""><span style="white-space: pre;"> Please do a quick review of your operations and let me know of any big errors (nothing less than $5k please.) If you find something big please e-mail or call me at 678-402-3139 by ${current.early_access_end}. </span></p>
+<p data-tinymcerootblock=""><span style="white-space: pre;">The Accounting Team is still working on our analysis, so the numbers could change slightly before the final release. While you can input questions in PALMS, we will not work these until after the P&amp;Ls are released and the RMs and GMs are notified. </span></p>
+<p data-tinymcerootblock=""><span style="white-space: pre;">We still need RMs and GMs to do a thorough scrub of numbers once we release them to the field. </span></p>
+<p data-tinymcerootblock=""><span style="white-space: pre;">&bull; P&amp;Ls will be released to the GMs/RMs ${current.question_start}; </span></p>
+<p data-tinymcerootblock=""><span style="white-space: pre;">&bull; PALMS will be open from the time P&amp;Ls are released until ${current.answer_end}; </span></p>
+<p data-tinymcerootblock=""><span style="white-space: pre;">&bull; Anything found will be addressed on the December P&amp;Ls; </span></p>
+<p data-tinymcerootblock=""><span style="white-space: pre;">Thank you for all your help to make sure our P&amp;L's go out fast and clean! Please don't hesitate to call with any questions or feedback on how to make this process better. <br /><br /></span></p>
+<p data-tinymcerootblock=""><br /></p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Sneak Peek Invitaiton</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields/>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>Review ${current.month} ${current.year} P&amp;L's in progress - respond by ${current.early_access_end}</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-01-21 12:56:59</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>df98c612dbf1ec505884eb184b9619fb</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Sneak Peek Invitaiton</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name>sysevent_email_action_df98c612dbf1ec505884eb184b9619fb</sys_update_name>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-01-27 10:27:30</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>
