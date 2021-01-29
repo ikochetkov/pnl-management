@@ -34,12 +34,12 @@
         <mandatory>false</mandatory>
         <message/>
         <message_html><![CDATA[<p data-tinymcerootblock=""><span style="white-space: pre;">Hello, All DVPs And ADs!</span><span style="white-space: pre;"><br />We have refreshed PNL with a sneak peek of your ${current.month} ${current.year} P&amp;L's.</span></p>
-<p data-tinymcerootblock=""><span style="white-space: pre;">Please do a quick review of your operations and let me know of any big errors (nothing less than $5k please.) If you find something big please e-mail or call me at 678-402-3139 by ${current.early_access_end}. </span></p>
-<p data-tinymcerootblock=""><span style="white-space: pre;">The Accounting Team is still working on our analysis, so the numbers could change slightly before the final release. While you can input questions in PALMS, we will not work these until after the P&amp;Ls are released and the RMs and GMs are notified. </span></p>
+<p data-tinymcerootblock=""><span style="white-space: pre;">Please do a quick review of your operations and let me know of any big errors (nothing less than $5k please.) If you find something big please e-mail <a href="mailto:Douglas.Stephens@aarons.com">Douglas.Stephens@aarons.com</a> or call at 678-402-3139 by ${current.early_access_end}. </span></p>
+<p data-tinymcerootblock=""><span style="white-space: pre;">The Accounting Team is still working on our analysis, so the numbers could change slightly before the final release. While you can input questions in PNL, we will not work these until after the P&amp;Ls are released and the RMs and GMs are notified. </span></p>
 <p data-tinymcerootblock=""><span style="white-space: pre;">We still need RMs and GMs to do a thorough scrub of numbers once we release them to the field. </span></p>
 <p data-tinymcerootblock=""><span style="white-space: pre;">&bull; P&amp;Ls will be released to the GMs/RMs ${current.question_start}; </span></p>
 <p data-tinymcerootblock=""><span style="white-space: pre;">&bull; PALMS will be open from the time P&amp;Ls are released until ${current.answer_end}; </span></p>
-<p data-tinymcerootblock=""><span style="white-space: pre;">&bull; Anything found will be addressed on the December P&amp;Ls; </span></p>
+<p data-tinymcerootblock=""><span style="white-space: pre;">&bull; Anything found will be addressed on the next month P&amp;Ls; </span></p>
 <p data-tinymcerootblock=""><span style="white-space: pre;">Thank you for all your help to make sure our P&amp;L's go out fast and clean! Please don't hesitate to call with any questions or feedback on how to make this process better. <br /><br /></span></p>
 <p data-tinymcerootblock=""><a title="PNL Management page" href="https://aaronstest.service-now.com/x/aaro2/workspace/pnl_management/statements">PNL Management page</a></p>]]></message_html>
         <message_list/>
@@ -63,7 +63,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>df98c612dbf1ec505884eb184b9619fb</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Sneak Peek Invitaiton</sys_name>
         <sys_overrides/>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
@@ -72,7 +72,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sysevent_email_action_df98c612dbf1ec505884eb184b9619fb</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-29 14:19:10</sys_updated_on>
+        <sys_updated_on>2021-01-29 14:25:36</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>
