@@ -13,7 +13,7 @@
         <ih_action>false</ih_action>
         <internal_name>getrecipientemail</internal_name>
         <label_cache>[{"name":"{{action.variable}}","label":"action➛variable","type":"action","ref":"x_aaro2_pnl_mgmt_m2m_sneak_peek_user"},{"name":"{{action.records}}","label":"action➛Records","type":"action","ref":"x_aaro2_pnl_mgmt_m2m_sneak_peek_user"},{"name":"{{step[1f25f3d4-95f8-472d-b645-f43c9bd5394c].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[1f25f3d4-95f8-472d-b645-f43c9bd5394c].emails}}","label":"step➛Script step➛Emails","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>bd7898c8db0eec10389b84d86896191a</latest_snapshot>
+        <latest_snapshot>4ee6eb3cdb4e2850389b84d868961972</latest_snapshot>
         <master_snapshot>ea54d840db0eec10389b84d868961984</master_snapshot>
         <name>GetRecipientEmail</name>
         <natlang/>
@@ -26,7 +26,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>cad2108cdbcaec10389b84d86896197f</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>GetRecipientEmail</sys_name>
         <sys_overrides/>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
@@ -35,7 +35,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_cad2108cdbcaec10389b84d86896197f</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 15:13:15</sys_updated_on>
+        <sys_updated_on>2021-01-29 14:10:39</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -72,7 +72,7 @@
         <sys_created_on>2021-01-26 14:54:55</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e944d440db0eec10389b84d8689619fc</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -80,7 +80,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 15:12:54</sys_updated_on>
+        <sys_updated_on>2021-01-29 14:10:33</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=e944d440db0eec10389b84d8689619fc"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -105,15 +105,17 @@
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-01-26 14:54:56</sys_created_on>
         <sys_id>79441840db0eec10389b84d868961921</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 15:12:55</sys_updated_on>
+        <sys_updated_on>2021-01-29 14:10:33</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 	var record = inputs.records;
   	var emails = []	
   while(record.next()){
     	var user = record.user.getRefRecord()
-        emails.push(user.getValue('email'))
+        var email = user.getValue('email')
+        if(email)
+          emails.push(email)
     }
   outputs.emails = emails
 })(inputs, outputs);
@@ -540,7 +542,7 @@
         <sys_created_on>2021-01-26 14:54:55</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e944d440db0eec10389b84d8689619fc</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -548,7 +550,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 15:12:54</sys_updated_on>
+        <sys_updated_on>2021-01-29 14:10:33</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=e944d440db0eec10389b84d8689619fc"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -573,15 +575,17 @@
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-01-26 14:54:56</sys_created_on>
         <sys_id>79441840db0eec10389b84d868961921</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 15:12:55</sys_updated_on>
+        <sys_updated_on>2021-01-29 14:10:33</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 	var record = inputs.records;
   	var emails = []	
   while(record.next()){
     	var user = record.user.getRefRecord()
-        emails.push(user.getValue('email'))
+        var email = user.getValue('email')
+        if(email)
+          emails.push(email)
     }
   outputs.emails = emails
 })(inputs, outputs);
@@ -875,14 +879,14 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="GetRecipientEmail">cad2108cdbcaec10389b84d86896197f</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"87541c40db0eec10389b84d868961912","name":"plan"}}</plan>
-        <snapshot>bd7898c8db0eec10389b84d86896191a</snapshot>
+        <snapshot>4ee6eb3cdb4e2850389b84d868961972</snapshot>
         <sys_class_name>sys_hub_action_plan</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-01-26 14:55:17</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>87541c40db0eec10389b84d868961912</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -891,7 +895,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 15:13:16</sys_updated_on>
+        <sys_updated_on>2021-01-29 14:10:40</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -963,7 +967,7 @@
         <sys_created_on>2021-01-26 14:55:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>6254d840db0eec10389b84d8689619a9</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -971,7 +975,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 15:13:15</sys_updated_on>
+        <sys_updated_on>2021-01-29 14:10:39</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=6254d840db0eec10389b84d8689619a9"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1010,15 +1014,17 @@
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-01-26 14:55:16</sys_created_on>
         <sys_id>ea54d840db0eec10389b84d8689619ca</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 15:13:15</sys_updated_on>
+        <sys_updated_on>2021-01-29 14:10:39</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 	var record = inputs.records;
   	var emails = []	
   while(record.next()){
     	var user = record.user.getRefRecord()
-        emails.push(user.getValue('email'))
+        var email = user.getValue('email')
+        if(email)
+          emails.push(email)
     }
   outputs.emails = emails
 })(inputs, outputs);
@@ -1163,7 +1169,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=Emails_child0,child_name=Emails_child0,child_type=string,child_type_label=String,child_uiUniqueId=51faed9d-8153-4188-8afa-4323c0a29ebc,co_type_name=FD0a7898c8390eec10753f9796378e6586,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=209d6887-3699-4dc2-922c-3733ffc616c7</attributes>
+        <attributes>child_label=Emails_child0,child_name=Emails_child0,child_type=string,child_type_label=String,child_uiUniqueId=51faed9d-8153-4188-8afa-4323c0a29ebc,co_type_name=FD92e6eb3c274e285014877f39166596ec,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=209d6887-3699-4dc2-922c-3733ffc616c7</attributes>
         <audit>false</audit>
         <calculation>(function calculatedFieldValue(current) {
 
@@ -1222,7 +1228,7 @@
         <sys_created_on>2021-01-26 14:55:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ae54d840db0eec10389b84d8689619b4</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1230,7 +1236,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 15:13:14</sys_updated_on>
+        <sys_updated_on>2021-01-29 14:10:39</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1331,7 +1337,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=Emails_child0,child_name=Emails_child0,child_type=string,child_type_label=String,child_uiUniqueId=c06f6508-51b8-45ee-8f8d-28e912492a5b,co_type_name=FD867898c8150eec1040a17c198d1be593,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=a7901aff-c4e5-4da4-9e44-131f46b7870e</attributes>
+        <attributes>child_label=Emails_child0,child_name=Emails_child0,child_type=string,child_type_label=String,child_uiUniqueId=c06f6508-51b8-45ee-8f8d-28e912492a5b,co_type_name=FD12e6eb3c8c4e2850ee616835e26521f9,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=a7901aff-c4e5-4da4-9e44-131f46b7870e</attributes>
         <audit>false</audit>
         <calculation>(function calculatedFieldValue(current) {
 
@@ -1392,7 +1398,7 @@
         <sys_created_on>2021-01-26 14:55:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ba54d840db0eec10389b84d8689619d0</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1400,7 +1406,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 15:13:15</sys_updated_on>
+        <sys_updated_on>2021-01-29 14:10:39</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1431,7 +1437,7 @@
         <sys_created_on>2021-01-26 14:55:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>6254d840db0eec10389b84d8689619a9</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1439,7 +1445,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 15:13:15</sys_updated_on>
+        <sys_updated_on>2021-01-29 14:10:39</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=6254d840db0eec10389b84d8689619a9"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1478,15 +1484,17 @@
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-01-26 14:55:16</sys_created_on>
         <sys_id>ea54d840db0eec10389b84d8689619ca</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 15:13:15</sys_updated_on>
+        <sys_updated_on>2021-01-29 14:10:39</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 	var record = inputs.records;
   	var emails = []	
   while(record.next()){
     	var user = record.user.getRefRecord()
-        emails.push(user.getValue('email'))
+        var email = user.getValue('email')
+        if(email)
+          emails.push(email)
     }
   outputs.emails = emails
 })(inputs, outputs);
@@ -1631,7 +1639,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=Emails_child0,child_name=Emails_child0,child_type=string,child_type_label=String,child_uiUniqueId=51faed9d-8153-4188-8afa-4323c0a29ebc,co_type_name=FD0a7898c8390eec10753f9796378e6586,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=209d6887-3699-4dc2-922c-3733ffc616c7</attributes>
+        <attributes>child_label=Emails_child0,child_name=Emails_child0,child_type=string,child_type_label=String,child_uiUniqueId=51faed9d-8153-4188-8afa-4323c0a29ebc,co_type_name=FD92e6eb3c274e285014877f39166596ec,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=209d6887-3699-4dc2-922c-3733ffc616c7</attributes>
         <audit>false</audit>
         <calculation>(function calculatedFieldValue(current) {
 
@@ -1690,7 +1698,7 @@
         <sys_created_on>2021-01-26 14:55:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ae54d840db0eec10389b84d8689619b4</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
@@ -1698,7 +1706,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 15:13:14</sys_updated_on>
+        <sys_updated_on>2021-01-29 14:10:39</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

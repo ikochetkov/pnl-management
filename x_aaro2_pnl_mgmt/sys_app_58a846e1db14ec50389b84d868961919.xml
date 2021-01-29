@@ -21,22 +21,22 @@
         <scoped_administration>false</scoped_administration>
         <short_description>Profit and Loss Management</short_description>
         <source>x_aaro2_pnl_mgmt</source>
-        <store_correlation_id>REPOAPP0000341013</store_correlation_id>
+        <store_correlation_id>REPOAPP0000341018</store_correlation_id>
         <store_url/>
         <sys_class_name>sys_app</sys_class_name>
         <sys_code/>
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2020-11-05 15:24:17</sys_created_on>
         <sys_id>58a846e1db14ec50389b84d868961919</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-29 13:18:01</sys_updated_on>
+        <sys_updated_on>2021-01-29 14:21:19</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <uninstall_blocked>false</uninstall_blocked>
         <user_role/>
         <vendor/>
         <vendor_prefix/>
-        <version>1.0.0014</version>
+        <version>1.0.0015</version>
     </sys_app>
 </record_update>
