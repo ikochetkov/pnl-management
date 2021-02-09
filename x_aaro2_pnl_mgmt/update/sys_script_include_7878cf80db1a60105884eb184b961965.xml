@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_aaro2_pnl_mgmt.Utils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>Utils</name>
+        <script><![CDATA[var Utils = Class.create();
+Utils.prototype = {
+	initialize: function() {
+	},
+
+	getDeadline: function(year, month, periodType) {
+		var dlGR = new GlideRecord('x_aaro2_pnl_mgmt_deadline');
+		dlGR.addQuery('year', year);
+		dlGR.addQuery('month', month);
+		dlGR.query();
+		if(dlGR.next()){
+			var period = {};
+			period.start = dlGR.getValue(periodType + '_start');
+			period.end = dlGR.getValue(periodType + '_end');
+
+			return period;
+		}else {
+			return false;
+		}
+
+	},
+
+	getReassignmentData: function(sysID){
+		var questionGr = new GlideRecord('x_aaro2_pnl_mgmt_question');
+		questionGr.get(sysID);
+		var acc = questionGr.getValue('account');
+		var year = questionGr.getValue('year');
+		var month = questionGr.getValue('period');
+		var deadlinePeriod = this.getDeadline(year,month,'reassign');
+		var timeValid = this.timeValid(deadlinePeriod.start,deadlinePeriod.end);
+		var users = [];
+		var accountAssignmentGr = new GlideRecord('x_aaro2_pnl_mgmt_pnl_account_assignment');
+		accountAssignmentGr.addQuery('account', acc);
+		accountAssignmentGr.query();
+		while(accountAssignmentGr.next()){
+			users.push({
+				id: accountAssignmentGr.getValue('user'),
+				label: accountAssignmentGr.getDisplayValue('user')
+			});		
+		}
+		return {
+			users: users,
+			start: deadlinePeriod.start,
+			end: deadlinePeriod.end,
+			time_valid: timeValid
+		};
+	},
+
+	timeValid: function(start, end){
+		var startNumeric = new GlideDateTime(start).getNumericValue();
+		var endNumeric = new GlideDateTime(end).getNumericValue();
+		var currentTime = new GlideDateTime().getNumericValue();
+		return startNumeric<currentTime && endNumeric>currentTime;
+	},
+
+	type: 'Utils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>xxmpurik</sys_created_by>
+        <sys_created_on>2021-02-08 14:28:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7878cf80db1a60105884eb184b961965</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Utils</sys_name>
+        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name>sys_script_include_7878cf80db1a60105884eb184b961965</sys_update_name>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-02-08 15:21:16</sys_updated_on>
+    </sys_script_include>
+</record_update>
