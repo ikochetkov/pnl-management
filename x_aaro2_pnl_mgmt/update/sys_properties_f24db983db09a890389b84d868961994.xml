@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
     <sys_properties action="INSERT_OR_UPDATE">
         <choices/>
-        <description>Last review day, when questions should be answered&#13;
+        <description>Business days period, when accounting can reassign questions &#13;
+Formar: number-number (e.g. 7-10)&#13;
 </description>
         <ignore_cache>false</ignore_cache>
         <is_private>false</is_private>
-        <name>x_aaro2_pnl_mgmt.supervisor_review_d_day</name>
+        <name>x_aaro2_pnl_mgmt.accounting_can_reassign_period</name>
         <read_roles/>
-        <suffix>supervisor_review_d_day</suffix>
+        <suffix>accounting_can_reassign_period</suffix>
         <sys_class_name>sys_properties</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2020-12-17 13:12:44</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f24db983db09a890389b84d868961994</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>x_aaro2_pnl_mgmt.supervisor_review_d_day</sys_name>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>x_aaro2_pnl_mgmt.accounting_can_reassign_period</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_properties_f24db983db09a890389b84d868961994</sys_update_name>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-18 16:05:38</sys_updated_on>
-        <type>integer</type>
-        <value>17</value>
+        <sys_updated_by>xxmpurik</sys_updated_by>
+        <sys_updated_on>2021-02-10 15:08:27</sys_updated_on>
+        <type>string</type>
+        <value>7-10</value>
         <write_roles/>
     </sys_properties>
     <sys_translated_text action="delete_multiple" query="documentkey=f24db983db09a890389b84d868961994"/>

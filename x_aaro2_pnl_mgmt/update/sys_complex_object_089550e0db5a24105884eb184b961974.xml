@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD049550e06d5a24100e3c208d4a547074</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>58a846e1db14ec50389b84d868961919</scope_name>
+        <serialized_content>{"FlowDesigner:FD049550e06d5a24100e3c208d4a547074":{"$COCollectionField":["String"],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD049550e06d5a24100e3c208d4a547074.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"emails\",\"mandatory\":\"true\",\"child_name\":\"emails_child0\",\"uiUniqueId\":\"624fab3d-fc15-4f34-91df-9209348748c4\",\"uiTypeLabel\":\"Array.String\",\"co_type_name\":\"FD049550e06d5a24100e3c208d4a547074\",\"child_label\":\"emails_child0\",\"child_type_label\":\"String\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"array.string\",\"child_defaultValue\":\"\",\"child_type\":\"string\",\"order\":\"1\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"8fc23b57-d726-49e5-beda-f5e98cd610fb\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>xxmpurik</sys_created_by>
+        <sys_created_on>2021-02-09 14:33:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>089550e0db5a24105884eb184b961974</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>FD049550e06d5a24100e3c208d4a547074</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name>sys_complex_object_089550e0db5a24105884eb184b961974</sys_update_name>
+        <sys_updated_by>xxmpurik</sys_updated_by>
+        <sys_updated_on>2021-02-09 14:33:15</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>
