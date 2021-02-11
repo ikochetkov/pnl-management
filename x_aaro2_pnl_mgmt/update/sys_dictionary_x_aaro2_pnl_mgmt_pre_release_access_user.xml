@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="" table="x_aaro2_pnl_mgmt_m2m_sneak_peek_user">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="user" table="x_aaro2_pnl_mgmt_pre_release_access">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
         <attributes/>
         <audit>false</audit>
-        <calculation/>
-        <choice>0</choice>
+        <calculation>(function calculatedFieldValue(current) {&#13;
+&#13;
+	// Add your code here&#13;
+	return '';  // return the calculated value&#13;
+&#13;
+})(current);</calculation>
+        <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label/>
+        <column_label>User</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -22,43 +27,43 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element/>
+        <element>user</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="Collection">collection</internal_type>
+        <internal_type display_value="Reference">reference</internal_type>
         <mandatory>false</mandatory>
-        <max_length>40</max_length>
-        <name>x_aaro2_pnl_mgmt_m2m_sneak_peek_user</name>
+        <max_length>32</max_length>
+        <name>x_aaro2_pnl_mgmt_pre_release_access</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
-        <reference/>
+        <reference display_value="" name="sys_user">sys_user</reference>
         <reference_cascade_rule/>
         <reference_floats>false</reference_floats>
         <reference_key/>
         <reference_qual/>
         <reference_qual_condition/>
         <reference_type/>
-        <sizeclass>27</sizeclass>
+        <sizeclass/>
         <spell_check>false</spell_check>
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 13:18:38</sys_created_on>
+        <sys_created_by>xxmpurik</sys_created_by>
+        <sys_created_on>2021-02-11 10:24:31</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>873e37f3db79ec10389b84d8689619b2</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_name>x_aaro2_pnl_mgmt_m2m_sneak_peek_user</sys_name>
+        <sys_id>dbbfa949db12a8105884eb184b961989</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>User</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name>sys_dictionary_x_aaro2_pnl_mgmt_m2m_sneak_peek_user_null</sys_update_name>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-02-11 12:12:24</sys_updated_on>
+        <sys_update_name>sys_dictionary_x_aaro2_pnl_mgmt_pre_release_access_user</sys_update_name>
+        <sys_updated_by>xxmpurik</sys_updated_by>
+        <sys_updated_on>2021-02-11 10:24:31</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

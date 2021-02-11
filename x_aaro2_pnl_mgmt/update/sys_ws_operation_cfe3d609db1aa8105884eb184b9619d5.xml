@@ -6,41 +6,43 @@
         <default_operation_uri/>
         <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
         <http_method>GET</http_method>
-        <name>getQuestionModalData</name>
+        <name>getCurrentPeriodDeadline</name>
         <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
-
 	
-	var sysID = request.queryParams.sys_id[0];
-	var data = new Utils().getQuestionModalData(sysID);
-	response.setContentType("application/json");
-	var stream = response.getStreamWriter();
-	stream.writeString(JSON.stringify(data));
-	response.setStatus(200);
+	var periodType = {}; 
+	if(request.queryParams.query) {
+		periodType = request.queryParams.query[0];
+		var period = new Utils().getCurrentPeriodDeadline(periodType);
+	}else {
+		period = false;
+	}
+
+	return period;
 
 })(request, response);]]></operation_script>
-        <operation_uri>/api/x_aaro2_pnl_mgmt/utils/getQuestionModalData</operation_uri>
+        <operation_uri>/api/x_aaro2_pnl_mgmt/utils/getCurrentPeriodDeadline</operation_uri>
         <produces>application/json,application/xml,text/xml</produces>
         <produces_customized>false</produces_customized>
-        <relative_path>/getQuestionModalData</relative_path>
+        <relative_path>/getCurrentPeriodDeadline</relative_path>
         <request_example/>
         <requires_acl_authorization>true</requires_acl_authorization>
         <requires_authentication>true</requires_authentication>
         <requires_snc_internal_role>true</requires_snc_internal_role>
         <short_description/>
         <sys_class_name>sys_ws_operation</sys_class_name>
-        <sys_created_by>xxikochet</sys_created_by>
-        <sys_created_on>2021-02-08 14:41:49</sys_created_on>
+        <sys_created_by>xxmpurik</sys_created_by>
+        <sys_created_on>2021-02-11 13:03:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>575a034cdb1a60105884eb184b961923</sys_id>
-        <sys_mod_count>29</sys_mod_count>
-        <sys_name>getQuestionModalData</sys_name>
+        <sys_id>cfe3d609db1aa8105884eb184b9619d5</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>getCurrentPeriodDeadline</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name>sys_ws_operation_575a034cdb1a60105884eb184b961923</sys_update_name>
-        <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-02-10 18:48:31</sys_updated_on>
+        <sys_update_name>sys_ws_operation_cfe3d609db1aa8105884eb184b9619d5</sys_update_name>
+        <sys_updated_by>xxmpurik</sys_updated_by>
+        <sys_updated_on>2021-02-11 13:13:13</sys_updated_on>
         <web_service_definition display_value="utils">d3a7e6e5db5ce8505884eb184b961953</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>
