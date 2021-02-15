@@ -8,35 +8,78 @@
         <http_method>GET</http_method>
         <name>GetPNLUserDataSet</name>
         <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+	var deadlineData = new Utils().getCurrentPeriodDeadline('answer');
+	var befeoreDeadline = deadlineData.beforeDeadline;
+	var curYear = deadlineData.curYear;
+	var curMonth = deadlineData.curMonth;
+	var curUser = 'lcortes'; //gs.getUserName();  TEST DATA
+	var userSysID = 'ec77b947134b16001a84bf304244b07f'; //gs.getUserID(); TEST DATA
 	
+	var tempAcc = new GlideRecord('x_aaro2_pnl_mgmt_temporary_access');
+	if(tempAcc.get('user', userSysID)) {
+		gs.info('utils tempAcc.getValue - ' + tempAcc.getValue('can_ask'));
+		if(tempAcc.getValue('can_ask')) {
+			curUser = 'nefiveas';
+		}
+	}
+
+	var responseObj, restResponse, endpoint;
+	gs.info('PNL MANAGEMENT: ' + JSON.stringify(request.queryParams));
+
+	try {
+		endpoint = gs.getProperty('x_aaro2_pnl_mgmt.GetPNLUserDataSet_endpoint') + "UserLogin=" + curUser;//gs.getUserName(); 'nefiveas'replace to  'srkincan'
+		gs.info(endpoint);
+		var r = new sn_ws.RESTMessageV2();
+		r.setHttpMethod('GET');
+		r.setEndpoint(endpoint);
+		r.setMIDServer(gs.getProperty('mid.server.rba_default'));
+		r.setRequestHeader('Content-Type', 'application/json');
+		r.setRequestHeader('Accept', 'application/json');
+		r.setHttpTimeout(5000);
+		restResponse = r.execute();
+		restResponse.waitForResponse(10);
+		responseObj = new global.RESTResponseUtils(restResponse);
+	} catch (ex) {
+		responseObj = new global.RESTResponseUtils(restResponse);
+		responseObj.setBody(ex.toString());
+		responseObj.setErrorMessage("There was an error calling the webservice.");
+		responseObj.setStatusCode(503);
+		responseObj.setHaveError(true);
+		gs.error(responseObj);
+	}
 	
+	//test data START
 
-    var responseObj, restResponse, endpoint;
-    gs.info('PNL MANAGEMENT: ' + JSON.stringify(request.queryParams));
+	var body = JSON.parse(responseObj.body);
+	var periods = body.Periods;
+	periods.push({
+		"FiscalYear": 2021,
+		"AccountingPeriod": 1
+	});
 
-    try {
-        endpoint = gs.getProperty('x_aaro2_pnl_mgmt.GetPNLUserDataSet_endpoint') + "UserLogin=" + gs.getUserName();//gs.getUserName(); 'nefiveas'replace to  'srkincan'
-        gs.info(endpoint);
-        var r = new sn_ws.RESTMessageV2();
-        r.setHttpMethod('GET');
-        r.setEndpoint(endpoint);
-        r.setMIDServer(gs.getProperty('mid.server.rba_default'));
-        r.setRequestHeader('Content-Type', 'application/json');
-        r.setRequestHeader('Accept', 'application/json');
-        r.setHttpTimeout(5000);
-        restResponse = r.execute();
-        restResponse.waitForResponse(10);
-        responseObj = new global.RESTResponseUtils(restResponse);
-    } catch (ex) {
-        responseObj = new global.RESTResponseUtils(restResponse);
-        responseObj.setBody(ex.toString());
-        responseObj.setErrorMessage("There was an error calling the webservice.");
-        responseObj.setStatusCode(503);
-        responseObj.setHaveError(true);
-        gs.error(responseObj);
-    }
+	body.Periods = periods;
+	responseObj.body = JSON.stringify(body);
+	
+	//test data END
+	
+	//check if User has Pre-release Access START
 
-    return responseObj;
+	var preRelAcc = new GlideRecord('x_aaro2_pnl_mgmt_pre_release_access');
+	if(!preRelAcc.get('user', userSysID) && befeoreDeadline) {
+		var preBody = JSON.parse(responseObj.body);
+		var prePeriods = preBody.Periods;
+		var filtered = prePeriods.filter(function(period){
+			return !(period.FiscalYear == curYear && period.AccountingPeriod == curMonth);
+		});
+		body.Periods = filtered;
+		responseObj.body = JSON.stringify(body);
+
+	}
+	
+	//check if User has Pre-release Access END
+
+	return responseObj;
 
 })(request, response);]]></operation_script>
         <operation_uri>/api/x_aaro2_pnl_mgmt/utils/GetPNLUserDataSet</operation_uri>
@@ -53,15 +96,15 @@
         <sys_created_on>2020-12-15 15:39:01</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ff7bcce6db4124905884eb184b96191e</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>88</sys_mod_count>
         <sys_name>GetPNLUserDataSet</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_ws_operation_ff7bcce6db4124905884eb184b96191e</sys_update_name>
-        <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-02-11 14:18:28</sys_updated_on>
+        <sys_updated_by>xxmpurik</sys_updated_by>
+        <sys_updated_on>2021-02-15 12:30:56</sys_updated_on>
         <web_service_definition display_value="utils">d3a7e6e5db5ce8505884eb184b961953</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>
