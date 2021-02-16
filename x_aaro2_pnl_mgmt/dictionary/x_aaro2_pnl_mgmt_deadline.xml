@@ -20,11 +20,6 @@
                 <element inactive_on_update="false" label="December" sequence="11" value="12"/>
             </choice>
         </element>
-        <element label="One day(Answer)" max_length="40" name="one_day_answer" type="boolean"/>
-        <element label="One day (Early Access)" max_length="40" name="one_day_early_access" type="boolean"/>
-        <element label="One day (Question)" max_length="40" name="one_day_question" type="boolean"/>
-        <element label="One day (Reassign)" max_length="40" name="one_day_reassign" type="boolean"/>
-        <element label="One day (Review)" max_length="40" name="one_day_review" type="boolean"/>
         <element label="Question End" max_length="40" name="question_end" type="glide_date_time"/>
         <element label="Question Start" max_length="40" name="question_start" type="glide_date_time"/>
         <element label="Reassign End" max_length="40" name="reassign_end" type="glide_date_time"/>

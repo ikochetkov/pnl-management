@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="one_day_early_access" table="x_aaro2_pnl_mgmt_deadline">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="type" table="x_aaro2_pnl_mgmt_question">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
@@ -11,10 +11,10 @@
 	return '';  // return the calculated value
 
 })(current);</calculation>
-        <choice/>
+        <choice>1</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>One day (Early Access)</column_label>
+        <column_label>Type</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -27,15 +27,15 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>one_day_early_access</element>
+        <element>type</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="">boolean</internal_type>
+        <internal_type display_value="Choice">choice</internal_type>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <name>x_aaro2_pnl_mgmt_deadline</name>
+        <name>x_aaro2_pnl_mgmt_question</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
@@ -52,18 +52,18 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-21 14:01:21</sys_created_on>
+        <sys_created_on>2021-02-16 12:49:37</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>63465e16db75ec505884eb184b96195c</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>One day (Early Access)</sys_name>
+        <sys_id>5dc08cfadb16ec10389b84d8689619f7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Type</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name>sys_dictionary_x_aaro2_pnl_mgmt_deadline_one_day_early_access</sys_update_name>
+        <sys_update_name>sys_dictionary_x_aaro2_pnl_mgmt_question_type</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-28 15:17:12</sys_updated_on>
+        <sys_updated_on>2021-02-16 12:49:37</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
