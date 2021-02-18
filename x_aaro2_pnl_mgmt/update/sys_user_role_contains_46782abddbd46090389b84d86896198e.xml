@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
     <sys_user_role_contains action="INSERT_OR_UPDATE">
         <contains display_value="workspace_user" name="workspace_user">3bf8d5b65344130084acddeeff7b122b</contains>
-        <role display_value="pnl_management" name="pnl_management">c6782abddbd46090389b84d868961976</role>
+        <role display_value="">c6782abddbd46090389b84d868961976</role>
         <sys_class_name>sys_user_role_contains</sys_class_name>
         <sys_created_by>xxikochet</sys_created_by>
         <sys_created_on>2020-11-06 12:21:53</sys_created_on>

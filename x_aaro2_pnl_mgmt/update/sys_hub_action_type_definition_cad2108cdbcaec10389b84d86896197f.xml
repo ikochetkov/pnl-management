@@ -58,7 +58,6 @@
         <action display_value="GetRecipientEmail">cad2108cdbcaec10389b84d86896197f</action>
         <cid>1f25f3d4-95f8-472d-b645-f43c9bd5394c</cid>
         <extended_inputs/>
-        <extended_inputs/>
         <extended_outputs/>
         <icon/>
         <inputs/>
@@ -136,139 +135,6 @@
         <value/>
         <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
     </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="id=e944d440db0eec10389b84d8689619fc"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>e944d440db0eec10389b84d8689619fc</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 14:55:11</sys_created_on>
-        <sys_id>6d549840db0eec10389b84d8689619b2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 14:55:11</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>mid_selection_type</field>
-        <id>e944d440db0eec10389b84d8689619fc</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 14:55:11</sys_created_on>
-        <sys_id>21549840db0eec10389b84d8689619b3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 14:55:11</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>records</field>
-        <id>e944d440db0eec10389b84d8689619fc</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 14:54:56</sys_created_on>
-        <sys_id>79441840db0eec10389b84d868961922</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 14:54:56</sys_updated_on>
-        <table>var__m_sys_hub_step_ext_input_e944d440db0eec10389b84d8689619fc</table>
-        <value>{{action.records}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>e944d440db0eec10389b84d8689619fc</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 14:54:56</sys_created_on>
-        <sys_id>f1441840db0eec10389b84d868961921</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 14:54:56</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_hub_step_ext_input action="delete_multiple" query="model=e944d440db0eec10389b84d8689619fc^sys_idNOT IN2d441840db0eec10389b84d868961902"/>
-    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <array>false</array>
-        <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=records,uiTypeLabel=Records</attributes>
-        <audit>false</audit>
-        <calculation>(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);</calculation>
-        <choice/>
-        <choice_field/>
-        <choice_table/>
-        <column_label/>
-        <comments/>
-        <create_roles/>
-        <default_value/>
-        <defaultsort/>
-        <delete_roles/>
-        <dependent/>
-        <dependent_on_field/>
-        <display>false</display>
-        <dynamic_creation>false</dynamic_creation>
-        <dynamic_creation_script/>
-        <dynamic_default_value/>
-        <dynamic_ref_qual/>
-        <element>records</element>
-        <element_reference>false</element_reference>
-        <foreign_database/>
-        <function_definition/>
-        <function_field>false</function_field>
-        <help/>
-        <hint/>
-        <internal_type display_value="Records">records</internal_type>
-        <label/>
-        <mandatory>true</mandatory>
-        <max_length>1024</max_length>
-        <model display_value="Script step">e944d440db0eec10389b84d8689619fc</model>
-        <model_id>e944d440db0eec10389b84d8689619fc</model_id>
-        <model_table>sys_hub_step_instance</model_table>
-        <name>var__m_sys_hub_step_ext_input_e944d440db0eec10389b84d8689619fc</name>
-        <next_element/>
-        <order>0</order>
-        <primary>false</primary>
-        <read_only>false</read_only>
-        <read_roles/>
-        <reference display_value="" name="x_aaro2_pnl_mgmt_m2m_sneak_peek_user">x_aaro2_pnl_mgmt_m2m_sneak_peek_user</reference>
-        <reference_cascade_rule/>
-        <reference_floats>false</reference_floats>
-        <reference_key/>
-        <reference_qual/>
-        <reference_qual_condition/>
-        <reference_type/>
-        <sizeclass/>
-        <spell_check>false</spell_check>
-        <staged>false</staged>
-        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 14:54:55</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>2d441840db0eec10389b84d868961902</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 14:54:55</sys_updated_on>
-        <table_reference>false</table_reference>
-        <text_index>false</text_index>
-        <unique>false</unique>
-        <use_dependent_field>false</use_dependent_field>
-        <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>false</virtual>
-        <widget/>
-        <write_roles/>
-        <xml_view>false</xml_view>
-    </sys_hub_step_ext_input>
     <sys_hub_step_ext_output action="delete_multiple" query="model=e944d440db0eec10389b84d8689619fc^sys_idNOT IN61441840db0eec10389b84d86896190b"/>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -353,90 +219,6 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
-    <sys_hub_action_input action="delete_multiple" query="model=cad2108cdbcaec10389b84d86896197f^sys_idNOT IN25441c8cdbcaec10389b84d868961969"/>
-    <sys_hub_action_input action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <array>false</array>
-        <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=records,uiTypeLabel=Records,uiUniqueId=cabb8564-9fa0-4853-ae6b-5a4f0348e00e</attributes>
-        <audit>false</audit>
-        <calculation>(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);</calculation>
-        <choice/>
-        <choice_field/>
-        <choice_table>x_aaro2_pnl_mgmt_m2m_sneak_peek_user</choice_table>
-        <column_label/>
-        <comments/>
-        <create_roles/>
-        <default_value/>
-        <defaultsort/>
-        <delete_roles/>
-        <dependent/>
-        <dependent_on_field/>
-        <display>false</display>
-        <dynamic_creation>false</dynamic_creation>
-        <dynamic_creation_script/>
-        <dynamic_default_value/>
-        <dynamic_ref_qual/>
-        <element>records</element>
-        <element_reference>false</element_reference>
-        <foreign_database/>
-        <function_definition/>
-        <function_field>false</function_field>
-        <help/>
-        <hint/>
-        <internal_type display_value="Records">records</internal_type>
-        <label>Records</label>
-        <mandatory>false</mandatory>
-        <max_length>1024</max_length>
-        <model display_value="GetRecipientEmail">cad2108cdbcaec10389b84d86896197f</model>
-        <model_id>cad2108cdbcaec10389b84d86896197f</model_id>
-        <model_table>sys_hub_action_type_definition</model_table>
-        <name>var__m_sys_hub_action_input_cad2108cdbcaec10389b84d86896197f</name>
-        <next_element/>
-        <order>1</order>
-        <primary>false</primary>
-        <read_only>false</read_only>
-        <read_roles/>
-        <reference display_value="" name="x_aaro2_pnl_mgmt_m2m_sneak_peek_user">x_aaro2_pnl_mgmt_m2m_sneak_peek_user</reference>
-        <reference_cascade_rule/>
-        <reference_floats>false</reference_floats>
-        <reference_key/>
-        <reference_qual/>
-        <reference_qual_condition/>
-        <reference_type/>
-        <sizeclass/>
-        <spell_check>false</spell_check>
-        <staged>false</staged>
-        <sys_class_name>sys_hub_action_input</sys_class_name>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 14:54:55</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>25441c8cdbcaec10389b84d868961969</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 14:54:55</sys_updated_on>
-        <table_reference>false</table_reference>
-        <text_index>false</text_index>
-        <unique>false</unique>
-        <use_dependent_field>false</use_dependent_field>
-        <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>false</virtual>
-        <widget/>
-        <write_roles/>
-        <xml_view>false</xml_view>
-    </sys_hub_action_input>
     <sys_hub_action_output action="delete_multiple" query="model=cad2108cdbcaec10389b84d86896197f^sys_idNOT INfd441840db0eec10389b84d868961927"/>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -528,7 +310,6 @@
         <action display_value="GetRecipientEmail">cad2108cdbcaec10389b84d86896197f</action>
         <cid>1f25f3d4-95f8-472d-b645-f43c9bd5394c</cid>
         <extended_inputs/>
-        <extended_inputs/>
         <extended_outputs/>
         <icon/>
         <inputs/>
@@ -606,139 +387,6 @@
         <value/>
         <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
     </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="id=e944d440db0eec10389b84d8689619fc"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>e944d440db0eec10389b84d8689619fc</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 14:55:11</sys_created_on>
-        <sys_id>6d549840db0eec10389b84d8689619b2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 14:55:11</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>mid_selection_type</field>
-        <id>e944d440db0eec10389b84d8689619fc</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 14:55:11</sys_created_on>
-        <sys_id>21549840db0eec10389b84d8689619b3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 14:55:11</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>records</field>
-        <id>e944d440db0eec10389b84d8689619fc</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 14:54:56</sys_created_on>
-        <sys_id>79441840db0eec10389b84d868961922</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 14:54:56</sys_updated_on>
-        <table>var__m_sys_hub_step_ext_input_e944d440db0eec10389b84d8689619fc</table>
-        <value>{{action.records}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>e944d440db0eec10389b84d8689619fc</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 14:54:56</sys_created_on>
-        <sys_id>f1441840db0eec10389b84d868961921</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 14:54:56</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_hub_step_ext_input action="delete_multiple" query="model=e944d440db0eec10389b84d8689619fc^sys_idNOT IN2d441840db0eec10389b84d868961902"/>
-    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <array>false</array>
-        <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=records,uiTypeLabel=Records</attributes>
-        <audit>false</audit>
-        <calculation>(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);</calculation>
-        <choice/>
-        <choice_field/>
-        <choice_table/>
-        <column_label/>
-        <comments/>
-        <create_roles/>
-        <default_value/>
-        <defaultsort/>
-        <delete_roles/>
-        <dependent/>
-        <dependent_on_field/>
-        <display>false</display>
-        <dynamic_creation>false</dynamic_creation>
-        <dynamic_creation_script/>
-        <dynamic_default_value/>
-        <dynamic_ref_qual/>
-        <element>records</element>
-        <element_reference>false</element_reference>
-        <foreign_database/>
-        <function_definition/>
-        <function_field>false</function_field>
-        <help/>
-        <hint/>
-        <internal_type display_value="Records">records</internal_type>
-        <label/>
-        <mandatory>true</mandatory>
-        <max_length>1024</max_length>
-        <model display_value="Script step">e944d440db0eec10389b84d8689619fc</model>
-        <model_id>e944d440db0eec10389b84d8689619fc</model_id>
-        <model_table>sys_hub_step_instance</model_table>
-        <name>var__m_sys_hub_step_ext_input_e944d440db0eec10389b84d8689619fc</name>
-        <next_element/>
-        <order>0</order>
-        <primary>false</primary>
-        <read_only>false</read_only>
-        <read_roles/>
-        <reference display_value="" name="x_aaro2_pnl_mgmt_m2m_sneak_peek_user">x_aaro2_pnl_mgmt_m2m_sneak_peek_user</reference>
-        <reference_cascade_rule/>
-        <reference_floats>false</reference_floats>
-        <reference_key/>
-        <reference_qual/>
-        <reference_qual_condition/>
-        <reference_type/>
-        <sizeclass/>
-        <spell_check>false</spell_check>
-        <staged>false</staged>
-        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 14:54:55</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>2d441840db0eec10389b84d868961902</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 14:54:55</sys_updated_on>
-        <table_reference>false</table_reference>
-        <text_index>false</text_index>
-        <unique>false</unique>
-        <use_dependent_field>false</use_dependent_field>
-        <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>false</virtual>
-        <widget/>
-        <write_roles/>
-        <xml_view>false</xml_view>
-    </sys_hub_step_ext_input>
     <sys_hub_step_ext_output action="delete_multiple" query="model=e944d440db0eec10389b84d8689619fc^sys_idNOT IN61441840db0eec10389b84d86896190b"/>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -823,32 +471,6 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_cad2108cdbcaec10389b84d86896197f^sys_idNOT INe144d440db0eec10389b84d8689619fa"/>
-    <sys_documentation action="INSERT_OR_UPDATE">
-        <element>records</element>
-        <help/>
-        <hint/>
-        <label>Records</label>
-        <language>en</language>
-        <name>var__m_sys_hub_action_input_cad2108cdbcaec10389b84d86896197f</name>
-        <plural/>
-        <sys_class_name>sys_documentation</sys_class_name>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 14:54:55</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>e144d440db0eec10389b84d8689619fa</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 14:54:55</sys_updated_on>
-        <url/>
-        <url_target/>
-    </sys_documentation>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_cad2108cdbcaec10389b84d86896197f^sys_idNOT IN39441840db0eec10389b84d86896192d"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>emails</element>
@@ -953,7 +575,6 @@
         <action display_value="GetRecipientEmail">ea54d840db0eec10389b84d868961984</action>
         <cid>1f25f3d4-95f8-472d-b645-f43c9bd5394c</cid>
         <extended_inputs/>
-        <extended_inputs/>
         <extended_outputs/>
         <icon/>
         <inputs/>
@@ -1031,139 +652,6 @@
 </value>
         <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
     </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="id=6254d840db0eec10389b84d8689619a9"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>6254d840db0eec10389b84d8689619a9</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 14:55:16</sys_created_on>
-        <sys_id>a654d840db0eec10389b84d8689619bd</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 14:55:16</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>mid_selection_type</field>
-        <id>6254d840db0eec10389b84d8689619a9</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 14:55:16</sys_created_on>
-        <sys_id>6a54d840db0eec10389b84d8689619bd</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 14:55:16</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>records</field>
-        <id>6254d840db0eec10389b84d8689619a9</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 14:55:16</sys_created_on>
-        <sys_id>6654d840db0eec10389b84d8689619cb</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 14:55:16</sys_updated_on>
-        <table>var__m_sys_hub_step_ext_input_6254d840db0eec10389b84d8689619a9</table>
-        <value>{{action.records}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>6254d840db0eec10389b84d8689619a9</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 14:55:16</sys_created_on>
-        <sys_id>2e54d840db0eec10389b84d8689619bd</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 14:55:16</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_hub_step_ext_input action="delete_multiple" query="model=6254d840db0eec10389b84d8689619a9^sys_idNOT IN2254d840db0eec10389b84d8689619ac"/>
-    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <array>false</array>
-        <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=records,uiTypeLabel=Records</attributes>
-        <audit>false</audit>
-        <calculation>(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);</calculation>
-        <choice/>
-        <choice_field/>
-        <choice_table/>
-        <column_label/>
-        <comments/>
-        <create_roles/>
-        <default_value/>
-        <defaultsort/>
-        <delete_roles/>
-        <dependent/>
-        <dependent_on_field/>
-        <display>false</display>
-        <dynamic_creation>false</dynamic_creation>
-        <dynamic_creation_script/>
-        <dynamic_default_value/>
-        <dynamic_ref_qual/>
-        <element>records</element>
-        <element_reference>false</element_reference>
-        <foreign_database/>
-        <function_definition/>
-        <function_field>false</function_field>
-        <help/>
-        <hint/>
-        <internal_type display_value="Records">records</internal_type>
-        <label>records</label>
-        <mandatory>true</mandatory>
-        <max_length>1024</max_length>
-        <model display_value="Script step">6254d840db0eec10389b84d8689619a9</model>
-        <model_id>6254d840db0eec10389b84d8689619a9</model_id>
-        <model_table>sys_hub_step_instance</model_table>
-        <name>var__m_sys_hub_step_ext_input_6254d840db0eec10389b84d8689619a9</name>
-        <next_element/>
-        <order>0</order>
-        <primary>false</primary>
-        <read_only>false</read_only>
-        <read_roles/>
-        <reference display_value="" name="x_aaro2_pnl_mgmt_m2m_sneak_peek_user">x_aaro2_pnl_mgmt_m2m_sneak_peek_user</reference>
-        <reference_cascade_rule/>
-        <reference_floats>false</reference_floats>
-        <reference_key/>
-        <reference_qual/>
-        <reference_qual_condition/>
-        <reference_type/>
-        <sizeclass/>
-        <spell_check>false</spell_check>
-        <staged>false</staged>
-        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 14:55:15</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>2254d840db0eec10389b84d8689619ac</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 14:55:15</sys_updated_on>
-        <table_reference>false</table_reference>
-        <text_index>false</text_index>
-        <unique>false</unique>
-        <use_dependent_field>false</use_dependent_field>
-        <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>false</virtual>
-        <widget/>
-        <write_roles/>
-        <xml_view>false</xml_view>
-    </sys_hub_step_ext_input>
     <sys_hub_step_ext_output action="delete_multiple" query="model=6254d840db0eec10389b84d8689619a9^sys_idNOT INae54d840db0eec10389b84d8689619b4"/>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -1248,90 +736,6 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
-    <sys_hub_action_input action="delete_multiple" query="model=ea54d840db0eec10389b84d868961984^sys_idNOT IN2e54d840db0eec10389b84d868961985"/>
-    <sys_hub_action_input action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <array>false</array>
-        <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=records,uiTypeLabel=Records,uiUniqueId=cabb8564-9fa0-4853-ae6b-5a4f0348e00e</attributes>
-        <audit>false</audit>
-        <calculation>(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);</calculation>
-        <choice/>
-        <choice_field/>
-        <choice_table>x_aaro2_pnl_mgmt_m2m_sneak_peek_user</choice_table>
-        <column_label/>
-        <comments/>
-        <create_roles/>
-        <default_value/>
-        <defaultsort/>
-        <delete_roles/>
-        <dependent/>
-        <dependent_on_field/>
-        <display>false</display>
-        <dynamic_creation>false</dynamic_creation>
-        <dynamic_creation_script/>
-        <dynamic_default_value/>
-        <dynamic_ref_qual/>
-        <element>records</element>
-        <element_reference>false</element_reference>
-        <foreign_database/>
-        <function_definition/>
-        <function_field>false</function_field>
-        <help/>
-        <hint/>
-        <internal_type display_value="Records">records</internal_type>
-        <label>Records</label>
-        <mandatory>false</mandatory>
-        <max_length>1024</max_length>
-        <model display_value="GetRecipientEmail">ea54d840db0eec10389b84d868961984</model>
-        <model_id>ea54d840db0eec10389b84d868961984</model_id>
-        <model_table>sys_hub_action_type_snapshot</model_table>
-        <name>var__m_sys_hub_action_input_ea54d840db0eec10389b84d868961984</name>
-        <next_element/>
-        <order>1</order>
-        <primary>false</primary>
-        <read_only>false</read_only>
-        <read_roles/>
-        <reference display_value="" name="x_aaro2_pnl_mgmt_m2m_sneak_peek_user">x_aaro2_pnl_mgmt_m2m_sneak_peek_user</reference>
-        <reference_cascade_rule/>
-        <reference_floats>false</reference_floats>
-        <reference_key/>
-        <reference_qual/>
-        <reference_qual_condition/>
-        <reference_type/>
-        <sizeclass/>
-        <spell_check>false</spell_check>
-        <staged>false</staged>
-        <sys_class_name>sys_hub_action_input</sys_class_name>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 14:55:15</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>2e54d840db0eec10389b84d868961985</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 14:55:15</sys_updated_on>
-        <table_reference>false</table_reference>
-        <text_index>false</text_index>
-        <unique>false</unique>
-        <use_dependent_field>false</use_dependent_field>
-        <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>false</virtual>
-        <widget/>
-        <write_roles/>
-        <xml_view>false</xml_view>
-    </sys_hub_action_input>
     <sys_hub_action_output action="delete_multiple" query="model=ea54d840db0eec10389b84d868961984^sys_idNOT INba54d840db0eec10389b84d8689619d0"/>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -1423,7 +827,6 @@
         <action display_value="GetRecipientEmail">ea54d840db0eec10389b84d868961984</action>
         <cid>1f25f3d4-95f8-472d-b645-f43c9bd5394c</cid>
         <extended_inputs/>
-        <extended_inputs/>
         <extended_outputs/>
         <icon/>
         <inputs/>
@@ -1501,139 +904,6 @@
 </value>
         <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
     </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="id=6254d840db0eec10389b84d8689619a9"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>6254d840db0eec10389b84d8689619a9</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 14:55:16</sys_created_on>
-        <sys_id>a654d840db0eec10389b84d8689619bd</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 14:55:16</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>mid_selection_type</field>
-        <id>6254d840db0eec10389b84d8689619a9</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 14:55:16</sys_created_on>
-        <sys_id>6a54d840db0eec10389b84d8689619bd</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 14:55:16</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>records</field>
-        <id>6254d840db0eec10389b84d8689619a9</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 14:55:16</sys_created_on>
-        <sys_id>6654d840db0eec10389b84d8689619cb</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 14:55:16</sys_updated_on>
-        <table>var__m_sys_hub_step_ext_input_6254d840db0eec10389b84d8689619a9</table>
-        <value>{{action.records}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>6254d840db0eec10389b84d8689619a9</id>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 14:55:16</sys_created_on>
-        <sys_id>2e54d840db0eec10389b84d8689619bd</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 14:55:16</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_hub_step_ext_input action="delete_multiple" query="model=6254d840db0eec10389b84d8689619a9^sys_idNOT IN2254d840db0eec10389b84d8689619ac"/>
-    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <array>false</array>
-        <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=records,uiTypeLabel=Records</attributes>
-        <audit>false</audit>
-        <calculation>(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);</calculation>
-        <choice/>
-        <choice_field/>
-        <choice_table/>
-        <column_label/>
-        <comments/>
-        <create_roles/>
-        <default_value/>
-        <defaultsort/>
-        <delete_roles/>
-        <dependent/>
-        <dependent_on_field/>
-        <display>false</display>
-        <dynamic_creation>false</dynamic_creation>
-        <dynamic_creation_script/>
-        <dynamic_default_value/>
-        <dynamic_ref_qual/>
-        <element>records</element>
-        <element_reference>false</element_reference>
-        <foreign_database/>
-        <function_definition/>
-        <function_field>false</function_field>
-        <help/>
-        <hint/>
-        <internal_type display_value="Records">records</internal_type>
-        <label>records</label>
-        <mandatory>true</mandatory>
-        <max_length>1024</max_length>
-        <model display_value="Script step">6254d840db0eec10389b84d8689619a9</model>
-        <model_id>6254d840db0eec10389b84d8689619a9</model_id>
-        <model_table>sys_hub_step_instance</model_table>
-        <name>var__m_sys_hub_step_ext_input_6254d840db0eec10389b84d8689619a9</name>
-        <next_element/>
-        <order>0</order>
-        <primary>false</primary>
-        <read_only>false</read_only>
-        <read_roles/>
-        <reference display_value="" name="x_aaro2_pnl_mgmt_m2m_sneak_peek_user">x_aaro2_pnl_mgmt_m2m_sneak_peek_user</reference>
-        <reference_cascade_rule/>
-        <reference_floats>false</reference_floats>
-        <reference_key/>
-        <reference_qual/>
-        <reference_qual_condition/>
-        <reference_type/>
-        <sizeclass/>
-        <spell_check>false</spell_check>
-        <staged>false</staged>
-        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 14:55:15</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>2254d840db0eec10389b84d8689619ac</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 14:55:15</sys_updated_on>
-        <table_reference>false</table_reference>
-        <text_index>false</text_index>
-        <unique>false</unique>
-        <use_dependent_field>false</use_dependent_field>
-        <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>false</virtual>
-        <widget/>
-        <write_roles/>
-        <xml_view>false</xml_view>
-    </sys_hub_step_ext_input>
     <sys_hub_step_ext_output action="delete_multiple" query="model=6254d840db0eec10389b84d8689619a9^sys_idNOT INae54d840db0eec10389b84d8689619b4"/>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -1718,32 +988,6 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_ea54d840db0eec10389b84d868961984^sys_idNOT INaa54d840db0eec10389b84d8689619a6"/>
-    <sys_documentation action="INSERT_OR_UPDATE">
-        <element>records</element>
-        <help/>
-        <hint/>
-        <label>Records</label>
-        <language>en</language>
-        <name>var__m_sys_hub_action_input_ea54d840db0eec10389b84d868961984</name>
-        <plural/>
-        <sys_class_name>sys_documentation</sys_class_name>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2021-01-26 14:55:15</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>aa54d840db0eec10389b84d8689619a6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-26 14:55:15</sys_updated_on>
-        <url/>
-        <url_target/>
-    </sys_documentation>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_ea54d840db0eec10389b84d868961984^sys_idNOT IN7a54d840db0eec10389b84d8689619d5"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>emails</element>

@@ -7,7 +7,7 @@
         <hint/>
         <name>PALMS User Types</name>
         <order>100</order>
-        <roles>x_aaro2_pnl_mgmt.pnl_role_access_user</roles>
+        <roles/>
         <sys_class_name>sys_app_application</sys_class_name>
         <sys_created_by>xxmpurik</sys_created_by>
         <sys_created_on>2021-02-05 10:43:38</sys_created_on>

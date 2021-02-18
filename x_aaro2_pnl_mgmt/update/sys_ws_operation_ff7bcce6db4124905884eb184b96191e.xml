@@ -9,37 +9,65 @@
         <name>GetPNLUserDataSet</name>
         <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
 
-	var preBody, prePeriods, filtered;
+	var utils = new Utils();
 
-	var deadlineData = new Utils().getCurrentPeriodDeadline('answer');
+	var preBody, prePeriods, filtered;
+	var deadlinePeriods = ['early_access', 'question', 'reassign', 'answer'];
+	var periodInfo = {};
+	var hasVerifAcc = false;
+
+	//get previous month deadline data -START
+	var deadlineData = utils.getCurrentPeriodDeadline('answer');
 	var beforeDeadline = deadlineData.beforeDeadline;
 	var curYear = deadlineData.curYear;
 	var curMonth = deadlineData.curMonth;
 	var deadlineSysID = deadlineData.sysID;
+	//get previous month deadline data -END
 
-	var earlyAccData = new Utils().getCurrentPeriodDeadline('early_access');
-	var earlyAccTime =  new Utils().timeValid(earlyAccData.start, earlyAccData.end);
-	//todo
-	// 	var curUser = gs.getUserName();
-	var curUser = 'nefiveas';
-	// 	var userSysID = gs.getUserID();
-	var userSysID = '9e8d995e9cd04d003d789b9c8ea5ca3c';
-
-	var tempAcc = new GlideRecord('x_aaro2_pnl_mgmt_temporary_access');
-	tempAcc.addQuery('deadline', deadlineSysID);
+	var curUser = gs.getUserName();
+	var userSysID = gs.getUserID();
+	
+	// check if user has temporary access -START
+	var tempAcc = new GlideRecord('x_aaro2_pnl_mgmt_temporary_access_participants');
 	tempAcc.addQuery('user', userSysID);
+	tempAcc.query();
 	if(tempAcc.next()) {
-		curUser = 'nefiveas';
-		if(tempAcc.getValue('can_ask') == 0) {
-			var canAsk = false;
+		curUser = gs.getProperty('x_aaro2_pnl_mgmt.temporary_access_userID');
+		if(tempAcc.getValue('can_interact') == 0) {
+			var canInteract = false;
 		}
 	}
+	// check if user has temporary access -END
+
+	deadlinePeriods.forEach(function(period){
+		var periodData = utils.getCurrentPeriodDeadline(period);
+		periodInfo[period] = {
+			currentPeriod : periodData.beforeDeadline,
+			start : periodData.start,
+			end : periodData.end
+		};
+	});
+	
+	//check if user has Early access -START
+	var hasEarlyAcc = utils.userHasEarlyAcc(userSysID, deadlineSysID);
+	var earlyAccTime =  utils.timeValid(periodInfo.early_access.start, deadlineData.end);
+	//check if user has Early access -END
+
+	//check if user has statements verification access -START
+	var statVer = new GlideRecord('x_aaro2_pnl_mgmt_m2m_statements_verificators');
+	statVer.addQuery('deadline', deadlineSysID);
+	statVer.addQuery('user', userSysID);
+	statVer.query();
+	if(statVer.hasNext()) {
+		hasVerifAcc = true;
+	}
+	//check if user has statements verification access -END
 
 	var responseObj, restResponse, endpoint;
 	gs.info('PNL MANAGEMENT: ' + JSON.stringify(request.queryParams));
 
 	try {
-		endpoint = gs.getProperty('x_aaro2_pnl_mgmt.GetPNLUserDataSet_endpoint') + "UserLogin=" + curUser;//gs.getUserName(); 'nefiveas'replace to  'srkincan'
+		endpoint = gs.getProperty('x_aaro2_pnl_mgmt.GetPNLUserDataSet_endpoint') + "UserLogin=" + curUser;
 		gs.info(endpoint);
 		var r = new sn_ws.RESTMessageV2();
 		r.setHttpMethod('GET');
@@ -74,33 +102,25 @@
 
 	//test data -END
 
-	// if user has temporary access but cant ask -START
-
-	if(canAsk == false) {
+	// if user has temporary access but cant ask - make data readonly -END 
+	if(canInteract == false) {
 		var body = JSON.parse(responseObj.body);
 		body.AccountingUnitsAlpha.forEach(function(item){
-			//var newItem = item;
 			if(item.RoleId == 976) {
 				item.RoleId = 998;
 			}
 		});
 		body.AccountingUnitsHierarchical.forEach(function(item){
-			//var newItem = item;
 			if(item.RoleId == 976) {
 				item.RoleId = 998;
 			}
 		});
 		responseObj.body = JSON.stringify(body);
 	}
-
-	// if user has temporary access but cant ask -END
+	// if user has temporary access but cant ask - make data readonly -END 
 	
-	//check if User has Early Access -START
-
-	var earlyAcc = new GlideRecord('x_aaro2_pnl_mgmt_m2m_sneak_peek_user');
-	earlyAcc.addQuery('deadline', deadlineSysID);
-	earlyAcc.addQuery('user', userSysID);
-	if(!earlyAcc.next() && earlyAccTime) {
+	// cutting previous month data -sTART
+	if((periodInfo.early_access.currentPeriod && !hasVerifAcc) || (periodInfo.answer.currentPeriod && !hasEarlyAcc)) {
 		preBody = JSON.parse(responseObj.body);
 		prePeriods = preBody.Periods;
 		filtered = prePeriods.filter(function(period){
@@ -109,27 +129,8 @@
 		preBody.Periods = filtered;
 		responseObj.body = JSON.stringify(preBody);
 	}
+	// cutting previous month data -END
 	
-	//check if User has Early Access -END
-
-	//check if User has Pre-release Access -START
-
-	var preRelAcc = new GlideRecord('x_aaro2_pnl_mgmt_pre_release_access');
-	preRelAcc.addQuery('deadline', deadlineSysID);
-	preRelAcc.addQuery('user', userSysID);
-	if(!preRelAcc.next() && beforeDeadline) {
-		preBody = JSON.parse(responseObj.body);
-		prePeriods = preBody.Periods;
-		filtered = prePeriods.filter(function(period){
-			return !(period.FiscalYear == curYear && period.AccountingPeriod == curMonth);
-		});
-		preBody.Periods = filtered;
-		responseObj.body = JSON.stringify(preBody);
-
-	}
-
-	//check if User has Pre-release Access -END
-
 	return responseObj;
 
 })(request, response);]]></operation_script>
@@ -147,7 +148,7 @@
         <sys_created_on>2020-12-15 15:39:01</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ff7bcce6db4124905884eb184b96191e</sys_id>
-        <sys_mod_count>117</sys_mod_count>
+        <sys_mod_count>146</sys_mod_count>
         <sys_name>GetPNLUserDataSet</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -155,7 +156,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_ws_operation_ff7bcce6db4124905884eb184b96191e</sys_update_name>
         <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-16 14:59:33</sys_updated_on>
+        <sys_updated_on>2021-02-18 19:01:10</sys_updated_on>
         <web_service_definition display_value="utils">d3a7e6e5db5ce8505884eb184b961953</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

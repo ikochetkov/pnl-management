@@ -37,7 +37,7 @@
         <sys_updated_on>2021-02-05 10:43:38</sys_updated_on>
         <u_description/>
         <update_access>false</update_access>
-        <user_role display_value="x_aaro2_pnl_mgmt.pnl_role_access_user" name="x_aaro2_pnl_mgmt.pnl_role_access_user">adaa764fdb4e6c145884eb184b961992</user_role>
+        <user_role/>
         <ws_access>true</ws_access>
     </sys_db_object>
 </record_update>
