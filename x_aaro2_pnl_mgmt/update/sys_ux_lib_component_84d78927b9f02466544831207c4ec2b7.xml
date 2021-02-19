@@ -12,19 +12,19 @@ No Results Found&#13;
         <source_script/>
         <source_script_name>@aarons/pnl-mgmt</source_script_name>
         <sys_class_name>sys_ux_lib_component</sys_class_name>
-        <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-11-19 14:19:20</sys_created_on>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-02-19 13:55:28</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>d3b8df9263de1cf9c6751f0f0c81bf84</sys_id>
-        <sys_mod_count>448262</sys_mod_count>
-        <sys_name>aaro2-pnl-user-profile</sys_name>
+        <sys_id>84d78927b9f02466544831207c4ec2b7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>aaro2-pnl-journal</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name>sys_ux_lib_component_d3b8df9263de1cf9c6751f0f0c81bf84</sys_update_name>
+        <sys_update_name>sys_ux_lib_component_84d78927b9f02466544831207c4ec2b7</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-02-19 13:55:10</sys_updated_on>
-        <tag>aaro2-pnl-user-profile</tag>
+        <sys_updated_on>2021-02-19 13:55:28</sys_updated_on>
+        <tag>aaro2-pnl-journal</tag>
     </sys_ux_lib_component>
 </record_update>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent">
+    <sys_ux_macroponent action="INSERT_OR_UPDATE">
+        <associated_types>d8899a0473000010f7353c78caf6a750,c1251a89db4c1010793ddf6b5e96199c</associated_types>
+        <component_dependencies/>
+        <composition>[]</composition>
+        <data/>
+        <events/>
+        <extends/>
+        <interactions/>
+        <layout>{}</layout>
+        <macroponent_dependencies/>
+        <name>PNL Journal</name>
+        <props>[]</props>
+        <root_component display_value="aaro2-pnl-journal">84d78927b9f02466544831207c4ec2b7</root_component>
+        <root_component_config>{}</root_component_config>
+        <schema_version>1.0.0</schema_version>
+        <sys_class_name>sys_ux_macroponent</sys_class_name>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-02-19 13:55:29</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d5601ea80da80e27e058b4ef67fa7853</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PNL Journal</sys_name>
+        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name>sys_ux_macroponent_d5601ea80da80e27e058b4ef67fa7853</sys_update_name>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-02-19 13:55:29</sys_updated_on>
+    </sys_ux_macroponent>
+</record_update>

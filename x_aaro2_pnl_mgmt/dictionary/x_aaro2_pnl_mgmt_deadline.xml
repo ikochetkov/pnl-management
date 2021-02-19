@@ -2,8 +2,8 @@
     <element label="Deadline" max_length="40" name="x_aaro2_pnl_mgmt_deadline" sizeclass="4" type="collection">
         <element label="Answer End" max_length="40" name="answer_end" type="glide_date_time"/>
         <element label="Answer Start" max_length="40" name="answer_start" type="glide_date_time"/>
-        <element label="Early Access End" max_length="40" name="early_access_end" type="glide_date_time"/>
-        <element label="Early Access Start" max_length="40" name="early_access_start" type="glide_date_time"/>
+        <element label="Statements Verification End" max_length="40" name="early_access_end" type="glide_date_time"/>
+        <element label="Statements Verification Start" max_length="40" name="early_access_start" type="glide_date_time"/>
         <element choice="1" default="javascript: (new SneakPeekUtil()).getMonth('',-1).month" display="true" label="Month" max_length="40" name="month" type="choice">
             <choice>
                 <element inactive_on_update="false" label="January" sequence="0" value="1"/>
