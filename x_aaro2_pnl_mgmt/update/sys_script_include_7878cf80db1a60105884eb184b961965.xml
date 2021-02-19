@@ -112,49 +112,56 @@ Utils.prototype = {
     }
     return entries
   },
-  _getUserObject: function(userid){
+  setJournal: function (sys_id, text) {
+    var gr = new GlideRecord(this.QUESTION_TABLE);
+    gr.get(sys_id)
+    gr.comments = text;
+    gr.update();
+    return 'success'
+  },
+  _getUserObject: function (userid) {
     var userGr = new GlideRecord('sys_user');
     userGr.get('user_name', userid)
     var userObj = {
       id: userid,
       name: userGr.getValue('name'),
-      avatar: userGr.getValue('avatar')|| '',
+      avatar: userGr.getValue('avatar') || '',
       email: userGr.getValue('email')
     }
     return userObj;
   },
-	timeValid: function (start, end) {
+  timeValid: function (start, end) {
     var startNumeric = new GlideDateTime(start).getNumericValue();
     var endNumeric = new GlideDateTime(end).getNumericValue();
     var currentTime = new GlideDateTime().getNumericValue();
     return startNumeric < currentTime && endNumeric > currentTime;
   },
-	
-	userHasEarlyAcc: function(userSysID, deadlineSysID) {
-		var hasEarlyAcc = false;
-		var userGr = new GlideRecord('sys_user');
-		if(userGr.get(userSysID)) {
-			if(userGr.getValue('title')) {
-				var userTitle = userGr.getValue('title');
-				var defaultUserTitles = gs.getProperty('x_aaro2_pnl_mgmt.default_pnl_early_acc_titles');
-				if(defaultUserTitles.indexOf(userTitle) != -1) {
-					hasEarlyAcc = true;
-				}
-			}
-		}
 
-		if(!hasEarlyAcc) {
-			var preRelAcc = new GlideRecord('x_aaro2_pnl_mgmt_m2m_early_access_user');
-			preRelAcc.addQuery('deadline', deadlineSysID);
-			preRelAcc.addQuery('user', userSysID);
-			preRelAcc.query();
-			if(preRelAcc.hasNext()) {
-				hasEarlyAcc = true;
-			}
-		}
-		
-		return hasEarlyAcc;
-	},
+  userHasEarlyAcc: function (userSysID, deadlineSysID) {
+    var hasEarlyAcc = false;
+    var userGr = new GlideRecord('sys_user');
+    if (userGr.get(userSysID)) {
+      if (userGr.getValue('title')) {
+        var userTitle = userGr.getValue('title');
+        var defaultUserTitles = gs.getProperty('x_aaro2_pnl_mgmt.default_pnl_early_acc_titles');
+        if (defaultUserTitles.indexOf(userTitle) != -1) {
+          hasEarlyAcc = true;
+        }
+      }
+    }
+
+    if (!hasEarlyAcc) {
+      var preRelAcc = new GlideRecord('x_aaro2_pnl_mgmt_m2m_early_access_user');
+      preRelAcc.addQuery('deadline', deadlineSysID);
+      preRelAcc.addQuery('user', userSysID);
+      preRelAcc.query();
+      if (preRelAcc.hasNext()) {
+        hasEarlyAcc = true;
+      }
+    }
+
+    return hasEarlyAcc;
+  },
 
   type: 'Utils'
 };]]></script>
@@ -163,14 +170,14 @@ Utils.prototype = {
         <sys_created_on>2021-02-08 14:28:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7878cf80db1a60105884eb184b961965</sys_id>
-        <sys_mod_count>81</sys_mod_count>
+        <sys_mod_count>88</sys_mod_count>
         <sys_name>Utils</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_7878cf80db1a60105884eb184b961965</sys_update_name>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-18 18:30:54</sys_updated_on>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-02-19 12:59:41</sys_updated_on>
     </sys_script_include>
 </record_update>
