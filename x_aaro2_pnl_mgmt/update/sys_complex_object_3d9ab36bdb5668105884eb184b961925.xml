@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD799ab36b595668100d736d99a7062e25</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>58a846e1db14ec50389b84d868961919</scope_name>
+        <serialized_content>{"FlowDesigner:FD799ab36b595668100d736d99a7062e25":{"$COCollectionField":["String"],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD799ab36b595668100d736d99a7062e25.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Emails\",\"mandatory\":\"true\",\"child_name\":\"Emails_child0\",\"uiUniqueId\":\"209d6887-3699-4dc2-922c-3733ffc616c7\",\"uiTypeLabel\":\"Array.String\",\"co_type_name\":\"FD799ab36b595668100d736d99a7062e25\",\"child_label\":\"Emails_child0\",\"child_type_label\":\"String\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.string\",\"child_type\":\"string\",\"order\":\"1\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"51faed9d-8153-4188-8afa-4323c0a29ebc\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>xxmpurik</sys_created_by>
+        <sys_created_on>2021-02-19 14:55:37</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>3d9ab36bdb5668105884eb184b961925</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FD799ab36b595668100d736d99a7062e25</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name>sys_complex_object_3d9ab36bdb5668105884eb184b961925</sys_update_name>
+        <sys_updated_by>xxmpurik</sys_updated_by>
+        <sys_updated_on>2021-02-19 14:55:37</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>

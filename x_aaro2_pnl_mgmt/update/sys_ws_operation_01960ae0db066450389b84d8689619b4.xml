@@ -11,9 +11,10 @@
 
 	var filters = ['company','status','subunit','year','account', 'over_1k_reviewed', 'manager_reviewed', 'supervisor_reviewed', 'answer_released', 'assigned_to', 'requested_by', 'over_1k'];
 	var boolean_fields = ['over_1k_reviewed', 'manager_reviewed', 'supervisor_reviewed', 'answer_released', 'over_1k'];
+	var object_fields = ['assigned_to'];
 	var resp = {};
 	var query ='';
-	var unitsQuery = request.queryParams.availableAccountingUnits;
+	var unitsQuery = request.queryParams.availableAccountingUnits || '';
 	if(request.queryParams.query) {
 		query = request.queryParams.query[0];
 	}
@@ -77,7 +78,12 @@
 	while(qGr.next()){
 		var questionFields = {};
 		fields.forEach(function(field){
-			if(~boolean_fields.indexOf(field)){
+			if(~object_fields.indexOf(field)){
+				questionFields[field] = {
+					value: qGr.getValue(field),
+					displayValue: qGr.getDisplayValue(field)
+				};
+			} else if(~boolean_fields.indexOf(field)){
 				questionFields[field] = !!+qGr.getValue(field);
 			} else {
 				questionFields[field] = qGr.getDisplayValue(field);
@@ -121,7 +127,7 @@
         <sys_created_on>2021-01-28 12:31:34</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>01960ae0db066450389b84d8689619b4</sys_id>
-        <sys_mod_count>72</sys_mod_count>
+        <sys_mod_count>74</sys_mod_count>
         <sys_name>getQuestionData</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -129,7 +135,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_ws_operation_01960ae0db066450389b84d8689619b4</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-02-18 10:49:45</sys_updated_on>
+        <sys_updated_on>2021-02-19 16:32:48</sys_updated_on>
         <web_service_definition display_value="utils">d3a7e6e5db5ce8505884eb184b961953</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

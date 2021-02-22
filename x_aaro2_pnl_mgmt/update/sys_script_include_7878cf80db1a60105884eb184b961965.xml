@@ -9,175 +9,178 @@
         <name>Utils</name>
         <script><![CDATA[var Utils = Class.create();
 Utils.prototype = {
-  initialize: function () {
-    this.DEADLINE_TABLE = 'x_aaro2_pnl_mgmt_deadline'
-    this.QUESTION_TABLE = 'x_aaro2_pnl_mgmt_question'
-    this.ACCOUNT_ASSIGNMENT_TABLE = 'x_aaro2_pnl_mgmt_pnl_account_assignment'
+	initialize: function () {
+		this.DEADLINE_TABLE = 'x_aaro2_pnl_mgmt_deadline';
+		this.QUESTION_TABLE = 'x_aaro2_pnl_mgmt_question';
+		this.ACCOUNT_ASSIGNMENT_TABLE = 'x_aaro2_pnl_mgmt_pnl_account_assignment';
 
-  },
+	},
 
-  getCurrentPeriodDeadline: function (periodType) {
-    var gdt = new GlideDateTime();
-    var data = {};
-    data.currentDateTime = gdt.toString();
-    gdt.addMonthsUTC(-1);
-    var curYear = gdt.getYearUTC();
-    var curMonth = gdt.getMonthUTC();
-    data = this.getDeadline(curYear, String(curMonth), periodType);
-    data.beforeDeadline = this.timeValid(data.start, data.end);
-    data.curYear = curYear;
-    data.curMonth = curMonth;
+	getCurrentPeriodDeadline: function (periodType) {
+		var gdt = new GlideDateTime();
+		var data = {};
+		data.currentDateTime = gdt.toString();
+		gdt.addMonthsUTC(-1);
+		var curYear = gdt.getYearUTC();
+		var curMonth = gdt.getMonthUTC();
+		data = this.getDeadline(curYear, String(curMonth), periodType);
+		data.beforeDeadline = this.timeValid(data.start, data.end);
+		data.curYear = curYear;
+		data.curMonth = curMonth;
 
-    return data;
-  },
+		return data;
+	},
 
-  // 	getCurrentPeriodDeadline: function(periodType) {
-  // 		var gdt = new GlideDateTime();
-  // 		var curYear = gdt.getYearUTC();
-  // 		var curMonth = gdt.getMonthUTC();
-  // 		--curMonth;
-  // 		var data = this.getDeadline(curYear, String(curMonth), periodType);
-  // 		data.currentDateTime = gdt.toString();
-  // 		data.beforeDeadline = this.timeValid(gdt, data.end);
-  // 		data.curYear = curYear;
-  // 		data.curMonth = curMonth;
+	// 	getCurrentPeriodDeadline: function(periodType) {
+	// 		var gdt = new GlideDateTime();
+	// 		var curYear = gdt.getYearUTC();
+	// 		var curMonth = gdt.getMonthUTC();
+	// 		--curMonth;
+	// 		var data = this.getDeadline(curYear, String(curMonth), periodType);
+	// 		data.currentDateTime = gdt.toString();
+	// 		data.beforeDeadline = this.timeValid(gdt, data.end);
+	// 		data.curYear = curYear;
+	// 		data.curMonth = curMonth;
 
-  // 		return data;
-  // 	},
+	// 		return data;
+	// 	},
 
-  getDeadline: function (year, month, periodType) {
-    var dlGR = new GlideRecord(this.DEADLINE_TABLE);
-    dlGR.addQuery('year', year);
-    dlGR.addQuery('month', month);
-    dlGR.query();
-    if (dlGR.next()) {
-      var period = {};
-      period.start = dlGR.getDisplayValue(periodType + '_start');
-      period.end = dlGR.getDisplayValue(periodType + '_end');
-      period.sysID = dlGR.getUniqueValue();
+	getDeadline: function (year, month, periodType) {
+		var formatted_month = month.indexOf('0')==0? month.replace('0',''): month;
+		var dlGR = new GlideRecord(this.DEADLINE_TABLE);
+		dlGR.addQuery('year', year);
+		dlGR.addQuery('month', formatted_month);
+		dlGR.query();
+		if (dlGR.next()) {
+			var period = {};
+			period.start = dlGR.getDisplayValue(periodType + '_start');
+			period.end = dlGR.getDisplayValue(periodType + '_end');
+			period.sysID = dlGR.getUniqueValue();
 
-      return period;
-    } else {
-      return false;
-    }
+			return period;
+		} else {
+			return false;
+		}
 
-  },
+	},
 
-  getQuestionModalData: function (sysID) {
-    var questionGr = new GlideRecord(this.QUESTION_TABLE);
-    questionGr.get(sysID);
-    var acc = questionGr.getValue('account');
-    var year = questionGr.getValue('year');
-    var month = questionGr.getValue('period');
-    var deadlineReassignmentPeriod = this.getDeadline(year, month, 'reassign');
-    var reassignmentTimeValid = this.timeValid(deadlineReassignmentPeriod.start, deadlineReassignmentPeriod.end);
+	getQuestionModalData: function (sysID) {
+		var questionGr = new GlideRecord(this.QUESTION_TABLE);
+		questionGr.get(sysID);
+		var acc = questionGr.getValue('account');
+		var year = questionGr.getValue('year');
+		var month = questionGr.getValue('period');
+		var deadlineReassignmentPeriod = this.getDeadline(year, month, 'reassign');
+		//gs.info('PNL_IGOR: year-'+year+' ; month - '+month);
+		//gs.info('PNL_IGOR2: '+deadlineReassignmentPeriod);
+		var reassignmentTimeValid = this.timeValid(deadlineReassignmentPeriod.start, deadlineReassignmentPeriod.end);
 
-    var deadlineAnswerPeriod = this.getDeadline(year, month, 'answer');
-    var answerTimeValid = this.timeValid(deadlineAnswerPeriod.start, deadlineAnswerPeriod.end);
+		var deadlineAnswerPeriod = this.getDeadline(year, month, 'answer');
+		var answerTimeValid = this.timeValid(deadlineAnswerPeriod.start, deadlineAnswerPeriod.end);
 
-    var users = [];
-    var accountAssignmentGr = new GlideRecord(this.ACCOUNT_ASSIGNMENT_TABLE);
-    accountAssignmentGr.addQuery('account', acc);
-    accountAssignmentGr.query();
-    while (accountAssignmentGr.next()) {
-      users.push({
-        id: accountAssignmentGr.getValue('user'),
-        label: accountAssignmentGr.getDisplayValue('user')
-      });
-    }
-    return {
-      reassignment_users: users,
-      reassignment_start: deadlineReassignmentPeriod.start,
-      reassignment_end: deadlineReassignmentPeriod.end,
-      reassignment_time_valid: reassignmentTimeValid,
-      answer_start: deadlineAnswerPeriod.start,
-      answer_end: deadlineReassignmentPeriod.end,
-      answer_time_valid: answerTimeValid,
-      journal: this.getJournal(sysID)
-    };
-  },
-  getJournal: function (sys_id) {
-    var je = new GlideRecord('sys_journal_field');
-    je.addQuery('element_id', sys_id);
-    je.orderByDesc('sys_created_on');
-    je.query();
-    var entries = []
-    while (je.next()) {
-      var entry = {
-        author: this._getUserObject(je.getValue('sys_created_by')),
-        comment: je.getValue('value'),
-        created_on: je.getValue('sys_created_on')
-      }
-      entries.push(entry);
-    }
-    return entries
-  },
-  setJournal: function (sys_id, text) {
-    var gr = new GlideRecord(this.QUESTION_TABLE);
-    gr.get(sys_id)
-    gr.comments = text;
-    gr.update();
-    return 'success'
-  },
-  _getUserObject: function (userid) {
-    var userGr = new GlideRecord('sys_user');
-    userGr.get('user_name', userid)
-    var userObj = {
-      id: userid,
-      name: userGr.getValue('name'),
-      avatar: userGr.getValue('avatar') || '',
-      email: userGr.getValue('email')
-    }
-    return userObj;
-  },
-  timeValid: function (start, end) {
-    var startNumeric = new GlideDateTime(start).getNumericValue();
-    var endNumeric = new GlideDateTime(end).getNumericValue();
-    var currentTime = new GlideDateTime().getNumericValue();
-    return startNumeric < currentTime && endNumeric > currentTime;
-  },
+		var users = [];
+		var accountAssignmentGr = new GlideRecord(this.ACCOUNT_ASSIGNMENT_TABLE);
+		accountAssignmentGr.addQuery('account', acc);
+		accountAssignmentGr.query();
+		while (accountAssignmentGr.next()) {
+			users.push({
+				id: accountAssignmentGr.getValue('user'),
+				label: accountAssignmentGr.getDisplayValue('user')
+			});
+		}
+		return {
+			reassignment_users: users,
+			reassignment_start: deadlineReassignmentPeriod.start,
+			reassignment_end: deadlineReassignmentPeriod.end,
+			reassignment_time_valid: reassignmentTimeValid,
+			answer_start: deadlineAnswerPeriod.start,
+			answer_end: deadlineReassignmentPeriod.end,
+			answer_time_valid: answerTimeValid,
+			journal: this.getJournal(sysID)
+		};
+	},
+	getJournal: function (sys_id) {
+		var je = new GlideRecord('sys_journal_field');
+		je.addQuery('element_id', sys_id);
+		je.orderByDesc('sys_created_on');
+		je.query();
+		var entries = [];
+		while (je.next()) {
+			var entry = {
+				author: this._getUserObject(je.getValue('sys_created_by')),
+				comment: je.getValue('value'),
+				created_on: je.getValue('sys_created_on')
+			};
+			entries.push(entry);
+		}
+		return entries;
+	},
+	setJournal: function (sys_id, text) {
+		var gr = new GlideRecord(this.QUESTION_TABLE);
+		gr.get(sys_id);
+		gr.comments = text;
+		gr.update();
+		return 'success';
+	},
+	_getUserObject: function (userid) {
+		var userGr = new GlideRecord('sys_user');
+		userGr.get('user_name', userid);
+		var userObj = {
+			id: userid,
+			name: userGr.getValue('name'),
+			avatar: userGr.getValue('avatar') || '',
+			email: userGr.getValue('email')
+		};
+		return userObj;
+	},
+	timeValid: function (start, end) {
+		var startNumeric = new GlideDateTime(start).getNumericValue();
+		var endNumeric = new GlideDateTime(end).getNumericValue();
+		var currentTime = new GlideDateTime().getNumericValue();
+		return startNumeric < currentTime && endNumeric > currentTime;
+	},
 
-  userHasEarlyAcc: function (userSysID, deadlineSysID) {
-    var hasEarlyAcc = false;
-    var userGr = new GlideRecord('sys_user');
-    if (userGr.get(userSysID)) {
-      if (userGr.getValue('title')) {
-        var userTitle = userGr.getValue('title');
-        var defaultUserTitles = gs.getProperty('x_aaro2_pnl_mgmt.default_pnl_early_acc_titles');
-        if (defaultUserTitles.indexOf(userTitle) != -1) {
-          hasEarlyAcc = true;
-        }
-      }
-    }
+	userHasEarlyAcc: function (userSysID, deadlineSysID) {
+		var hasEarlyAcc = false;
+		var userGr = new GlideRecord('sys_user');
+		if (userGr.get(userSysID)) {
+			if (userGr.getValue('title')) {
+				var userTitle = userGr.getValue('title');
+				var defaultUserTitles = gs.getProperty('x_aaro2_pnl_mgmt.default_pnl_early_acc_titles');
+				if (defaultUserTitles.indexOf(userTitle) != -1) {
+					hasEarlyAcc = true;
+				}
+			}
+		}
 
-    if (!hasEarlyAcc) {
-      var preRelAcc = new GlideRecord('x_aaro2_pnl_mgmt_m2m_early_access_user');
-      preRelAcc.addQuery('deadline', deadlineSysID);
-      preRelAcc.addQuery('user', userSysID);
-      preRelAcc.query();
-      if (preRelAcc.hasNext()) {
-        hasEarlyAcc = true;
-      }
-    }
+		if (!hasEarlyAcc) {
+			var preRelAcc = new GlideRecord('x_aaro2_pnl_mgmt_m2m_early_access_user');
+			preRelAcc.addQuery('deadline', deadlineSysID);
+			preRelAcc.addQuery('user', userSysID);
+			preRelAcc.query();
+			if (preRelAcc.hasNext()) {
+				hasEarlyAcc = true;
+			}
+		}
 
-    return hasEarlyAcc;
-  },
+		return hasEarlyAcc;
+	},
 
-  type: 'Utils'
+	type: 'Utils'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>xxmpurik</sys_created_by>
         <sys_created_on>2021-02-08 14:28:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7878cf80db1a60105884eb184b961965</sys_id>
-        <sys_mod_count>89</sys_mod_count>
+        <sys_mod_count>93</sys_mod_count>
         <sys_name>Utils</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_7878cf80db1a60105884eb184b961965</sys_update_name>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-02-19 13:08:16</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-02-22 10:26:39</sys_updated_on>
     </sys_script_include>
 </record_update>

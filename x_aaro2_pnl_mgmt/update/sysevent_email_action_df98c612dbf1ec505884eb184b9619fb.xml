@@ -41,7 +41,7 @@
 <p data-tinymcerootblock=""><span style="white-space: pre;">&bull; PALMS will be open from the time P&amp;Ls are released until ${current.answer_end}; </span></p>
 <p data-tinymcerootblock=""><span style="white-space: pre;">&bull; Anything found will be addressed on the next month P&amp;Ls; </span></p>
 <p data-tinymcerootblock=""><span style="white-space: pre;">Thank you for all your help to make sure our P&amp;L's go out fast and clean! Please don't hesitate to call with any questions or feedback on how to make this process better. <br /><br /></span></p>
-<p data-tinymcerootblock=""><a title="PNL Management page" href="https://aaronstest.service-now.com/x/aaro2/workspace/pnl_management/statements">PNL Management page</a></p>]]></message_html>
+<p data-tinymcerootblock=""><span style="font-size: 10pt; font-family: Arial, sans-serif; color: black;">PnL is available on ${mail_script:set_url_to_pnl_statements}</span></p>]]></message_html>
         <message_list/>
         <message_text/>
         <name>Sneak Peek Invitaiton</name>
@@ -63,7 +63,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>df98c612dbf1ec505884eb184b9619fb</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Sneak Peek Invitaiton</sys_name>
         <sys_overrides/>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
@@ -71,8 +71,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sysevent_email_action_df98c612dbf1ec505884eb184b9619fb</sys_update_name>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-29 14:25:36</sys_updated_on>
+        <sys_updated_by>xxmpurik</sys_updated_by>
+        <sys_updated_on>2021-02-22 12:28:32</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

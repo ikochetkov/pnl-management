@@ -15,6 +15,7 @@
 	var deadlinePeriods = ['early_access', 'question', 'reassign', 'answer'];
 	var periodInfo = {};
 	var hasVerifAcc = false;
+	var queryParams = '';
 
 	//get previous month deadline data -START
 	var deadlineData = utils.getCurrentPeriodDeadline('answer');
@@ -26,15 +27,18 @@
 
 	var curUser = gs.getUserName();
 	var userSysID = gs.getUserID();
-	
+
 	// check if user has temporary access -START
 	var tempAcc = new GlideRecord('x_aaro2_pnl_mgmt_temporary_access_participants');
 	tempAcc.addQuery('user', userSysID);
+	gs.info('pnl utils userSysID' + userSysID);
 	tempAcc.query();
 	if(tempAcc.next()) {
+		queryParams = '&TempReader=true'; 
 		curUser = gs.getProperty('x_aaro2_pnl_mgmt.temporary_access_userID');
-		if(tempAcc.getValue('can_interact') == 0) {
-			var canInteract = false;
+		if(tempAcc.getValue('can_interact') == 1) {
+			queryParams = '&TempWriter=true'; 
+			//var canInteract = false;
 		}
 	}
 	// check if user has temporary access -END
@@ -47,7 +51,7 @@
 			end : periodData.end
 		};
 	});
-	
+
 	//check if user has Early access -START
 	var hasEarlyAcc = utils.userHasEarlyAcc(userSysID, deadlineSysID);
 	var earlyAccTime =  utils.timeValid(periodInfo.early_access.start, deadlineData.end);
@@ -68,7 +72,10 @@
 
 	try {
 		endpoint = gs.getProperty('x_aaro2_pnl_mgmt.GetPNLUserDataSet_endpoint') + "UserLogin=" + curUser;
-		gs.info(endpoint);
+		if(queryParams) {
+			endpoint += queryParams;
+		}
+		gs.info('pnl utils endpoint' + endpoint);
 		var r = new sn_ws.RESTMessageV2();
 		r.setHttpMethod('GET');
 		r.setEndpoint(endpoint);
@@ -103,22 +110,22 @@
 	//test data -END
 
 	// if user has temporary access but cant ask - make data readonly -END 
-	if(canInteract == false) {
-		var body = JSON.parse(responseObj.body);
-		body.AccountingUnitsAlpha.forEach(function(item){
-			if(item.RoleId == 976) {
-				item.RoleId = 998;
-			}
-		});
-		body.AccountingUnitsHierarchical.forEach(function(item){
-			if(item.RoleId == 976) {
-				item.RoleId = 998;
-			}
-		});
-		responseObj.body = JSON.stringify(body);
-	}
+// 	if(canInteract == false) {
+// 		var body = JSON.parse(responseObj.body);
+// 		body.AccountingUnitsAlpha.forEach(function(item){
+// 			if(item.RoleId == 976) {
+// 				item.RoleId = 998;
+// 			}
+// 		});
+// 		body.AccountingUnitsHierarchical.forEach(function(item){
+// 			if(item.RoleId == 976) {
+// 				item.RoleId = 998;
+// 			}
+// 		});
+// 		responseObj.body = JSON.stringify(body);
+// 	}
 	// if user has temporary access but cant ask - make data readonly -END 
-	
+
 	// cutting previous month data -sTART
 	if((periodInfo.early_access.currentPeriod && !hasVerifAcc) || (periodInfo.answer.currentPeriod && !hasEarlyAcc)) {
 		preBody = JSON.parse(responseObj.body);
@@ -130,7 +137,7 @@
 		responseObj.body = JSON.stringify(preBody);
 	}
 	// cutting previous month data -END
-	
+
 	return responseObj;
 
 })(request, response);]]></operation_script>
@@ -148,7 +155,7 @@
         <sys_created_on>2020-12-15 15:39:01</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ff7bcce6db4124905884eb184b96191e</sys_id>
-        <sys_mod_count>146</sys_mod_count>
+        <sys_mod_count>150</sys_mod_count>
         <sys_name>GetPNLUserDataSet</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -156,7 +163,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_ws_operation_ff7bcce6db4124905884eb184b96191e</sys_update_name>
         <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-18 19:01:10</sys_updated_on>
+        <sys_updated_on>2021-02-22 10:56:20</sys_updated_on>
         <web_service_definition display_value="utils">d3a7e6e5db5ce8505884eb184b961953</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>
