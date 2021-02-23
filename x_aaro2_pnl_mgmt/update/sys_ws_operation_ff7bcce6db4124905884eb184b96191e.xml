@@ -95,19 +95,23 @@
 
 	//test data -START
 
-	var body = JSON.parse(responseObj.body);
-	var periods = body.Periods;
-	periods.push({
-		"FiscalYear": 2021,
-		"AccountingPeriod": 1
-	});
+// 	var body = JSON.parse(responseObj.body);
+// 	var periods = body.Periods;
+// 	periods.push({
+// 		"FiscalYear": 2021,
+// 		"AccountingPeriod": 1
+// 	});
 
-	body.Periods = periods;
-	responseObj.body = JSON.stringify(body);
+// 	body.Periods = periods;
+// 	responseObj.body = JSON.stringify(body);
 
 	//test data -END
 
 	// cutting previous month data -sTART
+	gs.info('pnl utils acc periodInfo.early_access.currentPeriod 1 - ' + periodInfo.early_access.currentPeriod);
+	gs.info('pnl utils acc !hasVerifAcc  1 - ' + !hasVerifAcc);
+	gs.info('pnl utils acc periodInfo.answer.currentPeriod  2 - ' + periodInfo.answer.currentPeriod);
+	gs.info('pnl utils acc !hasEarlyAcc 2  - ' + !hasEarlyAcc);
 	if((periodInfo.early_access.currentPeriod && !hasVerifAcc) || (periodInfo.answer.currentPeriod && !hasEarlyAcc)) {
 		preBody = JSON.parse(responseObj.body);
 		prePeriods = preBody.Periods;
@@ -136,7 +140,7 @@
         <sys_created_on>2020-12-15 15:39:01</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ff7bcce6db4124905884eb184b96191e</sys_id>
-        <sys_mod_count>153</sys_mod_count>
+        <sys_mod_count>157</sys_mod_count>
         <sys_name>GetPNLUserDataSet</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -144,7 +148,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_ws_operation_ff7bcce6db4124905884eb184b96191e</sys_update_name>
         <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-22 16:23:17</sys_updated_on>
+        <sys_updated_on>2021-02-23 09:56:05</sys_updated_on>
         <web_service_definition display_value="utils">d3a7e6e5db5ce8505884eb184b961953</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

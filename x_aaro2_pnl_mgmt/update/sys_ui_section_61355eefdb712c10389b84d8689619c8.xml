@@ -509,6 +509,20 @@
             <sys_user/>
             <type/>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>journal_company</element>
+            <position>34</position>
+            <sys_created_by>xxamirony</sys_created_by>
+            <sys_created_on>2021-02-23 09:22:53</sys_created_on>
+            <sys_id>7ac4d7b4db2e24505884eb184b961984</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Main" display_value="Main" name="x_aaro2_pnl_mgmt_question" sys_domain="global" view="Default view">61355eefdb712c10389b84d8689619c8</sys_ui_section>
+            <sys_updated_by>xxamirony</sys_updated_by>
+            <sys_updated_on>2021-02-23 09:22:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption>Main</caption>
             <header>false</header>
