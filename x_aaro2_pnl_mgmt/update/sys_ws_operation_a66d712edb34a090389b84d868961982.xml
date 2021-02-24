@@ -9,7 +9,7 @@
         <name>getSneakPeekInfo</name>
         <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
 	var shift = request.queryParams['shift'] || 0
-	var sneakPeekUtil = new SneakPeekUtil();
+	var sneakPeekUtil = new DeadlinesUtil();
 	return sneakPeekUtil.getNextSneakPeek(shift);
 })(request, response);]]></operation_script>
         <operation_uri>/api/x_aaro2_pnl_mgmt/utils/getSneakPeekInfo</operation_uri>
@@ -26,7 +26,7 @@
         <sys_created_on>2020-12-03 15:36:24</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a66d712edb34a090389b84d868961982</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>getSneakPeekInfo</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -34,7 +34,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_ws_operation_a66d712edb34a090389b84d868961982</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-12-21 14:58:19</sys_updated_on>
+        <sys_updated_on>2021-02-24 10:17:07</sys_updated_on>
         <web_service_definition display_value="utils">d3a7e6e5db5ce8505884eb184b961953</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

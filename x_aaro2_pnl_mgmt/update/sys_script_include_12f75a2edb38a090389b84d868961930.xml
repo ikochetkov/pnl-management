@@ -2,13 +2,13 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>package_private</access>
         <active>true</active>
-        <api_name>x_aaro2_pnl_mgmt.SneakPeekUtil</api_name>
+        <api_name>x_aaro2_pnl_mgmt.DeadlinesUtil</api_name>
         <caller_access/>
         <client_callable>false</client_callable>
         <description/>
-        <name>SneakPeekUtil</name>
-        <script><![CDATA[var SneakPeekUtil = Class.create();
-SneakPeekUtil.prototype = {
+        <name>DeadlinesUtil</name>
+        <script><![CDATA[var DeadlinesUtil = Class.create();
+DeadlinesUtil.prototype = {
 	initialize: function (date) {
 		this.DEADLINES_TABLE = 'x_aaro2_pnl_mgmt_deadline';
 		this.SNEAK_PEEK_PARTICIPANT_TABLE = 'x_aaro2_pnl_mgmt_m2m_statements_verificators'
@@ -98,33 +98,15 @@ SneakPeekUtil.prototype = {
 		gs.info('RESULT :: ' + JSON.stringify(result, null, 2))
 		return result
 	},
-	// getNextSneakPeekBefore: function (date) {
-	// 	var query = this.__getQueryBeforeDate(this.__getDateString(date))
-	// 	return this.__getSneakPeekOfDate(date, query)
-	// },
 
 	getDeadlines: function () {
 		var sneakPeekDay = this.SNEAK_PEEK_B_DAY.toString();
 		var mulReviewStart = this.MUL_REVIEW_PERIOD_START.toString()
 		var mulReviewEnd = this.MUL_REVIEW_PERIOD_END.toString()
-		//var accountingReviewStart = this.ACCOUNTING_PERIOD_START.toString()
-		//var accountingReviewEnd = this.ACCOUNTING_PERIOD_END.toString()
 		var accountingAnswerPeriodStart = this.ACCOUNTING_ANSWER_PERIOD_START.toString()
 		var accountingAnswerPeriodEnd = this.ACCOUNTING_ANSWER_PERIOD_END.toString()
 		var accountingCanReassignPeriodStart = this.ACCOUNTING_CAN_REASSIGN_PERIOD_START.toString()
 		var accountingCanReassignPeriodEnd = this.ACCOUNTING_CAN_REASSIGN_PERIOD_END.toString()
-
-		gs.info('sneakPeekDay ' + sneakPeekDay)
-		gs.info('mulReviewStart ' + mulReviewStart)
-		gs.info('mulReviewEnd ' + mulReviewEnd)
-		//gs.info('accountingReviewStart '+ accountingReviewStart)
-		//gs.info('accountingReviewEnd '+ accountingReviewEnd)
-		gs.info('accountingAnswerPeriodStart ' + accountingAnswerPeriodStart)
-		gs.info('accountingAnswerPeriodEnd ' + accountingAnswerPeriodEnd)
-		gs.info('accountingCanReassignPeriodStart ' + accountingCanReassignPeriodStart)
-		gs.info('accountingCanReassignPeriodEnd ' + accountingCanReassignPeriodEnd)
-
-
 
 		var deadlines = {
 			sneakPeek: {
@@ -132,7 +114,6 @@ SneakPeekUtil.prototype = {
 				progress: this.__getDateStatus(this.businessDaysDates[sneakPeekDay], 'sneakPeek'),
 				glideDateFrom: new GlideDateTime(this.businessDaysStrings[sneakPeekDay] + ' 13:00:00'),
 				glideDateTo: new GlideDateTime(this.businessDaysStrings[sneakPeekDay] + ' 22:00:00')
-
 			},
 			accountingCanReassignPeriod: {
 				from: this.businessDaysStrings[accountingCanReassignPeriodStart],
@@ -164,28 +145,22 @@ SneakPeekUtil.prototype = {
 				glideDateFrom: new GlideDateTime(this.businessDaysStrings[mulReviewStart] + ' 13:00:00'),
 				glideDateTo: new GlideDateTime(this.businessDaysStrings[mulReviewEnd] + ' 22:00:00')
 			},
-			// accountingReview: {
-			// 	from: this.businessDaysStrings[accountingReviewStart],
-			// 	to: this.businessDaysStrings[accountingReviewEnd],
-			// 	progress: this.__getPeriodStatus(
-			// 		this.businessDaysDates[accountingReviewStart],
-			// 		this.businessDaysDates[accountingReviewEnd],
-			// 		'accountingReview'),
-			// 	glideDateFrom: new GlideDateTime(this.businessDaysStrings[accountingReviewStart] + ' 13:00:00'),
-			// 	glideDateTo: new GlideDateTime(this.businessDaysStrings[accountingReviewEnd] + ' 22:00:00')
-			// },
-			// supervisorReview: {
-			// 	date: this.businessDaysStrings[supervisorReviewDay],
-			// 	progress: this.__getDateStatus(this.businessDaysDates[supervisorReviewDay],
-			// 								   'supervisorReview'),
-			// 	glideDateFrom: new GlideDateTime(this.businessDaysStrings[supervisorReviewDay] + ' 13:00:00'),
-			// 	glideDateTo: new GlideDateTime(this.businessDaysStrings[supervisorReviewDay] + ' 22:00:00')
-			// },
 			currentPeriod: this.currentPeriod
 		}
 		return deadlines
 	},
-
+	getDeadlinesStringified: function () {
+		var deadlines = this.getDeadlines();
+		deadlines.sneakPeek.glideDateFrom = deadlines.sneakPeek.glideDateFrom.toString()
+		deadlines.sneakPeek.glideDateTo = deadlines.sneakPeek.glideDateTo.toString()
+		deadlines.accountingCanReassignPeriod.glideDateFrom = deadlines.accountingCanReassignPeriod.glideDateFrom.toString()
+		deadlines.accountingCanReassignPeriod.glideDateTo = deadlines.accountingCanReassignPeriod.glideDateTo.toString();
+		deadlines.accountingAnswerPeriod.glideDateFrom = deadlines.accountingAnswerPeriod.glideDateFrom.toString()
+		deadlines.accountingAnswerPeriod.glideDateTo = deadlines.accountingAnswerPeriod.glideDateTo.toString();
+		deadlines.mulReview.glideDateFrom = deadlines.mulReview.glideDateFrom.toString()
+		deadlines.mulReview.glideDateTo = deadlines.mulReview.glideDateTo.toString();
+		return deadlines;
+	},
 	getDeadlinesShifted: function (shift) {
 		var date = this.currentDate;
 		date.addMonthsUTC(shift);
@@ -369,21 +344,21 @@ SneakPeekUtil.prototype = {
 
 
 
-	type: 'SneakPeekUtil'
+	type: 'DeadlinesUtil'
 }; ]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2020-12-03 16:03:47</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>12f75a2edb38a090389b84d868961930</sys_id>
-        <sys_mod_count>145</sys_mod_count>
-        <sys_name>SneakPeekUtil</sys_name>
+        <sys_mod_count>148</sys_mod_count>
+        <sys_name>DeadlinesUtil</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_12f75a2edb38a090389b84d868961930</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-02-19 10:32:28</sys_updated_on>
+        <sys_updated_on>2021-02-24 12:49:02</sys_updated_on>
     </sys_script_include>
 </record_update>
