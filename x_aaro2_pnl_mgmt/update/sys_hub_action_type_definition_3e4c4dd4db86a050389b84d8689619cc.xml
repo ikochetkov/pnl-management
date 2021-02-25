@@ -13,7 +13,7 @@
         <ih_action>false</ih_action>
         <internal_name>drop_previous_flow</internal_name>
         <label_cache>[{"name":"{{action.current}}","label":"action➛Current","type":"action","ref":""}]</label_cache>
-        <latest_snapshot>eccacfb8db4a2850389b84d86896194b</latest_snapshot>
+        <latest_snapshot>1fb5a2a5db2ee8505884eb184b961955</latest_snapshot>
         <master_snapshot>d0dc81d8dbc6a050389b84d868961938</master_snapshot>
         <name>Drop previous flow</name>
         <natlang/>
@@ -25,7 +25,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>3e4c4dd4db86a050389b84d8689619cc</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name>Drop previous flow</sys_name>
         <sys_overrides/>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
@@ -33,8 +33,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_3e4c4dd4db86a050389b84d8689619cc</sys_update_name>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-29 12:07:39</sys_updated_on>
+        <sys_updated_by>xxmpurik</sys_updated_by>
+        <sys_updated_on>2021-02-25 13:52:45</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -58,15 +58,15 @@
         <sys_created_on>2021-01-27 13:40:04</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>cfbccd98dbc6a050389b84d868961973</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-29 12:07:35</sys_updated_on>
+        <sys_updated_by>xxmpurik</sys_updated_by>
+        <sys_updated_on>2021-02-25 13:52:40</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=cfbccd98dbc6a050389b84d868961973"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -91,12 +91,12 @@
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-01-27 13:40:05</sys_created_on>
         <sys_id>43bccd98dbc6a050389b84d868961983</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-29 12:07:35</sys_updated_on>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>xxmpurik</sys_updated_by>
+        <sys_updated_on>2021-02-25 13:52:40</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   var current = inputs.current
-  var util = new SneakPeekUtil();
+  var util = new DeadlinesUtil();
   util.cancelRunningFlows(current.getUniqueValue(), true)
  
 })(inputs, outputs);
@@ -353,15 +353,15 @@
         <sys_created_on>2021-01-27 13:40:04</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>cfbccd98dbc6a050389b84d868961973</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-29 12:07:35</sys_updated_on>
+        <sys_updated_by>xxmpurik</sys_updated_by>
+        <sys_updated_on>2021-02-25 13:52:40</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=cfbccd98dbc6a050389b84d868961973"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -386,12 +386,12 @@
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-01-27 13:40:05</sys_created_on>
         <sys_id>43bccd98dbc6a050389b84d868961983</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-29 12:07:35</sys_updated_on>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>xxmpurik</sys_updated_by>
+        <sys_updated_on>2021-02-25 13:52:40</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   var current = inputs.current
-  var util = new SneakPeekUtil();
+  var util = new DeadlinesUtil();
   util.cancelRunningFlows(current.getUniqueValue(), true)
  
 })(inputs, outputs);
@@ -575,14 +575,14 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Drop previous flow">3e4c4dd4db86a050389b84d8689619cc</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"2cdc81d8dbc6a050389b84d8689619b7","name":"plan"}}</plan>
-        <snapshot>eccacfb8db4a2850389b84d86896194b</snapshot>
+        <snapshot>1fb5a2a5db2ee8505884eb184b961955</snapshot>
         <sys_class_name>sys_hub_action_plan</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-01-27 13:40:28</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>2cdc81d8dbc6a050389b84d8689619b7</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -590,8 +590,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-29 12:07:40</sys_updated_on>
+        <sys_updated_by>xxmpurik</sys_updated_by>
+        <sys_updated_on>2021-02-25 13:52:46</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -649,15 +649,15 @@
         <sys_created_on>2021-01-27 13:40:26</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d8dc81d8dbc6a050389b84d868961943</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-29 12:07:39</sys_updated_on>
+        <sys_updated_by>xxmpurik</sys_updated_by>
+        <sys_updated_on>2021-02-25 13:52:45</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=d8dc81d8dbc6a050389b84d868961943"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -682,12 +682,12 @@
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-01-27 13:40:27</sys_created_on>
         <sys_id>90dc81d8dbc6a050389b84d868961950</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-29 12:07:39</sys_updated_on>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>xxmpurik</sys_updated_by>
+        <sys_updated_on>2021-02-25 13:52:45</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   var current = inputs.current
-  var util = new SneakPeekUtil();
+  var util = new DeadlinesUtil();
   util.cancelRunningFlows(current.getUniqueValue(), true)
  
 })(inputs, outputs);
@@ -944,15 +944,15 @@
         <sys_created_on>2021-01-27 13:40:26</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d8dc81d8dbc6a050389b84d868961943</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-29 12:07:39</sys_updated_on>
+        <sys_updated_by>xxmpurik</sys_updated_by>
+        <sys_updated_on>2021-02-25 13:52:45</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=d8dc81d8dbc6a050389b84d868961943"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -977,12 +977,12 @@
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-01-27 13:40:27</sys_created_on>
         <sys_id>90dc81d8dbc6a050389b84d868961950</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-01-29 12:07:39</sys_updated_on>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>xxmpurik</sys_updated_by>
+        <sys_updated_on>2021-02-25 13:52:45</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   var current = inputs.current
-  var util = new SneakPeekUtil();
+  var util = new DeadlinesUtil();
   util.cancelRunningFlows(current.getUniqueValue(), true)
  
 })(inputs, outputs);

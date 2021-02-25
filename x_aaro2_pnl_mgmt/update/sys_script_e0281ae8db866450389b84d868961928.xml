@@ -8,7 +8,7 @@
         <action_name/>
         <action_query>false</action_query>
         <action_run_at>server</action_run_at>
-        <action_update>true</action_update>
+        <action_update>false</action_update>
         <active>true</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
@@ -39,7 +39,6 @@
 	accountingPeriodDate.addMonthsUTC(1);
 	var u = new DeadlinesUtil(accountingPeriodDate);
 	var deadlines = u.getDeadlines();
-	gs.info(JSON.stringify(deadlines, null, 2))
 	if(!current.getValue('early_access_start'))
 		current.early_access_start = deadlines.sneakPeek.glideDateFrom;
 	if(!current.getValue('early_access_end'))
@@ -72,7 +71,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>e0281ae8db866450389b84d868961928</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name>Set Default dates</sys_name>
         <sys_overrides/>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
@@ -81,7 +80,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_e0281ae8db866450389b84d868961928</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-02-24 10:16:23</sys_updated_on>
+        <sys_updated_on>2021-02-25 15:06:05</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
