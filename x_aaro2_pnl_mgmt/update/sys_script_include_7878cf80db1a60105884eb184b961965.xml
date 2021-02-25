@@ -46,10 +46,10 @@ Utils.prototype = {
 	// 	},
 
 	getDeadline: function (year, month, periodType) {
-		var formatted_month = month.indexOf('0')==0? month.replace('0',''): month;
+		//var formatted_month = month.indexOf('0')==0? month.replace('0',''): month;
 		var dlGR = new GlideRecord(this.DEADLINE_TABLE);
 		dlGR.addQuery('year', year);
-		dlGR.addQuery('month', formatted_month);
+		dlGR.addQuery('month', month);
 		dlGR.query();
 		if (dlGR.next()) {
 			var period = {};
@@ -79,13 +79,13 @@ Utils.prototype = {
 		var answerTimeValid = this.timeValid(deadlineAnswerPeriod.start, deadlineAnswerPeriod.end);
 
 		var users = [];
-		var accountAssignmentGr = new GlideRecord(this.ACCOUNT_ASSIGNMENT_TABLE);
-		accountAssignmentGr.addQuery('account', acc);
-		accountAssignmentGr.query();
-		while (accountAssignmentGr.next()) {
+		var accountAssignmentGa = new GlideAggregate(this.ACCOUNT_ASSIGNMENT_TABLE);
+		accountAssignmentGa.groupBy('user');
+		accountAssignmentGa.query();
+		while (accountAssignmentGa.next()) {
 			users.push({
-				id: accountAssignmentGr.getValue('user'),
-				label: accountAssignmentGr.getDisplayValue('user')
+				id: accountAssignmentGa.getValue('user'),
+				label: accountAssignmentGa.getDisplayValue('user')
 			});
 		}
 		return {
@@ -173,7 +173,7 @@ Utils.prototype = {
         <sys_created_on>2021-02-08 14:28:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7878cf80db1a60105884eb184b961965</sys_id>
-        <sys_mod_count>93</sys_mod_count>
+        <sys_mod_count>96</sys_mod_count>
         <sys_name>Utils</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -181,6 +181,6 @@ Utils.prototype = {
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_7878cf80db1a60105884eb184b961965</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-02-22 10:26:39</sys_updated_on>
+        <sys_updated_on>2021-02-24 14:31:22</sys_updated_on>
     </sys_script_include>
 </record_update>
