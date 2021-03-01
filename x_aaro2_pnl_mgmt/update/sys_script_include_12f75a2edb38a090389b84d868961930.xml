@@ -12,7 +12,6 @@ DeadlinesUtil.prototype = {
   initialize: function (date) {
     this.DEADLINES_TABLE = 'x_aaro2_pnl_mgmt_deadline';
 
-    this.STATEMENTS_VERIFICATION_TABLE = 'x_aaro2_pnl_mgmt_m2m_statements_verificators';
     this.EARLY_ACCESS_PARTICIPANT_TABLE = 'x_aaro2_pnl_mgmt_m2m_early_access_user'
     this.__initReviewPeriods()
     this.__initSchedule()
@@ -64,7 +63,6 @@ DeadlinesUtil.prototype = {
   },
   getDeadlineShifted: function (shift) {
     if (!shift) shift = 0
-    if (!shift) shift = 0
     shift -= 1
     var prevShift = shift - 1
     var accountingMonth = this.getMonth(new GlideDateTime(), shift);
@@ -73,6 +71,7 @@ DeadlinesUtil.prototype = {
     if (!deadline)
       deadline = this.__getNewDeadline(accountingMonth.month, accountingMonth.year)
     deadline.prevMonth = !!this.__queryDeadline(prevMonth.month, prevMonth.year)
+    deadline.eventActive = this.__getDateStatus()
     return deadline;
   },
   __querySneakPeek: function (month, year) {
@@ -181,7 +180,7 @@ DeadlinesUtil.prototype = {
       var participantsGrNew = new GlideRecord(m2mTable);
       participantsGrNew.initialize();
       participantsGrNew.deadline = deadlineSysId;
-      participantsGrNew.user = participant;
+      participantsGrNew.user = participant.sys_id;
       participantsGrNew.insert()
     })
   },
@@ -219,11 +218,10 @@ DeadlinesUtil.prototype = {
   },
   __getDeadlineObject: function (deadlineGr) {
     var deadline = {}
-    
+
     if (deadlineGr.next()) {
       var sys_id = deadlineGr.getUniqueValue()
       deadline = {
-        statements_verification_participants: this.__getParticipants(this.STATEMENTS_VERIFICATION_TABLE, sys_id),
         early_access_participants: this.__getParticipants(this.EARLY_ACCESS_PARTICIPANT_TABLE, sys_id),
         early_access_start: deadlineGr.getDisplayValue('early_access_start'),
         early_access_end: deadlineGr.getDisplayValue('early_access_end'),
@@ -242,9 +240,10 @@ DeadlinesUtil.prototype = {
 
     return deadline
   },
-  updateDeadline: function(sys_id, data) {
+  updateDeadline: function (sys_id, data) {
     this.updateParticipants(this.EARLY_ACCESS_PARTICIPANT_TABLE, sys_id, data.early_access_participants)
-    this.updateParticipants(this.STATEMENTS_VERIFICATION_TABLE, sys_id, data.statements_verification_participants)
+    var deadlineGr = new GlideRecord(this.DEADLINES_TABLE)
+    deadlineGr.get(sys_id)
     deadlineGr.early_access_start.setDisplayValue(data.early_access_start)
     deadlineGr.early_access_end.setDisplayValue(data.early_access_end)
     deadlineGr.question_start.setDisplayValue(data.question_start)
@@ -267,7 +266,7 @@ DeadlinesUtil.prototype = {
 
     return this.__getSneakPeekObject(gr);
   },
-  __getNewDeadline: function(month, year){
+  __getNewDeadline: function (month, year) {
     var deadlineGr = new GlideRecord(this.DEADLINES_TABLE);
     deadlineGr.initialize();
     deadlineGr.setValue('month', month);
@@ -297,6 +296,7 @@ DeadlinesUtil.prototype = {
     }
   },
   __getDateStatus: function (date, periodName) {
+    if (!date) return 'none'
     var today = this.currentDate
     var result = ''
     if (this.__datesEqual(date, today))
@@ -375,11 +375,13 @@ DeadlinesUtil.prototype = {
     return 'event_date<javascript:gs.dateGenerate(\'' + dateStr + '\',\'start\')'
   },
   __getDateString: function (gdt, usFormat) {
+    if (!gdt) return '01-01-2021';
     var year = gdt.getYearUTC();
     var month = gdt.getMonthUTC();
     var day = gdt.getDayOfMonthUTC();
     if (usFormat)
       return month + '-' + day + '-' + year;
+
     return year + '-' + month + '-' + day
   },
   __datesEqual: function (date1, date2) {
@@ -395,7 +397,7 @@ DeadlinesUtil.prototype = {
         <sys_created_on>2020-12-03 16:03:47</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>12f75a2edb38a090389b84d868961930</sys_id>
-        <sys_mod_count>159</sys_mod_count>
+        <sys_mod_count>165</sys_mod_count>
         <sys_name>DeadlinesUtil</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -403,6 +405,6 @@ DeadlinesUtil.prototype = {
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_12f75a2edb38a090389b84d868961930</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-02-25 15:55:16</sys_updated_on>
+        <sys_updated_on>2021-03-01 15:43:55</sys_updated_on>
     </sys_script_include>
 </record_update>

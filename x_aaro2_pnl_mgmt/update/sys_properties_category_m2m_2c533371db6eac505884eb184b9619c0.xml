@@ -2,20 +2,20 @@
     <sys_properties_category_m2m action="INSERT_OR_UPDATE">
         <category display_value="PNL Properties">b548a629db5ce8505884eb184b9619e4</category>
         <order>100</order>
-        <property display_value="x_aaro2_pnl_mgmt.default_pnl_early_acc_titles" name="x_aaro2_pnl_mgmt.default_pnl_early_acc_titles">9667aa93db5a6450389b84d8689619eb</property>
+        <property display_value="x_aaro2_pnl_mgmt.default_early_access_titles" name="x_aaro2_pnl_mgmt.default_early_access_titles">8bd17f7ddb2eac505884eb184b96193a</property>
         <sys_class_name>sys_properties_category_m2m</sys_class_name>
         <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-18 14:29:48</sys_created_on>
+        <sys_created_on>2021-02-26 14:10:11</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>351be65fdb5a6450389b84d868961918</sys_id>
+        <sys_id>2c533371db6eac505884eb184b9619c0</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_aaro2_pnl_mgmt.default_pnl_early_acc_titles.PNL Properties</sys_name>
+        <sys_name>x_aaro2_pnl_mgmt.default_pnl_sneak_peak_acc_titles.PNL Properties</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name>sys_properties_category_m2m_351be65fdb5a6450389b84d868961918</sys_update_name>
+        <sys_update_name>sys_properties_category_m2m_2c533371db6eac505884eb184b9619c0</sys_update_name>
         <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-18 14:29:48</sys_updated_on>
+        <sys_updated_on>2021-02-26 14:10:11</sys_updated_on>
     </sys_properties_category_m2m>
 </record_update>

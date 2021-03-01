@@ -14,7 +14,6 @@
 	var preBody, prePeriods, filtered;
 	var deadlinePeriods = ['early_access', 'question', 'reassign', 'answer'];
 	var periodInfo = {};
-	var hasVerifAcc = false;
 	var queryParams = '';
 
 	//get previous month deadline data -START
@@ -49,27 +48,21 @@
 			end : periodData.end
 		};
 	});
-
+	gs.info('deadlinePeriods: '+JSON.stringify(periodInfo));
 	//check if user has Early access -START
 	var hasEarlyAcc = utils.userHasEarlyAcc(userSysID, deadlineSysID);
 	var earlyAccTime =  utils.timeValid(periodInfo.early_access.start, deadlineData.end);
 	//check if user has Early access -END
 
 	//check if user has statements verification access -START
-	var statVer = new GlideRecord('x_aaro2_pnl_mgmt_m2m_statements_verificators');
-	statVer.addQuery('deadline', deadlineSysID);
-	statVer.addQuery('user', userSysID);
-	statVer.query();
-	if(statVer.hasNext()) {
-		hasVerifAcc = true;
-	}
+	//var	hasVerifAcc = utils.userHasVerifAcc(userSysID, deadlineSysID);
 	//check if user has statements verification access -END
 
 	var responseObj, restResponse, endpoint;
 	gs.info('PNL MANAGEMENT: ' + JSON.stringify(request.queryParams));
 
 	try {
-		endpoint = gs.getProperty('x_aaro2_pnl_mgmt.GetPNLUserDataSet_endpoint') + "UserLogin=" + curUser;// //'nefiveas';
+		endpoint = gs.getProperty('x_aaro2_pnl_mgmt.GetPNLUserDataSet_endpoint') + "UserLogin=" + 'cepritch';// //'nefiveas';
 		if(queryParams) {
 			endpoint += queryParams;
 		}
@@ -83,8 +76,6 @@
 		r.setHttpTimeout(5000);
 		restResponse = r.execute();
 		restResponse.waitForResponse(15);
-		gs.info('pnl utils response: '+restResponse);
-		gs.info('pnl utils response stringify: '+JSON.stringify(restResponse));
 		responseObj = new global.RESTResponseUtils(restResponse);
 	} catch (ex) {
 		responseObj = new global.RESTResponseUtils(restResponse);
@@ -94,35 +85,42 @@
 		responseObj.setHaveError(true);
 		gs.error(responseObj);
 	}
-
 	//test data -START
 
-// 	var body = JSON.parse(responseObj.body);
-// 	var periods = body.Periods;
-// 	periods.push({
-// 		"FiscalYear": 2021,
-// 		"AccountingPeriod": 1
-// 	});
+	var body = JSON.parse(responseObj.body);
+	var periods = body.Periods;
+	periods.push({
+		"FiscalYear": 2021,
+		"AccountingPeriod": 2
+	});
 
-// 	body.Periods = periods;
-// 	responseObj.body = JSON.stringify(body);
+	body.Periods = periods;
+	responseObj.body = JSON.stringify(body);
 
 	//test data -END
 
 	// cutting previous month data -sTART
+
 	gs.info('pnl utils acc periodInfo.early_access.currentPeriod 1 - ' + periodInfo.early_access.currentPeriod);
-	gs.info('pnl utils acc !hasVerifAcc  1 - ' + !hasVerifAcc);
+	//gs.info('pnl utils acc !hasVerifAcc  1 - ' + !hasVerifAcc);
 	gs.info('pnl utils acc periodInfo.answer.currentPeriod  2 - ' + periodInfo.answer.currentPeriod);
 	gs.info('pnl utils acc !hasEarlyAcc 2  - ' + !hasEarlyAcc);
-	if((periodInfo.early_access.currentPeriod && !hasVerifAcc) || (periodInfo.answer.currentPeriod && !hasEarlyAcc)) {
-		preBody = JSON.parse(responseObj.body);
-		prePeriods = preBody.Periods || [];
-		filtered = prePeriods.filter(function(period){
-			return !(period.FiscalYear == curYear && period.AccountingPeriod == curMonth);
-		});
-		preBody.Periods = filtered;
-		responseObj.body = JSON.stringify(preBody);
-	}
+
+	//if PALMS returned 200 (NOT 500)
+	if(responseObj && responseObj.body){
+		//if((periodInfo.early_access.currentPeriod && !hasVerifAcc) || (periodInfo.answer.currentPeriod && !hasEarlyAcc)) {
+		var currentTimeLessThenEarlyAccessEnd = new GlideDateTime().getNumericValue() < new GlideDateTime(periodInfo.early_access.end).getNumericValue();
+		gs.info('pnl utils userDebug: currentTimeLessThenEarlyAccessEnd - '+currentTimeLessThenEarlyAccessEnd+' ; userDontHavePnlAdminRole -  '+!gs.getUser().hasRole('x_aaro2_pnl_mgmt.admin')+' ; userDontHaveEarlyAccess - '+!hasEarlyAcc);
+		if(currentTimeLessThenEarlyAccessEnd && !gs.getUser().hasRole('x_aaro2_pnl_mgmt.admin') &&!hasEarlyAcc ){
+			preBody = JSON.parse(responseObj.body);
+			prePeriods = preBody.Periods;
+			filtered = prePeriods.filter(function(period){
+				return !(period.FiscalYear == curYear && period.AccountingPeriod == curMonth);
+			});
+			preBody.Periods = filtered;
+			responseObj.body = JSON.stringify(preBody);
+		}
+	} 
 	// cutting previous month data -END
 
 	return responseObj;
@@ -142,15 +140,15 @@
         <sys_created_on>2020-12-15 15:39:01</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ff7bcce6db4124905884eb184b96191e</sys_id>
-        <sys_mod_count>173</sys_mod_count>
+        <sys_mod_count>223</sys_mod_count>
         <sys_name>GetPNLUserDataSet</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_ws_operation_ff7bcce6db4124905884eb184b96191e</sys_update_name>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-25 17:54:55</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-03-01 15:04:30</sys_updated_on>
         <web_service_definition display_value="utils">d3a7e6e5db5ce8505884eb184b961953</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

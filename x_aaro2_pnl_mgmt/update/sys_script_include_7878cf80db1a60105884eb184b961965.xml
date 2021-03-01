@@ -145,7 +145,7 @@ Utils.prototype = {
 		if (userGr.get(userSysID)) {
 			if (userGr.getValue('title')) {
 				var userTitle = userGr.getValue('title');
-				var defaultUserTitles = gs.getProperty('x_aaro2_pnl_mgmt.default_pnl_early_acc_titles');
+				var defaultUserTitles = gs.getProperty('x_aaro2_pnl_mgmt.default_early_access_titles');
 				if (defaultUserTitles.indexOf(userTitle) != -1) {
 					hasEarlyAcc = true;
 				}
@@ -164,6 +164,45 @@ Utils.prototype = {
 
 		return hasEarlyAcc;
 	},
+	
+	getDefaultEarlyAccessUsers: function() {
+		var defaultEarlyAccessUsers = [];
+		var userGr = new GlideRecord('sys_user');
+		
+		userGr.addEncodedQuery('titleLIKEVice President^ORtitleLIKERegional Director');
+		userGr.query();
+		
+		while (userGr.next()) {
+			defaultEarlyAccessUsers.push(userGr.getUniqueValue());
+		}
+		
+		return defaultEarlyAccessUsers;
+	},
+
+// 	userHasVerifAcc: function(userSysID, deadlineSysID) {
+// 		var hasVerifAcc = false;
+// 		var userGr = new GlideRecord('sys_user');
+// 		if (userGr.get(userSysID)) {
+// 			if (userGr.getValue('title')) {
+// 				var userTitle = userGr.getValue('title');
+// 				var defaultUserTitles = gs.getProperty('x_aaro2_pnl_mgmt.default_early_access_titles');
+// 				if (defaultUserTitles.indexOf(userTitle) != -1) {
+// 					hasVerifAcc = true;
+// 				}
+// 			}
+// 		}
+
+// 		if(!hasVerifAcc) {
+// 			var statVer = new GlideRecord('x_aaro2_pnl_mgmt_m2m_statements_verificators');
+// 			statVer.addQuery('deadline', deadlineSysID);
+// 			statVer.addQuery('user', userSysID);
+// 			statVer.query();
+// 			if(statVer.hasNext()) {
+// 				hasVerifAcc = true;
+// 			}
+// 		}
+// 		return hasVerifAcc;
+// 	},
 
 	type: 'Utils'
 };]]></script>
@@ -172,14 +211,14 @@ Utils.prototype = {
         <sys_created_on>2021-02-08 14:28:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7878cf80db1a60105884eb184b961965</sys_id>
-        <sys_mod_count>97</sys_mod_count>
+        <sys_mod_count>103</sys_mod_count>
         <sys_name>Utils</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_7878cf80db1a60105884eb184b961965</sys_update_name>
-        <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-02-25 14:02:20</sys_updated_on>
+        <sys_updated_by>xxvholovk</sys_updated_by>
+        <sys_updated_on>2021-03-01 13:53:19</sys_updated_on>
     </sys_script_include>
 </record_update>

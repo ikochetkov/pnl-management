@@ -12,7 +12,7 @@
         <sys_created_on>2020-12-15 15:41:26</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>09dbcc6adb4124905884eb184b9619da</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>x_aaro2_pnl_mgmt.GetPNLUserDataSet_endpoint</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -20,9 +20,9 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_properties_09dbcc6adb4124905884eb184b9619da</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-02-25 15:12:37</sys_updated_on>
+        <sys_updated_on>2021-02-26 09:42:41</sys_updated_on>
         <type>string</type>
-        <value>https://pnldataservicedev.aarons.com/api/GetPNLUserDataSet?</value>
+        <value>https://pnldataserviceqa.aarons.com/api/GetPNLUserDataSet?</value>
         <write_roles>admin</write_roles>
     </sys_properties>
     <sys_translated_text action="delete_multiple" query="documentkey=09dbcc6adb4124905884eb184b9619da"/>
