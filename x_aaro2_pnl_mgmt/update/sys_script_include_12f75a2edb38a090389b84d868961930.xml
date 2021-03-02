@@ -71,7 +71,6 @@ DeadlinesUtil.prototype = {
     if (!deadline)
       deadline = this.__getNewDeadline(accountingMonth.month, accountingMonth.year)
     deadline.prevMonth = !!this.__queryDeadline(prevMonth.month, prevMonth.year)
-    deadline.eventActive = this.__getDateStatus()
     return deadline;
   },
   __querySneakPeek: function (month, year) {
@@ -187,7 +186,7 @@ DeadlinesUtil.prototype = {
   cancelRunningFlows: function (sys_id, skipCurrent) {
     var flow_GR = new GlideRecord('sys_flow_context');
     flow_GR.addQuery('source_record', sys_id);
-    flow_GR.addQuery('name', 'Send Sneak Peek Mails');
+    flow_GR.addQuery('name', 'PnL Deadlines');
     flow_GR.orderByDesc('sys_created_on')
     flow_GR.query();
     if (skipCurrent)
@@ -223,17 +222,26 @@ DeadlinesUtil.prototype = {
       var sys_id = deadlineGr.getUniqueValue()
       deadline = {
         early_access_participants: this.__getParticipants(this.EARLY_ACCESS_PARTICIPANT_TABLE, sys_id),
-        early_access_start: deadlineGr.getDisplayValue('early_access_start'),
         early_access_end: deadlineGr.getDisplayValue('early_access_end'),
+        early_access_start: deadlineGr.getDisplayValue('early_access_start'),
         question_start: deadlineGr.getDisplayValue('question_start'),
         question_end: deadlineGr.getDisplayValue('question_end'),
         reassign_start: deadlineGr.getDisplayValue('reassign_start'),
         reassign_end: deadlineGr.getDisplayValue('reassign_end'),
         answer_start: deadlineGr.getDisplayValue('answer_start'),
         answer_end: deadlineGr.getDisplayValue('answer_end'),
+        early_access_start_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('early_access_start')))),
+        early_access_end_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('early_access_end')))),
+        question_start_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('question_start')))),
+        question_end_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('question_end')))),
+        reassign_start_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('reassign_start')))),
+        reassign_end_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('reassign_end')))),
+        answer_start_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('answer_start')))),
+        answer_end_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('answer_end')))),
         month: deadlineGr.getValue('month'),
         monthLabel: deadlineGr.getDisplayValue('month'),
         year: deadlineGr.getValue("year"),
+        active: this.__getDateStatus(new GlideDateTime(deadlineGr.getValue('early_access_start'))),
         sys_id: sys_id
       }
     } else return false;
@@ -253,6 +261,8 @@ DeadlinesUtil.prototype = {
     deadlineGr.answer_start.setDisplayValue(data.answer_start)
     deadlineGr.answer_end.setDisplayValue(data.answer_end)
     deadlineGr.update();
+	
+    return data
   },
   __getNewSneakPeek: function (month, year) {
     var sneakPeekGr = new GlideRecord(this.DEADLINES_TABLE);
@@ -296,15 +306,15 @@ DeadlinesUtil.prototype = {
     }
   },
   __getDateStatus: function (date, periodName) {
-    if (!date) return 'none'
+    //if (!date) return 'none'
     var today = this.currentDate
     var result = ''
     if (this.__datesEqual(date, today))
-      result = 'partial'
+      result = 'now'
     if (date.before(today))
-      result = 'done'
+      result = 'before'
     if (date.after(today))
-      result = 'none'
+      result = 'after'
     if (result === 'partial')
       this.currentPeriod = periodName;
 
@@ -314,15 +324,15 @@ DeadlinesUtil.prototype = {
     var today = this.currentDate
     var result = ''
     if (this.__datesEqual(startDate, today) || this.__datesEqual(endDate, today))
-      result = 'partial'
+      result = 'now'
     if (startDate.before(today) && endDate.before(today))
-      result = 'done'
+      result = 'before'
     if (startDate.after(today) && endDate.after(today))
-      result = 'none'
+      result = 'after'
     if (startDate.before(today) && endDate.after(today))
-      result = 'partial'
+      result = 'now'
 
-    if (result === 'partial')
+    if (result === 'now')
       this.currentPeriod = periodName;
 
     return result
@@ -397,7 +407,7 @@ DeadlinesUtil.prototype = {
         <sys_created_on>2020-12-03 16:03:47</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>12f75a2edb38a090389b84d868961930</sys_id>
-        <sys_mod_count>165</sys_mod_count>
+        <sys_mod_count>179</sys_mod_count>
         <sys_name>DeadlinesUtil</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -405,6 +415,6 @@ DeadlinesUtil.prototype = {
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_12f75a2edb38a090389b84d868961930</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-03-01 15:43:55</sys_updated_on>
+        <sys_updated_on>2021-03-02 15:46:27</sys_updated_on>
     </sys_script_include>
 </record_update>

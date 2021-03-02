@@ -168,8 +168,9 @@ Utils.prototype = {
 	getDefaultEarlyAccessUsers: function() {
 		var defaultEarlyAccessUsers = [];
 		var userGr = new GlideRecord('sys_user');
+		var titles = gs.getProperty("x_aaro2_pnl_mgmt.default_early_access_titles").split(',').join('^ORtitleLIKE');
 		
-		userGr.addEncodedQuery('titleLIKEVice President^ORtitleLIKERegional Director');
+		userGr.addEncodedQuery('titleLIKE' + titles + '^active=true');
 		userGr.query();
 		
 		while (userGr.next()) {
@@ -177,6 +178,35 @@ Utils.prototype = {
 		}
 		
 		return defaultEarlyAccessUsers;
+	},
+	
+	getReviewingUsers: function() {
+		var reviewingUsers = [];
+		var userGr = new GlideRecord('sys_user');
+		var titles = gs.getProperty("x_aaro2_pnl_mgmt.default_review_titles");
+		
+		userGr.addEncodedQuery('titleIN' + titles + '^active=true');
+		userGr.query();
+		
+		while (userGr.next()) {
+			reviewingUsers.push(userGr.getUniqueValue());
+		}
+		
+		return reviewingUsers;
+	},
+	
+	getDayOfWeekName: function(number) {
+		var days = {1:"Monday",2:"Tuesday",3:"Wednesday",4:"Thursday",5:"Friday",6:"Saturday",7:"Sunday"};
+		
+		return days[number];
+	},
+	
+	dateToLetterFormat: function(date) {
+		var gdt = new GlideDateTime(date);
+	
+		var output = gdt.getMonthUTC() + '/' + gdt.getDayOfMonthUTC() + '/' + gdt.getYearUTC();
+		
+		return output;
 	},
 
 // 	userHasVerifAcc: function(userSysID, deadlineSysID) {
@@ -211,7 +241,7 @@ Utils.prototype = {
         <sys_created_on>2021-02-08 14:28:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7878cf80db1a60105884eb184b961965</sys_id>
-        <sys_mod_count>103</sys_mod_count>
+        <sys_mod_count>110</sys_mod_count>
         <sys_name>Utils</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -219,6 +249,6 @@ Utils.prototype = {
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_7878cf80db1a60105884eb184b961965</sys_update_name>
         <sys_updated_by>xxvholovk</sys_updated_by>
-        <sys_updated_on>2021-03-01 13:53:19</sys_updated_on>
+        <sys_updated_on>2021-03-02 12:21:42</sys_updated_on>
     </sys_script_include>
 </record_update>
