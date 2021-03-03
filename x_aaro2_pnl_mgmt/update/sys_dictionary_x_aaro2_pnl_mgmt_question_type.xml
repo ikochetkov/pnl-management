@@ -11,13 +11,13 @@
 	return '';  // return the calculated value
 
 })(current);</calculation>
-        <choice>1</choice>
+        <choice>3</choice>
         <choice_field/>
         <choice_table/>
         <column_label>Type</column_label>
         <comments/>
         <create_roles/>
-        <default_value/>
+        <default_value>None</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -55,7 +55,7 @@
         <sys_created_on>2021-02-16 12:49:37</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5dc08cfadb16ec10389b84d8689619f7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Type</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -63,7 +63,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_dictionary_x_aaro2_pnl_mgmt_question_type</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-02-16 12:49:37</sys_updated_on>
+        <sys_updated_on>2021-03-03 10:35:47</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

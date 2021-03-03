@@ -9,14 +9,14 @@
 selected&#13;
 No Results Found&#13;
 </required_translation_keys>
-        <source_script/>
+        <source_script display_value="@aarons/pnl-mgmt">e5460e176a82b94c56f102caec79b5af</source_script>
         <source_script_name>@aarons/pnl-mgmt</source_script_name>
         <sys_class_name>sys_ux_lib_component</sys_class_name>
         <sys_created_by>xxikochet</sys_created_by>
         <sys_created_on>2021-03-02 14:10:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>fe66a4d99934cf78aff9d3ac8567d5f2</sys_id>
-        <sys_mod_count>448528</sys_mod_count>
+        <sys_mod_count>448551</sys_mod_count>
         <sys_name>aaro2-pnl-deadlines-view</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -24,7 +24,7 @@ No Results Found&#13;
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_ux_lib_component_fe66a4d99934cf78aff9d3ac8567d5f2</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-03-02 15:55:48</sys_updated_on>
+        <sys_updated_on>2021-03-03 14:36:50</sys_updated_on>
         <tag>aaro2-pnl-deadlines-view</tag>
     </sys_ux_lib_component>
 </record_update>
