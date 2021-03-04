@@ -19,17 +19,33 @@ DeadlinesUtil.prototype = {
   },
 
   __initReviewPeriods: function () {
-    var early_access_b_day = gs.getProperty('x_aaro2_pnl_mgmt.early_access_b_day', 6);
     var mul_review_period = gs.getProperty('x_aaro2_pnl_mgmt.mul_review_period', '7-9').split('-');
     var accounting_answer_period = gs.getProperty('x_aaro2_pnl_mgmt.accounting_answer_period', '7-12').split('-');
     var accounting_can_reassign_period = gs.getProperty('x_aaro2_pnl_mgmt.accounting_can_reassign_period', '7-10').split('-');
-    this.SNEAK_PEEK_B_DAY = Number(early_access_b_day)
-    this.MUL_REVIEW_PERIOD_START = Number(mul_review_period[0])
-    this.MUL_REVIEW_PERIOD_END = Number(mul_review_period[1])
-    this.ACCOUNTING_ANSWER_PERIOD_START = Number(accounting_answer_period[0])
-    this.ACCOUNTING_ANSWER_PERIOD_END = Number(accounting_answer_period[1])
-    this.ACCOUNTING_CAN_REASSIGN_PERIOD_START = Number(accounting_can_reassign_period[0])
-    this.ACCOUNTING_CAN_REASSIGN_PERIOD_END = Number(accounting_can_reassign_period[1])
+    var question_review_period = gs.getProperty('x_aaro2_pnl_mgmt.question_review', '7-12').split('-')
+    this.SNEAK_PEEK_B_DAY = gs.getProperty('x_aaro2_pnl_mgmt.early_access_b_day', 6);
+    this.SNEAK_PEEK_START_TIME = gs.getProperty('x_aaro2_pnl_mgmt.early_access_start_time', '08:00:00')
+    this.SNEAK_PEEK_END_TIME = gs.getProperty('x_aaro2_pnl_mgmt.early_access_end_time', '14:00:00')
+
+    this.MUL_REVIEW_PERIOD_START = mul_review_period[0]
+    this.MUL_REVIEW_PERIOD_END = mul_review_period[1]
+    this.MUL_REVIEW_START_TIME = gs.getProperty('x_aaro2_pnl_mgmt.mul_review_period_start_time', '08:00:00')
+    this.MUL_REVIEW_END_TIME = gs.getProperty('x_aaro2_pnl_mgmt.mul_review_period_end_time', '14:00:00')
+
+    this.ACCOUNTING_ANSWER_PERIOD_START = accounting_answer_period[0]
+    this.ACCOUNTING_ANSWER_PERIOD_END = accounting_answer_period[1]
+    this.ACCOUNTING_ANSWER_START_TIME = gs.getProperty('x_aaro2_pnl_mgmt.accounting_answer_period_start_time', '08:00:00')
+    this.ACCOUNTING_ANSWER_END_TIME = gs.getProperty('x_aaro2_pnl_mgmt.accounting_answer_period_end_time', '14:00:00')
+
+    this.QUESTION_REVIEW_PERIOD_START = question_review_period[0]
+    this.QUESTION_REVIEW_PERIOD_END = question_review_period[1]
+    this.QUESTION_REVIEW_START_TIME = gs.getProperty('x_aaro2_pnl_mgmt.question_review_start_time', '08:00:00')
+    this.QUESTION_REVIEW_END_TIME = gs.getProperty('x_aaro2_pnl_mgmt.question_review_end_time', '14:00:00')
+
+    this.ACCOUNTING_CAN_REASSIGN_PERIOD_START = accounting_can_reassign_period[0]
+    this.ACCOUNTING_CAN_REASSIGN_PERIOD_END = accounting_can_reassign_period[1]
+    this.ACCOUNTING_CAN_REASSIGN_START_TIME = gs.getProperty('x_aaro2_pnl_mgmt.accounting_can_reassign_period_start_time', '08:00:00')
+    this.ACCOUNTING_CAN_REASSIGN_END_TIME = gs.getProperty('x_aaro2_pnl_mgmt.accounting_can_reassign_period_end_time', '14:00:00')
 
   },
 
@@ -102,54 +118,59 @@ DeadlinesUtil.prototype = {
   },
 
   getDeadlines: function () {
-    var sneakPeekDay = this.SNEAK_PEEK_B_DAY.toString();
-    var mulReviewStart = this.MUL_REVIEW_PERIOD_START.toString()
-    var mulReviewEnd = this.MUL_REVIEW_PERIOD_END.toString()
-    var accountingAnswerPeriodStart = this.ACCOUNTING_ANSWER_PERIOD_START.toString()
-    var accountingAnswerPeriodEnd = this.ACCOUNTING_ANSWER_PERIOD_END.toString()
-    var accountingCanReassignPeriodStart = this.ACCOUNTING_CAN_REASSIGN_PERIOD_START.toString()
-    var accountingCanReassignPeriodEnd = this.ACCOUNTING_CAN_REASSIGN_PERIOD_END.toString()
-
     var deadlines = {
-      sneakPeek: {
-        date: this.businessDaysStrings[sneakPeekDay],
-        progress: this.__getDateStatus(this.businessDaysDates[sneakPeekDay], 'sneakPeek'),
-        glideDateFrom: new GlideDateTime(this.businessDaysStrings[sneakPeekDay] + ' 13:00:00'),
-        glideDateTo: new GlideDateTime(this.businessDaysStrings[sneakPeekDay] + ' 22:00:00')
-      },
-      accountingCanReassignPeriod: {
-        from: this.businessDaysStrings[accountingCanReassignPeriodStart],
-        to: this.businessDaysStrings[accountingCanReassignPeriodEnd],
-        progress: this.__getPeriodStatus(
-          this.businessDaysDates[accountingCanReassignPeriodStart],
-          this.businessDaysDates[accountingCanReassignPeriodEnd],
-          'accountingCanReassignPeriod'),
-        glideDateFrom: new GlideDateTime(this.businessDaysStrings[accountingCanReassignPeriodStart] + ' 13:00:00'),
-        glideDateTo: new GlideDateTime(this.businessDaysStrings[accountingCanReassignPeriodEnd] + ' 22:00:00')
-      },
-      accountingAnswerPeriod: {
-        from: this.businessDaysStrings[accountingAnswerPeriodStart],
-        to: this.businessDaysStrings[accountingAnswerPeriodEnd],
-        progress: this.__getPeriodStatus(
-          this.businessDaysDates[accountingAnswerPeriodStart],
-          this.businessDaysDates[accountingAnswerPeriodEnd],
-          'accountingAnswerPeriod'),
-        glideDateFrom: new GlideDateTime(this.businessDaysStrings[accountingAnswerPeriodStart] + ' 13:00:00'),
-        glideDateTo: new GlideDateTime(this.businessDaysStrings[accountingAnswerPeriodEnd] + ' 22:00:00')
-      },
-      mulReview: {
-        from: this.businessDaysStrings[mulReviewStart],
-        to: this.businessDaysStrings[mulReviewEnd],
-        progress: this.__getPeriodStatus(
-          this.businessDaysDates[mulReviewStart],
-          this.businessDaysDates[mulReviewEnd],
-          'mulReview'),
-        glideDateFrom: new GlideDateTime(this.businessDaysStrings[mulReviewStart] + ' 13:00:00'),
-        glideDateTo: new GlideDateTime(this.businessDaysStrings[mulReviewEnd] + ' 22:00:00')
-      },
+      sneakPeek: this.__getPeriod(
+        this.SNEAK_PEEK_B_DAY,
+        this.SNEAK_PEEK_B_DAY,
+        this.SNEAK_PEEK_START_TIME,
+        this.SNEAK_PEEK_END_TIME
+      ),
+      accountingCanReassignPeriod: this.__getPeriod(
+        this.ACCOUNTING_CAN_REASSIGN_PERIOD_START,
+        this.ACCOUNTING_CAN_REASSIGN_PERIOD_END,
+        this.ACCOUNTING_CAN_REASSIGN_START_TIME,
+        this.ACCOUNTING_CAN_REASSIGN_END_TIME
+      ),
+      accountingAnswerPeriod: this.__getPeriod(
+        this.ACCOUNTING_ANSWER_PERIOD_START,
+        this.ACCOUNTING_ANSWER_PERIOD_END,
+        this.ACCOUNTING_ANSWER_START_TIME,
+        this.ACCOUNTING_ANSWER_END_TIME
+      ),
+      mulReview: this.__getPeriod(
+        this.MUL_REVIEW_PERIOD_START,
+        this.MUL_REVIEW_PERIOD_END,
+        this.MUL_REVIEW_START_TIME,
+        this.MUL_REVIEW_END_TIME
+      ),
+      review: this.__getPeriod(
+        this.QUESTION_REVIEW_PERIOD_START,
+        this.QUESTION_REVIEW_PERIOD_END,
+        this.QUESTION_REVIEW_START_TIME,
+        this.QUESTION_REVIEW_END_TIME
+      ),
       currentPeriod: this.currentPeriod
     }
     return deadlines
+  },
+
+  __getPeriod: function (periodStart, periodEnd, startTime, endTime) {
+    return {
+      from: this.businessDaysStrings[periodStart],
+      to: this.businessDaysStrings[periodEnd],
+      // progress: this.__getPeriodStatus(
+      //   this.businessDaysDates[periodStart],
+      //   this.businessDaysDates[periodEnd],
+      //   'questionReview'),
+      glideDateFrom: this.__getUTCTimeFromLocal(this.businessDaysStrings[periodStart], startTime),
+      glideDateTo: this.__getUTCTimeFromLocal(this.businessDaysStrings[periodEnd], endTime)
+    }
+  },
+  __getUTCTimeFromLocal: function (dateStr, timeStr) {
+    var gdt = new GlideDateTime();
+    gdt.setDisplayValue(dateStr + " " + timeStr)
+    return gdt;
+
   },
   getDeadlinesStringified: function () {
     var deadlines = this.getDeadlines();
@@ -222,22 +243,26 @@ DeadlinesUtil.prototype = {
       var sys_id = deadlineGr.getUniqueValue()
       deadline = {
         early_access_participants: this.__getParticipants(this.EARLY_ACCESS_PARTICIPANT_TABLE, sys_id),
-        early_access_end: deadlineGr.getDisplayValue('early_access_end'),
-        early_access_start: deadlineGr.getDisplayValue('early_access_start'),
-        question_start: deadlineGr.getDisplayValue('question_start'),
-        question_end: deadlineGr.getDisplayValue('question_end'),
-        reassign_start: deadlineGr.getDisplayValue('reassign_start'),
-        reassign_end: deadlineGr.getDisplayValue('reassign_end'),
-        answer_start: deadlineGr.getDisplayValue('answer_start'),
-        answer_end: deadlineGr.getDisplayValue('answer_end'),
-        early_access_start_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('early_access_start')))),
-        early_access_end_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('early_access_end')))),
-        question_start_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('question_start')))),
-        question_end_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('question_end')))),
-        reassign_start_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('reassign_start')))),
-        reassign_end_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('reassign_end')))),
-        answer_start_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('answer_start')))),
-        answer_end_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('answer_end')))),
+        early_access_end: deadlineGr.getDisplayValue('early_access_end') || '',
+        early_access_start: deadlineGr.getDisplayValue('early_access_start') || '',
+        question_start: deadlineGr.getDisplayValue('question_start') || '',
+        question_end: deadlineGr.getDisplayValue('question_end') || '',
+        reassign_start: deadlineGr.getDisplayValue('reassign_start') || '',
+        reassign_end: deadlineGr.getDisplayValue('reassign_end') || '',
+        answer_start: deadlineGr.getDisplayValue('answer_start') || '',
+        answer_end: deadlineGr.getDisplayValue('answer_end') || '',
+        review_start: deadlineGr.getDisplayValue('review_start') || '',
+        review_end: deadlineGr.getDisplayValue('review_end') || '',
+        early_access_start_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('early_access_start') || ''))),
+        early_access_end_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('early_access_end') || ''))),
+        question_start_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('question_start') || ''))),
+        question_end_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('question_end') || ''))),
+        reassign_start_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('reassign_start') || ''))),
+        reassign_end_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('reassign_end') || ''))),
+        answer_start_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('answer_start') || ''))),
+        answer_end_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('answer_end') || ''))),
+        review_start_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('review_start') || ''))),
+        review_end_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('review_end') || ''))),
         month: deadlineGr.getValue('month'),
         monthLabel: deadlineGr.getDisplayValue('month'),
         year: deadlineGr.getValue("year"),
@@ -260,6 +285,8 @@ DeadlinesUtil.prototype = {
     deadlineGr.reassign_end.setDisplayValue(data.reassign_end)
     deadlineGr.answer_start.setDisplayValue(data.answer_start)
     deadlineGr.answer_end.setDisplayValue(data.answer_end)
+    deadlineGr.review_start.setDisplayValue(data.review_start)
+    deadlineGr.review_end.setDisplayValue(data.review_end)
     deadlineGr.update();
     var deadlineGrU = new GlideRecord(this.DEADLINES_TABLE)
     deadlineGrU.get(sys_id);
@@ -310,6 +337,7 @@ DeadlinesUtil.prototype = {
     //if (!date) return 'none'
     var today = this.currentDate
     var result = ''
+    if (!date.toString()) return 'before'
     if (this.__datesEqual(date, today))
       result = 'now'
     if (date.before(today))
@@ -408,7 +436,7 @@ DeadlinesUtil.prototype = {
         <sys_created_on>2020-12-03 16:03:47</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>12f75a2edb38a090389b84d868961930</sys_id>
-        <sys_mod_count>181</sys_mod_count>
+        <sys_mod_count>190</sys_mod_count>
         <sys_name>DeadlinesUtil</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -416,6 +444,6 @@ DeadlinesUtil.prototype = {
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_12f75a2edb38a090389b84d868961930</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-03-02 16:58:16</sys_updated_on>
+        <sys_updated_on>2021-03-04 13:25:09</sys_updated_on>
     </sys_script_include>
 </record_update>

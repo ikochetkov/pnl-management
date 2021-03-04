@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
     <sys_properties action="INSERT_OR_UPDATE">
         <choices/>
-        <description>Business days period, when accounting can answer questions &#13;
-Format: number-number (e.g. 7-12)</description>
+        <description>Question review period &lt;b&gt;end&lt;/b&gt; time &#13;
+Format: HH-mm-ss (e.g 08:00:00) in US/Eastern time zone</description>
         <ignore_cache>false</ignore_cache>
         <is_private>false</is_private>
-        <name>x_aaro2_pnl_mgmt.accounting_answer_period</name>
+        <name>x_aaro2_pnl_mgmt.question_review_end_time</name>
         <read_roles/>
-        <suffix>accounting_answer_period</suffix>
+        <suffix>question_review_end_time</suffix>
         <sys_class_name>sys_properties</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
-        <sys_created_on>2020-12-17 13:09:57</sys_created_on>
+        <sys_created_on>2021-03-04 12:14:12</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>8aac3143db09a890389b84d868961935</sys_id>
-        <sys_mod_count>8</sys_mod_count>
-        <sys_name>x_aaro2_pnl_mgmt.accounting_answer_period</sys_name>
+        <sys_id>cc529e37db6eec905884eb184b961997</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_aaro2_pnl_mgmt.question_review_end_time</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name>sys_properties_8aac3143db09a890389b84d868961935</sys_update_name>
+        <sys_update_name>sys_properties_cc529e37db6eec905884eb184b961997</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-03-04 10:47:15</sys_updated_on>
+        <sys_updated_on>2021-03-04 12:14:12</sys_updated_on>
         <type>string</type>
-        <value>7-11</value>
+        <value>17:00:00</value>
         <write_roles/>
     </sys_properties>
-    <sys_translated_text action="delete_multiple" query="documentkey=8aac3143db09a890389b84d868961935"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=cc529e37db6eec905884eb184b961997"/>
 </record_update>
