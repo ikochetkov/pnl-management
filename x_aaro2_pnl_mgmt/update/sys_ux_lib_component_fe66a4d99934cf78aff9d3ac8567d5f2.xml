@@ -5,9 +5,44 @@
         <deprecated>false</deprecated>
         <overrides/>
         <required_sys_props/>
-        <required_translation_keys>{0} items selected&#13;
+        <required_translation_keys>Close dialog&#13;
 selected&#13;
 No Results Found&#13;
+{0} items selected&#13;
+Card Actions&#13;
+was&#13;
+Unknown User&#13;
+User Avatar: {0}&#13;
+busy&#13;
+away&#13;
+available&#13;
+offline&#13;
+Link opens in new window&#13;
+Collapsed alert list with {0} alerts.&#13;
+Expanded alert list with {0} alerts.&#13;
+Dismiss all alerts&#13;
+Dismiss All&#13;
+OK&#13;
+Open&#13;
+Open and dismiss alert&#13;
+Dismiss alert&#13;
+Show less&#13;
+Show more&#13;
+dismiss pill: {0}&#13;
+Characters left: {0}&#13;
+Optional&#13;
+More information&#13;
+required&#13;
+No results found&#13;
+Search&#13;
+Edit&#13;
+Country code: +{0}&#13;
+Call&#13;
+Met requirement: {0}.&#13;
+Unmet requirement: {0}.&#13;
+Unmask password&#13;
+Mask password&#13;
+Actions&#13;
 </required_translation_keys>
         <source_script display_value="@aarons/pnl-mgmt">e5460e176a82b94c56f102caec79b5af</source_script>
         <source_script_name>@aarons/pnl-mgmt</source_script_name>
@@ -16,15 +51,15 @@ No Results Found&#13;
         <sys_created_on>2021-03-02 14:10:15</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>fe66a4d99934cf78aff9d3ac8567d5f2</sys_id>
-        <sys_mod_count>448551</sys_mod_count>
+        <sys_mod_count>448598</sys_mod_count>
         <sys_name>aaro2-pnl-deadlines-view</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_ux_lib_component_fe66a4d99934cf78aff9d3ac8567d5f2</sys_update_name>
-        <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-03-03 14:36:50</sys_updated_on>
+        <sys_updated_by>xxvholovk</sys_updated_by>
+        <sys_updated_on>2021-03-05 13:02:04</sys_updated_on>
         <tag>aaro2-pnl-deadlines-view</tag>
     </sys_ux_lib_component>
 </record_update>
