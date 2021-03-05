@@ -46,10 +46,13 @@
 		gs.error(responseObj);
 	}
 
-// 	response.setContentType("application/json");
-// 	var stream = response.getStreamWriter();
-// 	stream.writeString(responseObj);
-	return responseObj;
+
+	response.setContentType("application/json");
+	var stream = response.getStreamWriter();
+	stream.writeString(JSON.stringify({
+		rows: responseObj.body.Rows,
+		askDeadline: askDeadline
+	}));
 
 
 })(request, response);]]></operation_script>
@@ -67,7 +70,7 @@
         <sys_created_on>2021-03-05 12:55:19</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>2b252300db3ea0d05884eb184b961969</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>GetPNLStatementRows2</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -75,7 +78,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_ws_operation_2b252300db3ea0d05884eb184b961969</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-03-05 13:03:05</sys_updated_on>
+        <sys_updated_on>2021-03-05 13:20:41</sys_updated_on>
         <web_service_definition display_value="utils">d3a7e6e5db5ce8505884eb184b961953</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>
