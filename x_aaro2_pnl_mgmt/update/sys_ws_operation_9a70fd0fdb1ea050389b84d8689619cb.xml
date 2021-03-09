@@ -9,8 +9,7 @@
         <name>GetPNLStatementDetailRows</name>
         <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
 
-     var responseObj , restResponse , endpoint ;
-	gs.info('PNL_GetPNLStatementDetailRows: '+request.queryParams);
+	var responseObj , restResponse , endpoint, access={} ;
 
 	try { 
 		endpoint = gs.getProperty('x_aaro2_pnl_mgmt.GetPNLStatementDatailRows_endpoint') +"FiscalYear="+ request.queryParams.FiscalYear +"&AccountingPeriod="+request.queryParams.AccountingPeriod+'&Company='+request.queryParams.Company+'&Account='+request.queryParams.Account+"&ObjectId=" + request.queryParams.ObjectId +"&RefreshType="+request.queryParams.RefreshType;
@@ -24,6 +23,20 @@
 		restResponse = r.execute();
 		restResponse.waitForResponse(10);   
 		responseObj = new global.RESTResponseUtils(restResponse);
+		var roleAccessGr = new GlideRecord('x_aaro2_pnl_mgmt_pnl_role_access');
+		if(roleAccessGr.get('ents_role_id', request.queryParams.Role.toString())){
+			access = {
+				ents_role_id: roleAccessGr.getValue('ents_role_id'),
+				ents_role_name: roleAccessGr.getValue('ents_role_name'),
+				can_ask: +roleAccessGr.getValue('can_ask'),
+				can_answer: +roleAccessGr.getValue('can_answer'),
+				over_1k: +roleAccessGr.getValue('over_1k'),
+				manager_review: +roleAccessGr.getValue('manager_review'),
+				supervisor_review: +roleAccessGr.getValue('supervisor_review')
+			};
+		}
+		responseObj = JSON.parse(responseObj.body);
+		responseObj.access = access;
 	}
 	catch(ex) {
 		responseObj = new global.RESTResponseUtils(restResponse);
@@ -33,13 +46,7 @@
 		responseObj.setHaveError(true);
 		gs.error(responseObj);
 	}
-// 	finally{
-// 		if(responseObj.haveError() == true){
-// 			gs.info(JSON.parse(responseObj.body).Error);
-// 			responseObj.setErrorMessage(JSON.parse(responseObj.body).Error);
-// 		}
 
-// 	}
 	return responseObj;
 
 
@@ -58,7 +65,7 @@
         <sys_created_on>2021-02-17 15:38:44</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>9a70fd0fdb1ea050389b84d8689619cb</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>GetPNLStatementDetailRows</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -66,7 +73,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_ws_operation_9a70fd0fdb1ea050389b84d8689619cb</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-02-23 10:03:36</sys_updated_on>
+        <sys_updated_on>2021-03-09 12:14:59</sys_updated_on>
         <web_service_definition display_value="utils">d3a7e6e5db5ce8505884eb184b961953</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>
