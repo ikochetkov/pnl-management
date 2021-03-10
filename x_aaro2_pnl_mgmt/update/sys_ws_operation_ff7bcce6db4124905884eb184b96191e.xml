@@ -77,11 +77,11 @@
 		r.setMIDServer(gs.getProperty('mid.server.rba_default'));
 		r.setRequestHeader('Content-Type', 'application/json');
 		r.setRequestHeader('Accept', 'application/json');
-		r.setHttpTimeout(5000);
+		r.setHttpTimeout(10000);
 		restResponse = r.execute();
 		restResponse.waitForResponse(15);
 		responseObj = new global.RESTResponseUtils(restResponse);
-		return responseObj;
+		//return responseObj;
 	} catch (ex) {
 		responseObj = new global.RESTResponseUtils(restResponse);
 		responseObj.setBody(ex.toString());
@@ -145,7 +145,7 @@
         <sys_created_on>2020-12-15 15:39:01</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ff7bcce6db4124905884eb184b96191e</sys_id>
-        <sys_mod_count>240</sys_mod_count>
+        <sys_mod_count>244</sys_mod_count>
         <sys_name>GetPNLUserDataSet</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -153,7 +153,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_ws_operation_ff7bcce6db4124905884eb184b96191e</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-03-05 10:44:06</sys_updated_on>
+        <sys_updated_on>2021-03-10 12:41:24</sys_updated_on>
         <web_service_definition display_value="utils">d3a7e6e5db5ce8505884eb184b961953</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>
