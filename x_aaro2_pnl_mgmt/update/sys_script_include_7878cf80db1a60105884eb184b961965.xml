@@ -142,15 +142,14 @@ Utils.prototype = {
 
 	userHasEarlyAcc: function (userSysID, deadlineSysID) {
 		var hasEarlyAcc = false;
-		var userGr = new GlideRecord('sys_user');
-		if (userGr.get(userSysID)) {
-			if (userGr.getValue('title')) {
-				var userTitle = userGr.getValue('title');
-				var defaultUserTitles = gs.getProperty('x_aaro2_pnl_mgmt.default_early_access_titles');
-				if (defaultUserTitles.indexOf(userTitle) != -1) {
-					hasEarlyAcc = true;
-				}
-			}
+		
+		var groups = gs.getProperty('x_aaro2_pnl_mgmt.default_early_access_groups');
+		var grMemberGr = new GlideRecord('sys_user_grmember');
+		grMemberGr.addQuery('group.name', 'IN', groups);
+		grMemberGr.addQuery('user', userSysID);
+		grMemberGr.query();
+		if(grMemberGr.next()) {
+			hasEarlyAcc = true;
 		}
 
 		if (!hasEarlyAcc) {
@@ -165,75 +164,75 @@ Utils.prototype = {
 
 		return hasEarlyAcc;
 	},
-	
+
 	getDefaultEarlyAccessUsers: function() {
 		var defaultEarlyAccessUsers = [];
-		var userGr = new GlideRecord('sys_user');
-		var titles = gs.getProperty("x_aaro2_pnl_mgmt.default_early_access_titles").split(',').join('^ORtitleLIKE');
-		
-		userGr.addEncodedQuery('titleLIKE' + titles + '^active=true');
-		userGr.query();
-		
-		while (userGr.next()) {
-			defaultEarlyAccessUsers.push(userGr.getUniqueValue());
+		var grMemberGr = new GlideRecord('sys_user_grmember');
+		var groups = gs.getProperty("x_aaro2_pnl_mgmt.default_early_access_groups");
+
+		grMemberGr.addEncodedQuery('group.nameIN' + groups + '^user.active=true');
+		grMemberGr.query();
+
+		while (grMemberGr.next()) {
+			defaultEarlyAccessUsers.push(grMemberGr.user.sys_id);
 		}
-		
+
 		return defaultEarlyAccessUsers;
 	},
-	
+
 	getReviewingUsers: function() {
 		var reviewingUsers = [];
-		var userGr = new GlideRecord('sys_user');
-		var titles = gs.getProperty("x_aaro2_pnl_mgmt.default_review_titles");
-		
-		userGr.addEncodedQuery('titleIN' + titles + '^active=true');
-		userGr.query();
-		
-		while (userGr.next()) {
-			reviewingUsers.push(userGr.getUniqueValue());
+		var grMemberGr = new GlideRecord('sys_user_grmember');
+		var groups = gs.getProperty("x_aaro2_pnl_mgmt.default_review_groups");
+
+		grMemberGr.addEncodedQuery('group.nameIN' + groups + '^user.active=true');
+		grMemberGr.query();
+
+		while (grMemberGr.next()) {
+			reviewingUsers.push(grMemberGr.user.sys_id);
 		}
-		
+
 		return reviewingUsers;
 	},
-	
+
 	getDayOfWeekName: function(number) {
 		var days = {1:"Monday",2:"Tuesday",3:"Wednesday",4:"Thursday",5:"Friday",6:"Saturday",7:"Sunday"};
-		
+
 		return days[number];
 	},
-	
+
 	dateToLetterFormat: function(date) {
 		var gdt = new GlideDateTime(date);
-	
+
 		var output = gdt.getMonthUTC() + '/' + gdt.getDayOfMonthUTC() + '/' + gdt.getYearUTC();
-		
+
 		return output;
 	},
 
-// 	userHasVerifAcc: function(userSysID, deadlineSysID) {
-// 		var hasVerifAcc = false;
-// 		var userGr = new GlideRecord('sys_user');
-// 		if (userGr.get(userSysID)) {
-// 			if (userGr.getValue('title')) {
-// 				var userTitle = userGr.getValue('title');
-// 				var defaultUserTitles = gs.getProperty('x_aaro2_pnl_mgmt.default_early_access_titles');
-// 				if (defaultUserTitles.indexOf(userTitle) != -1) {
-// 					hasVerifAcc = true;
-// 				}
-// 			}
-// 		}
+	// 	userHasVerifAcc: function(userSysID, deadlineSysID) {
+	// 		var hasVerifAcc = false;
+	// 		var userGr = new GlideRecord('sys_user');
+	// 		if (userGr.get(userSysID)) {
+	// 			if (userGr.getValue('title')) {
+	// 				var userTitle = userGr.getValue('title');
+	// 				var defaultUserTitles = gs.getProperty('x_aaro2_pnl_mgmt.default_early_access_titles');
+	// 				if (defaultUserTitles.indexOf(userTitle) != -1) {
+	// 					hasVerifAcc = true;
+	// 				}
+	// 			}
+	// 		}
 
-// 		if(!hasVerifAcc) {
-// 			var statVer = new GlideRecord('x_aaro2_pnl_mgmt_m2m_statements_verificators');
-// 			statVer.addQuery('deadline', deadlineSysID);
-// 			statVer.addQuery('user', userSysID);
-// 			statVer.query();
-// 			if(statVer.hasNext()) {
-// 				hasVerifAcc = true;
-// 			}
-// 		}
-// 		return hasVerifAcc;
-// 	},
+	// 		if(!hasVerifAcc) {
+	// 			var statVer = new GlideRecord('x_aaro2_pnl_mgmt_m2m_statements_verificators');
+	// 			statVer.addQuery('deadline', deadlineSysID);
+	// 			statVer.addQuery('user', userSysID);
+	// 			statVer.query();
+	// 			if(statVer.hasNext()) {
+	// 				hasVerifAcc = true;
+	// 			}
+	// 		}
+	// 		return hasVerifAcc;
+	// 	},
 
 	type: 'Utils'
 };]]></script>
@@ -242,14 +241,14 @@ Utils.prototype = {
         <sys_created_on>2021-02-08 14:28:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7878cf80db1a60105884eb184b961965</sys_id>
-        <sys_mod_count>111</sys_mod_count>
+        <sys_mod_count>114</sys_mod_count>
         <sys_name>Utils</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_7878cf80db1a60105884eb184b961965</sys_update_name>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-03-10 10:17:59</sys_updated_on>
+        <sys_updated_by>xxmpurik</sys_updated_by>
+        <sys_updated_on>2021-03-12 12:34:25</sys_updated_on>
     </sys_script_include>
 </record_update>
