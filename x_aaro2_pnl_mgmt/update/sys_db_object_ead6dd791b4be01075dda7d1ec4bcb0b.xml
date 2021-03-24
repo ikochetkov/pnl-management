@@ -11,9 +11,9 @@
         <delete_access>false</delete_access>
         <extension_model/>
         <is_extendable>false</is_extendable>
-        <label>Pnl Mgmt M2m Early Access User</label>
+        <label>Pnl Mgmt M2m Statements Verificators</label>
         <live_feed_enabled>false</live_feed_enabled>
-        <name>x_aaro2_pnl_mgmt_m2m_early_access_user</name>
+        <name>x_aaro2_pnl_mgmt_m2m_statements_verificators</name>
         <number_ref/>
         <provider_class/>
         <read_access>true</read_access>
@@ -23,18 +23,18 @@
         <sys_class_name>sys_db_object</sys_class_name>
         <sys_class_path/>
         <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-18 10:39:05</sys_created_on>
+        <sys_created_on>2021-02-18 10:36:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>8646bd13db926450389b84d8689619cd</sys_id>
+        <sys_id>ead6dd791b4be01075dda7d1ec4bcb0b</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Pnl Mgmt M2m Early Access User</sys_name>
+        <sys_name>Pnl Mgmt M2m Statements Verificators</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name>sys_db_object_8646bd13db926450389b84d8689619cd</sys_update_name>
+        <sys_update_name>sys_db_object_ead6dd791b4be01075dda7d1ec4bcb0b</sys_update_name>
         <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-18 10:39:05</sys_updated_on>
+        <sys_updated_on>2021-02-18 10:36:05</sys_updated_on>
         <u_description/>
         <update_access>true</update_access>
         <user_role/>
