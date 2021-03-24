@@ -2,7 +2,7 @@
     <sys_properties_category_m2m action="INSERT_OR_UPDATE">
         <category display_value="PNL Properties">b548a629db5ce8505884eb184b9619e4</category>
         <order>1400</order>
-        <property display_value="x_aaro2_pnl_mgmt.early_access_b_day" name="x_aaro2_pnl_mgmt.early_access_b_day">67aa3dcbdbc5a890389b84d868961916</property>
+        <property display_value="x_aaro2_pnl_mgmt.early_access_period" name="x_aaro2_pnl_mgmt.early_access_period">67aa3dcbdbc5a890389b84d868961916</property>
         <sys_class_name>sys_properties_category_m2m</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2020-12-17 13:13:55</sys_created_on>

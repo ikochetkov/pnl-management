@@ -5,7 +5,7 @@
         <active>true</active>
         <advanced_condition/>
         <affected_field_on_event/>
-        <category display_value="Task_SLA" name="Task_SLA">c97d83137f4432005f58108c3ffa917a</category>
+        <category display_value="PNL Management" name="PNL Management">fac143acdb07ec505884eb184b96194f</category>
         <collection>x_aaro2_pnl_mgmt_deadline</collection>
         <condition/>
         <content_type>text/html</content_type>
@@ -42,7 +42,7 @@
 <li><span style="white-space: pre;">Answers will be ready for your review by 4:00 PM ET on ${mail_script:pnl_answer_end}</span></li>
 <li><span style="white-space: pre;">Any adjustments will be made on ${mail_script:next_month_name} P&amp;Ls</span></li>
 </ul>
-<p><br /></p>
+<p><br /><span style="font-size: 10pt; font-family: Arial, sans-serif; color: black;">PnL is available on ${mail_script:set_url_to_pnl_statements}</span> <br /></p>
 <p><span style="font-size: 12pt;"><strong><span style="white-space: pre; color: #0000ff;">Please contact the NSC for any login issues.</span></strong></span></p>
 <p><br /></p>
 <p><span style="white-space: pre;">Thank you,</span></p>
@@ -68,7 +68,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>93052b47dbaeac50f41dc15b139619ad</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Access is available</sys_name>
         <sys_overrides/>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
@@ -76,8 +76,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sysevent_email_action_93052b47dbaeac50f41dc15b139619ad</sys_update_name>
-        <sys_updated_by>xxvholovk</sys_updated_by>
-        <sys_updated_on>2021-03-02 13:20:12</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-03-19 09:54:06</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

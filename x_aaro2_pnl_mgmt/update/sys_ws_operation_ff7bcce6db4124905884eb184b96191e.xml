@@ -26,7 +26,7 @@
 
 	var curUser = gs.getUserName();
 	if(gs.getUserName() == 'xxikochet' || gs.getUserName() == 'xxamirony' || gs.getUserName() == 'xxmpurik' || gs.getUserName() == 'xxvholovk' || gs.getUserName() == 'igor.kochetkov'){
-		curUser = 'nefiveas';
+		curUser = 'plowen';
 	}
 	var userSysID = gs.getUserID();
 
@@ -92,15 +92,15 @@
 	}
 	//test data -START
 
-// 	var body = JSON.parse(responseObj.body);
-// 	var periods = body.Periods;
-// 	periods.push({
-// 		"FiscalYear": 2021,
-// 		"AccountingPeriod": 2
-// 	});
+	// 	var body = JSON.parse(responseObj.body);
+	// 	var periods = body.Periods;
+	// 	periods.push({
+	// 		"FiscalYear": 2021,
+	// 		"AccountingPeriod": 2
+	// 	});
 
-// 	body.Periods = periods;
-// 	responseObj.body = JSON.stringify(body);
+	// 	body.Periods = periods;
+	// 	responseObj.body = JSON.stringify(body);
 
 	//test data -END
 
@@ -127,6 +127,8 @@
 		}
 	} 
 	// cutting previous month data -END
+	responseObj.preference_question = gs.getUser().getPreference('x_aaro2_pnl_mgmt.question_filters');
+	responseObj.preference_statement = gs.getUser().getPreference('x_aaro2_pnl_mgmt.statements');
 
 	return responseObj;
 
@@ -145,7 +147,7 @@
         <sys_created_on>2020-12-15 15:39:01</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ff7bcce6db4124905884eb184b96191e</sys_id>
-        <sys_mod_count>245</sys_mod_count>
+        <sys_mod_count>253</sys_mod_count>
         <sys_name>GetPNLUserDataSet</sys_name>
         <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -153,7 +155,7 @@
         <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_ws_operation_ff7bcce6db4124905884eb184b96191e</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-03-12 09:24:05</sys_updated_on>
+        <sys_updated_on>2021-03-23 10:52:59</sys_updated_on>
         <web_service_definition display_value="utils">d3a7e6e5db5ce8505884eb184b961953</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>
