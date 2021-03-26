@@ -2,123 +2,153 @@
     <sys_ui_list parent="" relationship="" sys_domain="global" table="x_aaro2_pnl_mgmt_question" version="2" view="">
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>account</element>
-            <list_id display_value="x_aaro2_pnl_mgmt_question" element="NULL" name="x_aaro2_pnl_mgmt_question" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">b835962fdb712c10389b84d8689619f3</list_id>
+            <element>number</element>
+            <list_id display_value="x_aaro2_pnl_mgmt_question" element="NULL" name="x_aaro2_pnl_mgmt_question" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">14631e5adbcbe410f41dc15b1396193b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>xxikochet</sys_created_by>
-            <sys_created_on>2021-01-25 11:01:15</sys_created_on>
-            <sys_id>f035962fdb712c10389b84d8689619f5</sys_id>
+            <sys_created_on>2021-03-24 16:59:22</sys_created_on>
+            <sys_id>10631e5adbcbe410f41dc15b1396193c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>xxikochet</sys_updated_by>
-            <sys_updated_on>2021-01-25 11:01:15</sys_updated_on>
+            <sys_updated_on>2021-03-24 16:59:22</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>amount</element>
-            <list_id display_value="x_aaro2_pnl_mgmt_question" element="NULL" name="x_aaro2_pnl_mgmt_question" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">b835962fdb712c10389b84d8689619f3</list_id>
+            <element>account</element>
+            <list_id display_value="x_aaro2_pnl_mgmt_question" element="NULL" name="x_aaro2_pnl_mgmt_question" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">14631e5adbcbe410f41dc15b1396193b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>xxikochet</sys_created_by>
-            <sys_created_on>2021-01-25 11:01:15</sys_created_on>
-            <sys_id>f835962fdb712c10389b84d8689619f5</sys_id>
+            <sys_created_on>2021-03-24 16:59:22</sys_created_on>
+            <sys_id>90631e5adbcbe410f41dc15b1396193c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>xxikochet</sys_updated_by>
-            <sys_updated_on>2021-01-25 11:01:15</sys_updated_on>
+            <sys_updated_on>2021-03-24 16:59:22</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>assigned_to</element>
-            <list_id display_value="x_aaro2_pnl_mgmt_question" element="NULL" name="x_aaro2_pnl_mgmt_question" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">b835962fdb712c10389b84d8689619f3</list_id>
+            <element>accounting_unit</element>
+            <list_id display_value="x_aaro2_pnl_mgmt_question" element="NULL" name="x_aaro2_pnl_mgmt_question" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">14631e5adbcbe410f41dc15b1396193b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
             <sum>false</sum>
             <sys_created_by>xxikochet</sys_created_by>
-            <sys_created_on>2021-01-25 11:01:15</sys_created_on>
-            <sys_id>7c35962fdb712c10389b84d8689619f5</sys_id>
+            <sys_created_on>2021-03-24 16:59:22</sys_created_on>
+            <sys_id>14631e5adbcbe410f41dc15b1396193c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>xxikochet</sys_updated_by>
-            <sys_updated_on>2021-01-25 11:01:15</sys_updated_on>
+            <sys_updated_on>2021-03-24 16:59:22</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>company</element>
-            <list_id display_value="x_aaro2_pnl_mgmt_question" element="NULL" name="x_aaro2_pnl_mgmt_question" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">b835962fdb712c10389b84d8689619f3</list_id>
+            <element>amount</element>
+            <list_id display_value="x_aaro2_pnl_mgmt_question" element="NULL" name="x_aaro2_pnl_mgmt_question" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">14631e5adbcbe410f41dc15b1396193b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
             <sum>false</sum>
             <sys_created_by>xxikochet</sys_created_by>
-            <sys_created_on>2021-01-25 11:01:15</sys_created_on>
-            <sys_id>fc35962fdb712c10389b84d8689619f5</sys_id>
+            <sys_created_on>2021-03-24 16:59:22</sys_created_on>
+            <sys_id>94631e5adbcbe410f41dc15b1396193c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>xxikochet</sys_updated_by>
-            <sys_updated_on>2021-01-25 11:01:15</sys_updated_on>
+            <sys_updated_on>2021-03-24 16:59:22</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>period</element>
-            <list_id display_value="x_aaro2_pnl_mgmt_question" element="NULL" name="x_aaro2_pnl_mgmt_question" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">b835962fdb712c10389b84d8689619f3</list_id>
+            <element>answer</element>
+            <list_id display_value="x_aaro2_pnl_mgmt_question" element="NULL" name="x_aaro2_pnl_mgmt_question" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">14631e5adbcbe410f41dc15b1396193b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>4</position>
             <sum>false</sum>
             <sys_created_by>xxikochet</sys_created_by>
-            <sys_created_on>2021-01-25 11:01:15</sys_created_on>
-            <sys_id>7035962fdb712c10389b84d8689619f6</sys_id>
+            <sys_created_on>2021-03-24 16:59:22</sys_created_on>
+            <sys_id>18631e5adbcbe410f41dc15b1396193c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>xxikochet</sys_updated_by>
-            <sys_updated_on>2021-01-25 11:01:15</sys_updated_on>
+            <sys_updated_on>2021-03-24 16:59:22</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>status</element>
-            <list_id display_value="x_aaro2_pnl_mgmt_question" element="NULL" name="x_aaro2_pnl_mgmt_question" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">b835962fdb712c10389b84d8689619f3</list_id>
+            <element>answer_released</element>
+            <list_id display_value="x_aaro2_pnl_mgmt_question" element="NULL" name="x_aaro2_pnl_mgmt_question" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">14631e5adbcbe410f41dc15b1396193b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>5</position>
             <sum>false</sum>
             <sys_created_by>xxikochet</sys_created_by>
-            <sys_created_on>2021-01-25 11:01:15</sys_created_on>
-            <sys_id>f035962fdb712c10389b84d8689619f6</sys_id>
+            <sys_created_on>2021-03-24 16:59:22</sys_created_on>
+            <sys_id>98631e5adbcbe410f41dc15b1396193c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>xxikochet</sys_updated_by>
-            <sys_updated_on>2021-01-25 11:01:15</sys_updated_on>
+            <sys_updated_on>2021-03-24 16:59:22</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>subunit</element>
-            <list_id display_value="x_aaro2_pnl_mgmt_question" element="NULL" name="x_aaro2_pnl_mgmt_question" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">b835962fdb712c10389b84d8689619f3</list_id>
+            <element>approval</element>
+            <list_id display_value="x_aaro2_pnl_mgmt_question" element="NULL" name="x_aaro2_pnl_mgmt_question" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">14631e5adbcbe410f41dc15b1396193b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>6</position>
             <sum>false</sum>
             <sys_created_by>xxikochet</sys_created_by>
-            <sys_created_on>2021-01-25 11:01:15</sys_created_on>
-            <sys_id>7435962fdb712c10389b84d8689619f6</sys_id>
+            <sys_created_on>2021-03-24 16:59:22</sys_created_on>
+            <sys_id>1c631e5adbcbe410f41dc15b1396193c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>xxikochet</sys_updated_by>
-            <sys_updated_on>2021-01-25 11:01:15</sys_updated_on>
+            <sys_updated_on>2021-03-24 16:59:22</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>year</element>
-            <list_id display_value="x_aaro2_pnl_mgmt_question" element="NULL" name="x_aaro2_pnl_mgmt_question" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">b835962fdb712c10389b84d8689619f3</list_id>
+            <element>assigned_to</element>
+            <list_id display_value="x_aaro2_pnl_mgmt_question" element="NULL" name="x_aaro2_pnl_mgmt_question" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">14631e5adbcbe410f41dc15b1396193b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>7</position>
             <sum>false</sum>
             <sys_created_by>xxikochet</sys_created_by>
-            <sys_created_on>2021-01-25 11:01:15</sys_created_on>
-            <sys_id>f435962fdb712c10389b84d8689619f6</sys_id>
+            <sys_created_on>2021-03-24 16:59:22</sys_created_on>
+            <sys_id>9c631e5adbcbe410f41dc15b1396193c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>xxikochet</sys_updated_by>
-            <sys_updated_on>2021-01-25 11:01:15</sys_updated_on>
+            <sys_updated_on>2021-03-24 16:59:22</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>comments</element>
+            <list_id display_value="x_aaro2_pnl_mgmt_question" element="NULL" name="x_aaro2_pnl_mgmt_question" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">14631e5adbcbe410f41dc15b1396193b</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>8</position>
+            <sum>false</sum>
+            <sys_created_by>xxikochet</sys_created_by>
+            <sys_created_on>2021-03-24 16:59:22</sys_created_on>
+            <sys_id>10631e5adbcbe410f41dc15b1396193d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>xxikochet</sys_updated_by>
+            <sys_updated_on>2021-03-24 16:59:22</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>company</element>
+            <list_id display_value="x_aaro2_pnl_mgmt_question" element="NULL" name="x_aaro2_pnl_mgmt_question" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">14631e5adbcbe410f41dc15b1396193b</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>9</position>
+            <sum>false</sum>
+            <sys_created_by>xxikochet</sys_created_by>
+            <sys_created_on>2021-03-24 16:59:22</sys_created_on>
+            <sys_id>90631e5adbcbe410f41dc15b1396193d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>xxikochet</sys_updated_by>
+            <sys_updated_on>2021-03-24 16:59:22</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -131,20 +161,20 @@
             <relationship/>
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
-            <sys_created_by>xxikochet</sys_created_by>
-            <sys_created_on>2021-01-25 11:01:15</sys_created_on>
+            <sys_created_by>xxmpurik</sys_created_by>
+            <sys_created_on>2021-03-24 09:57:01</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
-            <sys_id>b835962fdb712c10389b84d8689619f3</sys_id>
+            <sys_id>edb2f892db8b2010f41dc15b1396191e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_aaro2_pnl_mgmt_question</sys_name>
-            <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+            <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-            <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+            <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
             <sys_update_name>sys_ui_list_x_aaro2_pnl_mgmt_question_null</sys_update_name>
-            <sys_updated_by>xxikochet</sys_updated_by>
-            <sys_updated_on>2021-01-25 11:01:15</sys_updated_on>
+            <sys_updated_by>xxmpurik</sys_updated_by>
+            <sys_updated_on>2021-03-24 09:57:01</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

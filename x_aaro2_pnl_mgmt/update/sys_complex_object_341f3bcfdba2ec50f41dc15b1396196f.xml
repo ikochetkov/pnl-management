@@ -14,10 +14,10 @@
         <sys_mod_count>0</sys_mod_count>
         <sys_name>FD701f3bcfbda2ec503b4702a33e5fc46f</sys_name>
         <sys_overrides/>
-        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_complex_object_341f3bcfdba2ec50f41dc15b1396196f</sys_update_name>
         <sys_updated_by>xxvholovk</sys_updated_by>
         <sys_updated_on>2021-03-02 12:13:56</sys_updated_on>

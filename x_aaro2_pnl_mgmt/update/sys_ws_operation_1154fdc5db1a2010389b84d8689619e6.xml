@@ -37,10 +37,10 @@
         <sys_id>1154fdc5db1a2010389b84d8689619e6</sys_id>
         <sys_mod_count>9</sys_mod_count>
         <sys_name>getAskDeadlineByPeriod</sys_name>
-        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_ws_operation_1154fdc5db1a2010389b84d8689619e6</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
         <sys_updated_on>2021-02-11 11:04:29</sys_updated_on>

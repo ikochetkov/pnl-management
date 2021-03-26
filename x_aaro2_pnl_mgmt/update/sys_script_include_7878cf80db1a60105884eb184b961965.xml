@@ -67,6 +67,7 @@ Utils.prototype = {
 	getQuestionModalData: function (sysID) {
 		var questionGr = new GlideRecord(this.QUESTION_TABLE);
 		questionGr.get(sysID);
+
 		var acc = questionGr.getValue('account');
 		var year = questionGr.getValue('year');
 		var month = questionGr.getValue('period');
@@ -88,6 +89,20 @@ Utils.prototype = {
 				label: accountAssignmentGa.getDisplayValue('user')
 			});
 		}
+		//update watched_by field 
+		var watched_by = questionGr.getValue('watched_by');
+		var userSys_id = gs.getUserID();
+
+		if(watched_by == null) {
+			questionGr.setValue('watched_by', userSys_id);
+			questionGr.update();
+		} else if(watched_by.indexOf(userSys_id) == -1) {
+			watched_by += ',' + userSys_id;
+			questionGr.setValue('watched_by', watched_by);
+			questionGr.update();
+		}
+		//end
+
 		return {
 			reassignment_users: users,
 			reassignment_start: deadlineReassignmentPeriod.start,
@@ -142,12 +157,25 @@ Utils.prototype = {
 
 	userHasEarlyAcc: function (userSysID, deadlineSysID) {
 		var hasEarlyAcc = false;
+
+		//var groups = gs.getProperty('x_aaro2_pnl_mgmt.default_early_access_groups');
+		var groups = [];
+		var groupGr = new GlideRecord('x_aaro2_pnl_mgmt_early_access_group');
+		groupGr.addQuery('deadline', deadlineSysID);
+		groupGr.query();
+		while(groupGr.next()) {
+			groups.push(groupGr.getValue('group'));
+		}
 		
-		var groups = gs.getProperty('x_aaro2_pnl_mgmt.default_early_access_groups');
+		gs.info('groups - ' + groups);
+
+
 		var grMemberGr = new GlideRecord('sys_user_grmember');
-		grMemberGr.addQuery('group.name', 'IN', groups);
+		grMemberGr.addQuery('group', 'IN', groups);
 		grMemberGr.addQuery('user', userSysID);
 		grMemberGr.query();
+		
+		gs.info('grMemberGr query - ' + grMemberGr.getEncodedQuery());
 		if(grMemberGr.next()) {
 			hasEarlyAcc = true;
 		}
@@ -241,14 +269,14 @@ Utils.prototype = {
         <sys_created_on>2021-02-08 14:28:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7878cf80db1a60105884eb184b961965</sys_id>
-        <sys_mod_count>114</sys_mod_count>
+        <sys_mod_count>121</sys_mod_count>
         <sys_name>Utils</sys_name>
-        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_7878cf80db1a60105884eb184b961965</sys_update_name>
         <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-12 12:34:25</sys_updated_on>
+        <sys_updated_on>2021-03-26 15:01:03</sys_updated_on>
     </sys_script_include>
 </record_update>

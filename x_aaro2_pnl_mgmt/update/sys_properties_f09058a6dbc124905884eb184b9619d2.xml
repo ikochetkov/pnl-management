@@ -19,10 +19,10 @@ AccountingPeriod=11</description>
         <sys_id>f09058a6dbc124905884eb184b9619d2</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_aaro2_pnl_mgmt.GetPNLUserAccountingUnitSet</sys_name>
-        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_properties_f09058a6dbc124905884eb184b9619d2</sys_update_name>
         <sys_updated_by>xxsbhuvan</sys_updated_by>
         <sys_updated_on>2020-12-15 16:02:10</sys_updated_on>

@@ -67,10 +67,10 @@
         <sys_mod_count>4</sys_mod_count>
         <sys_name>Question was answered </sys_name>
         <sys_overrides/>
-        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sysevent_email_action_686718e4db5a24105884eb184b96193a</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
         <sys_updated_on>2021-03-19 09:53:18</sys_updated_on>

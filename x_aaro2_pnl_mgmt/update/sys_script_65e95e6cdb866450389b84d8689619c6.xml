@@ -36,6 +36,7 @@
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
 	var participantsTable = 'x_aaro2_pnl_mgmt_m2m_early_access_user'
+	var groupsTable = 'x_aaro2_pnl_mgmt_early_access_group'
 	var dlGr = new GlideRecord('x_aaro2_pnl_mgmt_deadline')
 	dlGr.orderByDesc('sys_created_on');
 	dlGr.setLimit(1);
@@ -52,6 +53,15 @@
 		newParticipant.deadline = current.getUniqueValue();
 		newParticipant.insert();
 	}
+	var prevDlGroup = new GlideRecord(groupsTable);
+	prevDlGroup.addQuery('deadline', prevDl)
+	prevDlGroup.query();
+	while(prevDlGroup.next()){
+		var newGroup = new GlideRecord(groupsTable);
+		newGroup.group = prevDlGroup.group
+		newGroup.deadline = current.getUniqueValue()
+		newGroup.insert()
+	}
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -60,16 +70,16 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>65e95e6cdb866450389b84d8689619c6</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Add early access participants from previous month</sys_name>
         <sys_overrides/>
-        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_65e95e6cdb866450389b84d8689619c6</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-03-12 15:24:21</sys_updated_on>
+        <sys_updated_on>2021-03-25 09:14:52</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

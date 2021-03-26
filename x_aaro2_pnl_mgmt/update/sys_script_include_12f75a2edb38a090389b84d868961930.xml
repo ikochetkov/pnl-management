@@ -13,6 +13,7 @@ DeadlinesUtil.prototype = {
     this.DEADLINES_TABLE = 'x_aaro2_pnl_mgmt_deadline';
 
     this.EARLY_ACCESS_PARTICIPANT_TABLE = 'x_aaro2_pnl_mgmt_m2m_early_access_user'
+    this.EARLY_ACCESS_GROUPS_TABLE = 'x_aaro2_pnl_mgmt_early_access_group'
     this.__initReviewPeriods()
     this.__initSchedule()
     this.__initDates(date)
@@ -214,6 +215,20 @@ DeadlinesUtil.prototype = {
       participantsGrNew.insert()
     })
   },
+  updateGroups: function (deadlineSysId, groups) {
+    var groupsGr = new GlideRecord(this.EARLY_ACCESS_GROUPS_TABLE);
+    groupsGr.addQuery('deadline', deadlineSysId);
+    groupsGr.query()
+    groupsGr.deleteMultiple()
+    var e = this;
+    groups.forEach(function (group) {
+      var groupNewGr = new GlideRecord(e.EARLY_ACCESS_GROUPS_TABLE);
+      groupNewGr.initialize();
+      groupNewGr.deadline = deadlineSysId;
+      groupNewGr.group = group.sys_id;
+      groupNewGr.insert()
+    })
+  },
   cancelRunningFlows: function (sys_id, skipCurrent) {
     var flow_GR = new GlideRecord('sys_flow_context');
     flow_GR.addQuery('source_record', sys_id);
@@ -253,6 +268,7 @@ DeadlinesUtil.prototype = {
       var sys_id = deadlineGr.getUniqueValue()
       deadline = {
         early_access_participants: this.__getParticipants(this.EARLY_ACCESS_PARTICIPANT_TABLE, sys_id),
+        early_access_groups: this.__getGroups(sys_id),
         early_access_end: deadlineGr.getDisplayValue('early_access_end') || '',
         early_access_start: deadlineGr.getDisplayValue('early_access_start') || '',
         question_start: deadlineGr.getDisplayValue('question_start') || '',
@@ -285,6 +301,7 @@ DeadlinesUtil.prototype = {
   },
   updateDeadline: function (sys_id, data) {
     this.updateParticipants(this.EARLY_ACCESS_PARTICIPANT_TABLE, sys_id, data.early_access_participants)
+    this.updateGroups(sys_id, data.early_access_groups)
     var deadlineGr = new GlideRecord(this.DEADLINES_TABLE)
     deadlineGr.get(sys_id)
     deadlineGr.early_access_start.setDisplayValue(data.early_access_start)
@@ -394,6 +411,18 @@ DeadlinesUtil.prototype = {
     return participants;
   },
 
+  __getGroups: function (sys_id) {
+    var groups = []
+    var groupGr = new GlideRecord(this.EARLY_ACCESS_GROUPS_TABLE)
+    groupGr.addQuery('deadline', sys_id)
+    groupGr.query()
+    while (groupGr.next()) {
+      var group = groupGr.group.getRefRecord()
+      groups.push(this.__getGroupObject(group))
+    }
+    return groups
+  },
+
   __getUserObject: function (userGr) {
     return {
       name: userGr.getValue('name'),
@@ -402,7 +431,12 @@ DeadlinesUtil.prototype = {
       email: userGr.getValue('email')
     }
   },
-
+  __getGroupObject: function (groupGr) {
+    return {
+      name: groupGr.getValue('name'),
+      sys_id: groupGr.getUniqueValue()
+    }
+  },
   __getAvatarLink: function (avatarId) {
     return avatarId ?
       ('https://' + gs.getProperty("instance_name") + '.service-now.com/' + avatarId + '.iix') :
@@ -446,14 +480,14 @@ DeadlinesUtil.prototype = {
         <sys_created_on>2020-12-03 16:03:47</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>12f75a2edb38a090389b84d868961930</sys_id>
-        <sys_mod_count>194</sys_mod_count>
+        <sys_mod_count>198</sys_mod_count>
         <sys_name>DeadlinesUtil</sys_name>
-        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_12f75a2edb38a090389b84d868961930</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-03-12 14:32:11</sys_updated_on>
+        <sys_updated_on>2021-03-25 09:09:27</sys_updated_on>
     </sys_script_include>
 </record_update>

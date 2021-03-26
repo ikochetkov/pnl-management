@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
     <sys_app_module action="INSERT_OR_UPDATE">
         <active>true</active>
-        <application display_value="PnL Management">14dfd22adb18e490389b84d868961989</application>
+        <application display_value="PALMSnow">14dfd22adb18e490389b84d868961989</application>
         <assessment/>
         <content_page/>
         <device_type/>
@@ -27,18 +27,18 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>caaab283db8e6c145884eb184b9619b1</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>PnL Role Access</sys_name>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Role Access</sys_name>
         <sys_overrides/>
-        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_app_module_caaab283db8e6c145884eb184b9619b1</sys_update_name>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-24 09:33:01</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-03-26 12:57:46</sys_updated_on>
         <timeline_page/>
-        <title>PnL Role Access</title>
+        <title>Role Access</title>
         <u_description/>
         <uncancelable>false</uncancelable>
         <view_name/>

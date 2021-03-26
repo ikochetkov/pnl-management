@@ -34,10 +34,10 @@
         <sys_id>575a034cdb1a60105884eb184b961923</sys_id>
         <sys_mod_count>29</sys_mod_count>
         <sys_name>getQuestionModalData</sys_name>
-        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_ws_operation_575a034cdb1a60105884eb184b961923</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
         <sys_updated_on>2021-02-10 18:48:31</sys_updated_on>

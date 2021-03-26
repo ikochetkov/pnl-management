@@ -6,17 +6,17 @@
         <macroponent display_value="PNL Journal">d5601ea80da80e27e058b4ef67fa7853</macroponent>
         <sys_class_name>sys_uib_toolbox_component</sys_class_name>
         <sys_created_by>xxikochet</sys_created_by>
-        <sys_created_on>2021-02-19 13:55:30</sys_created_on>
+        <sys_created_on>2021-03-26 14:41:01</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>25c93931cf1b798883f72f1501417d2d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>PNL Journal</sys_name>
-        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_uib_toolbox_component_25c93931cf1b798883f72f1501417d2d</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-02-19 13:55:30</sys_updated_on>
+        <sys_updated_on>2021-03-26 14:41:01</sys_updated_on>
     </sys_uib_toolbox_component>
 </record_update>

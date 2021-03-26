@@ -13,7 +13,7 @@
         <ih_action>false</ih_action>
         <internal_name>get_current_date</internal_name>
         <label_cache>[{"name":"{{step[1e1eb8b5-d79b-4843-a326-c6f6b0b9a5e9].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[1e1eb8b5-d79b-4843-a326-c6f6b0b9a5e9].current_date}}","label":"step➛Script step➛Current date","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>e56c43b0db8a2850389b84d868961980</latest_snapshot>
+        <latest_snapshot>5ba1789adbc320105884eb184b9619de</latest_snapshot>
         <master_snapshot>356c43b0db8a2850389b84d86896199a</master_snapshot>
         <name>Get Current Date</name>
         <natlang/>
@@ -29,10 +29,10 @@
         <sys_mod_count>5</sys_mod_count>
         <sys_name>Get Current Date</sys_name>
         <sys_overrides/>
-        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_781c07fcdb4a2850389b84d86896196b</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
         <sys_updated_on>2021-01-29 12:14:50</sys_updated_on>
@@ -90,7 +90,7 @@
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
         <sys_updated_on>2021-01-29 12:14:49</sys_updated_on>
@@ -224,7 +224,7 @@
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
         <sys_updated_on>2021-01-29 12:14:47</sys_updated_on>
@@ -310,7 +310,7 @@
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
         <sys_updated_on>2021-01-29 12:14:47</sys_updated_on>
@@ -348,7 +348,7 @@
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
         <sys_updated_on>2021-01-29 12:14:49</sys_updated_on>
@@ -482,7 +482,7 @@
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
         <sys_updated_on>2021-01-29 12:14:47</sys_updated_on>
@@ -513,10 +513,10 @@
         <sys_id>416c03b0db8a2850389b84d8689619ef</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Current Date</sys_name>
-        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_documentation_var__m_sys_hub_action_output_781c07fcdb4a2850389b84d86896196b_current_date_en</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
         <sys_updated_on>2021-01-29 12:14:47</sys_updated_on>
@@ -540,7 +540,7 @@
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
         <sys_updated_on>2021-01-29 12:14:50</sys_updated_on>
@@ -575,7 +575,7 @@
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
         <sys_updated_on>2021-01-29 12:14:49</sys_updated_on>
@@ -633,7 +633,7 @@
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
         <sys_updated_on>2021-01-29 12:14:49</sys_updated_on>
@@ -767,7 +767,7 @@
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
         <sys_updated_on>2021-01-29 12:14:49</sys_updated_on>
@@ -853,7 +853,7 @@
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
         <sys_updated_on>2021-01-29 12:14:49</sys_updated_on>
@@ -891,7 +891,7 @@
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
         <sys_updated_on>2021-01-29 12:14:49</sys_updated_on>
@@ -1025,7 +1025,7 @@
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
         <sys_updated_by>xxamirony</sys_updated_by>
         <sys_updated_on>2021-01-29 12:14:49</sys_updated_on>
@@ -1056,10 +1056,10 @@
         <sys_id>396c43b0db8a2850389b84d8689619af</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Current Date</sys_name>
-        <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_documentation_var__m_sys_hub_action_output_356c43b0db8a2850389b84d86896199a_current_date_en</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
         <sys_updated_on>2021-01-29 12:14:50</sys_updated_on>

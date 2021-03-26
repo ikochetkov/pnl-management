@@ -33,10 +33,10 @@
             <sys_id>4e29e076dbdaec10389b84d8689619f0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_aaro2_pnl_mgmt_deadline</sys_name>
-            <sys_package display_value="PNL Management" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+            <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-            <sys_scope display_value="PNL Management">58a846e1db14ec50389b84d868961919</sys_scope>
+            <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
             <sys_update_name>sys_ui_list_x_aaro2_pnl_mgmt_deadline_sys_ref_list</sys_update_name>
             <sys_updated_by>xxikochet</sys_updated_by>
             <sys_updated_on>2021-02-16 15:45:09</sys_updated_on>
