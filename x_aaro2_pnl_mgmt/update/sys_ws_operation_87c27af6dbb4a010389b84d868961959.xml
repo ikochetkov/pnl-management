@@ -13,7 +13,7 @@
 	gs.info('PNL MANAGEMENT: '+JSON.stringify(request.queryParams));
 
 	try { 
-		endpoint = gs.getProperty('x_aaro2_pnl_mgmt.GetPNLUserData_endpoint') +"UserLogin="+'srkincan'; //replace to  'srkincan' gs.getUserName()
+		endpoint = gs.getProperty('x_aaro2_pnl_mgmt.GetPNLUserData_endpoint') +"UserLogin="+ gs.getUserName(); //replace to  'srkincan' gs.getUserName()
 		gs.info(endpoint);
 		var r = new sn_ws.RESTMessageV2();
 		r.setHttpMethod('GET');
@@ -58,15 +58,15 @@
         <sys_created_on>2020-12-04 12:12:19</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>87c27af6dbb4a010389b84d868961959</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>GetPNLUserData</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_ws_operation_87c27af6dbb4a010389b84d868961959</sys_update_name>
-        <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2020-12-16 13:50:47</sys_updated_on>
+        <sys_updated_by>xxmpurik</sys_updated_by>
+        <sys_updated_on>2021-03-29 09:00:52</sys_updated_on>
         <web_service_definition display_value="utils">d3a7e6e5db5ce8505884eb184b961953</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>
