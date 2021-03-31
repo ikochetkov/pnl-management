@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="" label="Pnl Mgmt M2m Assign Manager" language="en" table="x_aaro2_pnl_mgmt_m2m_assign_manager">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>Pnl Mgmt M2m Assign Manager</label>
+            <language>en</language>
+            <name>x_aaro2_pnl_mgmt_m2m_assign_manager</name>
+            <plural>Pnl Mgmt M2m Assign Managers</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>xxmpurik</sys_created_by>
+            <sys_created_on>2021-03-31 12:35:24</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>f91a59e4db1fe410f41dc15b13961900</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Pnl Mgmt M2m Assign Manager</sys_name>
+            <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+            <sys_update_name>sys_documentation_x_aaro2_pnl_mgmt_m2m_assign_manager__en</sys_update_name>
+            <sys_updated_by>xxmpurik</sys_updated_by>
+            <sys_updated_on>2021-03-31 12:35:24</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Pnl Mgmt M2m Assign Manager" max_length="40" name="x_aaro2_pnl_mgmt_m2m_assign_manager" type="collection">
+        <element attributes="encode_utf8=false" label="Deadline" max_length="32" name="deadline" reference="x_aaro2_pnl_mgmt_deadline" type="reference"/>
+        <element attributes="encode_utf8=false" label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="deadline"/>
+        </index>
+        <index name="index2">
+            <element name="user"/>
+        </index>
+    </element>
+</database>
