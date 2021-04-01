@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
     <sys_properties_category_m2m action="INSERT_OR_UPDATE">
-        <category display_value="PNL Properties">b548a629db5ce8505884eb184b9619e4</category>
+        <category display_value="PALMSnow Properties">b548a629db5ce8505884eb184b9619e4</category>
         <order>100</order>
         <property display_value="x_aaro2_pnl_mgmt.GetPNLStatementDatailRows_endpoint" name="x_aaro2_pnl_mgmt.GetPNLStatementDatailRows_endpoint">54913903db5ea050389b84d868961959</property>
         <sys_class_name>sys_properties_category_m2m</sys_class_name>

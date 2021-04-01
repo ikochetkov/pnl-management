@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="PnL Role Access" max_length="40" name="x_aaro2_pnl_mgmt_pnl_role_access" sizeclass="20" type="collection">
+    <element label="PALMSnow Role Access" max_length="40" name="x_aaro2_pnl_mgmt_pnl_role_access" sizeclass="20" type="collection">
         <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Can Answer" max_length="40" name="can_answer" type="boolean"/>
         <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Can Ask" max_length="40" name="can_ask" type="boolean"/>
         <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="ENTS Role ID" max_length="10" name="ents_role_id" type="string"/>

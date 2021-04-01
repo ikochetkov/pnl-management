@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
     <sys_properties_category_m2m action="INSERT_OR_UPDATE">
-        <category display_value="PNL Properties">b548a629db5ce8505884eb184b9619e4</category>
+        <category display_value="PALMSnow Properties">b548a629db5ce8505884eb184b9619e4</category>
         <order>1550</order>
         <property display_value="x_aaro2_pnl_mgmt.question_review" name="x_aaro2_pnl_mgmt.question_review">9defbdbbdb6aec905884eb184b9619d6</property>
         <sys_class_name>sys_properties_category_m2m</sys_class_name>

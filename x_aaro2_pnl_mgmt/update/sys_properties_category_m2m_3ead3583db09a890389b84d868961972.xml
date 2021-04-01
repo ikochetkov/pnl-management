@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
     <sys_properties_category_m2m action="INSERT_OR_UPDATE">
-        <category display_value="PNL Properties">b548a629db5ce8505884eb184b9619e4</category>
+        <category display_value="PALMSnow Properties">b548a629db5ce8505884eb184b9619e4</category>
         <order>1700</order>
         <property display_value="x_aaro2_pnl_mgmt.accounting_can_reassign_period" name="x_aaro2_pnl_mgmt.accounting_can_reassign_period">f24db983db09a890389b84d868961994</property>
         <sys_class_name>sys_properties_category_m2m</sys_class_name>
