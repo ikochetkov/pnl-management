@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_timestamp" label="Timestamp" language="en" table="x_aaro2_pnl_mgmt_questions_data_creators">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_timestamp</element>
+            <help/>
+            <hint/>
+            <label>Timestamp</label>
+            <language>en</language>
+            <name>x_aaro2_pnl_mgmt_questions_data_creators</name>
+            <plural>Timestamps</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>xxikochet</sys_created_by>
+            <sys_created_on>2021-04-02 12:07:16</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>05d6630ddb1f2450f41dc15b139619ba</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Timestamp</sys_name>
+            <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+            <sys_update_name>sys_documentation_x_aaro2_pnl_mgmt_questions_data_creators_u_timestamp_en</sys_update_name>
+            <sys_updated_by>xxikochet</sys_updated_by>
+            <sys_updated_on>2021-04-02 12:07:16</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

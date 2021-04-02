@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="questionid" label="QuestionID" language="en" table="x_aaro2_pnl_mgmt_question">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>questionid</element>
+            <help/>
+            <hint/>
+            <label>QuestionID</label>
+            <language>en</language>
+            <name>x_aaro2_pnl_mgmt_question</name>
+            <plural>QuestionIDs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>xxikochet</sys_created_by>
+            <sys_created_on>2021-04-02 08:56:56</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>454bb245db5be050f41dc15b139619bd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>QuestionID</sys_name>
+            <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+            <sys_update_name>sys_documentation_x_aaro2_pnl_mgmt_question_questionid_en</sys_update_name>
+            <sys_updated_by>xxikochet</sys_updated_by>
+            <sys_updated_on>2021-04-02 08:56:56</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
