@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_aaro2_pnl_mgmt.QuestionsUtil</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>QuestionsUtil</name>
+        <script><![CDATA[var QuestionsUtil = Class.create();
+QuestionsUtil.prototype = {
+    initialize: function () {
+        this.QUESTIONS_TABLE = 'x_aaro2_pnl_mgmt_question'
+        this.UTILS = new x_aaro2_pnl_mgmt.Utils()
+        this.ASSIGN_MANAGER_TABLE = 'x_aaro2_pnl_mgmt_assignment_manager'
+        this.DEADLINE_TABLE = 'x_aaro2_pnl_mgmt_deadline'
+    },
+    checkUpdatingQuestions: function (questions) {
+        var self = this
+        var allowed = [];
+        var user = gs.getUserID()
+        var isManager = this._isAssignManager(user)
+        questions.forEach(function (question) {
+            var questionGr = new GlideRecord(self.QUESTIONS_TABLE)
+            questionGr.get(question)
+
+            if (isManager) {
+                allowed.push(self._getQuestionObject(questionGr))
+                return
+            }
+
+            var year = questionGr.getValue('year');
+            var month = questionGr.getValue('period');
+            var deadline = self.UTILS.getDeadline(year, month, 'reassign');
+
+            if (self.UTILS.timeValid(deadline.start, deadline.end)) {
+                allowed.push(self._getQuestionObject(questionGr))
+            }
+        })
+        return allowed
+    },
+    updateQuestions: function (questions, fields) {
+        var self = this;
+        questions.forEach(function (question) {
+            var questionGr = new GlideRecord(self.QUESTIONS_TABLE)
+            questionGr.get(question);
+            fields.forEach(function (field) {
+                questionGr[field.name] = field.value;
+            })
+            questionGr.update()
+        })
+    },
+    _getQuestionObject: function (questionGr) {
+        return {
+            sys_id: questionGr.getUniqueValue(),
+            number: questionGr.getValue('number'),
+            question: questionGr.getValue('question'),
+            description: questionGr.getValue('description'),
+        }
+    },
+    _isAssignManager: function (user) {
+        var managerGr = new GlideRecord(this.ASSIGN_MANAGER_TABLE);
+
+        return managerGr.get('user', user)
+    },
+    _getDeadline: function (year, month) {
+        var deadlineGr = new GlideRecord(this.DEADLINE_TABLE)
+        deadlineGr.addQuery('year', year);
+        deadlineGr.addQuery('month', month);
+        deadlineGr.setLimit(1);
+        deadlineGr.query();
+        deadlineGr.next()
+        return deadlineGr.getUniqueValue()
+    },
+
+    type: 'QuestionsUtil'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-04-05 13:20:30</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4d249bc2db9ba4905884eb184b961977</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>QuestionsUtil</sys_name>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name>sys_script_include_4d249bc2db9ba4905884eb184b961977</sys_update_name>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-04-06 12:22:58</sys_updated_on>
+    </sys_script_include>
+</record_update>
