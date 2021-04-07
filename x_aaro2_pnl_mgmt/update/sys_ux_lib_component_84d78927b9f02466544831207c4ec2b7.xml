@@ -5,9 +5,9 @@
         <deprecated>false</deprecated>
         <overrides/>
         <required_sys_props/>
-        <required_translation_keys>{0} items selected&#13;
-selected&#13;
+        <required_translation_keys>selected&#13;
 No Results Found&#13;
+{0} items selected&#13;
 </required_translation_keys>
         <source_script/>
         <source_script_name>@aarons/pnl-mgmt</source_script_name>
@@ -16,7 +16,7 @@ No Results Found&#13;
         <sys_created_on>2021-02-19 13:55:28</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>84d78927b9f02466544831207c4ec2b7</sys_id>
-        <sys_mod_count>449361</sys_mod_count>
+        <sys_mod_count>449389</sys_mod_count>
         <sys_name>aaro2-pnl-journal</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -24,7 +24,7 @@ No Results Found&#13;
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_ux_lib_component_84d78927b9f02466544831207c4ec2b7</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-04-06 08:54:44</sys_updated_on>
+        <sys_updated_on>2021-04-07 12:30:39</sys_updated_on>
         <tag>aaro2-pnl-journal</tag>
     </sys_ux_lib_component>
 </record_update>
