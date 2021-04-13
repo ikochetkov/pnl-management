@@ -16,7 +16,7 @@ AccountingPeriod=2&#13;
         <sys_created_on>2020-11-10 13:11:57</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>b3c9174bdbdce0105884eb184b9619a7</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>x_aaro2_pnl_mgmt.GetPNLReAssignDeadline_endpoint</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -24,9 +24,9 @@ AccountingPeriod=2&#13;
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_properties_b3c9174bdbdce0105884eb184b9619a7</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-02-15 09:22:38</sys_updated_on>
+        <sys_updated_on>2021-04-12 14:50:00</sys_updated_on>
         <type>string</type>
-        <value>https://pnldataserviceqa.aarons.com/api/GetPNLReAssignDeadline?</value>
+        <value>https://pnldataservicedev.aarons.com/api/GetPNLReAssignDeadline?</value>
         <write_roles/>
     </sys_properties>
     <sys_translated_text action="delete_multiple" query="documentkey=b3c9174bdbdce0105884eb184b9619a7"/>

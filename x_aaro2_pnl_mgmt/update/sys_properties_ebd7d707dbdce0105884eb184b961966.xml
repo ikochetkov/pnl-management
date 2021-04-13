@@ -16,7 +16,7 @@ Accounting Period</description>
         <sys_created_on>2020-11-10 13:03:17</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ebd7d707dbdce0105884eb184b961966</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>x_aaro2_pnl_mgmt.GetPNLAccountingQuestionDeadline_endpoint</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -24,9 +24,9 @@ Accounting Period</description>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_properties_ebd7d707dbdce0105884eb184b961966</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-02-15 09:22:38</sys_updated_on>
+        <sys_updated_on>2021-04-12 14:49:54</sys_updated_on>
         <type>string</type>
-        <value>https://pnldataserviceqa.aarons.com/api/GetPNLAccountingQuestionDeadline?</value>
+        <value>https://pnldataservicedev.aarons.com/api/GetPNLAccountingQuestionDeadline?</value>
         <write_roles/>
     </sys_properties>
     <sys_translated_text action="delete_multiple" query="documentkey=ebd7d707dbdce0105884eb184b961966"/>
