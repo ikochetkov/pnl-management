@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="INSERT_OR_UPDATE">
+        <category display_value="PALMSnow Properties">b548a629db5ce8505884eb184b9619e4</category>
+        <order>100</order>
+        <property display_value="x_aaro2_pnl_mgmt.export_excel" name="x_aaro2_pnl_mgmt.export_excel">4061b086dba3a850f41dc15b139619ab</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-04-17 12:35:02</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ae0df002db67a850f41dc15b13961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_aaro2_pnl_mgmt.export_excel.PALMSnow Properties</sys_name>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_ae0df002db67a850f41dc15b13961962</sys_update_name>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-04-17 12:35:02</sys_updated_on>
+    </sys_properties_category_m2m>
+</record_update>
