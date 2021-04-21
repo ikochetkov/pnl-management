@@ -12,17 +12,17 @@
         <sys_created_on>2021-04-17 11:46:34</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>4061b086dba3a850f41dc15b139619ab</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>x_aaro2_pnl_mgmt.export_excel</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_properties_4061b086dba3a850f41dc15b139619ab</sys_update_name>
-        <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-04-19 18:32:14</sys_updated_on>
+        <sys_updated_by>xxcjgibiss</sys_updated_by>
+        <sys_updated_on>2021-04-20 20:03:58</sys_updated_on>
         <type>string</type>
-        <value>http://66924d16b400.ngrok.io/palmsnow/statements</value>
+        <value>http://localhost:3001/palmsnow/statements</value>
         <write_roles/>
     </sys_properties>
     <sys_translated_text action="delete_multiple" query="documentkey=4061b086dba3a850f41dc15b139619ab"/>
