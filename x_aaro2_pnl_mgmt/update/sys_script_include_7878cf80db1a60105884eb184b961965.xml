@@ -55,8 +55,8 @@ Utils.prototype = {
 		dlGR.query();
 		if (dlGR.next()) {
 			var period = {};
-			period.start = dlGR.getDisplayValue(periodType + '_start');
-			period.end = dlGR.getDisplayValue(periodType + '_end');
+			period.start = dlGR.getValue(periodType + '_start');
+			period.end = dlGR.getValue(periodType + '_end');
 			period.sysID = dlGR.getUniqueValue();
 
 			return period;
@@ -173,11 +173,10 @@ Utils.prototype = {
 	timeValid: function (start, end) {
 		var startNumeric = new GlideDateTime(start).getNumericValue();
 		var endNumeric = new GlideDateTime(end).getNumericValue(); 
-		var currentTime = new GlideDateTime().getDisplayValue();
-		gs.info('currentTime' + currentTime);
-		var currentTimeNumeric = new GlideDateTime(currentTime).getNumericValue();
+		var currentTime = new GlideDateTime().getNumericValue();
+
 		//gs.info('PALMS Utils start --- ' + start + ' --currentTime-- ' + new GlideDateTime() + ' --- endNumeric ---' + end);
-		return startNumeric < currentTimeNumeric && endNumeric > currentTimeNumeric;
+		return startNumeric < currentTime && endNumeric > currentTime;
 	},
 
 	_getEarlyAccGroups: function (deadlineSysID) {
@@ -306,7 +305,7 @@ Utils.prototype = {
         <sys_created_on>2021-02-08 14:28:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7878cf80db1a60105884eb184b961965</sys_id>
-        <sys_mod_count>142</sys_mod_count>
+        <sys_mod_count>145</sys_mod_count>
         <sys_name>Utils</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -314,6 +313,6 @@ Utils.prototype = {
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_7878cf80db1a60105884eb184b961965</sys_update_name>
         <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-04-20 16:14:10</sys_updated_on>
+        <sys_updated_on>2021-04-22 11:16:48</sys_updated_on>
     </sys_script_include>
 </record_update>
