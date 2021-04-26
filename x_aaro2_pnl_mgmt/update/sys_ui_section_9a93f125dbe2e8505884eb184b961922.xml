@@ -1,72 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="Detailed question info" section_id="9a93f125dbe2e8505884eb184b961922" sys_domain="global" table="x_aaro2_pnl_mgmt_question" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>reference</element>
+            <element>sub_account</element>
             <position>0</position>
             <sys_created_by>xxikochet</sys_created_by>
-            <sys_created_on>2021-02-25 10:16:03</sys_created_on>
-            <sys_id>4d24bd65dbe2e8505884eb184b961973</sys_id>
+            <sys_created_on>2021-04-26 10:59:47</sys_created_on>
+            <sys_id>f28df23cdbf72414f41dc15b139619e0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Detailed question info" display_value="Detailed question info" name="x_aaro2_pnl_mgmt_question" sys_domain="global" view="Default view">9a93f125dbe2e8505884eb184b961922</sys_ui_section>
             <sys_updated_by>xxikochet</sys_updated_by>
-            <sys_updated_on>2021-02-25 10:16:03</sys_updated_on>
+            <sys_updated_on>2021-04-26 10:59:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>reference</element>
+            <position>1</position>
+            <sys_created_by>xxikochet</sys_created_by>
+            <sys_created_on>2021-04-26 10:59:47</sys_created_on>
+            <sys_id>7a8df23cdbf72414f41dc15b139619e0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Detailed question info" display_value="Detailed question info" name="x_aaro2_pnl_mgmt_question" sys_domain="global" view="Default view">9a93f125dbe2e8505884eb184b961922</sys_ui_section>
+            <sys_updated_by>xxikochet</sys_updated_by>
+            <sys_updated_on>2021-04-26 10:59:47</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>journal</element>
-            <position>1</position>
+            <position>2</position>
             <sys_created_by>xxikochet</sys_created_by>
-            <sys_created_on>2021-02-25 10:16:03</sys_created_on>
-            <sys_id>c124bd65dbe2e8505884eb184b961974</sys_id>
+            <sys_created_on>2021-04-26 10:59:47</sys_created_on>
+            <sys_id>fe8df23cdbf72414f41dc15b139619e0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Detailed question info" display_value="Detailed question info" name="x_aaro2_pnl_mgmt_question" sys_domain="global" view="Default view">9a93f125dbe2e8505884eb184b961922</sys_ui_section>
             <sys_updated_by>xxikochet</sys_updated_by>
-            <sys_updated_on>2021-02-25 10:16:03</sys_updated_on>
+            <sys_updated_on>2021-04-26 10:59:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>link_to_reference</element>
+            <position>3</position>
+            <sys_created_by>xxikochet</sys_created_by>
+            <sys_created_on>2021-04-26 10:59:47</sys_created_on>
+            <sys_id>768df23cdbf72414f41dc15b139619e1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Detailed question info" display_value="Detailed question info" name="x_aaro2_pnl_mgmt_question" sys_domain="global" view="Default view">9a93f125dbe2e8505884eb184b961922</sys_ui_section>
+            <sys_updated_by>xxikochet</sys_updated_by>
+            <sys_updated_on>2021-04-26 10:59:47</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>2</position>
+            <position>4</position>
             <sys_created_by>xxikochet</sys_created_by>
-            <sys_created_on>2021-02-25 10:16:03</sys_created_on>
-            <sys_id>4924bd65dbe2e8505884eb184b961974</sys_id>
+            <sys_created_on>2021-04-26 10:59:47</sys_created_on>
+            <sys_id>fa8df23cdbf72414f41dc15b139619e1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Detailed question info" display_value="Detailed question info" name="x_aaro2_pnl_mgmt_question" sys_domain="global" view="Default view">9a93f125dbe2e8505884eb184b961922</sys_ui_section>
             <sys_updated_by>xxikochet</sys_updated_by>
-            <sys_updated_on>2021-02-25 10:16:03</sys_updated_on>
+            <sys_updated_on>2021-04-26 10:59:47</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>group</element>
-            <position>3</position>
+            <position>5</position>
             <sys_created_by>xxikochet</sys_created_by>
-            <sys_created_on>2021-02-25 10:16:03</sys_created_on>
-            <sys_id>cd24bd65dbe2e8505884eb184b961974</sys_id>
+            <sys_created_on>2021-04-26 10:59:47</sys_created_on>
+            <sys_id>728df23cdbf72414f41dc15b139619e2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Detailed question info" display_value="Detailed question info" name="x_aaro2_pnl_mgmt_question" sys_domain="global" view="Default view">9a93f125dbe2e8505884eb184b961922</sys_ui_section>
             <sys_updated_by>xxikochet</sys_updated_by>
-            <sys_updated_on>2021-02-25 10:16:03</sys_updated_on>
+            <sys_updated_on>2021-04-26 10:59:47</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>invoice</element>
-            <position>4</position>
+            <position>6</position>
             <sys_created_by>xxikochet</sys_created_by>
-            <sys_created_on>2021-02-25 10:16:03</sys_created_on>
-            <sys_id>4524bd65dbe2e8505884eb184b961975</sys_id>
+            <sys_created_on>2021-04-26 10:59:47</sys_created_on>
+            <sys_id>f68df23cdbf72414f41dc15b139619e2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Detailed question info" display_value="Detailed question info" name="x_aaro2_pnl_mgmt_question" sys_domain="global" view="Default view">9a93f125dbe2e8505884eb184b961922</sys_ui_section>
             <sys_updated_by>xxikochet</sys_updated_by>
-            <sys_updated_on>2021-02-25 10:16:03</sys_updated_on>
+            <sys_updated_on>2021-04-26 10:59:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>invoice_image_url</element>
+            <position>7</position>
+            <sys_created_by>xxikochet</sys_created_by>
+            <sys_created_on>2021-04-26 10:59:47</sys_created_on>
+            <sys_id>7e8df23cdbf72414f41dc15b139619e2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Detailed question info" display_value="Detailed question info" name="x_aaro2_pnl_mgmt_question" sys_domain="global" view="Default view">9a93f125dbe2e8505884eb184b961922</sys_ui_section>
+            <sys_updated_by>xxikochet</sys_updated_by>
+            <sys_updated_on>2021-04-26 10:59:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>reference_link_details</element>
+            <position>8</position>
+            <sys_created_by>xxikochet</sys_created_by>
+            <sys_created_on>2021-04-26 10:59:47</sys_created_on>
+            <sys_id>f28df23cdbf72414f41dc15b139619e3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Detailed question info" display_value="Detailed question info" name="x_aaro2_pnl_mgmt_question" sys_domain="global" view="Default view">9a93f125dbe2e8505884eb184b961922</sys_ui_section>
+            <sys_updated_by>xxikochet</sys_updated_by>
+            <sys_updated_on>2021-04-26 10:59:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>reference_data</element>
+            <position>9</position>
+            <sys_created_by>xxikochet</sys_created_by>
+            <sys_created_on>2021-04-26 10:59:47</sys_created_on>
+            <sys_id>7a8df23cdbf72414f41dc15b139619e3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Detailed question info" display_value="Detailed question info" name="x_aaro2_pnl_mgmt_question" sys_domain="global" view="Default view">9a93f125dbe2e8505884eb184b961922</sys_ui_section>
+            <sys_updated_by>xxikochet</sys_updated_by>
+            <sys_updated_on>2021-04-26 10:59:47</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
