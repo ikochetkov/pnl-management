@@ -414,6 +414,76 @@
             <sys_user/>
             <type/>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>vendor</element>
+            <position>28</position>
+            <sys_created_by>xxmpurik</sys_created_by>
+            <sys_created_on>2021-04-27 13:45:33</sys_created_on>
+            <sys_id>f81d2019db3be4d05884eb184b961956</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Main" display_value="Main" name="x_aaro2_pnl_mgmt_question" sys_domain="global" view="Default view">61355eefdb712c10389b84d8689619c8</sys_ui_section>
+            <sys_updated_by>xxmpurik</sys_updated_by>
+            <sys_updated_on>2021-04-27 13:45:33</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>vendor_name</element>
+            <position>29</position>
+            <sys_created_by>xxmpurik</sys_created_by>
+            <sys_created_on>2021-04-27 13:46:23</sys_created_on>
+            <sys_id>744da019db3be4d05884eb184b9619d4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Main" display_value="Main" name="x_aaro2_pnl_mgmt_question" sys_domain="global" view="Default view">61355eefdb712c10389b84d8689619c8</sys_ui_section>
+            <sys_updated_by>xxmpurik</sys_updated_by>
+            <sys_updated_on>2021-04-27 13:46:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>paid_date</element>
+            <position>30</position>
+            <sys_created_by>xxmpurik</sys_created_by>
+            <sys_created_on>2021-04-27 13:48:29</sys_created_on>
+            <sys_id>3bbda099db3be4d05884eb184b961928</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Main" display_value="Main" name="x_aaro2_pnl_mgmt_question" sys_domain="global" view="Default view">61355eefdb712c10389b84d8689619c8</sys_ui_section>
+            <sys_updated_by>xxmpurik</sys_updated_by>
+            <sys_updated_on>2021-04-27 13:48:29</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>invoice_date</element>
+            <position>31</position>
+            <sys_created_by>xxmpurik</sys_created_by>
+            <sys_created_on>2021-04-27 13:49:27</sys_created_on>
+            <sys_id>b1fd2c99db3be4d05884eb184b9619f5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Main" display_value="Main" name="x_aaro2_pnl_mgmt_question" sys_domain="global" view="Default view">61355eefdb712c10389b84d8689619c8</sys_ui_section>
+            <sys_updated_by>xxmpurik</sys_updated_by>
+            <sys_updated_on>2021-04-27 13:49:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>link_to_invoice</element>
+            <position>32</position>
+            <sys_created_by>xxmpurik</sys_created_by>
+            <sys_created_on>2021-04-27 13:50:02</sys_created_on>
+            <sys_id>1e1e6899db3be4d05884eb184b9619f3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Main" display_value="Main" name="x_aaro2_pnl_mgmt_question" sys_domain="global" view="Default view">61355eefdb712c10389b84d8689619c8</sys_ui_section>
+            <sys_updated_by>xxmpurik</sys_updated_by>
+            <sys_updated_on>2021-04-27 13:50:02</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption>Main</caption>
             <header>false</header>

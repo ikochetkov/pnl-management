@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_aaro2_pnl_mgmt.PalmsnowActivityStream</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>PalmsnowActivityStream</name>
+        <script><![CDATA[var PalmsnowActivityStream = Class.create();
+PalmsnowActivityStream.prototype = {
+  initialize: function () {
+    this.QUESTIONS_TABLE = 'x_aaro2_pnl_mgmt_question'
+    this.HISTORY_SET_TABLE = 'sys_history_set'
+    this.HISTORY_LINE_TABLE = 'sys_history_line'
+    this.JOURNAL_ENTRIES_TABLE = 'sys_journal_field'
+    this.ATTACHMENTS_TABLE = 'sys_attachment'
+    this.HISTORY_TYPE = {
+      FIELD: 'FIELD',
+      ATTACHMENT: 'ATTACHMENT',
+      JOURNAL: 'JOURNAL'
+    }
+  },
+
+  get: function (sys_id) {
+    this.RECORD_SYS_ID = sys_id
+
+
+  },
+  _getHistoryRecords: function () {
+    var historySetGr = new GlideRecord(this.HISTORY_SET_TABLE)
+    historySetGr.get('id', this.RECORD_SYS_ID)
+    this.HISTORY_SET_SYS_ID = historySetGr.getUniqueValue()
+  },
+  _getHistoryLines: function () {
+    var historyLines = []
+    var historyLineGr = new GlideRecord(this.HISTORY_LINE_TABLE)
+    historyLineGr.addQuery('set', this.HISTORY_SET_SYS_ID)
+    historyLineGr.query()
+
+    while (historyLineGr.next()) {
+      historyLines.push(
+        {
+          update: historyLineGr.getValue('update'),
+          type: this.HISTORY_TYPE.FIELD,
+          user: {
+            name: historyLineGr.getValue('user_name'),
+            id: historyLineGr.getValue('user_id')
+          },
+          label: historyLineGr.getValue('label'),
+          oldValue: historyLineGr.getValue('old'),
+          newValue: historyLineGr.getValue('new'),
+          update_time: historyLineGr.getDisplayValue('update_time')
+        }
+      )
+    }
+  },
+  _getAttachmentHistory: function () {
+    var attachmentUpdates = []
+    var attGr = new GlideRecord(this.ATTACHMENTS_TABLE)
+    attGr.addQuery('table_name', this.QUESTIONS_TABLE)
+    attGr.addQuery('table_sys_id', this.RECORD_SYS_ID)
+    attGr.query()
+    while (attGr.next()) {
+      attachmentUpdates.push({
+        type: this.HISTORY_TYPE.ATTACHMENT,
+        user: attGr.getValue('sys_updated_by'),
+        update_type: attGr.getValue('sys_updated_on'),
+        updates: [
+          {
+             newValue: {
+              name: attGr.getValue('file_name'),
+              sys_id: attGr.getUniqueValue()
+            }
+          }
+        ]
+
+      })
+    }
+  },
+  _getGroups: function () {
+    [
+      {
+        update_time: '',
+        type: '',
+        user: {},
+        updates: [
+
+        ]
+      }
+    ]
+  },
+  type: 'PalmsnowActivityStream'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-04-28 11:27:08</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>50d6d9addbf3e8d05884eb184b961953</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>PalmsnowActivityStream</sys_name>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name>sys_script_include_50d6d9addbf3e8d05884eb184b961953</sys_update_name>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-04-28 15:49:56</sys_updated_on>
+    </sys_script_include>
+</record_update>
