@@ -9,24 +9,25 @@
         <name>getQuestionData</name>
         <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
 
-	var filters = ['company','status','accounting_unit','year','period','account', 'over_1k_reviewed', 'manager_reviewed', 'supervisor_reviewed', 'answer_released', 'assigned_to', 'requested_by', 'over_1k'];
+	var filters = ['company', 'status', 'accounting_unit', 'year', 'period', 'account', 'over_1k_reviewed', 'manager_reviewed', 'supervisor_reviewed', 'answer_released', 'assigned_to', 'requested_by', 'over_1k'];
 	var boolean_fields = ['over_1k_reviewed', 'manager_reviewed', 'supervisor_reviewed', 'answer_released', 'over_1k', 'is_generic'];
+	var currency_fields = ['amount']
 	var object_fields = ['assigned_to', 'watched_by'];
 	var resp = {};
-	var query ='';
+	var query = '';
 	var unitsQuery = request.queryParams.availableAccountingUnits || '';
 	var userSys_id = gs.getUserID();
 
 
-	filters.forEach(function(field){
+	filters.forEach(function (field) {
 		var ga = new GlideAggregate('x_aaro2_pnl_mgmt_question');
 		ga.groupBy(field);
 		//ga.addEncodedQuery(query);
 		ga.addEncodedQuery(unitsQuery);
 		ga.query();
-		if(ga.hasNext()){
+		if (ga.hasNext()) {
 			resp[field] = [];
-			while(ga.next()) {
+			while (ga.next()) {
 				resp[field].push({
 					id: ga.getValue(field),
 					label: ga.getDisplayValue(field)
@@ -35,26 +36,26 @@
 		}
 	});
 
-	if(request.queryParams.query) {
-		gs.info('request.queryParams.query[0] : '+request.queryParams.query[0]);
+	if (request.queryParams.query) {
+		gs.info('request.queryParams.query[0] : ' + request.queryParams.query[0]);
 		query = validateQuery(request.queryParams.query[0]);
 	}
-	gs.info('query : '+query);
+	gs.info('query : ' + query);
 	gs.getUser().savePreference('x_aaro2_pnl_mgmt.question_filters', query);
 
-	if(resp.year){
+	if (resp.year) {
 
 		resp.period = [];
 
-		resp.year.forEach(function(year){
+		resp.year.forEach(function (year) {
 			var ga2 = new GlideAggregate('x_aaro2_pnl_mgmt_question');
 			ga2.addQuery('year', year.id);
 			//ga2.addEncodedQuery(query);
 			ga2.addEncodedQuery(unitsQuery);
 			ga2.groupBy('period');
 			ga2.query();
-			while(ga2.next()) {     
-				resp.period.push({ FiscalYear:  year.id , AccountingPeriod: ga2.getValue('period')});
+			while (ga2.next()) {
+				resp.period.push({ FiscalYear: year.id, AccountingPeriod: ga2.getValue('period') });
 			}
 		});
 	}
@@ -68,13 +69,13 @@
 	fields.push('sys_id');
 	fields.push('sys_created_on');
 	fields.push('watched_by');
-	while(grSection.next()) {
+	while (grSection.next()) {
 		var grElement = new GlideRecord("sys_ui_element");
 		grElement.addQuery("sys_ui_section", grSection.sys_id);
 		grElement.addQuery("sys_ui_section!=5648a705db5f2450f41dc15b13961905^ORsys_ui_section=NULL")
 		grElement.addNullQuery("type");
 		grElement.query();
-		while(grElement.next()) {
+		while (grElement.next()) {
 			fields.push(grElement.getValue('element'));
 		}
 	}
@@ -83,37 +84,40 @@
 	qGr.addEncodedQuery(query);
 	qGr.addEncodedQuery(unitsQuery);
 	qGr.query();
-	while(qGr.next()){
+	while (qGr.next()) {
 		var questionFields = {};
-		fields.forEach(function(field){
-			if(~object_fields.indexOf(field)){
+		fields.forEach(function (field) {
+			if (~object_fields.indexOf(field)) {
 				questionFields[field] = {
 					value: qGr.getValue(field),
 					displayValue: qGr.getDisplayValue(field)
 				};
-			} else if(~boolean_fields.indexOf(field)){
+			} 
+			else if (~boolean_fields.indexOf(field))
 				questionFields[field] = !!+qGr.getValue(field);
-			} else {
+			else if (~currency_fields.indexOf(field))
+				questionFields[field] = Number(qGr.getValue(field))
+			else {
 				questionFields[field] = qGr.getDisplayValue(field);
 			}
 		});
-		
+
 		questionFields.watched_by_me = false;
-		if(questionFields.watched_by.value == null) {
+		if (questionFields.watched_by.value == null) {
 			questionFields.watched_by_me = false;
-		}else if(~questionFields.watched_by.value.indexOf(userSys_id)) {
+		} else if (~questionFields.watched_by.value.indexOf(userSys_id)) {
 			questionFields.watched_by_me = true;
 		}
-		
+
 		resp.questions.push(questionFields);
 	}
-	
-	
-	
+
+
+
 	var role_access = [];
 	accessGr = new GlideRecord('x_aaro2_pnl_mgmt_pnl_role_access');
 	accessGr.query();
-	while(accessGr.next()){
+	while (accessGr.next()) {
 		role_access.push({
 			supervisor_review: !!+accessGr.getValue('supervisor_review'),
 			can_ask: !!+accessGr.getValue('can_ask'),
@@ -130,12 +134,12 @@
 	return resp;
 
 
-	function validateQuery(inputQuery){
+	function validateQuery(inputQuery) {
 		var validated_query = '';
 		var pairs = inputQuery.split('^');
 		var receivedFilters = [];
-		pairs.forEach(function(pair){
-			if(pair){
+		pairs.forEach(function (pair) {
+			if (pair) {
 				var temp = pair.split('=');
 				receivedFilters.push({
 					name: temp[0],
@@ -144,21 +148,21 @@
 			}
 		});
 
-		receivedFilters.forEach(function(elem){
+		receivedFilters.forEach(function (elem) {
 			var flag = false;
-			if(resp.hasOwnProperty(elem.name)){
-				resp[elem.name].forEach(function(respObjElem){
-					if(respObjElem.id == elem.value){
+			if (resp.hasOwnProperty(elem.name)) {
+				resp[elem.name].forEach(function (respObjElem) {
+					if (respObjElem.id == elem.value) {
 						flag = true;
 					}
 				});
 			}
-			if(flag){
-				validated_query += elem.name+'='+elem.value+'^';
+			if (flag) {
+				validated_query += elem.name + '=' + elem.value + '^';
 			}
 		});
-		if(validated_query) validated_query = validated_query.substring(0, validated_query.length-1);
-		gs.info('validated_query: '+validated_query);
+		if (validated_query) validated_query = validated_query.substring(0, validated_query.length - 1);
+		gs.info('validated_query: ' + validated_query);
 		return validated_query;
 	}
 
@@ -177,7 +181,7 @@
         <sys_created_on>2021-01-28 12:31:34</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>01960ae0db066450389b84d8689619b4</sys_id>
-        <sys_mod_count>133</sys_mod_count>
+        <sys_mod_count>135</sys_mod_count>
         <sys_name>getQuestionData</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -185,7 +189,7 @@
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_ws_operation_01960ae0db066450389b84d8689619b4</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-05-05 12:21:11</sys_updated_on>
+        <sys_updated_on>2021-05-05 13:04:35</sys_updated_on>
         <web_service_definition display_value="utils">d3a7e6e5db5ce8505884eb184b961953</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

@@ -5,9 +5,43 @@
         <deprecated>false</deprecated>
         <overrides/>
         <required_sys_props/>
-        <required_translation_keys>{0} items selected&#13;
+        <required_translation_keys>Close dialog&#13;
+{0} items selected&#13;
 selected&#13;
 No Results Found&#13;
+Unknown User&#13;
+User Avatar: {0}&#13;
+Characters left: {0}&#13;
+required&#13;
+busy&#13;
+away&#13;
+available&#13;
+offline&#13;
+Unmask password&#13;
+Mask password&#13;
+Country code: +{0}&#13;
+Call&#13;
+Edit&#13;
+OK&#13;
+Open&#13;
+Open and dismiss alert&#13;
+Dismiss alert&#13;
+Show less&#13;
+Show more&#13;
+Collapsed alert list with {0} alerts.&#13;
+Expanded alert list with {0} alerts.&#13;
+Dismiss all alerts&#13;
+Dismiss All&#13;
+Actions&#13;
+Link opens in new window&#13;
+Optional&#13;
+More information&#13;
+was&#13;
+Card Actions&#13;
+dismiss pill: {0}&#13;
+More&#13;
+Selected tab: {0}&#13;
+More tabs&#13;
 </required_translation_keys>
         <source_script display_value="@aarons/pnl-mgmt">e5460e176a82b94c56f102caec79b5af</source_script>
         <source_script_name>@aarons/pnl-mgmt</source_script_name>
@@ -16,15 +50,15 @@ No Results Found&#13;
         <sys_created_on>2020-11-17 17:16:53</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>33a585ce2b6468c5609283a53703d5dc</sys_id>
-        <sys_mod_count>449897</sys_mod_count>
+        <sys_mod_count>450062</sys_mod_count>
         <sys_name>aaro2-pnl-statements</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_ux_lib_component_33a585ce2b6468c5609283a53703d5dc</sys_update_name>
-        <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-04-28 16:30:43</sys_updated_on>
+        <sys_updated_by>xxmpurik</sys_updated_by>
+        <sys_updated_on>2021-05-05 13:26:38</sys_updated_on>
         <tag>aaro2-pnl-statements</tag>
     </sys_ux_lib_component>
 </record_update>
