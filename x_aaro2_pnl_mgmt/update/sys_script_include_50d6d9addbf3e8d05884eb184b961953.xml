@@ -24,18 +24,21 @@ PalmsnowActivityStream.prototype = {
 
   get: function (sys_id) {
     this.RECORD_SYS_ID = sys_id
-
-
+    return this._getHistoryRecords()
   },
+
   _getHistoryRecords: function () {
     var historySetGr = new GlideRecord(this.HISTORY_SET_TABLE)
     historySetGr.get('id', this.RECORD_SYS_ID)
     this.HISTORY_SET_SYS_ID = historySetGr.getUniqueValue()
+    return this._getActivityStream()
   },
+
   _getHistoryLines: function () {
     var historyLines = []
     var historyLineGr = new GlideRecord(this.HISTORY_LINE_TABLE)
     historyLineGr.addQuery('set', this.HISTORY_SET_SYS_ID)
+    historyLineGr.addEncodedQuery('field!=watched_by^field!=comments^field!=email')
     historyLineGr.query()
 
     while (historyLineGr.next()) {
@@ -43,17 +46,35 @@ PalmsnowActivityStream.prototype = {
         {
           update: historyLineGr.getValue('update'),
           type: this.HISTORY_TYPE.FIELD,
-          user: {
-            name: historyLineGr.getValue('user_name'),
-            id: historyLineGr.getValue('user_id')
-          },
+          user: this._getUserObject(historyLineGr.getValue('user_id')),
           label: historyLineGr.getValue('label'),
-          oldValue: historyLineGr.getValue('old'),
-          newValue: historyLineGr.getValue('new'),
+          old_value: historyLineGr.getValue('old'),
+          new_value: historyLineGr.getValue('new'),
           update_time: historyLineGr.getDisplayValue('update_time')
         }
       )
     }
+    
+    var historyGroups = []
+    var indecies = {}
+    historyLines.forEach(function (hl) {
+      if (!historyGroups[hl.update]){
+        indecies[hl.update] = historyGroups.length;
+        historyGroups[indecies[hl.update]] = {
+          type: hl.type,
+          user: hl.user,
+          update_time: hl.update_time,
+          updates: []
+        }
+      }
+      historyGroups[indecies[hl.update]].updates.push({
+        label: hl.label,
+        old_value: hl.old_value,
+        new_value: hl.new_value
+      })
+    })
+   
+    return historyGroups
   },
   _getAttachmentHistory: function () {
     var attachmentUpdates = []
@@ -64,40 +85,79 @@ PalmsnowActivityStream.prototype = {
     while (attGr.next()) {
       attachmentUpdates.push({
         type: this.HISTORY_TYPE.ATTACHMENT,
-        user: attGr.getValue('sys_updated_by'),
-        update_type: attGr.getValue('sys_updated_on'),
+        user: this._getUserObject(attGr.getValue('sys_created_by')),
+        update_time: attGr.getValue('sys_updated_on'),
         updates: [
           {
-             newValue: {
+            new_value: {
               name: attGr.getValue('file_name'),
-              sys_id: attGr.getUniqueValue()
+              sys_id: attGr.getUniqueValue(),
+              link: gs.getProperty('glide.servlet.uri')+'api/now/attachment/'+ attGr.getUniqueValue()+'/file'
             }
           }
         ]
 
       })
     }
+   
+    return attachmentUpdates
   },
-  _getGroups: function () {
-    [
-      {
-        update_time: '',
-        type: '',
-        user: {},
+  _getJournalLines: function () {
+    var journalLines = []
+    var journalGr = new GlideRecord(this.JOURNAL_ENTRIES_TABLE);
+    journalGr.addQuery('element_id', this.RECORD_SYS_ID)
+    journalGr.query()
+    
+    while (journalGr.next()) {
+      var entry = {
+        type: this.HISTORY_TYPE.JOURNAL,
+        user: this._getUserObject(journalGr.getValue('sys_created_by')),
+        update_time: journalGr.getValue('sys_created_on'),
         updates: [
-
+          {
+            new_value: journalGr.getValue('value')
+          }
         ]
       }
-    ]
+      journalLines.push(entry)
+    }
+    
+    return journalLines
+  },
+  _getActivityStream: function () {
+    var activityStream = this._getHistoryLines()
+      .concat(this._getAttachmentHistory())
+      .concat(this._getJournalLines())
+
+    activityStream.sort(function (a, b) {
+      var gdta = new GlideDateTime(a.update_time)
+      var gdtb = new GlideDateTime(b.update_time)
+      return gdtb.getNumericValue() - gdta.getNumericValue()
+    })
+   
+    return activityStream;
+
+  },
+  _getUserObject: function(userid){
+    var userGr = new GlideRecord('sys_user');
+    userGr.get('user_name', userid)
+    var userObj = {
+      id: userid,
+      name: userGr.getValue('name'),
+      avatar: userGr.getValue('avatar')|| '',
+      email: userGr.getValue('email')
+    }
+    return userObj;
   },
   type: 'PalmsnowActivityStream'
-};]]></script>
+};
+]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-04-28 11:27:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>50d6d9addbf3e8d05884eb184b961953</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_name>PalmsnowActivityStream</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -105,6 +165,6 @@ PalmsnowActivityStream.prototype = {
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_50d6d9addbf3e8d05884eb184b961953</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-04-28 15:49:56</sys_updated_on>
+        <sys_updated_on>2021-05-05 09:00:52</sys_updated_on>
     </sys_script_include>
 </record_update>
