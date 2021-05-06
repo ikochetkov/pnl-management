@@ -92,7 +92,7 @@ PalmsnowActivityStream.prototype = {
             new_value: {
               name: attGr.getValue('file_name'),
               sys_id: attGr.getUniqueValue(),
-              link: gs.getProperty('glide.servlet.uri')+'api/now/attachment/'+ attGr.getUniqueValue()+'/file'
+              content_type: attGr.getValue('content_type'),
             }
           }
         ]
@@ -157,7 +157,7 @@ PalmsnowActivityStream.prototype = {
         <sys_created_on>2021-04-28 11:27:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>50d6d9addbf3e8d05884eb184b961953</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>27</sys_mod_count>
         <sys_name>PalmsnowActivityStream</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -165,6 +165,6 @@ PalmsnowActivityStream.prototype = {
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_50d6d9addbf3e8d05884eb184b961953</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-05-05 09:00:52</sys_updated_on>
+        <sys_updated_on>2021-05-05 14:33:04</sys_updated_on>
     </sys_script_include>
 </record_update>
