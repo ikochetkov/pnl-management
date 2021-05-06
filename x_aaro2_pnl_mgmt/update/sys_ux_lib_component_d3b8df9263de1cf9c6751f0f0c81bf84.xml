@@ -5,8 +5,8 @@
         <deprecated>false</deprecated>
         <overrides/>
         <required_sys_props/>
-        <required_translation_keys>{0} items selected&#13;
-selected&#13;
+        <required_translation_keys>selected&#13;
+{0} items selected&#13;
 No Results Found&#13;
 </required_translation_keys>
         <source_script/>
@@ -16,7 +16,7 @@ No Results Found&#13;
         <sys_created_on>2020-11-19 14:19:20</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d3b8df9263de1cf9c6751f0f0c81bf84</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>450087</sys_mod_count>
         <sys_name>aaro2-pnl-user-profile</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -24,7 +24,7 @@ No Results Found&#13;
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_ux_lib_component_d3b8df9263de1cf9c6751f0f0c81bf84</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-05-06 09:16:38</sys_updated_on>
+        <sys_updated_on>2021-05-06 14:56:11</sys_updated_on>
         <tag>aaro2-pnl-user-profile</tag>
     </sys_ux_lib_component>
 </record_update>
