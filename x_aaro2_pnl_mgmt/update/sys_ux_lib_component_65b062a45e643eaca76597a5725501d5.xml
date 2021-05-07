@@ -5,8 +5,8 @@
         <deprecated>false</deprecated>
         <overrides/>
         <required_sys_props/>
-        <required_translation_keys>selected&#13;
-{0} items selected&#13;
+        <required_translation_keys>{0} items selected&#13;
+selected&#13;
 No Results Found&#13;
 </required_translation_keys>
         <source_script/>
@@ -16,7 +16,7 @@ No Results Found&#13;
         <sys_created_on>2020-12-21 17:07:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>65b062a45e643eaca76597a5725501d5</sys_id>
-        <sys_mod_count>450087</sys_mod_count>
+        <sys_mod_count>450110</sys_mod_count>
         <sys_name>aaro2-review-container</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -24,7 +24,7 @@ No Results Found&#13;
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_ux_lib_component_65b062a45e643eaca76597a5725501d5</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-05-06 14:56:23</sys_updated_on>
+        <sys_updated_on>2021-05-07 13:29:17</sys_updated_on>
         <tag>aaro2-review-container</tag>
     </sys_ux_lib_component>
 </record_update>
