@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
     <sys_properties action="INSERT_OR_UPDATE">
         <choices/>
-        <description>Endpoint or get PNL user data</description>
+        <description>Path for download export</description>
         <ignore_cache>false</ignore_cache>
         <is_private>false</is_private>
-        <name>x_aaro2_pnl_mgmt.GetPNLUserData_endpoint</name>
+        <name>x_aaro2_pnl_mgmt.path_for_export_download</name>
         <read_roles/>
-        <suffix>GetPNLUserData_endpoint</suffix>
+        <suffix>path_for_export_download</suffix>
         <sys_class_name>sys_properties</sys_class_name>
         <sys_created_by>xxikochet</sys_created_by>
-        <sys_created_on>2020-12-04 12:36:27</sys_created_on>
+        <sys_created_on>2021-05-12 16:03:07</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>3218f276dbf4a010389b84d8689619f2</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>x_aaro2_pnl_mgmt.GetPNLUserData_endpoint</sys_name>
+        <sys_id>8f4c920adbc47814f41dc15b139619f9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_aaro2_pnl_mgmt.path_for_export_download</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name>sys_properties_3218f276dbf4a010389b84d8689619f2</sys_update_name>
+        <sys_update_name>sys_properties_8f4c920adbc47814f41dc15b139619f9</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-05-12 13:53:39</sys_updated_on>
+        <sys_updated_on>2021-05-12 16:03:31</sys_updated_on>
         <type>string</type>
-        <value>https://pnldataserviceqa.aarons.com/api/GetPNLUserData?</value>
+        <value>https://pnldataserviceqa.aarons.com/palmsnow?exportkey=</value>
         <write_roles/>
     </sys_properties>
-    <sys_translated_text action="delete_multiple" query="documentkey=3218f276dbf4a010389b84d8689619f2"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=8f4c920adbc47814f41dc15b139619f9"/>
 </record_update>

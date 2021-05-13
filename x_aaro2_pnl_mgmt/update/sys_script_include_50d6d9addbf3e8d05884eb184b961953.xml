@@ -15,6 +15,7 @@ PalmsnowActivityStream.prototype = {
     this.HISTORY_LINE_TABLE = 'sys_history_line'
     this.JOURNAL_ENTRIES_TABLE = 'sys_journal_field'
     this.ATTACHMENTS_TABLE = 'sys_attachment'
+    this.AUDIT_TABLE = 'sys_audit'
     this.HISTORY_TYPE = {
       FIELD: 'FIELD',
       ATTACHMENT: 'ATTACHMENT',
@@ -34,6 +35,30 @@ PalmsnowActivityStream.prototype = {
     return this._getActivityStream()
   },
 
+  _getAuditRecords: function () {
+    var auditRecords = []
+    var auditGr = new GlideRecord('sys_audit')
+    auditGr.addQuery('documentkey', this.RECORD_SYS_ID);
+    auditGr.addEncodedQuery('fieldname!=watched_by^fieldname!=comments^fieldname!=email')
+    auditGr.query()
+    while (auditGr.next()) {
+      auditRecords.push({
+        update_time: auditGr.getValue('sys_created_by'),
+        user: this._getUserObject(auditGr.getValue('user')),
+        updates: [
+          {
+            old_value: auditGr.getValue('oldvalue'),
+            new_value: auditGr.getValue('newvalue'),
+            field: auditGr.getValue('fieldname'),
+            label: auditGr.getDisplayValue('fieldname'),
+          }
+        ],
+        type: this.HISTORY_TYPE.FIELD
+      })
+    }
+    return auditRecords;
+
+  },
   _getHistoryLines: function () {
     var historyLines = []
     var historyLineGr = new GlideRecord(this.HISTORY_LINE_TABLE)
@@ -54,11 +79,12 @@ PalmsnowActivityStream.prototype = {
         }
       )
     }
-    
+    gs.info('HISTORY_RECORD::' + this.RECORD_SYS_ID)
+    gs.info('HISTORY_LINES::' + JSON.stringify(historyLines, null, 2))
     var historyGroups = []
     var indecies = {}
     historyLines.forEach(function (hl) {
-      if (!historyGroups[hl.update]){
+      if (!historyGroups[hl.update]) {
         indecies[hl.update] = historyGroups.length;
         historyGroups[indecies[hl.update]] = {
           type: hl.type,
@@ -73,8 +99,8 @@ PalmsnowActivityStream.prototype = {
         new_value: hl.new_value
       })
     })
-   
-    return historyGroups
+    gs.info('HISTORY_GROUPS::' + JSON.stringify(historyGroups, null, 2))
+    return historyGroups.length ? historyGroups : false
   },
   _getAttachmentHistory: function () {
     var attachmentUpdates = []
@@ -99,7 +125,7 @@ PalmsnowActivityStream.prototype = {
 
       })
     }
-   
+
     return attachmentUpdates
   },
   _getJournalLines: function () {
@@ -107,7 +133,7 @@ PalmsnowActivityStream.prototype = {
     var journalGr = new GlideRecord(this.JOURNAL_ENTRIES_TABLE);
     journalGr.addQuery('element_id', this.RECORD_SYS_ID)
     journalGr.query()
-    
+
     while (journalGr.next()) {
       var entry = {
         type: this.HISTORY_TYPE.JOURNAL,
@@ -121,11 +147,12 @@ PalmsnowActivityStream.prototype = {
       }
       journalLines.push(entry)
     }
-    
+
     return journalLines
   },
   _getActivityStream: function () {
-    var activityStream = this._getHistoryLines()
+    var history = this._getHistoryLines() || this._getAuditRecords()
+    var activityStream = history
       .concat(this._getAttachmentHistory())
       .concat(this._getJournalLines())
 
@@ -134,17 +161,17 @@ PalmsnowActivityStream.prototype = {
       var gdtb = new GlideDateTime(b.update_time)
       return gdtb.getNumericValue() - gdta.getNumericValue()
     })
-   
+
     return activityStream;
 
   },
-  _getUserObject: function(userid){
+  _getUserObject: function (userid) {
     var userGr = new GlideRecord('sys_user');
     userGr.get('user_name', userid)
     var userObj = {
       id: userid,
       name: userGr.getValue('name'),
-      avatar: userGr.getValue('avatar')|| '',
+      avatar: userGr.getValue('avatar') || '',
       email: userGr.getValue('email')
     }
     return userObj;
@@ -157,7 +184,7 @@ PalmsnowActivityStream.prototype = {
         <sys_created_on>2021-04-28 11:27:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>50d6d9addbf3e8d05884eb184b961953</sys_id>
-        <sys_mod_count>27</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_name>PalmsnowActivityStream</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -165,6 +192,6 @@ PalmsnowActivityStream.prototype = {
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_50d6d9addbf3e8d05884eb184b961953</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-05-05 14:33:04</sys_updated_on>
+        <sys_updated_on>2021-05-12 10:04:45</sys_updated_on>
     </sys_script_include>
 </record_update>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>GetPNLExportKey</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+
+	/*
+	EXAMPLE:
+	http://pnldataservicedev.aarons.com/api/GetPNLExportKey?UserLogin=nefiveas&RefreshType=2&Company=30&FiscalYear=2021&AccountingPeriod=3&IncludeChildObjects=false&ObjectId=7739&ExportType=1
+	*/
+
+	var responseObj , restResponse;
+	var endpoint = gs.getProperty('x_aaro2_pnl_mgmt.GetPNLExportKey_endpoint');
+	var exportURL = gs.getProperty('x_aaro2_pnl_mgmt.path_for_export_download');
+
+	try { 
+		var r = new sn_ws.RESTMessageV2();
+		r.setHttpMethod('GET');
+		r.setEndpoint(endpoint);
+		r.setQueryParameter('UserLogin',request.queryParams.UserLogin);
+		r.setQueryParameter('RefreshType',request.queryParams.RefreshType);
+		r.setQueryParameter('Company',request.queryParams.Company);
+		r.setQueryParameter('FiscalYear',request.queryParams.FiscalYear);
+		r.setQueryParameter('AccountingPeriod',request.queryParams.AccountingPeriod);
+		r.setQueryParameter('IncludeChildObjects',request.queryParams.IncludeChildObjects);
+		r.setQueryParameter('ObjectId',request.queryParams.ObjectId);
+		r.setQueryParameter('ExportType',request.queryParams.ExportType);
+		r.setMIDServer(gs.getProperty('mid.server.rba_default'));
+		r.setRequestHeader('Content-Type', 'application/json');
+		r.setRequestHeader('Accept','application/json');
+		r.setHttpTimeout(5000);                            
+		restResponse = r.execute();
+		restResponse.waitForResponse(10);   
+		responseObj = new global.RESTResponseUtils(restResponse);
+		responseObj.body = JSON.parse(responseObj.body);
+	}
+	catch(ex) {
+		responseObj = new global.RESTResponseUtils(restResponse);
+		responseObj.setBody(ex.toString());
+		responseObj.setErrorMessage("There was an error calling the webservice.");
+		responseObj.setStatusCode(503);
+		responseObj.setHaveError(true);
+		gs.error(responseObj);
+	}
+
+	response.setContentType("application/json");
+	var stream = response.getStreamWriter();
+	stream.writeString(exportURL+responseObj.body.ExportKey);
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_aaro2_pnl_mgmt/utils/GetPNLExportKey</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/GetPNLExportKey</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-12 13:57:54</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0d7fb546db007814f41dc15b139619fd</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>GetPNLExportKey</sys_name>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name>sys_ws_operation_0d7fb546db007814f41dc15b139619fd</sys_update_name>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-12 16:09:02</sys_updated_on>
+        <web_service_definition display_value="utils">d3a7e6e5db5ce8505884eb184b961953</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

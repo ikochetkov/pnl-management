@@ -34,7 +34,7 @@
         <sys_updated_on>2020-11-06 12:21:51</sys_updated_on>
         <toolbar_button display_value="Lists Button">bd782abddbd46090389b84d86896191e</toolbar_button>
         <type>full</type>
-        <workspace_config display_value="PNL Management">9978e27ddbd46090389b84d86896193b</workspace_config>
+        <workspace_config display_value="PALMSnow">9978e27ddbd46090389b84d86896193b</workspace_config>
     </sys_aw_module>
     <sys_variable_value action="delete_multiple" query="document_key=b9782abddbd46090389b84d86896191e"/>
 </record_update>

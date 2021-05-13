@@ -8,27 +8,27 @@
         <global_search display_value="Default search settings">97a574ea53c0130084acddeeff7b12a6</global_search>
         <global_search_data display_value="Agent Workspace Search Config">4961e3e7871033000929717936cb0ba7</global_search_data>
         <hide_search_results_count>false</hide_search_results_count>
-        <name>PNL Management</name>
+        <name>PALMSnow</name>
         <navigation_type>breadcrumb</navigation_type>
         <notifications_enabled>true</notifications_enabled>
         <primary_color>#91C712</primary_color>
-        <search_enabled>true</search_enabled>
+        <search_enabled>false</search_enabled>
         <sys_class_name>sys_aw_master_config</sys_class_name>
         <sys_created_by>xxikochet</sys_created_by>
         <sys_created_on>2020-11-06 12:21:50</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>9978e27ddbd46090389b84d86896193b</sys_id>
-        <sys_mod_count>22</sys_mod_count>
-        <sys_name>PNL Management</sys_name>
+        <sys_mod_count>25</sys_mod_count>
+        <sys_name>PALMSnow</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_aw_master_config_9978e27ddbd46090389b84d86896193b</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-04-13 09:20:40</sys_updated_on>
+        <sys_updated_on>2021-05-12 13:48:16</sys_updated_on>
         <user_preference_controls_enabled>true</user_preference_controls_enabled>
-        <workspace_logo>5e1b32b0db60a0105884eb184b961977</workspace_logo>
+        <workspace_logo>68acf98adbcc3814f41dc15b13961950</workspace_logo>
         <workspace_url>pnl_management</workspace_url>
     </sys_aw_master_config>
 </record_update>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_custom_content_root_elem">
     <sys_ux_custom_content_root_elem action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <applicability>single</applicability>
         <applicable_page display_value="PNL Management">e178e27ddbd46090389b84d86896193c</applicable_page>
         <attrs/>
@@ -24,7 +24,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>ecbd3902db24e810389b84d86896193a</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>User Profile Button</sys_name>
         <sys_overrides/>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
@@ -32,8 +32,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_ux_custom_content_root_elem_ecbd3902db24e810389b84d86896193a</sys_update_name>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2020-11-19 14:09:11</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-12 13:48:43</sys_updated_on>
         <tree_root/>
     </sys_ux_custom_content_root_elem>
     <sys_variable_value action="delete_multiple" query="document_key=ecbd3902db24e810389b84d86896193a"/>

@@ -13,7 +13,7 @@
         <icon>circle-question-fill</icon>
         <id>questions</id>
         <label>Questions</label>
-        <order>300</order>
+        <order>20</order>
         <roles/>
         <sys_class_name>sys_aw_module</sys_class_name>
         <sys_created_by>xxikochet</sys_created_by>
@@ -21,7 +21,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>b7b51021dba8a410389b84d8689619fc</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>questions</sys_name>
         <sys_overrides/>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
@@ -31,10 +31,10 @@
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_aw_module_b7b51021dba8a410389b84d8689619fc</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2020-11-17 18:05:07</sys_updated_on>
+        <sys_updated_on>2021-05-12 13:49:13</sys_updated_on>
         <toolbar_button display_value="Questions Button">2df51421dba8a410389b84d8689619b2</toolbar_button>
         <type>full</type>
-        <workspace_config display_value="PNL Management">9978e27ddbd46090389b84d86896193b</workspace_config>
+        <workspace_config display_value="PALMSnow">9978e27ddbd46090389b84d86896193b</workspace_config>
     </sys_aw_module>
     <sys_variable_value action="delete_multiple" query="document_key=b7b51021dba8a410389b84d8689619fc"/>
 </record_update>
