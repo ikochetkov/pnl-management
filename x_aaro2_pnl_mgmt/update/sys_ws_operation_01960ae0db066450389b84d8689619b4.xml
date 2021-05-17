@@ -9,9 +9,9 @@
         <name>getQuestionData</name>
         <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
 
-	var filters = ['company', 'status', 'accounting_unit', 'year', 'period', 'account', 'over_1k_reviewed', 'manager_reviewed', 'supervisor_reviewed', 'answer_released', 'assigned_to', 'requested_by', 'over_1k'];
+	var filters = ['company', 'status', 'accounting_unit', 'year', 'period', 'account', 'over_1k_reviewed', 'manager_reviewed', 'supervisor_reviewed', 'answer_released', 'assigned_to', 'requested_by', 'over_1k','sys_id'];
 	var boolean_fields = ['over_1k_reviewed', 'manager_reviewed', 'supervisor_reviewed', 'answer_released', 'over_1k', 'is_generic'];
-	var currency_fields = ['amount']
+	var currency_fields = ['amount'];
 	var object_fields = ['assigned_to', 'watched_by'];
 	var resp = {};
 	var query = '';
@@ -22,7 +22,7 @@
 	filters.forEach(function (field) {
 		var ga = new GlideAggregate('x_aaro2_pnl_mgmt_question');
 		ga.groupBy(field);
-		//ga.addEncodedQuery(query);
+		ga.addEncodedQuery(query);
 		ga.addEncodedQuery(unitsQuery);
 		ga.query();
 		if (ga.hasNext()) {
@@ -50,7 +50,7 @@
 		resp.year.forEach(function (year) {
 			var ga2 = new GlideAggregate('x_aaro2_pnl_mgmt_question');
 			ga2.addQuery('year', year.id);
-			//ga2.addEncodedQuery(query);
+			ga2.addEncodedQuery(query);
 			ga2.addEncodedQuery(unitsQuery);
 			ga2.groupBy('period');
 			ga2.query();
@@ -72,7 +72,7 @@
 	while (grSection.next()) {
 		var grElement = new GlideRecord("sys_ui_element");
 		grElement.addQuery("sys_ui_section", grSection.sys_id);
-		grElement.addQuery("sys_ui_section!=5648a705db5f2450f41dc15b13961905^ORsys_ui_section=NULL")
+		grElement.addQuery("sys_ui_section!=5648a705db5f2450f41dc15b13961905^ORsys_ui_section=NULL");
 		grElement.addNullQuery("type");
 		grElement.query();
 		while (grElement.next()) {
@@ -96,7 +96,7 @@
 			else if (~boolean_fields.indexOf(field))
 				questionFields[field] = !!+qGr.getValue(field);
 			else if (~currency_fields.indexOf(field))
-				questionFields[field] = Number(qGr.getValue(field))
+				questionFields[field] = Number(qGr.getValue(field));
 			else {
 				questionFields[field] = qGr.getDisplayValue(field);
 			}
@@ -181,15 +181,15 @@
         <sys_created_on>2021-01-28 12:31:34</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>01960ae0db066450389b84d8689619b4</sys_id>
-        <sys_mod_count>135</sys_mod_count>
+        <sys_mod_count>139</sys_mod_count>
         <sys_name>getQuestionData</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_ws_operation_01960ae0db066450389b84d8689619b4</sys_update_name>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-05-05 13:04:35</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-17 11:10:25</sys_updated_on>
         <web_service_definition display_value="utils">d3a7e6e5db5ce8505884eb184b961953</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

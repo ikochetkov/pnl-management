@@ -43,12 +43,19 @@ PalmsnowActivityStream.prototype = {
     auditGr.query()
     while (auditGr.next()) {
       auditRecords.push({
-        update_time: auditGr.getValue('sys_created_by'),
+        update_time: auditGr.getValue('sys_created_on'),
         user: this._getUserObject(auditGr.getValue('user')),
         updates: [
+          auditGr.getValue('fieldname')!=='assigned_to'?
           {
             old_value: auditGr.getValue('oldvalue'),
             new_value: auditGr.getValue('newvalue'),
+            field: auditGr.getValue('fieldname'),
+            label: auditGr.getDisplayValue('fieldname'),
+          }:
+          {
+            old_value: this._getUserBySysId(auditGr.getValue('oldvalue')),
+            new_value: this._getUserBySysId(auditGr.getValue('newvalue')),
             field: auditGr.getValue('fieldname'),
             label: auditGr.getDisplayValue('fieldname'),
           }
@@ -165,6 +172,11 @@ PalmsnowActivityStream.prototype = {
     return activityStream;
 
   },
+  _getUserBySysId: function(sys_id){
+    var userGr = new GlideRecord('sys_user');
+    userGr.get(sys_id)
+    return userGr.getValue('name')
+  },
   _getUserObject: function (userid) {
     var userGr = new GlideRecord('sys_user');
     userGr.get('user_name', userid)
@@ -184,7 +196,7 @@ PalmsnowActivityStream.prototype = {
         <sys_created_on>2021-04-28 11:27:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>50d6d9addbf3e8d05884eb184b961953</sys_id>
-        <sys_mod_count>34</sys_mod_count>
+        <sys_mod_count>36</sys_mod_count>
         <sys_name>PalmsnowActivityStream</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -192,6 +204,6 @@ PalmsnowActivityStream.prototype = {
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_50d6d9addbf3e8d05884eb184b961953</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-05-12 10:04:45</sys_updated_on>
+        <sys_updated_on>2021-05-14 11:46:57</sys_updated_on>
     </sys_script_include>
 </record_update>

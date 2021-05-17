@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_aw_module">
     <sys_aw_module action="INSERT_OR_UPDATE">
-        <active>false</active>
+        <active>true</active>
         <content display_value="User Profile Module Content">f8d0ca46db24e810389b84d8689619e5</content>
         <content_attrs/>
         <content_component display_value="aaro2-pnl-user-profile">d3b8df9263de1cf9c6751f0f0c81bf84</content_component>
@@ -13,7 +13,7 @@
         <icon>address-card-outline</icon>
         <id>user_profile</id>
         <label>User Profile</label>
-        <order>100</order>
+        <order>400</order>
         <roles/>
         <sys_class_name>sys_aw_module</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
@@ -21,7 +21,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>0c7d3102db24e810389b84d868961915</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>user_profile</sys_name>
         <sys_overrides/>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
@@ -31,7 +31,7 @@
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_aw_module_0c7d3102db24e810389b84d868961915</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-05-12 13:48:43</sys_updated_on>
+        <sys_updated_on>2021-05-14 14:12:43</sys_updated_on>
         <toolbar_button display_value="User Profile Button">ecbd3902db24e810389b84d86896193a</toolbar_button>
         <type>full</type>
         <workspace_config display_value="PALMSnow">9978e27ddbd46090389b84d86896193b</workspace_config>
