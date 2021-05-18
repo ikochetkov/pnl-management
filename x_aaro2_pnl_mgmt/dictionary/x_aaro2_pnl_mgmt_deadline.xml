@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Deadline" max_length="40" name="x_aaro2_pnl_mgmt_deadline" sizeclass="7" type="collection">
+    <element label="Deadline" max_length="40" name="x_aaro2_pnl_mgmt_deadline" sizeclass="3" type="collection">
         <element label="Answer End" max_length="40" name="answer_end" type="glide_date_time"/>
         <element label="Answer Start" max_length="40" name="answer_start" type="glide_date_time"/>
         <element label="Early Access End" max_length="40" name="early_access_end" type="glide_date_time"/>
         <element label="Early Access Start" max_length="40" name="early_access_start" type="glide_date_time"/>
-        <element choice="1" default="javascript: (new SneakPeekUtil()).getMonth('',-1).month" display="true" label="Month" max_length="40" name="month" type="choice">
+        <element choice="1" default="javascript: (new SneakPeekUtil()).getMonth('',-1).month" label="Month" max_length="40" name="month" type="choice">
             <choice>
                 <element inactive_on_update="false" label="January" sequence="0" value="1"/>
                 <element inactive_on_update="false" label="February" sequence="1" value="2"/>
@@ -20,6 +20,7 @@
                 <element inactive_on_update="false" label="December" sequence="11" value="12"/>
             </choice>
         </element>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;return current.getDisplayValue('month') + &quot; &quot; + current.year;&#13;&#10;&#13;&#10;})(current);" display="true" label="Name" max_length="100" name="name" type="string" virtual="true"/>
         <element label="Question End" max_length="40" name="question_end" type="glide_date_time"/>
         <element label="Question Start" max_length="40" name="question_start" type="glide_date_time"/>
         <element label="Reassign End" max_length="40" name="reassign_end" type="glide_date_time"/>

@@ -9,485 +9,514 @@
         <name>DeadlinesUtil</name>
         <script><![CDATA[var DeadlinesUtil = Class.create();
 DeadlinesUtil.prototype = {
-  initialize: function (date) {
-    this.DEADLINES_TABLE = 'x_aaro2_pnl_mgmt_deadline';
+	initialize: function (date) {
+		this.DEADLINES_TABLE = 'x_aaro2_pnl_mgmt_deadline';
 
-    this.EARLY_ACCESS_PARTICIPANT_TABLE = 'x_aaro2_pnl_mgmt_m2m_early_access_user'
-    this.EARLY_ACCESS_GROUPS_TABLE = 'x_aaro2_pnl_mgmt_early_access_group'
-    this.__initReviewPeriods()
-    this.__initSchedule()
-    this.__initDates(date)
-  },
+		this.EARLY_ACCESS_PARTICIPANT_TABLE = 'x_aaro2_pnl_mgmt_m2m_early_access_user';
+		this.EARLY_ACCESS_GROUPS_TABLE = 'x_aaro2_pnl_mgmt_early_access_group';
+		this.USER_GRMEMBER_TABLE = 'sys_user_grmember';
+		this.arrayUtil = new global.ArrayUtil();
+		this.__initReviewPeriods();
+		this.__initSchedule();
+		this.__initDates(date);
+	},
 
-  __initReviewPeriods: function () {
-    var sneak_peek_period = gs.getProperty('x_aaro2_pnl_mgmt.early_access_period', '6-7').split('-')
-    var mul_review_period = gs.getProperty('x_aaro2_pnl_mgmt.mul_review_period', '7-9').split('-');
-    var accounting_answer_period = gs.getProperty('x_aaro2_pnl_mgmt.accounting_answer_period', '7-12').split('-');
-    var accounting_can_reassign_period = gs.getProperty('x_aaro2_pnl_mgmt.accounting_can_reassign_period', '7-10').split('-');
-    var question_review_period = gs.getProperty('x_aaro2_pnl_mgmt.question_review', '7-12').split('-')
+	__initReviewPeriods: function () {
+		var sneak_peek_period = gs.getProperty('x_aaro2_pnl_mgmt.early_access_period', '6-7').split('-');
+		var mul_review_period = gs.getProperty('x_aaro2_pnl_mgmt.mul_review_period', '7-9').split('-');
+		var accounting_answer_period = gs.getProperty('x_aaro2_pnl_mgmt.accounting_answer_period', '7-12').split('-');
+		var accounting_can_reassign_period = gs.getProperty('x_aaro2_pnl_mgmt.accounting_can_reassign_period', '7-10').split('-');
+		var question_review_period = gs.getProperty('x_aaro2_pnl_mgmt.question_review', '7-12').split('-');
 
-    this.SNEAK_PEEK_PERIOD_START = sneak_peek_period[0];
-    this.SNEAK_PEEK_PERIOD_END = sneak_peek_period[1];
-    this.SNEAK_PEEK_START_TIME = gs.getProperty('x_aaro2_pnl_mgmt.early_access_start_time', '08:00:00')
-    this.SNEAK_PEEK_END_TIME = gs.getProperty('x_aaro2_pnl_mgmt.early_access_end_time', '14:00:00')
+		this.SNEAK_PEEK_PERIOD_START = sneak_peek_period[0];
+		this.SNEAK_PEEK_PERIOD_END = sneak_peek_period[1];
+		this.SNEAK_PEEK_START_TIME = gs.getProperty('x_aaro2_pnl_mgmt.early_access_start_time', '08:00:00');
+		this.SNEAK_PEEK_END_TIME = gs.getProperty('x_aaro2_pnl_mgmt.early_access_end_time', '14:00:00');
 
-    this.MUL_REVIEW_PERIOD_START = mul_review_period[0]
-    this.MUL_REVIEW_PERIOD_END = mul_review_period[1]
-    this.MUL_REVIEW_START_TIME = gs.getProperty('x_aaro2_pnl_mgmt.mul_review_period_start_time', '08:00:00')
-    this.MUL_REVIEW_END_TIME = gs.getProperty('x_aaro2_pnl_mgmt.mul_review_period_end_time', '14:00:00')
+		this.MUL_REVIEW_PERIOD_START = mul_review_period[0];
+		this.MUL_REVIEW_PERIOD_END = mul_review_period[1];
+		this.MUL_REVIEW_START_TIME = gs.getProperty('x_aaro2_pnl_mgmt.mul_review_period_start_time', '08:00:00');
+		this.MUL_REVIEW_END_TIME = gs.getProperty('x_aaro2_pnl_mgmt.mul_review_period_end_time', '14:00:00');
 
-    this.ACCOUNTING_ANSWER_PERIOD_START = accounting_answer_period[0]
-    this.ACCOUNTING_ANSWER_PERIOD_END = accounting_answer_period[1]
-    this.ACCOUNTING_ANSWER_START_TIME = gs.getProperty('x_aaro2_pnl_mgmt.accounting_answer_period_start_time', '08:00:00')
-    this.ACCOUNTING_ANSWER_END_TIME = gs.getProperty('x_aaro2_pnl_mgmt.accounting_answer_period_end_time', '14:00:00')
+		this.ACCOUNTING_ANSWER_PERIOD_START = accounting_answer_period[0];
+		this.ACCOUNTING_ANSWER_PERIOD_END = accounting_answer_period[1];
+		this.ACCOUNTING_ANSWER_START_TIME = gs.getProperty('x_aaro2_pnl_mgmt.accounting_answer_period_start_time', '08:00:00');
+		this.ACCOUNTING_ANSWER_END_TIME = gs.getProperty('x_aaro2_pnl_mgmt.accounting_answer_period_end_time', '14:00:00');
 
-    this.QUESTION_REVIEW_PERIOD_START = question_review_period[0]
-    this.QUESTION_REVIEW_PERIOD_END = question_review_period[1]
-    this.QUESTION_REVIEW_START_TIME = gs.getProperty('x_aaro2_pnl_mgmt.question_review_start_time', '08:00:00')
-    this.QUESTION_REVIEW_END_TIME = gs.getProperty('x_aaro2_pnl_mgmt.question_review_end_time', '14:00:00')
+		this.QUESTION_REVIEW_PERIOD_START = question_review_period[0];
+		this.QUESTION_REVIEW_PERIOD_END = question_review_period[1];
+		this.QUESTION_REVIEW_START_TIME = gs.getProperty('x_aaro2_pnl_mgmt.question_review_start_time', '08:00:00');
+		this.QUESTION_REVIEW_END_TIME = gs.getProperty('x_aaro2_pnl_mgmt.question_review_end_time', '14:00:00');
 
-    this.ACCOUNTING_CAN_REASSIGN_PERIOD_START = accounting_can_reassign_period[0]
-    this.ACCOUNTING_CAN_REASSIGN_PERIOD_END = accounting_can_reassign_period[1]
-    this.ACCOUNTING_CAN_REASSIGN_START_TIME = gs.getProperty('x_aaro2_pnl_mgmt.accounting_can_reassign_period_start_time', '08:00:00')
-    this.ACCOUNTING_CAN_REASSIGN_END_TIME = gs.getProperty('x_aaro2_pnl_mgmt.accounting_can_reassign_period_end_time', '14:00:00')
+		this.ACCOUNTING_CAN_REASSIGN_PERIOD_START = accounting_can_reassign_period[0];
+		this.ACCOUNTING_CAN_REASSIGN_PERIOD_END = accounting_can_reassign_period[1];
+		this.ACCOUNTING_CAN_REASSIGN_START_TIME = gs.getProperty('x_aaro2_pnl_mgmt.accounting_can_reassign_period_start_time', '08:00:00');
+		this.ACCOUNTING_CAN_REASSIGN_END_TIME = gs.getProperty('x_aaro2_pnl_mgmt.accounting_can_reassign_period_end_time', '14:00:00');
 
-  },
+	},
 
-  __initSchedule: function () {
-    this.schedule = new GlideSchedule('090eecae0a0a0b260077e1dfa71da828'); //8-5 weekdays excluding holidays
-  },
+	__initSchedule: function () {
+		this.schedule = new GlideSchedule('090eecae0a0a0b260077e1dfa71da828'); //8-5 weekdays excluding holidays
+	},
 
-  __initDates: function (date) {
+	__initDates: function (date) {
 
-    this.currentDate = new GlideDateTime();
+		this.currentDate = new GlideDateTime();
 
-    var startOfThisMonth = this.__getStartOfMonth(date || this.currentDate)
+		var startOfThisMonth = this.__getStartOfMonth(date || this.currentDate)
 
-    this.__getBusinessDays(startOfThisMonth, 1, 22)
-  },
+		this.__getBusinessDays(startOfThisMonth, 1, 22)
+	},
 
-  getNextSneakPeek: function (shift) {
+	getNextSneakPeek: function (shift) {
 
-    if (!shift) shift = 0
-    shift -= 1
-    var prevShift = shift - 1
-    var accountingMonth = this.getMonth(new GlideDateTime(), shift);
-    var prevMonth = this.getMonth(new GlideDateTime(), prevShift);
-    var sneakPeek = this.__querySneakPeek(accountingMonth.month, accountingMonth.year)
+		if (!shift) shift = 0
+		shift -= 1
+		var prevShift = shift - 1
+		var accountingMonth = this.getMonth(new GlideDateTime(), shift);
+		var prevMonth = this.getMonth(new GlideDateTime(), prevShift);
+		var sneakPeek = this.__querySneakPeek(accountingMonth.month, accountingMonth.year)
 
-    if (!sneakPeek)
-      sneakPeek = this.__getNewSneakPeek(accountingMonth.month, accountingMonth.year)
+		if (!sneakPeek)
+			sneakPeek = this.__getNewSneakPeek(accountingMonth.month, accountingMonth.year)
 
-    sneakPeek.prevMonth = !!this.__querySneakPeek(prevMonth.month, prevMonth.year)
-    return sneakPeek
-  },
-  getDeadlineShifted: function (shift) {
-    if (!shift) shift = 0
-    shift -= 1
-    var prevShift = shift - 1
-    var accountingMonth = this.getMonth(new GlideDateTime(), shift);
-    var prevMonth = this.getMonth(new GlideDateTime(), prevShift);
-    var deadline = this.__queryDeadline(accountingMonth.month, accountingMonth.year)
-    if (!deadline)
-      deadline = this.__getNewDeadline(accountingMonth.month, accountingMonth.year)
-    deadline.prevMonth = this.__isDeadlineExists(prevMonth.month, prevMonth.year)
-    return deadline;
-  },
-  __querySneakPeek: function (month, year) {
-    var sneakPeekGr = new GlideRecord(this.DEADLINES_TABLE);
-    sneakPeekGr.addQuery('month', month);
-    sneakPeekGr.addQuery('year', year);
-    sneakPeekGr.setLimit(1);
-    sneakPeekGr.query();
-    return this.__getSneakPeekObject(sneakPeekGr)
-  },
-  __queryDeadline: function (month, year) {
-    var deadlineGr = new GlideRecord(this.DEADLINES_TABLE);
-    deadlineGr.addQuery('month', month);
-    deadlineGr.addQuery('year', year);
-    deadlineGr.setLimit(1);
-    deadlineGr.query();
-    return this.__getDeadlineObject(deadlineGr)
-  },
-  __isDeadlineExists: function (month, year) {
-    var deadlineGr = new GlideRecord(this.DEADLINES_TABLE);
-    deadlineGr.addQuery('month', month);
-    deadlineGr.addQuery('year', year);
-    deadlineGr.setLimit(1);
-    deadlineGr.query();
-    return deadlineGr.hasNext();
-  },
-  getMonth: function (gdt, shift) {
-    gdt = gdt || new GlideDateTime()
-    if (shift) gdt.addMonthsUTC(shift);
+		sneakPeek.prevMonth = !!this.__querySneakPeek(prevMonth.month, prevMonth.year)
+		return sneakPeek
+	},
+	getDeadlineShifted: function (shift) {
+		if (!shift) shift = 0
+		shift -= 1
+		var prevShift = shift - 1
+		var accountingMonth = this.getMonth(new GlideDateTime(), shift);
+		var prevMonth = this.getMonth(new GlideDateTime(), prevShift);
+		var deadline = this.__queryDeadline(accountingMonth.month, accountingMonth.year)
+		if (!deadline)
+			deadline = this.__getNewDeadline(accountingMonth.month, accountingMonth.year)
+		deadline.prevMonth = this.__isDeadlineExists(prevMonth.month, prevMonth.year)
+		return deadline;
+	},
+	__querySneakPeek: function (month, year) {
+		var sneakPeekGr = new GlideRecord(this.DEADLINES_TABLE);
+		sneakPeekGr.addQuery('month', month);
+		sneakPeekGr.addQuery('year', year);
+		sneakPeekGr.setLimit(1);
+		sneakPeekGr.query();
+		return this.__getSneakPeekObject(sneakPeekGr)
+	},
+	__queryDeadline: function (month, year) {
+		var deadlineGr = new GlideRecord(this.DEADLINES_TABLE);
+		deadlineGr.addQuery('month', month);
+		deadlineGr.addQuery('year', year);
+		deadlineGr.setLimit(1);
+		deadlineGr.query();
+		return this.__getDeadlineObject(deadlineGr)
+	},
+	__isDeadlineExists: function (month, year) {
+		var deadlineGr = new GlideRecord(this.DEADLINES_TABLE);
+		deadlineGr.addQuery('month', month);
+		deadlineGr.addQuery('year', year);
+		deadlineGr.setLimit(1);
+		deadlineGr.query();
+		return deadlineGr.hasNext();
+	},
+	getMonth: function (gdt, shift) {
+		gdt = gdt || new GlideDateTime()
+		if (shift) gdt.addMonthsUTC(shift);
 
-    var result = {
-      year: gdt.getYearUTC(),
-      month: gdt.getMonthUTC()
-    }
-    return result
-  },
+		var result = {
+			year: gdt.getYearUTC(),
+			month: gdt.getMonthUTC()
+		}
+		return result
+	},
 
-  getDeadlines: function () {
-    var deadlines = {
-      sneakPeek: this.__getPeriod(
-        this.SNEAK_PEEK_PERIOD_START,
-        this.SNEAK_PEEK_PERIOD_END,
-        this.SNEAK_PEEK_START_TIME,
-        this.SNEAK_PEEK_END_TIME
-      ),
-      accountingCanReassignPeriod: this.__getPeriod(
-        this.ACCOUNTING_CAN_REASSIGN_PERIOD_START,
-        this.ACCOUNTING_CAN_REASSIGN_PERIOD_END,
-        this.ACCOUNTING_CAN_REASSIGN_START_TIME,
-        this.ACCOUNTING_CAN_REASSIGN_END_TIME
-      ),
-      accountingAnswerPeriod: this.__getPeriod(
-        this.ACCOUNTING_ANSWER_PERIOD_START,
-        this.ACCOUNTING_ANSWER_PERIOD_END,
-        this.ACCOUNTING_ANSWER_START_TIME,
-        this.ACCOUNTING_ANSWER_END_TIME
-      ),
-      mulReview: this.__getPeriod(
-        this.MUL_REVIEW_PERIOD_START,
-        this.MUL_REVIEW_PERIOD_END,
-        this.MUL_REVIEW_START_TIME,
-        this.MUL_REVIEW_END_TIME
-      ),
-      review: this.__getPeriod(
-        this.QUESTION_REVIEW_PERIOD_START,
-        this.QUESTION_REVIEW_PERIOD_END,
-        this.QUESTION_REVIEW_START_TIME,
-        this.QUESTION_REVIEW_END_TIME
-      ),
-      currentPeriod: this.currentPeriod
-    }
-    return deadlines
-  },
+	getDeadlines: function () {
+		var deadlines = {
+			sneakPeek: this.__getPeriod(
+				this.SNEAK_PEEK_PERIOD_START,
+				this.SNEAK_PEEK_PERIOD_END,
+				this.SNEAK_PEEK_START_TIME,
+				this.SNEAK_PEEK_END_TIME
+			),
+			accountingCanReassignPeriod: this.__getPeriod(
+				this.ACCOUNTING_CAN_REASSIGN_PERIOD_START,
+				this.ACCOUNTING_CAN_REASSIGN_PERIOD_END,
+				this.ACCOUNTING_CAN_REASSIGN_START_TIME,
+				this.ACCOUNTING_CAN_REASSIGN_END_TIME
+			),
+			accountingAnswerPeriod: this.__getPeriod(
+				this.ACCOUNTING_ANSWER_PERIOD_START,
+				this.ACCOUNTING_ANSWER_PERIOD_END,
+				this.ACCOUNTING_ANSWER_START_TIME,
+				this.ACCOUNTING_ANSWER_END_TIME
+			),
+			mulReview: this.__getPeriod(
+				this.MUL_REVIEW_PERIOD_START,
+				this.MUL_REVIEW_PERIOD_END,
+				this.MUL_REVIEW_START_TIME,
+				this.MUL_REVIEW_END_TIME
+			),
+			review: this.__getPeriod(
+				this.QUESTION_REVIEW_PERIOD_START,
+				this.QUESTION_REVIEW_PERIOD_END,
+				this.QUESTION_REVIEW_START_TIME,
+				this.QUESTION_REVIEW_END_TIME
+			),
+			currentPeriod: this.currentPeriod
+		}
+		return deadlines
+	},
 
-  __getPeriod: function (periodStart, periodEnd, startTime, endTime) {
-    return {
-      from: this.businessDaysStrings[periodStart],
-      to: this.businessDaysStrings[periodEnd],
-      // progress: this.__getPeriodStatus(
-      //   this.businessDaysDates[periodStart],
-      //   this.businessDaysDates[periodEnd],
-      //   'questionReview'),
-      glideDateFrom: this.__getUTCTimeFromLocal(this.businessDaysStrings[periodStart], startTime),
-      glideDateTo: this.__getUTCTimeFromLocal(this.businessDaysStrings[periodEnd], endTime)
-    }
-  },
-  __getUTCTimeFromLocal: function (dateStr, timeStr) {
-    var gdt = new GlideDateTime();
-    gdt.setDisplayValue(dateStr + " " + timeStr)
-    return gdt;
+	__getPeriod: function (periodStart, periodEnd, startTime, endTime) {
+		return {
+			from: this.businessDaysStrings[periodStart],
+			to: this.businessDaysStrings[periodEnd],
+			// progress: this.__getPeriodStatus(
+			//   this.businessDaysDates[periodStart],
+			//   this.businessDaysDates[periodEnd],
+			//   'questionReview'),
+			glideDateFrom: this.__getUTCTimeFromLocal(this.businessDaysStrings[periodStart], startTime),
+			glideDateTo: this.__getUTCTimeFromLocal(this.businessDaysStrings[periodEnd], endTime)
+		}
+	},
+	__getUTCTimeFromLocal: function (dateStr, timeStr) {
+		var gdt = new GlideDateTime();
+		gdt.setDisplayValue(dateStr + " " + timeStr)
+		return gdt;
 
-  },
-  getDeadlinesStringified: function () {
-    var deadlines = this.getDeadlines();
-    deadlines.sneakPeek.glideDateFrom = deadlines.sneakPeek.glideDateFrom.toString()
-    deadlines.sneakPeek.glideDateTo = deadlines.sneakPeek.glideDateTo.toString()
-    deadlines.accountingCanReassignPeriod.glideDateFrom = deadlines.accountingCanReassignPeriod.glideDateFrom.toString()
-    deadlines.accountingCanReassignPeriod.glideDateTo = deadlines.accountingCanReassignPeriod.glideDateTo.toString();
-    deadlines.accountingAnswerPeriod.glideDateFrom = deadlines.accountingAnswerPeriod.glideDateFrom.toString()
-    deadlines.accountingAnswerPeriod.glideDateTo = deadlines.accountingAnswerPeriod.glideDateTo.toString();
-    deadlines.mulReview.glideDateFrom = deadlines.mulReview.glideDateFrom.toString()
-    deadlines.mulReview.glideDateTo = deadlines.mulReview.glideDateTo.toString();
-    return deadlines;
-  },
-  getDeadlinesShifted: function (shift) {
-    var date = this.currentDate;
-    date.addMonthsUTC(shift);
-    this.__initDates(date);
-    return this.getDeadlines();
-  },
-  updateParticipants: function (m2mTable, deadlineSysId, participants) {
-    var participantsGr = new GlideRecord(m2mTable);
-    participantsGr.addQuery('deadline', deadlineSysId);
-    participantsGr.query()
-    participantsGr.deleteMultiple()
-    var e = this;
-    participants.forEach(function (participant) {
-      var participantsGrNew = new GlideRecord(m2mTable);
-      participantsGrNew.initialize();
-      participantsGrNew.deadline = deadlineSysId;
-      participantsGrNew.user = participant.sys_id;
-      participantsGrNew.insert()
-    })
-  },
-  updateGroups: function (deadlineSysId, groups) {
-    var groupsGr = new GlideRecord(this.EARLY_ACCESS_GROUPS_TABLE);
-    groupsGr.addQuery('deadline', deadlineSysId);
-    groupsGr.query()
-    groupsGr.deleteMultiple()
-    var e = this;
-    groups.forEach(function (group) {
-      var groupNewGr = new GlideRecord(e.EARLY_ACCESS_GROUPS_TABLE);
-      groupNewGr.initialize();
-      groupNewGr.deadline = deadlineSysId;
-      groupNewGr.group = group.sys_id;
-      groupNewGr.insert()
-    })
-  },
-  cancelRunningFlows: function (sys_id, skipCurrent) {
-    var flow_GR = new GlideRecord('sys_flow_context');
-    flow_GR.addQuery('source_record', sys_id);
-    flow_GR.addQuery('name', 'PnL Deadlines');
-    flow_GR.orderByDesc('sys_created_on')
-    flow_GR.query();
-    if (skipCurrent)
-      flow_GR.next()
-    while (flow_GR.next())
-      sn_fd.FlowAPI.cancel(flow_GR.getUniqueValue(), 'Cancelled from request record');
-  },
-  __getSneakPeekObject: function (sneakPeekGr) {
-    var sneakPeek = {}
-    if (sneakPeekGr.next()) {
-      sneakPeek.participants = this.__getParticipants(sneakPeekGr.getUniqueValue())
-      sneakPeek.reviewPeriod = {
-        month: sneakPeekGr.getDisplayValue('month'),
-        year: sneakPeekGr.getValue('year')
-      }
+	},
+	getDeadlinesStringified: function () {
+		var deadlines = this.getDeadlines();
+		deadlines.sneakPeek.glideDateFrom = deadlines.sneakPeek.glideDateFrom.toString()
+		deadlines.sneakPeek.glideDateTo = deadlines.sneakPeek.glideDateTo.toString()
+		deadlines.accountingCanReassignPeriod.glideDateFrom = deadlines.accountingCanReassignPeriod.glideDateFrom.toString()
+		deadlines.accountingCanReassignPeriod.glideDateTo = deadlines.accountingCanReassignPeriod.glideDateTo.toString();
+		deadlines.accountingAnswerPeriod.glideDateFrom = deadlines.accountingAnswerPeriod.glideDateFrom.toString()
+		deadlines.accountingAnswerPeriod.glideDateTo = deadlines.accountingAnswerPeriod.glideDateTo.toString();
+		deadlines.mulReview.glideDateFrom = deadlines.mulReview.glideDateFrom.toString()
+		deadlines.mulReview.glideDateTo = deadlines.mulReview.glideDateTo.toString();
+		return deadlines;
+	},
+	getDeadlinesShifted: function (shift) {
+		var date = this.currentDate;
+		date.addMonthsUTC(shift);
+		this.__initDates(date);
+		return this.getDeadlines();
+	},
+	updateParticipants: function (m2mTable, deadlineSysId, participants) {
+		var participantsGr = new GlideRecord(m2mTable);
+		participantsGr.addQuery('deadline', deadlineSysId);
+		participantsGr.query()
+		participantsGr.deleteMultiple()
+		var e = this;
+		participants.forEach(function (participant) {
+			var participantsGrNew = new GlideRecord(m2mTable);
+			participantsGrNew.initialize();
+			participantsGrNew.deadline = deadlineSysId;
+			participantsGrNew.user = participant.sys_id;
+			participantsGrNew.insert()
+		})
+	},
+	updateGroups: function (deadlineSysId, groups) {
+		var groupsGr = new GlideRecord(this.EARLY_ACCESS_GROUPS_TABLE);
+		groupsGr.addQuery('deadline', deadlineSysId);
+		groupsGr.query()
+		groupsGr.deleteMultiple()
+		var e = this;
+		groups.forEach(function (group) {
+			var groupNewGr = new GlideRecord(e.EARLY_ACCESS_GROUPS_TABLE);
+			groupNewGr.initialize();
+			groupNewGr.deadline = deadlineSysId;
+			groupNewGr.group = group.sys_id;
+			groupNewGr.insert()
+		})
+	},
+	cancelRunningFlows: function (sys_id, skipCurrent) {
+		var flow_GR = new GlideRecord('sys_flow_context');
+		flow_GR.addQuery('source_record', sys_id);
+		flow_GR.addQuery('name', 'PnL Deadlines');
+		flow_GR.orderByDesc('sys_created_on')
+		flow_GR.query();
+		if (skipCurrent)
+			flow_GR.next()
+		while (flow_GR.next())
+			sn_fd.FlowAPI.cancel(flow_GR.getUniqueValue(), 'Cancelled from request record');
+	},
+	__getSneakPeekObject: function (sneakPeekGr) {
+		var sneakPeek = {}
+		if (sneakPeekGr.next()) {
+			sneakPeek.participants = this.__getParticipants(sneakPeekGr.getUniqueValue())
+			sneakPeek.reviewPeriod = {
+				month: sneakPeekGr.getDisplayValue('month'),
+				year: sneakPeekGr.getValue('year')
+			}
 
-      sneakPeek.event_date = sneakPeekGr.getDisplayValue('early_access_start');
-      sneakPeek.sys_id = sneakPeekGr.getUniqueValue()
-      if (sneakPeek.event_date)
-        sneakPeek.status = this.__getDateStatus(new GlideDateTime(sneakPeek.event_date)) === 'none'
-      else {
-        sneakPeek.event_date = "not defined yet"
-        sneakPeek.status = 'none'
-      }
-    } else return false;
+			sneakPeek.event_date = sneakPeekGr.getDisplayValue('early_access_start');
+			sneakPeek.sys_id = sneakPeekGr.getUniqueValue()
+			if (sneakPeek.event_date)
+				sneakPeek.status = this.__getDateStatus(new GlideDateTime(sneakPeek.event_date)) === 'none'
+			else {
+				sneakPeek.event_date = "not defined yet"
+				sneakPeek.status = 'none'
+			}
+		} else return false;
 
-    return sneakPeek
-  },
-  __getDeadlineObject: function (deadlineGr, isGet) {
-    var deadline = {}
-    gs.info('__GETDEADLINEOBJECT')
-    if (deadlineGr.next() || isGet) {
-      var sys_id = deadlineGr.getUniqueValue()
-      deadline = {
-        early_access_participants: this.__getParticipants(this.EARLY_ACCESS_PARTICIPANT_TABLE, sys_id),
-        early_access_groups: this.__getGroups(sys_id),
-        early_access_end: deadlineGr.getDisplayValue('early_access_end') || '',
-        early_access_start: deadlineGr.getDisplayValue('early_access_start') || '',
-        question_start: deadlineGr.getDisplayValue('question_start') || '',
-        question_end: deadlineGr.getDisplayValue('question_end') || '',
-        reassign_start: deadlineGr.getDisplayValue('reassign_start') || '',
-        reassign_end: deadlineGr.getDisplayValue('reassign_end') || '',
-        answer_start: deadlineGr.getDisplayValue('answer_start') || '',
-        answer_end: deadlineGr.getDisplayValue('answer_end') || '',
-        review_start: deadlineGr.getDisplayValue('review_start') || '',
-        review_end: deadlineGr.getDisplayValue('review_end') || '',
-        early_access_start_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('early_access_start') || ''))),
-        early_access_end_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('early_access_end') || ''))),
-        question_start_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('question_start') || ''))),
-        question_end_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('question_end') || ''))),
-        reassign_start_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('reassign_start') || ''))),
-        reassign_end_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('reassign_end') || ''))),
-        answer_start_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('answer_start') || ''))),
-        answer_end_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('answer_end') || ''))),
-        review_start_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('review_start') || ''))),
-        review_end_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('review_end') || ''))),
-        month: deadlineGr.getValue('month'),
-        monthLabel: deadlineGr.getDisplayValue('month'),
-        year: deadlineGr.getValue("year"),
-        active: this.__getDateStatus(new GlideDateTime(deadlineGr.getValue('early_access_start'))),
-        sys_id: sys_id
-      }
-    } else return false;
+		return sneakPeek
+	},
+	__getDeadlineObject: function (deadlineGr, isGet) {
+		var deadline = {}
+		gs.info('__GETDEADLINEOBJECT')
+		if (deadlineGr.next() || isGet) {
+			var sys_id = deadlineGr.getUniqueValue()
+			deadline = {
+				early_access_user_list: this.__getEarlyAccessParticipantsList(sys_id),
+				early_access_participants: this.__getParticipants(this.EARLY_ACCESS_PARTICIPANT_TABLE, sys_id),
+				early_access_groups: this.__getGroups(sys_id),
+				early_access_end: deadlineGr.getValue('early_access_end') || '',
+				early_access_start: deadlineGr.getValue('early_access_start') || '',
+				question_start: deadlineGr.getValue('question_start') || '',
+				question_end: deadlineGr.getValue('question_end') || '',
+				reassign_start: deadlineGr.getValue('reassign_start') || '',
+				reassign_end: deadlineGr.getValue('reassign_end') || '',
+				answer_start: deadlineGr.getValue('answer_start') || '',
+				answer_end: deadlineGr.getValue('answer_end') || '',
+				review_start: deadlineGr.getValue('review_start') || '',
+				review_end: deadlineGr.getValue('review_end') || '',
+				early_access_start_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('early_access_start') || ''))),
+				early_access_end_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('early_access_end') || ''))),
+				question_start_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('question_start') || ''))),
+				question_end_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('question_end') || ''))),
+				reassign_start_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('reassign_start') || ''))),
+				reassign_end_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('reassign_end') || ''))),
+				answer_start_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('answer_start') || ''))),
+				answer_end_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('answer_end') || ''))),
+				review_start_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('review_start') || ''))),
+				review_end_status: this.__getDateStatus((new GlideDateTime(deadlineGr.getValue('review_end') || ''))),
+				month: deadlineGr.getValue('month'),
+				monthLabel: deadlineGr.getDisplayValue('month'),
+				year: deadlineGr.getValue("year"),
+				active: this.__getDateStatus(new GlideDateTime(deadlineGr.getValue('early_access_start'))),
+				sys_id: sys_id
+			}
+		} else return false;
 
-    return deadline
-  },
-  updateDeadline: function (sys_id, data) {
-    this.updateParticipants(this.EARLY_ACCESS_PARTICIPANT_TABLE, sys_id, data.early_access_participants)
-    this.updateGroups(sys_id, data.early_access_groups)
-    var deadlineGr = new GlideRecord(this.DEADLINES_TABLE)
-    deadlineGr.get(sys_id)
-    deadlineGr.early_access_start.setDisplayValue(data.early_access_start)
-    deadlineGr.early_access_end.setDisplayValue(data.early_access_end)
-    deadlineGr.question_start.setDisplayValue(data.question_start)
-    deadlineGr.question_end.setDisplayValue(data.question_end)
-    deadlineGr.reassign_start.setDisplayValue(data.reassign_start)
-    deadlineGr.reassign_end.setDisplayValue(data.reassign_end)
-    deadlineGr.answer_start.setDisplayValue(data.answer_start)
-    deadlineGr.answer_end.setDisplayValue(data.answer_end)
-    deadlineGr.review_start.setDisplayValue(data.review_start)
-    deadlineGr.review_end.setDisplayValue(data.review_end)
-    deadlineGr.update();
-    var deadlineGrU = new GlideRecord(this.DEADLINES_TABLE)
-    deadlineGrU.get(sys_id);
-    return this.__getDeadlineObject(deadlineGrU, true)
-  },
-  __getNewSneakPeek: function (month, year) {
-    var sneakPeekGr = new GlideRecord(this.DEADLINES_TABLE);
-    sneakPeekGr.initialize();
-    sneakPeekGr.setValue('month', month);
-    sneakPeekGr.setValue('year', year);
-    var sneakPeekSysId = sneakPeekGr.insert();
+		return deadline
+	},
+	updateDeadline: function (sys_id, data) {
+		this.updateParticipants(this.EARLY_ACCESS_PARTICIPANT_TABLE, sys_id, data.early_access_participants)
+		this.updateGroups(sys_id, data.early_access_groups)
+		var deadlineGr = new GlideRecord(this.DEADLINES_TABLE)
+		deadlineGr.get(sys_id)
+		deadlineGr.early_access_start.setValue(data.early_access_start)
+		deadlineGr.early_access_end.setValue(data.early_access_end)
+		deadlineGr.question_start.setValue(data.question_start)
+		deadlineGr.question_end.setValue(data.question_end)
+		deadlineGr.reassign_start.setValue(data.reassign_start)
+		deadlineGr.reassign_end.setValue(data.reassign_end)
+		deadlineGr.answer_start.setValue(data.answer_start)
+		deadlineGr.answer_end.setValue(data.answer_end)
+		deadlineGr.review_start.setValue(data.review_start)
+		deadlineGr.review_end.setValue(data.review_end)
+		deadlineGr.update();
+		var deadlineGrU = new GlideRecord(this.DEADLINES_TABLE)
+		deadlineGrU.get(sys_id);
+		return this.__getDeadlineObject(deadlineGrU, true)
+	},
+	__getNewSneakPeek: function (month, year) {
+		var sneakPeekGr = new GlideRecord(this.DEADLINES_TABLE);
+		sneakPeekGr.initialize();
+		sneakPeekGr.setValue('month', month);
+		sneakPeekGr.setValue('year', year);
+		var sneakPeekSysId = sneakPeekGr.insert();
 
-    var gr = new GlideRecord(this.DEADLINES_TABLE);
-    gr.get(sneakPeekSysId);
+		var gr = new GlideRecord(this.DEADLINES_TABLE);
+		gr.get(sneakPeekSysId);
 
-    return this.__getSneakPeekObject(gr);
-  },
-  __getNewDeadline: function (month, year) {
-    var deadlineGr = new GlideRecord(this.DEADLINES_TABLE);
-    deadlineGr.initialize();
-    deadlineGr.setValue('month', month);
-    deadlineGr.setValue('year', year);
-    var deadlineSysId = deadlineGr.insert();
+		return this.__getSneakPeekObject(gr);
+	},
+	__getNewDeadline: function (month, year) {
+		var deadlineGr = new GlideRecord(this.DEADLINES_TABLE);
+		deadlineGr.initialize();
+		deadlineGr.setValue('month', month);
+		deadlineGr.setValue('year', year);
+		var deadlineSysId = deadlineGr.insert();
 
-    var gr = new GlideRecord(this.DEADLINES_TABLE);
-    gr.get(deadlineSysId);
+		var gr = new GlideRecord(this.DEADLINES_TABLE);
+		gr.get(deadlineSysId);
 
-    return this.__getDeadlineObject(gr);
-  },
-  __getStartOfMonth: function (date) {
-    var year = date.getYearUTC()
-    var month = date.getMonthUTC()
-    var startOfMonthString = year + '-' + month + '-01';
-    return new GlideDateTime(startOfMonthString);
-  },
-  __getBusinessDays: function (startDate, dayFrom, dayTo) {
-    this.businessDaysDates = {};
-    this.businessDaysStrings = {}
-    this.businessDaysdStrings = {}
-    for (var dayNumber = dayFrom; dayNumber <= dayTo; dayNumber++) {
-      var date = this.__addDays(startDate, dayNumber)
-      this.businessDaysDates[dayNumber] = date;
-      this.businessDaysdStrings[dayNumber] = date.toString()
-      this.businessDaysStrings[dayNumber] = this.__getDateString(date, true);
-    }
-  },
-  __getDateStatus: function (date, periodName) {
-    //if (!date) return 'none'
-    var today = this.currentDate
-    var result = ''
-    if (!date.toString()) return 'before'
-    if (this.__datesEqual(date, today))
-      result = 'now'
-    if (date.before(today))
-      result = 'before'
-    if (date.after(today))
-      result = 'after'
-    if (result === 'partial')
-      this.currentPeriod = periodName;
+		return this.__getDeadlineObject(gr);
+	},
+	__getStartOfMonth: function (date) {
+		var year = date.getYearUTC()
+		var month = date.getMonthUTC()
+		var startOfMonthString = year + '-' + month + '-01';
+		return new GlideDateTime(startOfMonthString);
+	},
+	__getBusinessDays: function (startDate, dayFrom, dayTo) {
+		this.businessDaysDates = {};
+		this.businessDaysStrings = {}
+		this.businessDaysdStrings = {}
+		for (var dayNumber = dayFrom; dayNumber <= dayTo; dayNumber++) {
+			var date = this.__addDays(startDate, dayNumber)
+			this.businessDaysDates[dayNumber] = date;
+			this.businessDaysdStrings[dayNumber] = date.toString()
+			this.businessDaysStrings[dayNumber] = this.__getDateString(date, true);
+		}
+	},
+	__getDateStatus: function (date, periodName) {
+		//if (!date) return 'none'
+		var today = this.currentDate
+		var result = ''
+		if (!date.toString()) return 'before'
+		if (this.__datesEqual(date, today))
+			result = 'now'
+		if (date.before(today))
+			result = 'before'
+		if (date.after(today))
+			result = 'after'
+		if (result === 'partial')
+			this.currentPeriod = periodName;
 
-    return result
-  },
-  __getPeriodStatus: function (startDate, endDate, periodName) {
-    var today = this.currentDate
-    var result = ''
-    if (this.__datesEqual(startDate, today) || this.__datesEqual(endDate, today))
-      result = 'now'
-    if (startDate.before(today) && endDate.before(today))
-      result = 'before'
-    if (startDate.after(today) && endDate.after(today))
-      result = 'after'
-    if (startDate.before(today) && endDate.after(today))
-      result = 'now'
+		return result
+	},
+	__getPeriodStatus: function (startDate, endDate, periodName) {
+		var today = this.currentDate
+		var result = ''
+		if (this.__datesEqual(startDate, today) || this.__datesEqual(endDate, today))
+			result = 'now'
+		if (startDate.before(today) && endDate.before(today))
+			result = 'before'
+		if (startDate.after(today) && endDate.after(today))
+			result = 'after'
+		if (startDate.before(today) && endDate.after(today))
+			result = 'now'
 
-    if (result === 'now')
-      this.currentPeriod = periodName;
+		if (result === 'now')
+			this.currentPeriod = periodName;
 
-    return result
-  },
+		return result
+	},
 
-  __addDays: function (startDate, daysToAdd) {
-    var duration = new GlideDuration(60 * 60 * 9 * 1000 * daysToAdd);
-    return this.schedule.add(startDate, duration)
-  },
-  __getParticipants: function (m2mTable, deadlineSysId) {
-    var participants = []
-    var participantGr = new GlideRecord(m2mTable);
-    participantGr.addQuery('deadline', deadlineSysId);
-    participantGr.query()
+	__addDays: function (startDate, daysToAdd) {
+		var duration = new GlideDuration(60 * 60 * 9 * 1000 * daysToAdd);
+		return this.schedule.add(startDate, duration)
+	},
+	__getParticipants: function (m2mTable, deadlineSysId) {
+		var participants = []
+		var participantGr = new GlideRecord(m2mTable);
+		participantGr.addQuery('deadline', deadlineSysId);
+		participantGr.query()
 
-    while (participantGr.next()) {
-      var userGr = participantGr.user.getRefRecord();
-      participants.push(this.__getUserObject(userGr));
-    }
-    return participants;
-  },
+		while (participantGr.next()) {
+			var userGr = participantGr.user.getRefRecord();
+			participants.push(this.__getUserObject(userGr));
+		}
+		return participants;
+	},
 
-  __getGroups: function (sys_id) {
-    var groups = []
-    var groupGr = new GlideRecord(this.EARLY_ACCESS_GROUPS_TABLE)
-    groupGr.addQuery('deadline', sys_id)
-    groupGr.query()
-    while (groupGr.next()) {
-      var group = groupGr.group.getRefRecord()
-      groups.push(this.__getGroupObject(group))
-    }
-    return groups
-  },
+	__getGroups: function (sys_id) {
+		var groups = []
+		var groupGr = new GlideRecord(this.EARLY_ACCESS_GROUPS_TABLE)
+		groupGr.addQuery('deadline', sys_id)
+		groupGr.query()
+		while (groupGr.next()) {
+			var group = groupGr.group.getRefRecord()
+			groups.push(this.__getGroupObject(group))
+		}
+		return groups
+	},
 
-  __getUserObject: function (userGr) {
-    return {
-      name: userGr.getValue('name'),
-      sys_id: userGr.getUniqueValue(),
-      picture: this.__getAvatarLink(userGr.getValue('avatar')),
-      email: userGr.getValue('email')
-    }
-  },
-  __getGroupObject: function (groupGr) {
-    return {
-      name: groupGr.getValue('name'),
-      sys_id: groupGr.getUniqueValue()
-    }
-  },
-  __getAvatarLink: function (avatarId) {
-    return avatarId ?
-      ('https://' + gs.getProperty("instance_name") + '.service-now.com/' + avatarId + '.iix') :
-      '';
-  },
+	__getUserObject: function (userGr) {
+		return {
+			name: userGr.getValue('name'),
+			sys_id: userGr.getUniqueValue(),
+			picture: this.__getAvatarLink(userGr.getValue('avatar')),
+			email: userGr.getValue('email'),
+			title: userGr.getValue('title'),
+			department: userGr.department.getDisplayValue(),
+			active: !!+userGr.getValue('active')
+		}
+	},
+	__getGroupObject: function (groupGr) {
+		return {
+			name: groupGr.getValue('name'),
+			sys_id: groupGr.getUniqueValue()
+		}
+	},
+	__getAvatarLink: function (avatarId) {
+		return avatarId ?
+			('https://' + gs.getProperty("instance_name") + '.service-now.com/' + avatarId + '.iix') :
+		'';
+	},
 
-  __getDateQuery: function (date) {
-    var dateStr = this.__getDateString(date)
-    return 'event_dateON' + dateStr +
-      '@javascript:gs.dateGenerate(\'' + dateStr + '\',\'start\')' +
-      '@javascript:gs.dateGenerate(\'' + dateStr + '\',\'end\')';
-  },
-  __getQueryAfterDate: function (dateStr) {
+	__getDateQuery: function (date) {
+		var dateStr = this.__getDateString(date)
+		return 'event_dateON' + dateStr +
+			'@javascript:gs.dateGenerate(\'' + dateStr + '\',\'start\')' +
+			'@javascript:gs.dateGenerate(\'' + dateStr + '\',\'end\')';
+	},
+	__getQueryAfterDate: function (dateStr) {
 
-    return 'event_date>javascript:gs.dateGenerate(\'' + dateStr + '\',\'end\')'
-  },
-  __getQueryBeforeDate: function (dateStr) {
+		return 'event_date>javascript:gs.dateGenerate(\'' + dateStr + '\',\'end\')'
+	},
+	__getQueryBeforeDate: function (dateStr) {
 
-    return 'event_date<javascript:gs.dateGenerate(\'' + dateStr + '\',\'start\')'
-  },
-  __getDateString: function (gdt, usFormat) {
-    if (!gdt) return '01-01-2021';
-    var year = gdt.getYearUTC();
-    var month = gdt.getMonthUTC();
-    var day = gdt.getDayOfMonthUTC();
-    if (usFormat)
-      return month + '-' + day + '-' + year;
+		return 'event_date<javascript:gs.dateGenerate(\'' + dateStr + '\',\'start\')'
+	},
+	__getDateString: function (gdt, usFormat) {
+		if (!gdt) return '01-01-2021';
+		var year = gdt.getYearUTC();
+		var month = gdt.getMonthUTC();
+		var day = gdt.getDayOfMonthUTC();
+		if (usFormat)
+			return month + '-' + day + '-' + year;
 
-    return year + '-' + month + '-' + day
-  },
-  __datesEqual: function (date1, date2) {
-    return this.__getDateString(date1) === this.__getDateString(date2)
-  },
-  __getDate: function (gdt) {
-    return new GlideDate(this.__getDateString(gdt))
-  },
-  type: 'DeadlinesUtil'
+		return year + '-' + month + '-' + day
+	},
+	__datesEqual: function (date1, date2) {
+		return this.__getDateString(date1) === this.__getDateString(date2)
+	},
+	__getDate: function (gdt) {
+		return new GlideDate(this.__getDateString(gdt))
+	},
+
+	__getEarlyAccessParticipantsList: function (deadlineSysID) {
+		var participants = this.__getParticipants(this.EARLY_ACCESS_PARTICIPANT_TABLE, deadlineSysID);
+		var groupsFromDeadline=	this.__getGroups(deadlineSysID);
+		var usersFromDeadlineGroups = this.__getUsersFromGroups(groupsFromDeadline);
+		var fullEarlyAccessParticipantsList = this.arrayUtil.union(participants,usersFromDeadlineGroups);
+		return fullEarlyAccessParticipantsList;
+	},
+
+	__getUsersFromGroups: function (groupList) {
+		var users = [];
+		var groupsSysIDs = groupList.map(function(group){
+			return group.sys_id;
+		});
+		var gr = new GlideRecord(this.USER_GRMEMBER_TABLE);
+		gr.addQuery('group','IN',groupsSysIDs);
+		//gr.addQuery('user.active',true);
+		gr.query();
+		while(gr.next()){
+			users.push(this.__getUserObject(gr.user.getRefRecord()));
+		}
+		return users;
+	},
+	type: 'DeadlinesUtil'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2020-12-03 16:03:47</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>12f75a2edb38a090389b84d868961930</sys_id>
-        <sys_mod_count>198</sys_mod_count>
+        <sys_mod_count>216</sys_mod_count>
         <sys_name>DeadlinesUtil</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_12f75a2edb38a090389b84d868961930</sys_update_name>
-        <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-03-25 09:09:27</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-18 14:14:52</sys_updated_on>
     </sys_script_include>
 </record_update>
