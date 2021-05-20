@@ -11,13 +11,13 @@
         <copied_from_name/>
         <description/>
         <internal_name>send_sneak_peek_mails</internal_name>
-        <label_cache>[{"name":"3aa91482-3c0e-49d6-8260-9f96c63a1649.table_name","label":"13➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3aa91482-3c0e-49d6-8260-9f96c63a1649.record","label":"13➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.changed_fields","label":"Trigger➛Changed Fields","type":"array.object","base_type":"array.object","attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FDCollection","child_label":"FDChangeDetails","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"array.object","child_type":"object","child_name":"FDChangeDetails"}},{"name":"7426b9f3-c6c5-4793-a1d3-aba0d5675cae.emails","label":"11➛emails","reference_display":"emails","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"96536590-d030-4c9b-8c88-e69d47184548"}},{"name":"Created or Updated_1.current.month","label":"Trigger➛Deadline Record➛Month","reference":"","reference_display":"Month","type":"choice","base_type":"choice","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"month"},{"name":"Created or Updated_1.current.year","label":"Trigger➛Deadline Record➛Year","reference":"","reference_display":"Year","type":"string","base_type":"string","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"year"},{"name":"821ad930-1e1d-4106-ae64-bdb9734d710b.Count","label":"10➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"821ad930-1e1d-4106-ae64-bdb9734d710b.Table","label":"10➛PNL Questions Table","reference":"x_aaro2_pnl_mgmt_question","reference_display":"PNL Questions","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"821ad930-1e1d-4106-ae64-bdb9734d710b.Records","label":"10➛PNL Questions Records","reference":"x_aaro2_pnl_mgmt_question","reference_display":"PNL Questions","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"800ddc1f-579e-4905-9aaf-ad5d988d20e3.scheduled_end_date_time","label":"9➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"800ddc1f-579e-4905-9aaf-ad5d988d20e3.total_duration","label":"9➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"a902bcf0-1b6a-4c93-925a-51abdb1f7a14.state","label":"9➛State","reference_display":"State","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"Created or Updated_1.current.answer_end","label":"Trigger➛Deadline Record➛Answer End","reference":"","reference_display":"Answer End","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"answer_end"},{"name":"15a38a0f-0db6-4c16-b0ea-99c6d4763cb4.state","label":"4➛State","reference_display":"State","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"87ccf2c2-c0f3-4eca-a487-5f7ae766f409.current_date","label":"2➛Current Date","reference_display":"Current Date","type":"glide_date_time","base_type":"glide_date_time","attributes":{"uiType":"glide_date_time","uiTypeLabel":"Date/Time","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"8c152286-6f01-4347-bcad-984dad454a5c"}},{"name":"Created or Updated_1.current.early_access_end","label":"Trigger➛Deadline Record➛Early Access End","reference":"","reference_display":"Early Access End","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"early_access_end"},{"name":"Created or Updated_1.current","label":"Trigger➛Deadline Record","reference":"x_aaro2_pnl_mgmt_deadline","reference_display":"Deadline","type":"reference","base_type":"reference","attributes":{}},{"name":"Created or Updated_1.current.early_access_start","label":"Trigger➛Deadline Record➛Early Access Start","reference":"","reference_display":"Early Access Start","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"early_access_start"},{"name":"ff75c2ee-9492-443d-898e-bdc9bec55c3b.scheduled_end_date_time","label":"4➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"ff75c2ee-9492-443d-898e-bdc9bec55c3b.total_duration","label":"4➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"Created_1.current.event_date","label":"Trigger➛Sneak Peek Event Record➛Event Date","reference":"","reference_display":"Event Date","type":"glide_date","base_type":"glide_date","parent_table_name":"x_aaro2_pnl_mgmt_sneak_peek_event","column_name":"event_date"},{"name":"c8038d76-9695-491b-9902-7a90921daebc.state","label":"1➛State","reference_display":"State","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"Created_1.current","label":"Trigger➛Sneak Peek Event Record","reference":"x_aaro2_pnl_mgmt_sneak_peek_event","reference_display":"label","type":"reference","base_type":"reference","attributes":{}},{"name":"2e01e51f-77df-43d0-9d04-c1eaf4999d9d.email","label":"5➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Records","label":"5➛Pnl Mgmt M2m Statements Verificators Records","reference":"x_aaro2_pnl_mgmt_m2m_statements_verificators","reference_display":"Pnl Mgmt M2m Statements Verificators","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Table","label":"5➛Pnl Mgmt M2m Statements Verificators Table","reference":"x_aaro2_pnl_mgmt_m2m_statements_verificators","reference_display":"Pnl Mgmt M2m Statements Verificators","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Count","label":"5➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.sys_id","label":"Trigger➛Sneak Peek Event Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_aaro2_pnl_mgmt_sneak_peek_event","column_name":"sys_id"},{"name":"34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item","label":"6➛Pnl Mgmt M2m Sneak Peek User Record","reference":"x_aaro2_pnl_mgmt_m2m_sneak_peek_user","reference_display":"label","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"2afe20e4-8ec0-4e33-9775-10ccb8c67335.email","label":"5➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item.user","label":"6➛Pnl Mgmt M2m Sneak Peek User Record➛User","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_aaro2_pnl_mgmt_m2m_sneak_peek_user","column_name":"user"},{"name":"34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item.user.email","label":"6➛Pnl Mgmt M2m Sneak Peek User Record➛User➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"c1900124-8bef-4f2b-a238-f4db71e4555a.month","label":"5➛Month","reference_display":"Month","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b2b9ea98-f43e-42f7-8212-5b193e343a42"}},{"name":"c1900124-8bef-4f2b-a238-f4db71e4555a.dayofweek","label":"5➛Day Of Week","reference_display":"Day Of Week","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"2cb5dd9f-9e7d-438d-a859-8730c4ed0c37"}},{"name":"c1900124-8bef-4f2b-a238-f4db71e4555a.year","label":"5➛Year","reference_display":"Year","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"a9d19794-4d43-42ea-9017-3f3e130237a2"}},{"name":"c1900124-8bef-4f2b-a238-f4db71e4555a.day","label":"5➛Day","reference_display":"Day","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"4914cfe8-cccb-420f-b0bc-5ee0bb8fb5f8"}},{"name":"Created_1.run_start_time","label":"Trigger➛Run Start Time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"test_input_hidden":"true"}},{"name":"075bdd86-f83e-43f9-a1a5-e76cf6147c7f.emails","label":"5➛Emails","reference_display":"Emails","type":"array.string","base_type":"array.string","attributes":{"uiTypeLabel":"Array.String","co_type_name":"FDfd9ab36b6556681089c25eb817393031","child_label":"Emails_child0","child_type_label":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.string","child_type":"string","child_name":"Emails_child0","child_uiUniqueId":"c06f6508-51b8-45ee-8f8d-28e912492a5b","uiUniqueId":"a7901aff-c4e5-4da4-9e44-131f46b7870e"}},{"name":"Created or Updated_1.current.question_start","label":"Trigger➛Deadline Record➛Question Start","reference":"","reference_display":"Question Start","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"question_start"},{"name":"bafb4add-dad1-4a8f-90ac-e15f259a517c.total_duration","label":"6➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"bafb4add-dad1-4a8f-90ac-e15f259a517c.scheduled_end_date_time","label":"6➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"Created or Updated_1.current.sys_id","label":"Trigger➛Deadline Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"sys_id"}]</label_cache>
-        <latest_snapshot>3731c500dbdc78105884eb184b96198b</latest_snapshot>
+        <label_cache>[{"name":"87ccf2c2-c0f3-4eca-a487-5f7ae766f409.is_last_quarter_month","label":"2➛Is Last Quarter Month","reference_display":"Is Last Quarter Month","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5deb4dc4-c645-4890-8ba9-cf81a6ceb249"}},{"name":"3aa91482-3c0e-49d6-8260-9f96c63a1649.table_name","label":"13➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3aa91482-3c0e-49d6-8260-9f96c63a1649.record","label":"13➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.changed_fields","label":"Trigger➛Changed Fields","type":"array.object","base_type":"array.object","attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FDCollection","child_label":"FDChangeDetails","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"array.object","child_type":"object","child_name":"FDChangeDetails"}},{"name":"7426b9f3-c6c5-4793-a1d3-aba0d5675cae.emails","label":"11➛emails","reference_display":"emails","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"96536590-d030-4c9b-8c88-e69d47184548"}},{"name":"Created or Updated_1.current.month","label":"Trigger➛Deadline Record➛Month","reference":"","reference_display":"Month","type":"choice","base_type":"choice","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"month"},{"name":"Created or Updated_1.current.year","label":"Trigger➛Deadline Record➛Year","reference":"","reference_display":"Year","type":"string","base_type":"string","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"year"},{"name":"821ad930-1e1d-4106-ae64-bdb9734d710b.Count","label":"10➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"821ad930-1e1d-4106-ae64-bdb9734d710b.Table","label":"10➛PALMSnow Questions Table","reference":"x_aaro2_pnl_mgmt_question","reference_display":"PALMSnow Questions","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"821ad930-1e1d-4106-ae64-bdb9734d710b.Records","label":"10➛PALMSnow Questions Records","reference":"x_aaro2_pnl_mgmt_question","reference_display":"PALMSnow Questions","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"800ddc1f-579e-4905-9aaf-ad5d988d20e3.scheduled_end_date_time","label":"12➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"800ddc1f-579e-4905-9aaf-ad5d988d20e3.total_duration","label":"12➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"a902bcf0-1b6a-4c93-925a-51abdb1f7a14.state","label":"9➛State","reference_display":"State","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"Created or Updated_1.current.answer_end","label":"Trigger➛Deadline Record➛Answer End","reference":"","reference_display":"Answer End","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"answer_end"},{"name":"15a38a0f-0db6-4c16-b0ea-99c6d4763cb4.state","label":"4➛State","reference_display":"State","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"87ccf2c2-c0f3-4eca-a487-5f7ae766f409.current_date","label":"2➛Current Date","reference_display":"Current Date","type":"glide_date_time","base_type":"glide_date_time","attributes":{"uiType":"glide_date_time","uiTypeLabel":"Date/Time","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"8c152286-6f01-4347-bcad-984dad454a5c"}},{"name":"Created or Updated_1.current.early_access_end","label":"Trigger➛Deadline Record➛Early Access End","reference":"","reference_display":"Early Access End","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"early_access_end"},{"name":"Created or Updated_1.current","label":"Trigger➛Deadline Record","reference":"x_aaro2_pnl_mgmt_deadline","reference_display":"Deadline","type":"reference","base_type":"reference","attributes":{}},{"name":"Created or Updated_1.current.early_access_start","label":"Trigger➛Deadline Record➛Early Access Start","reference":"","reference_display":"Early Access Start","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"early_access_start"},{"name":"ff75c2ee-9492-443d-898e-bdc9bec55c3b.scheduled_end_date_time","label":"4➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"ff75c2ee-9492-443d-898e-bdc9bec55c3b.total_duration","label":"4➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"Created_1.current.event_date","label":"Trigger➛Sneak Peek Event Record➛Event Date","reference":"","reference_display":"Event Date","type":"glide_date","base_type":"glide_date","parent_table_name":"x_aaro2_pnl_mgmt_sneak_peek_event","column_name":"event_date"},{"name":"c8038d76-9695-491b-9902-7a90921daebc.state","label":"1➛State","reference_display":"State","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"Created_1.current","label":"Trigger➛Sneak Peek Event Record","reference":"x_aaro2_pnl_mgmt_sneak_peek_event","reference_display":"label","type":"reference","base_type":"reference","attributes":{}},{"name":"2e01e51f-77df-43d0-9d04-c1eaf4999d9d.email","label":"5➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Records","label":"5➛Pnl Mgmt M2m Statements Verificators Records","reference":"x_aaro2_pnl_mgmt_m2m_statements_verificators","reference_display":"Pnl Mgmt M2m Statements Verificators","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Table","label":"5➛Pnl Mgmt M2m Statements Verificators Table","reference":"x_aaro2_pnl_mgmt_m2m_statements_verificators","reference_display":"Pnl Mgmt M2m Statements Verificators","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Count","label":"5➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.sys_id","label":"Trigger➛Sneak Peek Event Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_aaro2_pnl_mgmt_sneak_peek_event","column_name":"sys_id"},{"name":"34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item","label":"6➛Pnl Mgmt M2m Sneak Peek User Record","reference":"x_aaro2_pnl_mgmt_m2m_sneak_peek_user","reference_display":"label","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"2afe20e4-8ec0-4e33-9775-10ccb8c67335.email","label":"5➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item.user","label":"6➛Pnl Mgmt M2m Sneak Peek User Record➛User","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_aaro2_pnl_mgmt_m2m_sneak_peek_user","column_name":"user"},{"name":"34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item.user.email","label":"6➛Pnl Mgmt M2m Sneak Peek User Record➛User➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"c1900124-8bef-4f2b-a238-f4db71e4555a.month","label":"5➛Month","reference_display":"Month","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b2b9ea98-f43e-42f7-8212-5b193e343a42"}},{"name":"c1900124-8bef-4f2b-a238-f4db71e4555a.dayofweek","label":"5➛Day Of Week","reference_display":"Day Of Week","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"2cb5dd9f-9e7d-438d-a859-8730c4ed0c37"}},{"name":"c1900124-8bef-4f2b-a238-f4db71e4555a.year","label":"5➛Year","reference_display":"Year","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"a9d19794-4d43-42ea-9017-3f3e130237a2"}},{"name":"c1900124-8bef-4f2b-a238-f4db71e4555a.day","label":"5➛Day","reference_display":"Day","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"4914cfe8-cccb-420f-b0bc-5ee0bb8fb5f8"}},{"name":"Created_1.run_start_time","label":"Trigger➛Run Start Time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"test_input_hidden":"true"}},{"name":"075bdd86-f83e-43f9-a1a5-e76cf6147c7f.emails","label":"5➛Emails","reference_display":"Emails","type":"array.string","base_type":"array.string","attributes":{"uiTypeLabel":"Array.String","co_type_name":"FDfd9ab36b6556681089c25eb817393031","child_label":"Emails_child0","child_type_label":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.string","child_type":"string","child_name":"Emails_child0","child_uiUniqueId":"c06f6508-51b8-45ee-8f8d-28e912492a5b","uiUniqueId":"a7901aff-c4e5-4da4-9e44-131f46b7870e"}},{"name":"Created or Updated_1.current.question_start","label":"Trigger➛Deadline Record➛Question Start","reference":"","reference_display":"Question Start","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"question_start"},{"name":"bafb4add-dad1-4a8f-90ac-e15f259a517c.total_duration","label":"6➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"bafb4add-dad1-4a8f-90ac-e15f259a517c.scheduled_end_date_time","label":"6➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"Created or Updated_1.current.sys_id","label":"Trigger➛Deadline Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"sys_id"}]</label_cache>
+        <latest_snapshot>32779fdddbf9a450389b84d868961924</latest_snapshot>
         <master_snapshot>32779fdddbf9a450389b84d868961924</master_snapshot>
         <name>PnL Deadlines</name>
         <natlang/>
         <outputs/>
-        <remote_trigger_id>c3cfb637db47ac90f41dc15b13961905</remote_trigger_id>
+        <remote_trigger_id>779d7aacdb10f050f41dc15b139619f4</remote_trigger_id>
         <run_as>system</run_as>
         <run_with_roles/>
         <sc_callable>false</sc_callable>
@@ -30,7 +30,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>343d36ffdbb8e810389b84d868961994</sys_id>
-        <sys_mod_count>86</sys_mod_count>
+        <sys_mod_count>92</sys_mod_count>
         <sys_name>PnL Deadlines</sys_name>
         <sys_overrides/>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
@@ -38,8 +38,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_hub_flow_343d36ffdbb8e810389b84d868961994</sys_update_name>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:22</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:06</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_variable_value action="delete_multiple" query="document_key=343d36ffdbb8e810389b84d868961994"/>
@@ -59,11 +59,11 @@
         <run_when_user_list/>
         <run_when_user_setting>any</run_when_user_setting>
         <sys_class_name>sys_flow_record_trigger</sys_class_name>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-03-29 12:04:19</sys_created_on>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:53:03</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
-        <sys_id>c3cfb637db47ac90f41dc15b13961905</sys_id>
+        <sys_id>779d7aacdb10f050f41dc15b139619f4</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
@@ -72,36 +72,36 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:19</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:03</sys_updated_on>
         <table>x_aaro2_pnl_mgmt_deadline</table>
     </sys_flow_record_trigger>
     <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
         <active>true</active>
-        <data>{"table":"sys_trigger_runner_mapping","id":"8fcfb637db47ac90f41dc15b13961905","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
+        <data>{"table":"sys_trigger_runner_mapping","id":"339d7aacdb10f050f41dc15b139619f5","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
         <identifier>343d36ffdbb8e810389b84d868961994</identifier>
         <runner>FDTriggerRunner</runner>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-03-29 12:04:19</sys_created_on>
-        <sys_id>8fcfb637db47ac90f41dc15b13961905</sys_id>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:53:03</sys_created_on>
+        <sys_id>339d7aacdb10f050f41dc15b139619f5</sys_id>
         <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:19</sys_updated_on>
-        <trigger display_value="">c3cfb637db47ac90f41dc15b13961905</trigger>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:04</sys_updated_on>
+        <trigger display_value="">779d7aacdb10f050f41dc15b139619f4</trigger>
     </sys_trigger_runner_mapping>
     <sys_json_chunk action="INSERT_OR_UPDATE">
         <data>H4sIAAAAAAAAAGXLWwqAIBBA0b3MdytwKxGD5fggGUFHLKK99yAo6Pce7ga5MtqYGgYGBaOeZpdTZQPdTc0TYy2UMYYioPrh0wuJBHbXl8T/jpc1r48mRlqE2JA5u9WxEOwH5v2lw4YAAAA=</data>
-        <document_id>8fcfb637db47ac90f41dc15b13961905</document_id>
+        <document_id>339d7aacdb10f050f41dc15b139619f5</document_id>
         <field>trigger_runner</field>
         <length>144</length>
         <position>0</position>
         <source_table>sys_trigger_runner_mapping</source_table>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-03-29 12:04:19</sys_created_on>
-        <sys_id>47cfb637db47ac90f41dc15b13961906</sys_id>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:53:04</sys_created_on>
+        <sys_id>f79d7aacdb10f050f41dc15b139619f5</sys_id>
     </sys_json_chunk>
-    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=343d36ffdbb8e810389b84d868961994^sys_idNOT IN8fcfb637db47ac90f41dc15b13961905"/>
-    <sys_hub_flow_component action="delete_multiple" query="flow=343d36ffdbb8e810389b84d868961994^sys_idNOT IN40d99865db7a24105884eb184b96192d,4bb65864db5a24105884eb184b9619d7,6802fb1ddb9a6c105884eb184b9619ed,81cdc15cdbc6a050389b84d8689619e2,83b69864db5a24105884eb184b961901,8dec87f0db8a2850389b84d868961905,bc7cf1f0db816450389b84d86896195d,c7b65864db5a24105884eb184b9619db,c7b65864db5a24105884eb184b9619e7,c7b65864db5a24105884eb184b9619ee,c9ec47f0db8a2850389b84d8689619d2,e8023f1ddb9a6c105884eb184b96191e,ecf410c0db0eec10389b84d86896192d"/>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=343d36ffdbb8e810389b84d868961994^sys_idNOT IN339d7aacdb10f050f41dc15b139619f5"/>
+    <sys_hub_flow_component action="delete_multiple" query="flow=343d36ffdbb8e810389b84d868961994^sys_idNOT IN40d99865db7a24105884eb184b96192d,4bb65864db5a24105884eb184b9619d7,4d8d7e6cdb10f050f41dc15b13961938,6802fb1ddb9a6c105884eb184b9619ed,81cdc15cdbc6a050389b84d8689619e2,83b69864db5a24105884eb184b961901,8dec87f0db8a2850389b84d868961905,998d7e6cdb10f050f41dc15b1396193c,bc7cf1f0db816450389b84d86896195d,c18d3e6cdb10f050f41dc15b139619e6,c7b65864db5a24105884eb184b9619db,c9ec47f0db8a2850389b84d8689619d2,e8023f1ddb9a6c105884eb184b96191e,ecf410c0db0eec10389b84d86896192d"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
@@ -111,22 +111,22 @@
         <compiled_snapshot>89a95065db7a24105884eb184b961933</compiled_snapshot>
         <display_text/>
         <flow display_value="PnL Deadlines">343d36ffdbb8e810389b84d868961994</flow>
-        <order>13</order>
+        <order>14</order>
         <parent_ui_id>534ca70d-da86-45f6-9ab5-7e9174d805c5</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-03-09 13:57:06</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>40d99865db7a24105884eb184b96192d</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-05-18 14:32:46</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:06</sys_updated_on>
         <ui_id>b7b73f25-ce48-4efe-9b25-85f7599a3200</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=40d99865db7a24105884eb184b96192d"/>
@@ -167,7 +167,7 @@
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
-        <order>8</order>
+        <order>11</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id/>
@@ -176,15 +176,15 @@
         <sys_created_on>2021-02-09 14:38:19</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>4bb65864db5a24105884eb184b9619d7</sys_id>
-        <sys_mod_count>59</sys_mod_count>
+        <sys_mod_count>66</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:21</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
         <ui_id>534ca70d-da86-45f6-9ab5-7e9174d805c5</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -229,6 +229,73 @@
         <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
         <value/>
     </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Generate Event">b56604bfdb3b48145f65ba03e296195e</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="PnL Deadlines">343d36ffdbb8e810389b84d868961994</flow>
+        <order>8</order>
+        <parent_ui_id>cf42161a-cba4-40a2-ad06-11196cbddeeb</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:36</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4d8d7e6cdb10f050f41dc15b13961938</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
+        <ui_id>39e7a743-dd5c-4971-8cf6-326442db0bbe</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=4d8d7e6cdb10f050f41dc15b13961938"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4d8d7e6cdb10f050f41dc15b13961938</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:36</sys_created_on>
+        <sys_id>198d7e6cdb10f050f41dc15b1396193b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:36</sys_updated_on>
+        <value>x_aaro2_pnl_mgmt.review_started_last_month</value>
+        <variable display_value="">f56604bfdb3b48145f65ba03e296195f</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=4d8d7e6cdb10f050f41dc15b13961938"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>event_name</field>
+        <id>4d8d7e6cdb10f050f41dc15b13961938</id>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:36</sys_created_on>
+        <sys_id>d18d7e6cdb10f050f41dc15b1396193b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:36</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>4d8d7e6cdb10f050f41dc15b13961938</id>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:36</sys_created_on>
+        <sys_id>958d7e6cdb10f050f41dc15b1396193b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:36</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
+        <value>{{Created or Updated_1.current}}</value>
+    </sys_element_mapping>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
         <block display_value="">411d7a3fdb07ac90f41dc15b13961912</block>
         <comment/>
@@ -250,15 +317,15 @@
         <sys_created_on>2021-02-12 14:31:48</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>6802fb1ddb9a6c105884eb184b9619ed</sys_id>
-        <sys_mod_count>48</sys_mod_count>
+        <sys_mod_count>54</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:21</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
         <ui_id>bafb4add-dad1-4a8f-90ac-e15f259a517c</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -385,15 +452,15 @@
         <sys_created_on>2021-01-27 13:44:34</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>81cdc15cdbc6a050389b84d8689619e2</sys_id>
-        <sys_mod_count>196</sys_mod_count>
+        <sys_mod_count>210</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-05-18 14:32:46</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
         <ui_id>2e219cb0-f993-47e3-88d4-49877e834ba3</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=81cdc15cdbc6a050389b84d8689619e2"/>
@@ -419,22 +486,22 @@
         <compiled_snapshot>b56604bfdb3b48145f65ba03e296195e</compiled_snapshot>
         <display_text/>
         <flow display_value="PnL Deadlines">343d36ffdbb8e810389b84d868961994</flow>
-        <order>12</order>
+        <order>13</order>
         <parent_ui_id>534ca70d-da86-45f6-9ab5-7e9174d805c5</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>xxmpurik</sys_created_by>
         <sys_created_on>2021-02-09 14:38:20</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>83b69864db5a24105884eb184b961901</sys_id>
-        <sys_mod_count>158</sys_mod_count>
+        <sys_mod_count>172</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-05-18 14:32:46</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
         <ui_id>30809f85-03be-493b-9a3a-33cb5f4f15b8</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=83b69864db5a24105884eb184b961901"/>
@@ -471,11 +538,11 @@
         <sys_created_by>xxmpurik</sys_created_by>
         <sys_created_on>2021-02-09 14:38:20</sys_created_on>
         <sys_id>8fb69864db5a24105884eb184b961902</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-09 14:38:20</sys_updated_on>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-19 14:42:17</sys_updated_on>
         <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
-        <value>{{7426b9f3-c6c5-4793-a1d3-aba0d5675cae.emails}}</value>
+        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>record</field>
@@ -510,15 +577,15 @@
         <sys_created_on>2021-01-29 12:16:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>8dec87f0db8a2850389b84d868961905</sys_id>
-        <sys_mod_count>60</sys_mod_count>
+        <sys_mod_count>66</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:21</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
         <ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -564,6 +631,40 @@
         <value/>
     </sys_element_mapping>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">d18d7e6cdb10f050f41dc15b1396193c</block>
+        <comment/>
+        <connected_to>cf42161a-cba4-40a2-ad06-11196cbddeeb</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="PnL Deadlines">343d36ffdbb8e810389b84d868961994</flow>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:36</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>998d7e6cdb10f050f41dc15b1396193c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
+        <ui_id>c7bfa9be-edd1-4b0f-b0fa-6a1499ff0ce4</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=998d7e6cdb10f050f41dc15b1396193c"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
         <block display_value="">8d1d7a3fdb07ac90f41dc15b13961905</block>
         <comment/>
         <connected_to/>
@@ -584,15 +685,15 @@
         <sys_created_on>2020-12-10 13:22:43</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>bc7cf1f0db816450389b84d86896195d</sys_id>
-        <sys_mod_count>88</sys_mod_count>
+        <sys_mod_count>94</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:21</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
         <ui_id>ff75c2ee-9492-443d-898e-bdc9bec55c3b</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -704,6 +805,54 @@
         <value/>
     </sys_element_mapping>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">098d3e6cdb10f050f41dc15b139619e5</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="PnL Deadlines">343d36ffdbb8e810389b84d868961994</flow>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:36</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c18d3e6cdb10f050f41dc15b139619e6</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
+        <ui_id>cf42161a-cba4-40a2-ad06-11196cbddeeb</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=c18d3e6cdb10f050f41dc15b139619e6"/>
+    <sys_element_mapping action="delete_multiple" query="id=c18d3e6cdb10f050f41dc15b139619e6"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>c18d3e6cdb10f050f41dc15b139619e6</id>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:36</sys_created_on>
+        <sys_id>cd8d3e6cdb10f050f41dc15b139619e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:36</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{87ccf2c2-c0f3-4eca-a487-5f7ae766f409.is_last_quarter_month}}=true</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
         <block display_value="">c51d7a3fdb07ac90f41dc15b1396192f</block>
         <comment/>
         <connected_to/>
@@ -715,7 +864,7 @@
         <inputs/>
         <inputs/>
         <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
-        <order>9</order>
+        <order>12</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id>534ca70d-da86-45f6-9ab5-7e9174d805c5</parent_ui_id>
@@ -724,15 +873,15 @@
         <sys_created_on>2021-02-09 14:38:20</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>c7b65864db5a24105884eb184b9619db</sys_id>
-        <sys_mod_count>59</sys_mod_count>
+        <sys_mod_count>66</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:21</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
         <ui_id>800ddc1f-579e-4905-9aaf-ad5d988d20e3</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -845,114 +994,6 @@
     </sys_element_mapping>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
-        <action_inputs/>
-        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
-        <action_type_parent/>
-        <comment/>
-        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
-        <display_text/>
-        <flow display_value="PnL Deadlines">343d36ffdbb8e810389b84d868961994</flow>
-        <order>10</order>
-        <parent_ui_id>534ca70d-da86-45f6-9ab5-7e9174d805c5</parent_ui_id>
-        <sys_class_name>sys_hub_action_instance</sys_class_name>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:38:20</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>c7b65864db5a24105884eb184b9619e7</sys_id>
-        <sys_mod_count>158</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-05-18 14:32:46</sys_updated_on>
-        <ui_id>821ad930-1e1d-4106-ae64-bdb9734d710b</ui_id>
-    </sys_hub_action_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=c7b65864db5a24105884eb184b9619e7"/>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_action_instance</document>
-        <document_key>c7b65864db5a24105884eb184b9619e7</document_key>
-        <order>0</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:38:20</sys_created_on>
-        <sys_id>cbb65864db5a24105884eb184b9619e9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-09 14:38:20</sys_updated_on>
-        <value>x_aaro2_pnl_mgmt_question</value>
-        <variable display_value="">8f400a1587003300663ca1bb36cb0b4b</variable>
-    </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="id=c7b65864db5a24105884eb184b9619e7"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>conditions</field>
-        <id>c7b65864db5a24105884eb184b9619e7</id>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:38:20</sys_created_on>
-        <sys_id>87b65864db5a24105884eb184b9619e9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-09 14:38:20</sys_updated_on>
-        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
-        <value>year={{Created or Updated_1.current.year}}^period={{Created or Updated_1.current.month}}^status=4</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>table</field>
-        <id>c7b65864db5a24105884eb184b9619e7</id>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:38:20</sys_created_on>
-        <sys_id>4bb65864db5a24105884eb184b9619e9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-09 14:38:20</sys_updated_on>
-        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_hub_action_instance action="INSERT_OR_UPDATE">
-        <action_inputs/>
-        <action_inputs/>
-        <action_type display_value="GetSubmitter'sEmails">099590e0db5a24105884eb184b961985</action_type>
-        <action_type_parent/>
-        <comment/>
-        <compiled_snapshot>099590e0db5a24105884eb184b961985</compiled_snapshot>
-        <display_text/>
-        <flow display_value="PnL Deadlines">343d36ffdbb8e810389b84d868961994</flow>
-        <order>11</order>
-        <parent_ui_id>534ca70d-da86-45f6-9ab5-7e9174d805c5</parent_ui_id>
-        <sys_class_name>sys_hub_action_instance</sys_class_name>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:38:20</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>c7b65864db5a24105884eb184b9619ee</sys_id>
-        <sys_mod_count>158</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-05-18 14:32:46</sys_updated_on>
-        <ui_id>7426b9f3-c6c5-4793-a1d3-aba0d5675cae</ui_id>
-    </sys_hub_action_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=c7b65864db5a24105884eb184b9619ee"/>
-    <sys_element_mapping action="delete_multiple" query="id=c7b65864db5a24105884eb184b9619ee"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>questions</field>
-        <id>c7b65864db5a24105884eb184b9619ee</id>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:38:20</sys_created_on>
-        <sys_id>cbb65864db5a24105884eb184b9619ef</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-09 14:38:20</sys_updated_on>
-        <table>var__m_sys_hub_action_input_099590e0db5a24105884eb184b961985</table>
-        <value>{{821ad930-1e1d-4106-ae64-bdb9734d710b.Records}}</value>
-    </sys_element_mapping>
-    <sys_hub_action_instance action="INSERT_OR_UPDATE">
-        <action_inputs/>
         <action_type display_value="Get Current Date">356c43b0db8a2850389b84d86896199a</action_type>
         <action_type_parent/>
         <comment/>
@@ -966,15 +1007,15 @@
         <sys_created_on>2021-01-29 12:16:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>c9ec47f0db8a2850389b84d8689619d2</sys_id>
-        <sys_mod_count>168</sys_mod_count>
+        <sys_mod_count>182</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-05-18 14:32:46</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
         <ui_id>87ccf2c2-c0f3-4eca-a487-5f7ae766f409</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=c9ec47f0db8a2850389b84d8689619d2"/>
@@ -987,22 +1028,22 @@
         <compiled_snapshot>b56604bfdb3b48145f65ba03e296195e</compiled_snapshot>
         <display_text/>
         <flow display_value="PnL Deadlines">343d36ffdbb8e810389b84d868961994</flow>
-        <order>7</order>
-        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
+        <order>10</order>
+        <parent_ui_id>c7bfa9be-edd1-4b0f-b0fa-6a1499ff0ce4</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>xxikochet</sys_created_by>
         <sys_created_on>2021-02-12 14:31:48</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e8023f1ddb9a6c105884eb184b96191e</sys_id>
-        <sys_mod_count>132</sys_mod_count>
+        <sys_mod_count>146</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-05-18 14:32:46</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
         <ui_id>cf7c351c-4b82-4e83-93ad-38d19f0316e4</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=e8023f1ddb9a6c105884eb184b96191e"/>
@@ -1061,15 +1102,15 @@
         <sys_created_on>2021-01-26 14:57:51</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ecf410c0db0eec10389b84d86896192d</sys_id>
-        <sys_mod_count>206</sys_mod_count>
+        <sys_mod_count>220</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-05-18 14:32:46</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
         <ui_id>0f33a204-d06d-4fdd-a29c-499df443201a</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=ecf410c0db0eec10389b84d86896192d"/>
@@ -1136,15 +1177,15 @@
         <sys_created_on>2021-01-26 14:46:14</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>6242184cdbcaec10389b84d868961924</sys_id>
-        <sys_mod_count>73</sys_mod_count>
+        <sys_mod_count>79</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:21</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
         <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -1290,15 +1331,15 @@
         <sys_created_on>2020-12-07 15:41:04</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>1a5fba77dbf8e810389b84d868961964</sys_id>
-        <sys_mod_count>45</sys_mod_count>
+        <sys_mod_count>49</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:20</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:04</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1314,7 +1355,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD25cf36378e47ac9025ae28bbd834396e,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDf29df6ac3510f05030d024fd16cb2501,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
         <audit>false</audit>
         <calculation>(function calculatedFieldValue(current) {
 
@@ -1373,15 +1414,15 @@
         <sys_created_on>2021-01-26 14:46:14</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>1e42184cdbcaec10389b84d868961901</sys_id>
-        <sys_mod_count>72</sys_mod_count>
+        <sys_mod_count>78</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:20</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:04</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1456,15 +1497,15 @@
         <sys_created_on>2020-12-07 15:41:04</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>965fba77dbf8e810389b84d86896195b</sys_id>
-        <sys_mod_count>45</sys_mod_count>
+        <sys_mod_count>49</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:20</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:04</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1476,7 +1517,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
-    <sys_hub_action_instance action="delete_multiple" query="flow=343d36ffdbb8e810389b84d868961994^sys_idNOT IN40d99865db7a24105884eb184b96192d,81cdc15cdbc6a050389b84d8689619e2,83b69864db5a24105884eb184b961901,c7b65864db5a24105884eb184b9619e7,c7b65864db5a24105884eb184b9619ee,c9ec47f0db8a2850389b84d8689619d2,e8023f1ddb9a6c105884eb184b96191e,ecf410c0db0eec10389b84d86896192d"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=343d36ffdbb8e810389b84d868961994^sys_idNOT IN40d99865db7a24105884eb184b96192d,4d8d7e6cdb10f050f41dc15b13961938,81cdc15cdbc6a050389b84d8689619e2,83b69864db5a24105884eb184b961901,c9ec47f0db8a2850389b84d8689619d2,e8023f1ddb9a6c105884eb184b96191e,ecf410c0db0eec10389b84d86896192d"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
@@ -1486,22 +1527,22 @@
         <compiled_snapshot>89a95065db7a24105884eb184b961933</compiled_snapshot>
         <display_text/>
         <flow display_value="PnL Deadlines">343d36ffdbb8e810389b84d868961994</flow>
-        <order>13</order>
+        <order>14</order>
         <parent_ui_id>534ca70d-da86-45f6-9ab5-7e9174d805c5</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-03-09 13:57:06</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>40d99865db7a24105884eb184b96192d</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-05-18 14:32:46</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:06</sys_updated_on>
         <ui_id>b7b73f25-ce48-4efe-9b25-85f7599a3200</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=40d99865db7a24105884eb184b96192d"/>
@@ -1533,6 +1574,87 @@
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
+        <action_type display_value="Generate Event">b56604bfdb3b48145f65ba03e296195e</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="PnL Deadlines">343d36ffdbb8e810389b84d868961994</flow>
+        <order>8</order>
+        <parent_ui_id>cf42161a-cba4-40a2-ad06-11196cbddeeb</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:36</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4d8d7e6cdb10f050f41dc15b13961938</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
+        <ui_id>39e7a743-dd5c-4971-8cf6-326442db0bbe</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=4d8d7e6cdb10f050f41dc15b13961938"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4d8d7e6cdb10f050f41dc15b13961938</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:36</sys_created_on>
+        <sys_id>198d7e6cdb10f050f41dc15b1396193b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:36</sys_updated_on>
+        <value>x_aaro2_pnl_mgmt.review_started_last_month</value>
+        <variable display_value="">f56604bfdb3b48145f65ba03e296195f</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=4d8d7e6cdb10f050f41dc15b13961938"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>event_name</field>
+        <id>4d8d7e6cdb10f050f41dc15b13961938</id>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:36</sys_created_on>
+        <sys_id>d18d7e6cdb10f050f41dc15b1396193b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:36</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>4d8d7e6cdb10f050f41dc15b13961938</id>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:36</sys_created_on>
+        <sys_id>958d7e6cdb10f050f41dc15b1396193b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:36</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
+        <value>{{Created or Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=4d8d7e6cdb10f050f41dc15b13961938^sys_idNOT IN918d7e6cdb10f050f41dc15b1396193a"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>parm1</input_name>
+        <instance>4d8d7e6cdb10f050f41dc15b13961938</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"parm1":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\nvar defaultEarlyAccessUsers \u003d new Utils().getReviewingUsers();\n\nreturn defaultEarlyAccessUsers;"}}</script>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:36</sys_created_on>
+        <sys_id>918d7e6cdb10f050f41dc15b1396193a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:36</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
         <action_type display_value="Drop previous flow">d0dc81d8dbc6a050389b84d868961938</action_type>
         <action_type_parent/>
         <comment/>
@@ -1546,15 +1668,15 @@
         <sys_created_on>2021-01-27 13:44:34</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>81cdc15cdbc6a050389b84d8689619e2</sys_id>
-        <sys_mod_count>196</sys_mod_count>
+        <sys_mod_count>210</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-05-18 14:32:46</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
         <ui_id>2e219cb0-f993-47e3-88d4-49877e834ba3</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=81cdc15cdbc6a050389b84d8689619e2"/>
@@ -1580,22 +1702,22 @@
         <compiled_snapshot>b56604bfdb3b48145f65ba03e296195e</compiled_snapshot>
         <display_text/>
         <flow display_value="PnL Deadlines">343d36ffdbb8e810389b84d868961994</flow>
-        <order>12</order>
+        <order>13</order>
         <parent_ui_id>534ca70d-da86-45f6-9ab5-7e9174d805c5</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>xxmpurik</sys_created_by>
         <sys_created_on>2021-02-09 14:38:20</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>83b69864db5a24105884eb184b961901</sys_id>
-        <sys_mod_count>158</sys_mod_count>
+        <sys_mod_count>172</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-05-18 14:32:46</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
         <ui_id>30809f85-03be-493b-9a3a-33cb5f4f15b8</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=83b69864db5a24105884eb184b961901"/>
@@ -1632,11 +1754,11 @@
         <sys_created_by>xxmpurik</sys_created_by>
         <sys_created_on>2021-02-09 14:38:20</sys_created_on>
         <sys_id>8fb69864db5a24105884eb184b961902</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-09 14:38:20</sys_updated_on>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-19 14:42:17</sys_updated_on>
         <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
-        <value>{{7426b9f3-c6c5-4793-a1d3-aba0d5675cae.emails}}</value>
+        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>record</field>
@@ -1650,114 +1772,20 @@
         <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
         <value>{{Created or Updated_1.current}}</value>
     </sys_element_mapping>
-    <sys_hub_action_instance action="INSERT_OR_UPDATE">
-        <action_inputs/>
-        <action_inputs/>
-        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
-        <action_type_parent/>
-        <comment/>
-        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
-        <display_text/>
-        <flow display_value="PnL Deadlines">343d36ffdbb8e810389b84d868961994</flow>
-        <order>10</order>
-        <parent_ui_id>534ca70d-da86-45f6-9ab5-7e9174d805c5</parent_ui_id>
-        <sys_class_name>sys_hub_action_instance</sys_class_name>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:38:20</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>c7b65864db5a24105884eb184b9619e7</sys_id>
-        <sys_mod_count>158</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-05-18 14:32:46</sys_updated_on>
-        <ui_id>821ad930-1e1d-4106-ae64-bdb9734d710b</ui_id>
-    </sys_hub_action_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=c7b65864db5a24105884eb184b9619e7"/>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_action_instance</document>
-        <document_key>c7b65864db5a24105884eb184b9619e7</document_key>
-        <order>0</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:38:20</sys_created_on>
-        <sys_id>cbb65864db5a24105884eb184b9619e9</sys_id>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=83b69864db5a24105884eb184b961901^sys_idNOT IN5a0d4658db14bc105884eb184b961995"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>parm1</input_name>
+        <instance>83b69864db5a24105884eb184b961901</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"parm1":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\nvar defaultEarlyAccessUsers \u003d new Utils().getReviewingUsers();\n\nreturn defaultEarlyAccessUsers;"}}</script>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-19 14:42:17</sys_created_on>
+        <sys_id>5a0d4658db14bc105884eb184b961995</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-09 14:38:20</sys_updated_on>
-        <value>x_aaro2_pnl_mgmt_question</value>
-        <variable display_value="">8f400a1587003300663ca1bb36cb0b4b</variable>
-    </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="id=c7b65864db5a24105884eb184b9619e7"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>conditions</field>
-        <id>c7b65864db5a24105884eb184b9619e7</id>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:38:20</sys_created_on>
-        <sys_id>87b65864db5a24105884eb184b9619e9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-09 14:38:20</sys_updated_on>
-        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
-        <value>year={{Created or Updated_1.current.year}}^period={{Created or Updated_1.current.month}}^status=4</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>table</field>
-        <id>c7b65864db5a24105884eb184b9619e7</id>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:38:20</sys_created_on>
-        <sys_id>4bb65864db5a24105884eb184b9619e9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-09 14:38:20</sys_updated_on>
-        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_hub_action_instance action="INSERT_OR_UPDATE">
-        <action_inputs/>
-        <action_inputs/>
-        <action_type display_value="GetSubmitter'sEmails">099590e0db5a24105884eb184b961985</action_type>
-        <action_type_parent/>
-        <comment/>
-        <compiled_snapshot>099590e0db5a24105884eb184b961985</compiled_snapshot>
-        <display_text/>
-        <flow display_value="PnL Deadlines">343d36ffdbb8e810389b84d868961994</flow>
-        <order>11</order>
-        <parent_ui_id>534ca70d-da86-45f6-9ab5-7e9174d805c5</parent_ui_id>
-        <sys_class_name>sys_hub_action_instance</sys_class_name>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:38:20</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>c7b65864db5a24105884eb184b9619ee</sys_id>
-        <sys_mod_count>158</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-05-18 14:32:46</sys_updated_on>
-        <ui_id>7426b9f3-c6c5-4793-a1d3-aba0d5675cae</ui_id>
-    </sys_hub_action_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=c7b65864db5a24105884eb184b9619ee"/>
-    <sys_element_mapping action="delete_multiple" query="id=c7b65864db5a24105884eb184b9619ee"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>questions</field>
-        <id>c7b65864db5a24105884eb184b9619ee</id>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:38:20</sys_created_on>
-        <sys_id>cbb65864db5a24105884eb184b9619ef</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-09 14:38:20</sys_updated_on>
-        <table>var__m_sys_hub_action_input_099590e0db5a24105884eb184b961985</table>
-        <value>{{821ad930-1e1d-4106-ae64-bdb9734d710b.Records}}</value>
-    </sys_element_mapping>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-19 14:42:17</sys_updated_on>
+    </sys_hub_input_scripts>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_type display_value="Get Current Date">356c43b0db8a2850389b84d86896199a</action_type>
@@ -1773,15 +1801,15 @@
         <sys_created_on>2021-01-29 12:16:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>c9ec47f0db8a2850389b84d8689619d2</sys_id>
-        <sys_mod_count>168</sys_mod_count>
+        <sys_mod_count>182</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-05-18 14:32:46</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
         <ui_id>87ccf2c2-c0f3-4eca-a487-5f7ae766f409</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=c9ec47f0db8a2850389b84d8689619d2"/>
@@ -1794,22 +1822,22 @@
         <compiled_snapshot>b56604bfdb3b48145f65ba03e296195e</compiled_snapshot>
         <display_text/>
         <flow display_value="PnL Deadlines">343d36ffdbb8e810389b84d868961994</flow>
-        <order>7</order>
-        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
+        <order>10</order>
+        <parent_ui_id>c7bfa9be-edd1-4b0f-b0fa-6a1499ff0ce4</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>xxikochet</sys_created_by>
         <sys_created_on>2021-02-12 14:31:48</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e8023f1ddb9a6c105884eb184b96191e</sys_id>
-        <sys_mod_count>132</sys_mod_count>
+        <sys_mod_count>146</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-05-18 14:32:46</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
         <ui_id>cf7c351c-4b82-4e83-93ad-38d19f0316e4</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=e8023f1ddb9a6c105884eb184b96191e"/>
@@ -1882,15 +1910,15 @@
         <sys_created_on>2021-01-26 14:57:51</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ecf410c0db0eec10389b84d86896192d</sys_id>
-        <sys_mod_count>206</sys_mod_count>
+        <sys_mod_count>220</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2021-05-18 14:32:46</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
         <ui_id>0f33a204-d06d-4fdd-a29c-499df443201a</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=ecf410c0db0eec10389b84d86896192d"/>
@@ -1959,7 +1987,7 @@
         <sys_updated_by>xxmpurik</sys_updated_by>
         <sys_updated_on>2021-03-29 11:52:26</sys_updated_on>
     </sys_hub_input_scripts>
-    <sys_hub_flow_logic action="delete_multiple" query="flow=343d36ffdbb8e810389b84d868961994^sys_idNOT IN4bb65864db5a24105884eb184b9619d7,6802fb1ddb9a6c105884eb184b9619ed,8dec87f0db8a2850389b84d868961905,bc7cf1f0db816450389b84d86896195d,c7b65864db5a24105884eb184b9619db"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=343d36ffdbb8e810389b84d868961994^sys_idNOT IN4bb65864db5a24105884eb184b9619d7,6802fb1ddb9a6c105884eb184b9619ed,8dec87f0db8a2850389b84d868961905,998d7e6cdb10f050f41dc15b1396193c,bc7cf1f0db816450389b84d86896195d,c18d3e6cdb10f050f41dc15b139619e6,c7b65864db5a24105884eb184b9619db"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
         <block display_value="">811d7a3fdb07ac90f41dc15b1396191a</block>
         <comment/>
@@ -1972,7 +2000,7 @@
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
-        <order>8</order>
+        <order>11</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id/>
@@ -1981,15 +2009,15 @@
         <sys_created_on>2021-02-09 14:38:19</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>4bb65864db5a24105884eb184b9619d7</sys_id>
-        <sys_mod_count>59</sys_mod_count>
+        <sys_mod_count>66</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:21</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
         <ui_id>534ca70d-da86-45f6-9ab5-7e9174d805c5</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2055,15 +2083,15 @@
         <sys_created_on>2021-02-12 14:31:48</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>6802fb1ddb9a6c105884eb184b9619ed</sys_id>
-        <sys_mod_count>48</sys_mod_count>
+        <sys_mod_count>54</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:21</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
         <ui_id>bafb4add-dad1-4a8f-90ac-e15f259a517c</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2195,15 +2223,15 @@
         <sys_created_on>2021-01-29 12:16:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>8dec87f0db8a2850389b84d868961905</sys_id>
-        <sys_mod_count>60</sys_mod_count>
+        <sys_mod_count>66</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:21</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
         <ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2249,6 +2277,40 @@
         <value/>
     </sys_element_mapping>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">d18d7e6cdb10f050f41dc15b1396193c</block>
+        <comment/>
+        <connected_to>cf42161a-cba4-40a2-ad06-11196cbddeeb</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="PnL Deadlines">343d36ffdbb8e810389b84d868961994</flow>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:36</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>998d7e6cdb10f050f41dc15b1396193c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
+        <ui_id>c7bfa9be-edd1-4b0f-b0fa-6a1499ff0ce4</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=998d7e6cdb10f050f41dc15b1396193c"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
         <block display_value="">8d1d7a3fdb07ac90f41dc15b13961905</block>
         <comment/>
         <connected_to/>
@@ -2269,15 +2331,15 @@
         <sys_created_on>2020-12-10 13:22:43</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>bc7cf1f0db816450389b84d86896195d</sys_id>
-        <sys_mod_count>88</sys_mod_count>
+        <sys_mod_count>94</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:21</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
         <ui_id>ff75c2ee-9492-443d-898e-bdc9bec55c3b</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2389,6 +2451,54 @@
         <value/>
     </sys_element_mapping>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">098d3e6cdb10f050f41dc15b139619e5</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="PnL Deadlines">343d36ffdbb8e810389b84d868961994</flow>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:36</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c18d3e6cdb10f050f41dc15b139619e6</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
+        <ui_id>cf42161a-cba4-40a2-ad06-11196cbddeeb</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=c18d3e6cdb10f050f41dc15b139619e6"/>
+    <sys_element_mapping action="delete_multiple" query="id=c18d3e6cdb10f050f41dc15b139619e6"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>c18d3e6cdb10f050f41dc15b139619e6</id>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:36</sys_created_on>
+        <sys_id>cd8d3e6cdb10f050f41dc15b139619e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:36</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{87ccf2c2-c0f3-4eca-a487-5f7ae766f409.is_last_quarter_month}}=true</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
         <block display_value="">c51d7a3fdb07ac90f41dc15b1396192f</block>
         <comment/>
         <connected_to/>
@@ -2400,7 +2510,7 @@
         <inputs/>
         <inputs/>
         <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
-        <order>9</order>
+        <order>12</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id>534ca70d-da86-45f6-9ab5-7e9174d805c5</parent_ui_id>
@@ -2409,15 +2519,15 @@
         <sys_created_on>2021-02-09 14:38:20</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>c7b65864db5a24105884eb184b9619db</sys_id>
-        <sys_mod_count>59</sys_mod_count>
+        <sys_mod_count>66</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:21</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:05</sys_updated_on>
         <ui_id>800ddc1f-579e-4905-9aaf-ad5d988d20e3</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -2609,14 +2719,14 @@
         <binding_strategy>com.snc.process_flow.engine.binding.OncePerUniqueChange</binding_strategy>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"d777dfdddbf9a450389b84d86896190e","name":"plan"}}</plan>
         <plan_id>343d36ffdbb8e810389b84d868961994</plan_id>
-        <snapshot>3731c500dbdc78105884eb184b96198b</snapshot>
+        <snapshot>32779fdddbf9a450389b84d868961924</snapshot>
         <sys_class_name>sys_flow_trigger_plan</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-01-18 16:04:32</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>d777dfdddbf9a450389b84d86896190e</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -2624,9 +2734,9 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:20</sys_updated_on>
-        <trigger display_value="">c3cfb637db47ac90f41dc15b13961905</trigger>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:04</sys_updated_on>
+        <trigger display_value="">779d7aacdb10f050f41dc15b139619f4</trigger>
     </sys_flow_trigger_plan>
     <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -2639,7 +2749,7 @@
         <copied_from_name/>
         <description/>
         <internal_name>send_sneak_peek_mails</internal_name>
-        <label_cache>[{"name":"3aa91482-3c0e-49d6-8260-9f96c63a1649.table_name","label":"13➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3aa91482-3c0e-49d6-8260-9f96c63a1649.record","label":"13➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.changed_fields","label":"Trigger➛Changed Fields","type":"array.object","base_type":"array.object","attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FDCollection","child_label":"FDChangeDetails","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"array.object","child_type":"object","child_name":"FDChangeDetails"}},{"name":"7426b9f3-c6c5-4793-a1d3-aba0d5675cae.emails","label":"11➛emails","reference_display":"emails","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"96536590-d030-4c9b-8c88-e69d47184548"}},{"name":"Created or Updated_1.current.month","label":"Trigger➛Deadline Record➛Month","reference":"","reference_display":"Month","type":"choice","base_type":"choice","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"month"},{"name":"Created or Updated_1.current.year","label":"Trigger➛Deadline Record➛Year","reference":"","reference_display":"Year","type":"string","base_type":"string","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"year"},{"name":"821ad930-1e1d-4106-ae64-bdb9734d710b.Count","label":"10➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"821ad930-1e1d-4106-ae64-bdb9734d710b.Table","label":"10➛PNL Questions Table","reference":"x_aaro2_pnl_mgmt_question","reference_display":"PNL Questions","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"821ad930-1e1d-4106-ae64-bdb9734d710b.Records","label":"10➛PNL Questions Records","reference":"x_aaro2_pnl_mgmt_question","reference_display":"PNL Questions","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"800ddc1f-579e-4905-9aaf-ad5d988d20e3.scheduled_end_date_time","label":"9➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"800ddc1f-579e-4905-9aaf-ad5d988d20e3.total_duration","label":"9➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"a902bcf0-1b6a-4c93-925a-51abdb1f7a14.state","label":"9➛State","reference_display":"State","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"Created or Updated_1.current.answer_end","label":"Trigger➛Deadline Record➛Answer End","reference":"","reference_display":"Answer End","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"answer_end"},{"name":"15a38a0f-0db6-4c16-b0ea-99c6d4763cb4.state","label":"4➛State","reference_display":"State","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"87ccf2c2-c0f3-4eca-a487-5f7ae766f409.current_date","label":"2➛Current Date","reference_display":"Current Date","type":"glide_date_time","base_type":"glide_date_time","attributes":{"uiType":"glide_date_time","uiTypeLabel":"Date/Time","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"8c152286-6f01-4347-bcad-984dad454a5c"}},{"name":"Created or Updated_1.current.early_access_end","label":"Trigger➛Deadline Record➛Early Access End","reference":"","reference_display":"Early Access End","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"early_access_end"},{"name":"Created or Updated_1.current","label":"Trigger➛Deadline Record","reference":"x_aaro2_pnl_mgmt_deadline","reference_display":"Deadline","type":"reference","base_type":"reference","attributes":{}},{"name":"Created or Updated_1.current.early_access_start","label":"Trigger➛Deadline Record➛Early Access Start","reference":"","reference_display":"Early Access Start","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"early_access_start"},{"name":"ff75c2ee-9492-443d-898e-bdc9bec55c3b.scheduled_end_date_time","label":"4➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"ff75c2ee-9492-443d-898e-bdc9bec55c3b.total_duration","label":"4➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"Created_1.current.event_date","label":"Trigger➛Sneak Peek Event Record➛Event Date","reference":"","reference_display":"Event Date","type":"glide_date","base_type":"glide_date","parent_table_name":"x_aaro2_pnl_mgmt_sneak_peek_event","column_name":"event_date"},{"name":"c8038d76-9695-491b-9902-7a90921daebc.state","label":"1➛State","reference_display":"State","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"Created_1.current","label":"Trigger➛Sneak Peek Event Record","reference":"x_aaro2_pnl_mgmt_sneak_peek_event","reference_display":"label","type":"reference","base_type":"reference","attributes":{}},{"name":"2e01e51f-77df-43d0-9d04-c1eaf4999d9d.email","label":"5➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Records","label":"5➛Pnl Mgmt M2m Statements Verificators Records","reference":"x_aaro2_pnl_mgmt_m2m_statements_verificators","reference_display":"Pnl Mgmt M2m Statements Verificators","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Table","label":"5➛Pnl Mgmt M2m Statements Verificators Table","reference":"x_aaro2_pnl_mgmt_m2m_statements_verificators","reference_display":"Pnl Mgmt M2m Statements Verificators","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Count","label":"5➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.sys_id","label":"Trigger➛Sneak Peek Event Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_aaro2_pnl_mgmt_sneak_peek_event","column_name":"sys_id"},{"name":"34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item","label":"6➛Pnl Mgmt M2m Sneak Peek User Record","reference":"x_aaro2_pnl_mgmt_m2m_sneak_peek_user","reference_display":"label","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"2afe20e4-8ec0-4e33-9775-10ccb8c67335.email","label":"5➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item.user","label":"6➛Pnl Mgmt M2m Sneak Peek User Record➛User","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_aaro2_pnl_mgmt_m2m_sneak_peek_user","column_name":"user"},{"name":"34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item.user.email","label":"6➛Pnl Mgmt M2m Sneak Peek User Record➛User➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"c1900124-8bef-4f2b-a238-f4db71e4555a.month","label":"5➛Month","reference_display":"Month","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b2b9ea98-f43e-42f7-8212-5b193e343a42"}},{"name":"c1900124-8bef-4f2b-a238-f4db71e4555a.dayofweek","label":"5➛Day Of Week","reference_display":"Day Of Week","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"2cb5dd9f-9e7d-438d-a859-8730c4ed0c37"}},{"name":"c1900124-8bef-4f2b-a238-f4db71e4555a.year","label":"5➛Year","reference_display":"Year","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"a9d19794-4d43-42ea-9017-3f3e130237a2"}},{"name":"c1900124-8bef-4f2b-a238-f4db71e4555a.day","label":"5➛Day","reference_display":"Day","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"4914cfe8-cccb-420f-b0bc-5ee0bb8fb5f8"}},{"name":"Created_1.run_start_time","label":"Trigger➛Run Start Time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"test_input_hidden":"true"}},{"name":"075bdd86-f83e-43f9-a1a5-e76cf6147c7f.emails","label":"5➛Emails","reference_display":"Emails","type":"array.string","base_type":"array.string","attributes":{"uiTypeLabel":"Array.String","co_type_name":"FDfd9ab36b6556681089c25eb817393031","child_label":"Emails_child0","child_type_label":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.string","child_type":"string","child_name":"Emails_child0","child_uiUniqueId":"c06f6508-51b8-45ee-8f8d-28e912492a5b","uiUniqueId":"a7901aff-c4e5-4da4-9e44-131f46b7870e"}},{"name":"Created or Updated_1.current.question_start","label":"Trigger➛Deadline Record➛Question Start","reference":"","reference_display":"Question Start","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"question_start"},{"name":"bafb4add-dad1-4a8f-90ac-e15f259a517c.total_duration","label":"6➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"bafb4add-dad1-4a8f-90ac-e15f259a517c.scheduled_end_date_time","label":"6➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"Created or Updated_1.current.sys_id","label":"Trigger➛Deadline Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"sys_id"}]</label_cache>
+        <label_cache>[{"name":"87ccf2c2-c0f3-4eca-a487-5f7ae766f409.is_last_quarter_month","label":"2➛Is Last Quarter Month","reference_display":"Is Last Quarter Month","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5deb4dc4-c645-4890-8ba9-cf81a6ceb249"}},{"name":"3aa91482-3c0e-49d6-8260-9f96c63a1649.table_name","label":"13➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3aa91482-3c0e-49d6-8260-9f96c63a1649.record","label":"13➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.changed_fields","label":"Trigger➛Changed Fields","type":"array.object","base_type":"array.object","attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FDCollection","child_label":"FDChangeDetails","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"array.object","child_type":"object","child_name":"FDChangeDetails"}},{"name":"7426b9f3-c6c5-4793-a1d3-aba0d5675cae.emails","label":"11➛emails","reference_display":"emails","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"96536590-d030-4c9b-8c88-e69d47184548"}},{"name":"Created or Updated_1.current.month","label":"Trigger➛Deadline Record➛Month","reference":"","reference_display":"Month","type":"choice","base_type":"choice","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"month"},{"name":"Created or Updated_1.current.year","label":"Trigger➛Deadline Record➛Year","reference":"","reference_display":"Year","type":"string","base_type":"string","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"year"},{"name":"821ad930-1e1d-4106-ae64-bdb9734d710b.Count","label":"10➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"821ad930-1e1d-4106-ae64-bdb9734d710b.Table","label":"10➛PALMSnow Questions Table","reference":"x_aaro2_pnl_mgmt_question","reference_display":"PALMSnow Questions","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"821ad930-1e1d-4106-ae64-bdb9734d710b.Records","label":"10➛PALMSnow Questions Records","reference":"x_aaro2_pnl_mgmt_question","reference_display":"PALMSnow Questions","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"800ddc1f-579e-4905-9aaf-ad5d988d20e3.scheduled_end_date_time","label":"12➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"800ddc1f-579e-4905-9aaf-ad5d988d20e3.total_duration","label":"12➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"a902bcf0-1b6a-4c93-925a-51abdb1f7a14.state","label":"9➛State","reference_display":"State","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"Created or Updated_1.current.answer_end","label":"Trigger➛Deadline Record➛Answer End","reference":"","reference_display":"Answer End","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"answer_end"},{"name":"15a38a0f-0db6-4c16-b0ea-99c6d4763cb4.state","label":"4➛State","reference_display":"State","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"87ccf2c2-c0f3-4eca-a487-5f7ae766f409.current_date","label":"2➛Current Date","reference_display":"Current Date","type":"glide_date_time","base_type":"glide_date_time","attributes":{"uiType":"glide_date_time","uiTypeLabel":"Date/Time","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"8c152286-6f01-4347-bcad-984dad454a5c"}},{"name":"Created or Updated_1.current.early_access_end","label":"Trigger➛Deadline Record➛Early Access End","reference":"","reference_display":"Early Access End","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"early_access_end"},{"name":"Created or Updated_1.current","label":"Trigger➛Deadline Record","reference":"x_aaro2_pnl_mgmt_deadline","reference_display":"Deadline","type":"reference","base_type":"reference","attributes":{}},{"name":"Created or Updated_1.current.early_access_start","label":"Trigger➛Deadline Record➛Early Access Start","reference":"","reference_display":"Early Access Start","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"early_access_start"},{"name":"ff75c2ee-9492-443d-898e-bdc9bec55c3b.scheduled_end_date_time","label":"4➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"ff75c2ee-9492-443d-898e-bdc9bec55c3b.total_duration","label":"4➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"Created_1.current.event_date","label":"Trigger➛Sneak Peek Event Record➛Event Date","reference":"","reference_display":"Event Date","type":"glide_date","base_type":"glide_date","parent_table_name":"x_aaro2_pnl_mgmt_sneak_peek_event","column_name":"event_date"},{"name":"c8038d76-9695-491b-9902-7a90921daebc.state","label":"1➛State","reference_display":"State","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"Created_1.current","label":"Trigger➛Sneak Peek Event Record","reference":"x_aaro2_pnl_mgmt_sneak_peek_event","reference_display":"label","type":"reference","base_type":"reference","attributes":{}},{"name":"2e01e51f-77df-43d0-9d04-c1eaf4999d9d.email","label":"5➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Records","label":"5➛Pnl Mgmt M2m Statements Verificators Records","reference":"x_aaro2_pnl_mgmt_m2m_statements_verificators","reference_display":"Pnl Mgmt M2m Statements Verificators","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Table","label":"5➛Pnl Mgmt M2m Statements Verificators Table","reference":"x_aaro2_pnl_mgmt_m2m_statements_verificators","reference_display":"Pnl Mgmt M2m Statements Verificators","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"45c120a7-eee0-4d43-b70c-0ea44b8bb13f.Count","label":"5➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.sys_id","label":"Trigger➛Sneak Peek Event Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_aaro2_pnl_mgmt_sneak_peek_event","column_name":"sys_id"},{"name":"34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item","label":"6➛Pnl Mgmt M2m Sneak Peek User Record","reference":"x_aaro2_pnl_mgmt_m2m_sneak_peek_user","reference_display":"label","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"2afe20e4-8ec0-4e33-9775-10ccb8c67335.email","label":"5➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item.user","label":"6➛Pnl Mgmt M2m Sneak Peek User Record➛User","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_aaro2_pnl_mgmt_m2m_sneak_peek_user","column_name":"user"},{"name":"34f10bfd-8dc2-4e45-b45c-1751bf2a0337.item.user.email","label":"6➛Pnl Mgmt M2m Sneak Peek User Record➛User➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"c1900124-8bef-4f2b-a238-f4db71e4555a.month","label":"5➛Month","reference_display":"Month","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b2b9ea98-f43e-42f7-8212-5b193e343a42"}},{"name":"c1900124-8bef-4f2b-a238-f4db71e4555a.dayofweek","label":"5➛Day Of Week","reference_display":"Day Of Week","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"2cb5dd9f-9e7d-438d-a859-8730c4ed0c37"}},{"name":"c1900124-8bef-4f2b-a238-f4db71e4555a.year","label":"5➛Year","reference_display":"Year","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"a9d19794-4d43-42ea-9017-3f3e130237a2"}},{"name":"c1900124-8bef-4f2b-a238-f4db71e4555a.day","label":"5➛Day","reference_display":"Day","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"4914cfe8-cccb-420f-b0bc-5ee0bb8fb5f8"}},{"name":"Created_1.run_start_time","label":"Trigger➛Run Start Time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"test_input_hidden":"true"}},{"name":"075bdd86-f83e-43f9-a1a5-e76cf6147c7f.emails","label":"5➛Emails","reference_display":"Emails","type":"array.string","base_type":"array.string","attributes":{"uiTypeLabel":"Array.String","co_type_name":"FDfd9ab36b6556681089c25eb817393031","child_label":"Emails_child0","child_type_label":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.string","child_type":"string","child_name":"Emails_child0","child_uiUniqueId":"c06f6508-51b8-45ee-8f8d-28e912492a5b","uiUniqueId":"a7901aff-c4e5-4da4-9e44-131f46b7870e"}},{"name":"Created or Updated_1.current.question_start","label":"Trigger➛Deadline Record➛Question Start","reference":"","reference_display":"Question Start","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"question_start"},{"name":"bafb4add-dad1-4a8f-90ac-e15f259a517c.total_duration","label":"6➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"bafb4add-dad1-4a8f-90ac-e15f259a517c.scheduled_end_date_time","label":"6➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"Created or Updated_1.current.sys_id","label":"Trigger➛Deadline Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_aaro2_pnl_mgmt_deadline","column_name":"sys_id"}]</label_cache>
         <master>true</master>
         <name>PnL Deadlines</name>
         <natlang/>
@@ -2656,7 +2766,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>32779fdddbf9a450389b84d868961924</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -2664,12 +2774,12 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:15</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:01</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow_snapshot>
     <sys_variable_value action="delete_multiple" query="document_key=32779fdddbf9a450389b84d868961924"/>
-    <sys_hub_flow_component action="delete_multiple" query="flow=32779fdddbf9a450389b84d868961924^sys_idNOT IN18158bd6db52a4505884eb184b961980,18fc4bf0db8a2850389b84d8689619ea,20d610a4db5a24105884eb184b96199b,28d610a4db5a24105884eb184b9619a9,6cfc4bf0db8a2850389b84d8689619f0,74dd095cdbc6a050389b84d86896195f,83779fdddbf9a450389b84d868961980,acd610a4db5a24105884eb184b9619a2,c5a51044db0eec10389b84d868961915,d1cff237db47ac90f41dc15b139619b2,e0158bd6db52a4505884eb184b96199a,e4d610a4db5a24105884eb184b9619bd,ecd610a4db5a24105884eb184b9619c0"/>
+    <sys_hub_flow_component action="delete_multiple" query="flow=32779fdddbf9a450389b84d868961924^sys_idNOT IN18158bd6db52a4505884eb184b961980,18fc4bf0db8a2850389b84d8689619ea,28d610a4db5a24105884eb184b9619a9,2e9db6acdb10f050f41dc15b139619b1,6cfc4bf0db8a2850389b84d8689619f0,74dd095cdbc6a050389b84d86896195f,83779fdddbf9a450389b84d868961980,a29db6acdb10f050f41dc15b13961935,c5a51044db0eec10389b84d868961915,d1cff237db47ac90f41dc15b139619b2,e0158bd6db52a4505884eb184b96199a,e4d610a4db5a24105884eb184b9619bd,e69db6acdb10f050f41dc15b13961970,ecd610a4db5a24105884eb184b9619c0"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
@@ -2679,22 +2789,22 @@
         <compiled_snapshot>b56604bfdb3b48145f65ba03e296195e</compiled_snapshot>
         <display_text/>
         <flow display_value="PnL Deadlines">32779fdddbf9a450389b84d868961924</flow>
-        <order>7</order>
-        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
+        <order>10</order>
+        <parent_ui_id>c7bfa9be-edd1-4b0f-b0fa-6a1499ff0ce4</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>xxikochet</sys_created_by>
         <sys_created_on>2021-02-15 13:49:22</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>18158bd6db52a4505884eb184b961980</sys_id>
-        <sys_mod_count>52</sys_mod_count>
+        <sys_mod_count>60</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:15</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:00</sys_updated_on>
         <ui_id>cf7c351c-4b82-4e83-93ad-38d19f0316e4</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=18158bd6db52a4505884eb184b961980"/>
@@ -2752,85 +2862,18 @@
         <sys_created_on>2021-01-29 12:17:11</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>18fc4bf0db8a2850389b84d8689619ea</sys_id>
-        <sys_mod_count>68</sys_mod_count>
+        <sys_mod_count>76</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:14</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:59</sys_updated_on>
         <ui_id>87ccf2c2-c0f3-4eca-a487-5f7ae766f409</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=18fc4bf0db8a2850389b84d8689619ea"/>
-    <sys_hub_action_instance action="INSERT_OR_UPDATE">
-        <action_inputs/>
-        <action_inputs/>
-        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
-        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
-        <comment/>
-        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
-        <display_text/>
-        <flow display_value="PnL Deadlines">32779fdddbf9a450389b84d868961924</flow>
-        <order>10</order>
-        <parent_ui_id>534ca70d-da86-45f6-9ab5-7e9174d805c5</parent_ui_id>
-        <sys_class_name>sys_hub_action_instance</sys_class_name>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:38:42</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>20d610a4db5a24105884eb184b96199b</sys_id>
-        <sys_mod_count>64</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:15</sys_updated_on>
-        <ui_id>821ad930-1e1d-4106-ae64-bdb9734d710b</ui_id>
-    </sys_hub_action_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=20d610a4db5a24105884eb184b96199b"/>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_action_instance</document>
-        <document_key>20d610a4db5a24105884eb184b96199b</document_key>
-        <order>0</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:38:42</sys_created_on>
-        <sys_id>a8d610a4db5a24105884eb184b96199c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-09 14:38:42</sys_updated_on>
-        <value>x_aaro2_pnl_mgmt_question</value>
-        <variable display_value="">8f400a1587003300663ca1bb36cb0b4b</variable>
-    </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="id=20d610a4db5a24105884eb184b96199b"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>conditions</field>
-        <id>20d610a4db5a24105884eb184b96199b</id>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:38:42</sys_created_on>
-        <sys_id>64d610a4db5a24105884eb184b96199c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-09 14:38:42</sys_updated_on>
-        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
-        <value>year={{Created or Updated_1.current.year}}^period={{Created or Updated_1.current.month}}^status=4</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>table</field>
-        <id>20d610a4db5a24105884eb184b96199b</id>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:38:42</sys_created_on>
-        <sys_id>28d610a4db5a24105884eb184b96199c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-09 14:38:42</sys_updated_on>
-        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
-        <value/>
-    </sys_element_mapping>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
@@ -2840,22 +2883,22 @@
         <compiled_snapshot>b56604bfdb3b48145f65ba03e296195e</compiled_snapshot>
         <display_text/>
         <flow display_value="PnL Deadlines">32779fdddbf9a450389b84d868961924</flow>
-        <order>12</order>
+        <order>13</order>
         <parent_ui_id>534ca70d-da86-45f6-9ab5-7e9174d805c5</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>xxmpurik</sys_created_by>
         <sys_created_on>2021-02-09 14:38:42</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>28d610a4db5a24105884eb184b9619a9</sys_id>
-        <sys_mod_count>64</sys_mod_count>
+        <sys_mod_count>72</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:15</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:00</sys_updated_on>
         <ui_id>30809f85-03be-493b-9a3a-33cb5f4f15b8</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=28d610a4db5a24105884eb184b9619a9"/>
@@ -2892,11 +2935,11 @@
         <sys_created_by>xxmpurik</sys_created_by>
         <sys_created_on>2021-02-09 14:38:42</sys_created_on>
         <sys_id>acd610a4db5a24105884eb184b9619aa</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-09 14:38:42</sys_updated_on>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-19 14:42:39</sys_updated_on>
         <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
-        <value>{{7426b9f3-c6c5-4793-a1d3-aba0d5675cae.emails}}</value>
+        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>record</field>
@@ -2910,6 +2953,40 @@
         <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
         <value>{{Created or Updated_1.current}}</value>
     </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">d18d7e6cdb10f050f41dc15b1396193c</block>
+        <comment/>
+        <connected_to>cf42161a-cba4-40a2-ad06-11196cbddeeb</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="PnL Deadlines">32779fdddbf9a450389b84d868961924</flow>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>2e9db6acdb10f050f41dc15b139619b1</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:00</sys_updated_on>
+        <ui_id>c7bfa9be-edd1-4b0f-b0fa-6a1499ff0ce4</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=2e9db6acdb10f050f41dc15b139619b1"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
         <block display_value="">7c1d3a3fdb07ac90f41dc15b139619fb</block>
         <comment/>
@@ -2931,15 +3008,15 @@
         <sys_created_on>2021-01-29 12:17:12</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>6cfc4bf0db8a2850389b84d8689619f0</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>39</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:14</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:59</sys_updated_on>
         <ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3000,15 +3077,15 @@
         <sys_created_on>2021-01-27 13:44:50</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>74dd095cdbc6a050389b84d86896195f</sys_id>
-        <sys_mod_count>80</sys_mod_count>
+        <sys_mod_count>88</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:14</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:59</sys_updated_on>
         <ui_id>2e219cb0-f993-47e3-88d4-49877e834ba3</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=74dd095cdbc6a050389b84d86896195f"/>
@@ -3046,15 +3123,15 @@
         <sys_created_on>2021-01-18 16:04:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>83779fdddbf9a450389b84d868961980</sys_id>
-        <sys_mod_count>48</sys_mod_count>
+        <sys_mod_count>52</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:14</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:00</sys_updated_on>
         <ui_id>ff75c2ee-9492-443d-898e-bdc9bec55c3b</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3168,43 +3245,69 @@
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
-        <action_type display_value="GetSubmitter'sEmails">099590e0db5a24105884eb184b961985</action_type>
-        <action_type_parent display_value="GetSubmitter'sEmails">acd354acdb1a24105884eb184b961907</action_type_parent>
+        <action_type display_value="Generate Event">b56604bfdb3b48145f65ba03e296195e</action_type>
+        <action_type_parent display_value="Generate Event">1df4083bdb3b48145f65ba03e29619f1</action_type_parent>
         <comment/>
-        <compiled_snapshot>099590e0db5a24105884eb184b961985</compiled_snapshot>
+        <compiled_snapshot>b56604bfdb3b48145f65ba03e296195e</compiled_snapshot>
         <display_text/>
         <flow display_value="PnL Deadlines">32779fdddbf9a450389b84d868961924</flow>
-        <order>11</order>
-        <parent_ui_id>534ca70d-da86-45f6-9ab5-7e9174d805c5</parent_ui_id>
+        <order>8</order>
+        <parent_ui_id>cf42161a-cba4-40a2-ad06-11196cbddeeb</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:38:42</sys_created_on>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:57</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>acd610a4db5a24105884eb184b9619a2</sys_id>
-        <sys_mod_count>64</sys_mod_count>
+        <sys_id>a29db6acdb10f050f41dc15b13961935</sys_id>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:15</sys_updated_on>
-        <ui_id>7426b9f3-c6c5-4793-a1d3-aba0d5675cae</ui_id>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:00</sys_updated_on>
+        <ui_id>39e7a743-dd5c-4971-8cf6-326442db0bbe</ui_id>
     </sys_hub_action_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=acd610a4db5a24105884eb184b9619a2"/>
-    <sys_element_mapping action="delete_multiple" query="id=acd610a4db5a24105884eb184b9619a2"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>questions</field>
-        <id>acd610a4db5a24105884eb184b9619a2</id>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:38:42</sys_created_on>
-        <sys_id>e8d610a4db5a24105884eb184b9619a3</sys_id>
+    <sys_variable_value action="delete_multiple" query="document_key=a29db6acdb10f050f41dc15b13961935"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>a29db6acdb10f050f41dc15b13961935</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:57</sys_created_on>
+        <sys_id>6e9db6acdb10f050f41dc15b13961936</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-09 14:38:42</sys_updated_on>
-        <table>var__m_sys_hub_action_input_099590e0db5a24105884eb184b961985</table>
-        <value>{{821ad930-1e1d-4106-ae64-bdb9734d710b.Records}}</value>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:57</sys_updated_on>
+        <value>x_aaro2_pnl_mgmt.review_started_last_month</value>
+        <variable display_value="">f56604bfdb3b48145f65ba03e296195f</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=a29db6acdb10f050f41dc15b13961935"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>event_name</field>
+        <id>a29db6acdb10f050f41dc15b13961935</id>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:57</sys_created_on>
+        <sys_id>2a9db6acdb10f050f41dc15b13961936</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:57</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>a29db6acdb10f050f41dc15b13961935</id>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:57</sys_created_on>
+        <sys_id>ea9db6acdb10f050f41dc15b13961936</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:57</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
+        <value>{{Created or Updated_1.current}}</value>
     </sys_element_mapping>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
@@ -3222,15 +3325,15 @@
         <sys_created_on>2021-01-26 15:00:54</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>c5a51044db0eec10389b84d868961915</sys_id>
-        <sys_mod_count>84</sys_mod_count>
+        <sys_mod_count>92</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:14</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:00</sys_updated_on>
         <ui_id>0f33a204-d06d-4fdd-a29c-499df443201a</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=c5a51044db0eec10389b84d868961915"/>
@@ -3294,22 +3397,22 @@
         <compiled_snapshot>89a95065db7a24105884eb184b961933</compiled_snapshot>
         <display_text/>
         <flow display_value="PnL Deadlines">32779fdddbf9a450389b84d868961924</flow>
-        <order>13</order>
+        <order>14</order>
         <parent_ui_id>534ca70d-da86-45f6-9ab5-7e9174d805c5</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>xxmpurik</sys_created_by>
         <sys_created_on>2021-03-29 12:04:12</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d1cff237db47ac90f41dc15b139619b2</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:15</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:00</sys_updated_on>
         <ui_id>b7b73f25-ce48-4efe-9b25-85f7599a3200</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=d1cff237db47ac90f41dc15b139619b2"/>
@@ -3359,15 +3462,15 @@
         <sys_created_on>2021-02-15 13:49:23</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e0158bd6db52a4505884eb184b96199a</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:14</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:00</sys_updated_on>
         <ui_id>bafb4add-dad1-4a8f-90ac-e15f259a517c</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3490,7 +3593,7 @@
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
-        <order>8</order>
+        <order>11</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id/>
@@ -3499,15 +3602,15 @@
         <sys_created_on>2021-02-09 14:38:43</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e4d610a4db5a24105884eb184b9619bd</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:15</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:00</sys_updated_on>
         <ui_id>534ca70d-da86-45f6-9ab5-7e9174d805c5</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3553,6 +3656,54 @@
         <value/>
     </sys_element_mapping>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">098d3e6cdb10f050f41dc15b139619e5</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="PnL Deadlines">32779fdddbf9a450389b84d868961924</flow>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e69db6acdb10f050f41dc15b13961970</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:00</sys_updated_on>
+        <ui_id>cf42161a-cba4-40a2-ad06-11196cbddeeb</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=e69db6acdb10f050f41dc15b13961970"/>
+    <sys_element_mapping action="delete_multiple" query="id=e69db6acdb10f050f41dc15b13961970"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>e69db6acdb10f050f41dc15b13961970</id>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:58</sys_created_on>
+        <sys_id>229db6acdb10f050f41dc15b139619b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:58</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{87ccf2c2-c0f3-4eca-a487-5f7ae766f409.is_last_quarter_month}}=true</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
         <block display_value="">c51d7a3fdb07ac90f41dc15b1396192f</block>
         <comment/>
         <connected_to/>
@@ -3564,7 +3715,7 @@
         <inputs/>
         <inputs/>
         <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
-        <order>9</order>
+        <order>12</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id>534ca70d-da86-45f6-9ab5-7e9174d805c5</parent_ui_id>
@@ -3573,15 +3724,15 @@
         <sys_created_on>2021-02-09 14:38:43</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ecd610a4db5a24105884eb184b9619c0</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:15</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:00</sys_updated_on>
         <ui_id>800ddc1f-579e-4905-9aaf-ad5d988d20e3</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -3704,15 +3855,15 @@
         <sys_created_on>2021-01-18 16:04:31</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>47779fdddbf9a450389b84d8689619d3</sys_id>
-        <sys_mod_count>69</sys_mod_count>
+        <sys_mod_count>75</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:20</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:04</sys_updated_on>
         <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -3886,15 +4037,15 @@
         <sys_created_on>2021-01-18 16:04:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>07779fdddbf9a450389b84d868961942</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>47</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:13</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:59</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -3969,15 +4120,15 @@
         <sys_created_on>2021-01-18 16:04:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3a779fdddbf9a450389b84d868961926</sys_id>
-        <sys_mod_count>44</sys_mod_count>
+        <sys_mod_count>48</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:13</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:59</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -3993,7 +4144,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD25cf36378e47ac9025ae28bbd834396e,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDf29df6ac3510f05030d024fd16cb2501,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
         <audit>false</audit>
         <calculation>(function calculatedFieldValue(current) {
 
@@ -4052,15 +4203,15 @@
         <sys_created_on>2021-01-26 15:00:53</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>fca5dc04db0eec10389b84d8689619c7</sys_id>
-        <sys_mod_count>41</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:13</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:59</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -4072,7 +4223,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
-    <sys_hub_action_instance action="delete_multiple" query="flow=32779fdddbf9a450389b84d868961924^sys_idNOT IN18158bd6db52a4505884eb184b961980,18fc4bf0db8a2850389b84d8689619ea,20d610a4db5a24105884eb184b96199b,28d610a4db5a24105884eb184b9619a9,74dd095cdbc6a050389b84d86896195f,acd610a4db5a24105884eb184b9619a2,c5a51044db0eec10389b84d868961915,d1cff237db47ac90f41dc15b139619b2"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=32779fdddbf9a450389b84d868961924^sys_idNOT IN18158bd6db52a4505884eb184b961980,18fc4bf0db8a2850389b84d8689619ea,28d610a4db5a24105884eb184b9619a9,74dd095cdbc6a050389b84d86896195f,a29db6acdb10f050f41dc15b13961935,c5a51044db0eec10389b84d868961915,d1cff237db47ac90f41dc15b139619b2"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
@@ -4082,22 +4233,22 @@
         <compiled_snapshot>b56604bfdb3b48145f65ba03e296195e</compiled_snapshot>
         <display_text/>
         <flow display_value="PnL Deadlines">32779fdddbf9a450389b84d868961924</flow>
-        <order>7</order>
-        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
+        <order>10</order>
+        <parent_ui_id>c7bfa9be-edd1-4b0f-b0fa-6a1499ff0ce4</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>xxikochet</sys_created_by>
         <sys_created_on>2021-02-15 13:49:22</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>18158bd6db52a4505884eb184b961980</sys_id>
-        <sys_mod_count>52</sys_mod_count>
+        <sys_mod_count>60</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:15</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:00</sys_updated_on>
         <ui_id>cf7c351c-4b82-4e83-93ad-38d19f0316e4</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=18158bd6db52a4505884eb184b961980"/>
@@ -4169,85 +4320,18 @@
         <sys_created_on>2021-01-29 12:17:11</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>18fc4bf0db8a2850389b84d8689619ea</sys_id>
-        <sys_mod_count>68</sys_mod_count>
+        <sys_mod_count>76</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:14</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:59</sys_updated_on>
         <ui_id>87ccf2c2-c0f3-4eca-a487-5f7ae766f409</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=18fc4bf0db8a2850389b84d8689619ea"/>
-    <sys_hub_action_instance action="INSERT_OR_UPDATE">
-        <action_inputs/>
-        <action_inputs/>
-        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
-        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
-        <comment/>
-        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
-        <display_text/>
-        <flow display_value="PnL Deadlines">32779fdddbf9a450389b84d868961924</flow>
-        <order>10</order>
-        <parent_ui_id>534ca70d-da86-45f6-9ab5-7e9174d805c5</parent_ui_id>
-        <sys_class_name>sys_hub_action_instance</sys_class_name>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:38:42</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>20d610a4db5a24105884eb184b96199b</sys_id>
-        <sys_mod_count>64</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:15</sys_updated_on>
-        <ui_id>821ad930-1e1d-4106-ae64-bdb9734d710b</ui_id>
-    </sys_hub_action_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=20d610a4db5a24105884eb184b96199b"/>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_action_instance</document>
-        <document_key>20d610a4db5a24105884eb184b96199b</document_key>
-        <order>0</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:38:42</sys_created_on>
-        <sys_id>a8d610a4db5a24105884eb184b96199c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-09 14:38:42</sys_updated_on>
-        <value>x_aaro2_pnl_mgmt_question</value>
-        <variable display_value="">8f400a1587003300663ca1bb36cb0b4b</variable>
-    </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="id=20d610a4db5a24105884eb184b96199b"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>conditions</field>
-        <id>20d610a4db5a24105884eb184b96199b</id>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:38:42</sys_created_on>
-        <sys_id>64d610a4db5a24105884eb184b96199c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-09 14:38:42</sys_updated_on>
-        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
-        <value>year={{Created or Updated_1.current.year}}^period={{Created or Updated_1.current.month}}^status=4</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>table</field>
-        <id>20d610a4db5a24105884eb184b96199b</id>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:38:42</sys_created_on>
-        <sys_id>28d610a4db5a24105884eb184b96199c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-09 14:38:42</sys_updated_on>
-        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
-        <value/>
-    </sys_element_mapping>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
@@ -4257,22 +4341,22 @@
         <compiled_snapshot>b56604bfdb3b48145f65ba03e296195e</compiled_snapshot>
         <display_text/>
         <flow display_value="PnL Deadlines">32779fdddbf9a450389b84d868961924</flow>
-        <order>12</order>
+        <order>13</order>
         <parent_ui_id>534ca70d-da86-45f6-9ab5-7e9174d805c5</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>xxmpurik</sys_created_by>
         <sys_created_on>2021-02-09 14:38:42</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>28d610a4db5a24105884eb184b9619a9</sys_id>
-        <sys_mod_count>64</sys_mod_count>
+        <sys_mod_count>72</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:15</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:00</sys_updated_on>
         <ui_id>30809f85-03be-493b-9a3a-33cb5f4f15b8</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=28d610a4db5a24105884eb184b9619a9"/>
@@ -4309,11 +4393,11 @@
         <sys_created_by>xxmpurik</sys_created_by>
         <sys_created_on>2021-02-09 14:38:42</sys_created_on>
         <sys_id>acd610a4db5a24105884eb184b9619aa</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-09 14:38:42</sys_updated_on>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-19 14:42:39</sys_updated_on>
         <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
-        <value>{{7426b9f3-c6c5-4793-a1d3-aba0d5675cae.emails}}</value>
+        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>record</field>
@@ -4327,6 +4411,20 @@
         <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
         <value>{{Created or Updated_1.current}}</value>
     </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=28d610a4db5a24105884eb184b9619a9^sys_idNOT IN231dce58db14bc105884eb184b961997"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>parm1</input_name>
+        <instance>28d610a4db5a24105884eb184b9619a9</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"parm1":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\nvar defaultEarlyAccessUsers \u003d new Utils().getReviewingUsers();\n\nreturn defaultEarlyAccessUsers;"}}</script>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-19 14:42:38</sys_created_on>
+        <sys_id>231dce58db14bc105884eb184b961997</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-19 14:42:38</sys_updated_on>
+    </sys_hub_input_scripts>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
@@ -4343,15 +4441,15 @@
         <sys_created_on>2021-01-27 13:44:50</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>74dd095cdbc6a050389b84d86896195f</sys_id>
-        <sys_mod_count>80</sys_mod_count>
+        <sys_mod_count>88</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:14</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:59</sys_updated_on>
         <ui_id>2e219cb0-f993-47e3-88d4-49877e834ba3</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=74dd095cdbc6a050389b84d86896195f"/>
@@ -4371,44 +4469,84 @@
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
-        <action_type display_value="GetSubmitter'sEmails">099590e0db5a24105884eb184b961985</action_type>
-        <action_type_parent display_value="GetSubmitter'sEmails">acd354acdb1a24105884eb184b961907</action_type_parent>
+        <action_type display_value="Generate Event">b56604bfdb3b48145f65ba03e296195e</action_type>
+        <action_type_parent display_value="Generate Event">1df4083bdb3b48145f65ba03e29619f1</action_type_parent>
         <comment/>
-        <compiled_snapshot>099590e0db5a24105884eb184b961985</compiled_snapshot>
+        <compiled_snapshot>b56604bfdb3b48145f65ba03e296195e</compiled_snapshot>
         <display_text/>
         <flow display_value="PnL Deadlines">32779fdddbf9a450389b84d868961924</flow>
-        <order>11</order>
-        <parent_ui_id>534ca70d-da86-45f6-9ab5-7e9174d805c5</parent_ui_id>
+        <order>8</order>
+        <parent_ui_id>cf42161a-cba4-40a2-ad06-11196cbddeeb</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:38:42</sys_created_on>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:57</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>acd610a4db5a24105884eb184b9619a2</sys_id>
-        <sys_mod_count>64</sys_mod_count>
+        <sys_id>a29db6acdb10f050f41dc15b13961935</sys_id>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:15</sys_updated_on>
-        <ui_id>7426b9f3-c6c5-4793-a1d3-aba0d5675cae</ui_id>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:00</sys_updated_on>
+        <ui_id>39e7a743-dd5c-4971-8cf6-326442db0bbe</ui_id>
     </sys_hub_action_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=acd610a4db5a24105884eb184b9619a2"/>
-    <sys_element_mapping action="delete_multiple" query="id=acd610a4db5a24105884eb184b9619a2"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>questions</field>
-        <id>acd610a4db5a24105884eb184b9619a2</id>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:38:42</sys_created_on>
-        <sys_id>e8d610a4db5a24105884eb184b9619a3</sys_id>
+    <sys_variable_value action="delete_multiple" query="document_key=a29db6acdb10f050f41dc15b13961935"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>a29db6acdb10f050f41dc15b13961935</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:57</sys_created_on>
+        <sys_id>6e9db6acdb10f050f41dc15b13961936</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-02-09 14:38:42</sys_updated_on>
-        <table>var__m_sys_hub_action_input_099590e0db5a24105884eb184b961985</table>
-        <value>{{821ad930-1e1d-4106-ae64-bdb9734d710b.Records}}</value>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:57</sys_updated_on>
+        <value>x_aaro2_pnl_mgmt.review_started_last_month</value>
+        <variable display_value="">f56604bfdb3b48145f65ba03e296195f</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=a29db6acdb10f050f41dc15b13961935"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>event_name</field>
+        <id>a29db6acdb10f050f41dc15b13961935</id>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:57</sys_created_on>
+        <sys_id>2a9db6acdb10f050f41dc15b13961936</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:57</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
+        <value/>
     </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>a29db6acdb10f050f41dc15b13961935</id>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:57</sys_created_on>
+        <sys_id>ea9db6acdb10f050f41dc15b13961936</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:57</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b56604bfdb3b48145f65ba03e296195e</table>
+        <value>{{Created or Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=a29db6acdb10f050f41dc15b13961935^sys_idNOT INe29db6acdb10f050f41dc15b13961936"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>parm1</input_name>
+        <instance>a29db6acdb10f050f41dc15b13961935</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"parm1":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\nvar defaultEarlyAccessUsers \u003d new Utils().getReviewingUsers();\n\nreturn defaultEarlyAccessUsers;"}}</script>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:57</sys_created_on>
+        <sys_id>e29db6acdb10f050f41dc15b13961936</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:57</sys_updated_on>
+    </sys_hub_input_scripts>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
@@ -4425,15 +4563,15 @@
         <sys_created_on>2021-01-26 15:00:54</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>c5a51044db0eec10389b84d868961915</sys_id>
-        <sys_mod_count>84</sys_mod_count>
+        <sys_mod_count>92</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:14</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:00</sys_updated_on>
         <ui_id>0f33a204-d06d-4fdd-a29c-499df443201a</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=c5a51044db0eec10389b84d868961915"/>
@@ -4511,22 +4649,22 @@
         <compiled_snapshot>89a95065db7a24105884eb184b961933</compiled_snapshot>
         <display_text/>
         <flow display_value="PnL Deadlines">32779fdddbf9a450389b84d868961924</flow>
-        <order>13</order>
+        <order>14</order>
         <parent_ui_id>534ca70d-da86-45f6-9ab5-7e9174d805c5</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>xxmpurik</sys_created_by>
         <sys_created_on>2021-03-29 12:04:12</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d1cff237db47ac90f41dc15b139619b2</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:15</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:00</sys_updated_on>
         <ui_id>b7b73f25-ce48-4efe-9b25-85f7599a3200</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=d1cff237db47ac90f41dc15b139619b2"/>
@@ -4555,7 +4693,41 @@
         <table>var__m_sys_hub_action_input_89a95065db7a24105884eb184b961933</table>
         <value>{{Created or Updated_1.current.year}}</value>
     </sys_element_mapping>
-    <sys_hub_flow_logic action="delete_multiple" query="flow=32779fdddbf9a450389b84d868961924^sys_idNOT IN6cfc4bf0db8a2850389b84d8689619f0,83779fdddbf9a450389b84d868961980,e0158bd6db52a4505884eb184b96199a,e4d610a4db5a24105884eb184b9619bd,ecd610a4db5a24105884eb184b9619c0"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=32779fdddbf9a450389b84d868961924^sys_idNOT IN2e9db6acdb10f050f41dc15b139619b1,6cfc4bf0db8a2850389b84d8689619f0,83779fdddbf9a450389b84d868961980,e0158bd6db52a4505884eb184b96199a,e4d610a4db5a24105884eb184b9619bd,e69db6acdb10f050f41dc15b13961970,ecd610a4db5a24105884eb184b9619c0"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">d18d7e6cdb10f050f41dc15b1396193c</block>
+        <comment/>
+        <connected_to>cf42161a-cba4-40a2-ad06-11196cbddeeb</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="PnL Deadlines">32779fdddbf9a450389b84d868961924</flow>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>2e9db6acdb10f050f41dc15b139619b1</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:00</sys_updated_on>
+        <ui_id>c7bfa9be-edd1-4b0f-b0fa-6a1499ff0ce4</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=2e9db6acdb10f050f41dc15b139619b1"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
         <block display_value="">7c1d3a3fdb07ac90f41dc15b139619fb</block>
         <comment/>
@@ -4577,15 +4749,15 @@
         <sys_created_on>2021-01-29 12:17:12</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>6cfc4bf0db8a2850389b84d8689619f0</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>39</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:14</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:59</sys_updated_on>
         <ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -4651,15 +4823,15 @@
         <sys_created_on>2021-01-18 16:04:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>83779fdddbf9a450389b84d868961980</sys_id>
-        <sys_mod_count>48</sys_mod_count>
+        <sys_mod_count>52</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:14</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:00</sys_updated_on>
         <ui_id>ff75c2ee-9492-443d-898e-bdc9bec55c3b</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -4791,15 +4963,15 @@
         <sys_created_on>2021-02-15 13:49:23</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e0158bd6db52a4505884eb184b96199a</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:14</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:00</sys_updated_on>
         <ui_id>bafb4add-dad1-4a8f-90ac-e15f259a517c</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -4922,7 +5094,7 @@
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
-        <order>8</order>
+        <order>11</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id/>
@@ -4931,15 +5103,15 @@
         <sys_created_on>2021-02-09 14:38:43</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e4d610a4db5a24105884eb184b9619bd</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:15</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:00</sys_updated_on>
         <ui_id>534ca70d-da86-45f6-9ab5-7e9174d805c5</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -4985,6 +5157,54 @@
         <value/>
     </sys_element_mapping>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">098d3e6cdb10f050f41dc15b139619e5</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="PnL Deadlines">32779fdddbf9a450389b84d868961924</flow>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>b6115668-cbbe-4b14-92d1-f649dd044175</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e69db6acdb10f050f41dc15b13961970</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:00</sys_updated_on>
+        <ui_id>cf42161a-cba4-40a2-ad06-11196cbddeeb</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=e69db6acdb10f050f41dc15b13961970"/>
+    <sys_element_mapping action="delete_multiple" query="id=e69db6acdb10f050f41dc15b13961970"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>e69db6acdb10f050f41dc15b13961970</id>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 12:52:58</sys_created_on>
+        <sys_id>229db6acdb10f050f41dc15b139619b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:52:58</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{87ccf2c2-c0f3-4eca-a487-5f7ae766f409.is_last_quarter_month}}=true</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
         <block display_value="">c51d7a3fdb07ac90f41dc15b1396192f</block>
         <comment/>
         <connected_to/>
@@ -4996,7 +5216,7 @@
         <inputs/>
         <inputs/>
         <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
-        <order>9</order>
+        <order>12</order>
         <outputs_assigned/>
         <outputs_to_assign/>
         <parent_ui_id>534ca70d-da86-45f6-9ab5-7e9174d805c5</parent_ui_id>
@@ -5005,15 +5225,15 @@
         <sys_created_on>2021-02-09 14:38:43</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ecd610a4db5a24105884eb184b9619c0</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-03-29 12:04:15</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 12:53:00</sys_updated_on>
         <ui_id>800ddc1f-579e-4905-9aaf-ad5d988d20e3</ui_id>
         <workflow_inputs/>
         <workflow_reference/>

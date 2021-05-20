@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="sys_import_set_row" label="Question Data" max_length="40" name="x_aaro2_pnl_mgmt_question_data" sizeclass="0" type="collection">
+    <element audit="true" extends="sys_import_set_row" label="Question Data" max_length="40" name="x_aaro2_pnl_mgmt_question_data" sizeclass="2645" type="collection">
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Account" label="Account" max_length="40" name="u_account" type="string"/>
         <element attributes="import_attribute_name=Account5020Amount" label="Account5020Amount" max_length="15" name="u_account5020amount" type="decimal"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Account5020Id" label="Account5020Id" max_length="40" name="u_account5020id" type="string"/>
@@ -14,6 +14,7 @@
         <element attributes="import_attribute_name=Amount" label="Amount" max_length="15" name="u_amount" type="decimal"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Answer" label="Answer" max_length="3172" name="u_answer" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=BaseUnit" label="BaseUnit" max_length="40" name="u_baseunit" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="BaseUnitObjectId" max_length="40" name="u_baseunitobjectid" type="string"/>
         <element attributes="import_attribute_name=Company" label="Company" max_length="40" name="u_company" type="integer"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=CorrectingJournalCo" label="CorrectingJournalCo" max_length="40" name="u_correctingjournalco" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=CorrectingJournalNumber" label="CorrectingJournalNumber" max_length="40" name="u_correctingjournalnumber" type="string"/>
@@ -29,20 +30,24 @@
         <element attributes="edge_encryption_enabled=true,import_attribute_name=ManagerReviewUser" label="ManagerReviewUser" max_length="40" name="u_managerreviewuser" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=ManagerReviewUserFirstName" label="ManagerReviewUserFirstName" max_length="40" name="u_managerreviewuserfirstname" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=ManagerReviewUserLastName" label="ManagerReviewUserLastName" max_length="40" name="u_managerreviewuserlastname" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="MAN.ReviewState" max_length="40" name="u_man_reviewstate" type="string"/>
         <element attributes="import_attribute_name=Over1KReview" label="Over1KReview" max_length="40" name="u_over1kreview" type="integer"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Over1KReviewLastName" label="Over1KReviewLastName" max_length="40" name="u_over1kreviewlastname" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Over1KReviewTime" label="Over1KReviewTime" max_length="40" name="u_over1kreviewtime" type="glide_date_time"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Over1KReviewUser" label="Over1KReviewUser" max_length="40" name="u_over1kreviewuser" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Over1KReviewUserFirstName" label="Over1KReviewUserFirstName" max_length="40" name="u_over1kreviewuserfirstname" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="OVER.ReviewState" max_length="40" name="u_over_reviewstate" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Question" label="Question" max_length="6501" name="u_question" type="string"/>
         <element attributes="import_attribute_name=QuestionID" label="QuestionID" max_length="40" name="u_questionid" type="integer"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Reference" label="Reference" max_length="40" name="u_reference" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=SubAccount" label="SubAccount" max_length="40" name="u_subaccount" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=SubUnit" label="SubUnit" max_length="40" name="u_subunit" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="SubUnitObjectId" max_length="40" name="u_subunitobjectid" type="string"/>
         <element attributes="import_attribute_name=SupervisorReview" label="SupervisorReview" max_length="40" name="u_supervisorreview" type="integer"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=SupervisorReviewLastName" label="SupervisorReviewLastName" max_length="40" name="u_supervisorreviewlastname" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=SupervisorReviewTime" label="SupervisorReviewTime" max_length="40" name="u_supervisorreviewtime" type="glide_date_time"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=SupervisorReviewUser" label="SupervisorReviewUser" max_length="40" name="u_supervisorreviewuser" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=SupervisorReviewUserFirstName" label="SupervisorReviewUserFirstName" max_length="40" name="u_supervisorre_wuserfirstname" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="SUPER.ReviewState" max_length="40" name="u_super_reviewstate" type="string"/>
     </element>
 </database>

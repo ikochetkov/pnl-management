@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="use_document_viewer=true" audit="true" label="PALMSnow Questions" max_length="40" name="x_aaro2_pnl_mgmt_question" sizeclass="692" type="collection">
+    <element attributes="use_document_viewer=true" audit="true" label="PALMSnow Questions" max_length="40" name="x_aaro2_pnl_mgmt_question" sizeclass="1300" type="collection">
         <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Account" max_length="6" name="account" type="string"/>
         <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Accounting Unit" max_length="120" name="accounting_unit" type="string"/>
         <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Amount" max_length="20" name="amount" type="currency"/>
@@ -38,6 +38,7 @@
                 <element inactive_on_update="false" label="Assigned" value="2"/>
                 <element inactive_on_update="false" label="Saved" value="1"/>
                 <element inactive_on_update="false" label="Unapproved" value="6"/>
+                <element inactive_on_update="false" label="undefined" sequence="0" value="undefined"/>
                 <element inactive_on_update="false" label="Out of date" sequence="10" value="0"/>
             </choice>
         </element>

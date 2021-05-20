@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_aaro2_pnl_mgmt.DeadlineActivity</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>DeadlineActivity</name>
+        <script><![CDATA[var DeadlineActivity = Class.create();
+DeadlineActivity.prototype = {
+  initialize: function (sys_id) {
+    this.RECORD_SYS_ID = sys_id
+    this.HISTORY_SET_TABLE = 'sys_history_set',
+      this.HISTORY_LINE_TABLE = 'sys_history_line'
+    this.EMAIL_TABLE = 'sys_email'
+  },
+  get: function () {
+    if(!this.RECORD_SYS_ID)return []
+    var mails = []
+    var mailGr = new GlideRecord(this.EMAIL_TABLE)
+    mailGr.addQuery('instance', this.RECORD_SYS_ID)
+    mailGr.orderByDesc('sys_created_on')
+    mailGr.query()
+    while (mailGr.next()) {
+      mails.push(this._getMailObject(mailGr))
+    }
+    return mails
+  },
+  _getMailObject: function(gr){
+    return {
+      recipients: gr.getValue('recipients'),
+      subject: gr.getValue('subject'),
+      created_on: gr.getValue('sys_created_on'),
+      body: gr.getValue('body')
+    }
+  },
+  type: 'DeadlineActivity'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-05-19 11:13:03</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d41d5d5cdbd87c10f41dc15b13961921</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>DeadlineActivity</sys_name>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name>sys_script_include_d41d5d5cdbd87c10f41dc15b13961921</sys_update_name>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-05-19 13:27:48</sys_updated_on>
+    </sys_script_include>
+</record_update>

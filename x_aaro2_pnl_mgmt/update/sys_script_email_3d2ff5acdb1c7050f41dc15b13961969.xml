@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>get_next_month_label</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(current, template, email, email_action, event) {
+
+	var MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+	var nextMonthIndex = 0;
+	var currentMonth= current.month.getDisplayValue();
+	var currentMonthIndex = MONTHS.indexOf(currentMonth);
+	if(currentMonthIndex != 11){
+		nextMonthIndex=currentMonthIndex+1;
+	}
+	template.print(MONTHS[nextMonthIndex+1]);
+
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-05-20 08:39:07</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3d2ff5acdb1c7050f41dc15b13961969</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>get_next_month_label</sys_name>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name>sys_script_email_3d2ff5acdb1c7050f41dc15b13961969</sys_update_name>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-20 08:46:41</sys_updated_on>
+        <u_description/>
+    </sys_script_email>
+</record_update>
