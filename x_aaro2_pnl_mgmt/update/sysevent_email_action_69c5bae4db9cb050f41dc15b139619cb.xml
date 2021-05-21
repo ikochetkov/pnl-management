@@ -33,7 +33,7 @@
         <item_table/>
         <mandatory>false</mandatory>
         <message/>
-        <message_html><![CDATA[<p>P&amp;L statements and short sheets are available in PALMS for the accounting period:</p>
+        <message_html><![CDATA[<p>P&amp;L statements and short sheets are available in PALMSnow for the accounting period:</p>
 <p>Fiscal Year: <span style="white-space: pre;">${year}<br /></span></p>
 <p><span style="white-space: pre;">Accounting Period: ${month} </span></p>
 <ul style="list-style-position: inside;">
@@ -69,7 +69,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>69c5bae4db9cb050f41dc15b139619cb</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Access is available  - 3rd month of quarter</sys_name>
         <sys_overrides/>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
@@ -78,7 +78,7 @@
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sysevent_email_action_69c5bae4db9cb050f41dc15b139619cb</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-05-20 14:16:19</sys_updated_on>
+        <sys_updated_on>2021-05-21 09:16:06</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" label="Deadline" max_length="40" name="x_aaro2_pnl_mgmt_deadline" sizeclass="4" type="collection">
+    <element audit="true" label="Deadline" max_length="40" name="x_aaro2_pnl_mgmt_deadline" sizeclass="2" type="collection">
         <element label="Answer End" max_length="40" name="answer_end" type="glide_date_time"/>
         <element label="Answer Start" max_length="40" name="answer_start" type="glide_date_time"/>
         <element label="Early Access End" max_length="40" name="early_access_end" type="glide_date_time"/>
