@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="sys_import_set_row" label="Question Data" max_length="40" name="x_aaro2_pnl_mgmt_question_data" sizeclass="3945" type="collection">
+    <element audit="true" extends="sys_import_set_row" label="Question Data" max_length="40" name="x_aaro2_pnl_mgmt_question_data" sizeclass="5245" type="collection">
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Account" label="Account" max_length="40" name="u_account" type="string"/>
         <element attributes="import_attribute_name=Account5020Amount" label="Account5020Amount" max_length="15" name="u_account5020amount" type="decimal"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Account5020Id" label="Account5020Id" max_length="40" name="u_account5020id" type="string"/>

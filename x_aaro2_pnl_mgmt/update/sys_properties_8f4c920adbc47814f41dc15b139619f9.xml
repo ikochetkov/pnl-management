@@ -12,7 +12,7 @@
         <sys_created_on>2021-05-12 16:03:07</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>8f4c920adbc47814f41dc15b139619f9</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>x_aaro2_pnl_mgmt.path_for_export_download</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -20,9 +20,9 @@
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_properties_8f4c920adbc47814f41dc15b139619f9</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-05-12 16:03:31</sys_updated_on>
+        <sys_updated_on>2021-05-21 16:07:41</sys_updated_on>
         <type>string</type>
-        <value>https://pnldataserviceqa.aarons.com/palmsnow?exportkey=</value>
+        <value>https://pnldataservice.aarons.com/palmsnow?exportkey=</value>
         <write_roles/>
     </sys_properties>
     <sys_translated_text action="delete_multiple" query="documentkey=8f4c920adbc47814f41dc15b139619f9"/>
