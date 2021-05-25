@@ -25,9 +25,9 @@
 	//get previous month deadline data -END
 
 	var curUser = gs.getUserName();
-	if(gs.getUserName() == 'xxikochet' || gs.getUserName() == 'xxamirony' || gs.getUserName()=='vbardak' || gs.getUserName() == 'xxmpurik' || gs.getUserName() == 'xxvholovk' || gs.getUserName() == 'igor.kochetkov'){
-		curUser = 'plowen';
-	}
+// 	if(gs.getUserName() == 'xxikochet' || gs.getUserName() == 'xxamirony' || gs.getUserName()=='vbardak' || gs.getUserName() == 'xxmpurik' || gs.getUserName() == 'xxvholovk' || gs.getUserName() == 'igor.kochetkov'){
+// 		curUser = 'plowen';
+// 	}
 	var userSysID = gs.getUserID();
 
 	// check if user has temporary access -START
@@ -147,7 +147,7 @@
         <sys_created_on>2020-12-15 15:39:01</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ff7bcce6db4124905884eb184b96191e</sys_id>
-        <sys_mod_count>258</sys_mod_count>
+        <sys_mod_count>259</sys_mod_count>
         <sys_name>GetPNLUserDataSet</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -155,7 +155,7 @@
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_ws_operation_ff7bcce6db4124905884eb184b96191e</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-05-21 14:52:23</sys_updated_on>
+        <sys_updated_on>2021-05-25 12:54:04</sys_updated_on>
         <web_service_definition display_value="utils">d3a7e6e5db5ce8505884eb184b961953</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>
