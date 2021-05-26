@@ -33,12 +33,12 @@
         <item_table/>
         <mandatory>false</mandatory>
         <message/>
-        <message_html><![CDATA[<p data-tinymcerootblock=""><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span style="white-space: pre;">Hello, All DVPs And ADs!</span><span style="white-space: pre;"><br />We have refreshed PNL with a sneak peek of your ${month} ${year} P&amp;L's.</span></span></p>
+        <message_html><![CDATA[<p data-tinymcerootblock=""><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span style="white-space: pre;">Hello, All DVPs And ADs!</span><span style="white-space: pre;"><br />We have refreshed PALMSnow with a sneak peek of your ${month} ${year} P&amp;L's.</span></span></p>
 <p data-tinymcerootblock=""><span style="white-space: pre; font-family: arial, helvetica, sans-serif; font-size: 10pt;">Please do a quick review of your operations and let me know of any big errors (nothing less than $5k please.) If you find something big please e-mail <a href="mailto:Douglas.Stephens@aarons.com">Douglas.Stephens@aarons.com</a> or call at 678-402-3139 by ${early_access_end}.<br /></span></p>
 <p data-tinymcerootblock=""><span style="white-space: pre; font-family: arial, helvetica, sans-serif; font-size: 10pt;">The Accounting Team is still working on our analysis, so the numbers could change slightly before the final release. While you can input questions in PNL, we will not work these until after the P&amp;Ls are released and the RMs and GMs are notified. </span></p>
 <p data-tinymcerootblock=""><span style="white-space: pre; font-family: arial, helvetica, sans-serif; font-size: 10pt;">We still need RMs and GMs to do a thorough scrub of numbers once we release them to the field. </span></p>
 <p data-tinymcerootblock=""><span style="white-space: pre; font-family: arial, helvetica, sans-serif; font-size: 10pt;">&bull; P&amp;Ls will be released to the GMs/RMs at ${question_start}<br /></span></p>
-<p data-tinymcerootblock=""><span style="white-space: pre; font-family: arial, helvetica, sans-serif; font-size: 10pt;">&bull; PALMS will be open from the time P&amp;Ls are released until ${question_end}<br /></span></p>
+<p data-tinymcerootblock=""><span style="white-space: pre; font-family: arial, helvetica, sans-serif; font-size: 10pt;">&bull; PALMSnow will be open from the time P&amp;Ls are released until ${question_end}<br /></span></p>
 <p data-tinymcerootblock=""><span style="white-space: pre; font-family: arial, helvetica, sans-serif; font-size: 10pt;">&bull; Anything found will be addressed on the next month P&amp;Ls; </span></p>
 <p data-tinymcerootblock=""><span style="white-space: pre; font-family: arial, helvetica, sans-serif; font-size: 10pt;">Thank you for all your help to make sure our P&amp;L's go out fast and clean! Please don't hesitate to call with any questions or feedback on how to make this process better. <br /><br /></span></p>
 <p data-tinymcerootblock=""><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif; color: black;">PnL is available on ${mail_script:set_url_to_pnl_statements}</span></p>]]></message_html>
@@ -65,7 +65,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>df98c612dbf1ec505884eb184b9619fb</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>Early Access Invitaiton</sys_name>
         <sys_overrides/>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
@@ -74,7 +74,7 @@
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sysevent_email_action_df98c612dbf1ec505884eb184b9619fb</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-05-19 18:48:20</sys_updated_on>
+        <sys_updated_on>2021-05-26 12:12:23</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

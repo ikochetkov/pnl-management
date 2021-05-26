@@ -37,7 +37,7 @@
 <p>Fiscal Year: <span style="white-space: pre;">${year}<br /></span></p>
 <p><span style="white-space: pre;">Accounting Period: ${month} </span></p>
 <p style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="font-size: 12.0pt; color: black;">&nbsp;</span></p>
-<p style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="font-size: 10.0pt; font-family: Arial, sans-serif; color: black;">PnL is available on ${mail_script:set_url_to_pnl_questions} </span></p>
+<p style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="font-size: 10.0pt; font-family: Arial, sans-serif; color: black;">PALMSnow is available on ${mail_script:set_url_to_pnl_questions} </span></p>
 <p style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="font-size: 10.0pt; font-family: Arial, sans-serif; color: black;">&nbsp;</span></p>
 <p style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;"><strong><span style="font-size: 10.0pt; font-family: Arial, sans-serif; color: blue;">Please contact the NSC for any login issues at <a style="color: #0563c1; text-decoration: underline;" href="mailto:support@aarons.com"><span style="color: blue;">support@aarons.com</span></a> or call 678-402-0015</span></strong><br /></p>]]></message_html>
         <message_list/>
@@ -63,7 +63,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>686718e4db5a24105884eb184b96193a</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>Question was answered</sys_name>
         <sys_overrides/>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
@@ -72,7 +72,7 @@
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sysevent_email_action_686718e4db5a24105884eb184b96193a</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-05-21 09:17:21</sys_updated_on>
+        <sys_updated_on>2021-05-26 12:13:51</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>
