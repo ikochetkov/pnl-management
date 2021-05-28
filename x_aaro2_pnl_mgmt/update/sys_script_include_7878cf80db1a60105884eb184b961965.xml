@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
     <sys_script_include action="INSERT_OR_UPDATE">
-        <access>package_private</access>
+        <access>public</access>
         <active>true</active>
         <api_name>x_aaro2_pnl_mgmt.Utils</api_name>
         <caller_access/>
@@ -15,7 +15,8 @@ Utils.prototype = {
 		this.ACCOUNT_ASSIGNMENT_TABLE = 'x_aaro2_pnl_mgmt_pnl_account_assignment';
 		this.EARLY_ACC_GR_TABLE = 'x_aaro2_pnl_mgmt_early_access_group';
 		this.ASSIGN_MANAGER_TABLE = 'x_aaro2_pnl_mgmt_assignment_manager';
-		this.ATTACHMENT_TABLE = 'sys_attachment'
+		this.ATTACHMENT_TABLE = 'sys_attachment';
+		this.NOTIFICATIONS_TABLE = 'sysevent_email_action';
 	},
 
 	getCurrentPeriodDeadline: function (periodType) {
@@ -273,6 +274,42 @@ Utils.prototype = {
 		return output;
 	},
 
+	getNotifications: function (deadlineSysId, month) {
+
+		var lastMonths = [3,6,9,12];
+		var isLastQmonth = !!~lastMonths.indexOf(parseInt(month));
+
+		var dayName = {
+			earlyAccess: 'Early Access Invitaiton',
+			invitation: isLastQmonth? 'Access is available  - 3rd month of quarter' : 'Access is available  - first 2 months of quarter',
+			completion: 'Question was answered'
+		};
+		var notifications = {};
+
+
+		for(var key in dayName){
+			var notifGr = new GlideRecord(this.NOTIFICATIONS_TABLE);
+			notifGr.addEncodedQuery('sys_scope.scope=x_aaro2_pnl_mgmt');
+			notifGr.addQuery('name', dayName[key]);
+			notifGr.query();
+			if(notifGr.next()){
+				notifications[key] = new global.GlobalUtils().getSumulatedNotification(notifGr.getUniqueValue(), deadlineSysId, gs.getUserID(), "", ""); 
+			}
+		}
+		notifications.isLastMonth = isLastQmonth;
+		notifications.month = parseInt(month);
+		return notifications;
+	},
+
+
+	/* 
+
+		var result = SNC.NotificationSimulator.simulate("df98c612dbf1ec505884eb184b9619fb", "7f51f224db5cb050f41dc15b139619b4", "c02f26a91b7180d094c7caad1e4bcb4d", "", "&sys_target=sysevent_email_action&sys_uniqueValue=df98c612dbf1ec505884eb184b9619fb&sys_row=0&sysparm_encoded_record=");
+
+		var result = SNC.NotificationSimulator.simulate(this.getParameter("sysparm_email_action_id"), this.getParameter("sysparm_record_id"), this.getParameter("sysparm_user_id"), this.getParameter("sysparm_event_id"), this.getParameter("sysparm_changed_fields"));
+
+		*/
+
 	// 	userHasVerifAcc: function(userSysID, deadlineSysID) {
 	// 		var hasVerifAcc = false;
 	// 		var userGr = new GlideRecord('sys_user');
@@ -305,14 +342,14 @@ Utils.prototype = {
         <sys_created_on>2021-02-08 14:28:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7878cf80db1a60105884eb184b961965</sys_id>
-        <sys_mod_count>145</sys_mod_count>
+        <sys_mod_count>154</sys_mod_count>
         <sys_name>Utils</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_7878cf80db1a60105884eb184b961965</sys_update_name>
-        <sys_updated_by>xxmpurik</sys_updated_by>
-        <sys_updated_on>2021-04-22 11:16:48</sys_updated_on>
+        <sys_updated_by>xxikochet</sys_updated_by>
+        <sys_updated_on>2021-05-27 13:15:48</sys_updated_on>
     </sys_script_include>
 </record_update>
