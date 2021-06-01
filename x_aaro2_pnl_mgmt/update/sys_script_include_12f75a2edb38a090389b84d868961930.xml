@@ -269,6 +269,7 @@ DeadlinesUtil.prototype = {
 		if (deadlineGr.next() || isGet) {
 			var sys_id = deadlineGr.getUniqueValue()
 			deadline = {
+				reviewingUsers: new Utils().getReviewingUsers(),
 				notifications: new Utils().getNotifications(sys_id,deadlineGr.getValue('month')),
 				early_access_user_list: this.__getEarlyAccessParticipantsList(sys_id),
 				early_access_participants: this.__getParticipants(this.EARLY_ACCESS_PARTICIPANT_TABLE, sys_id),
@@ -510,14 +511,14 @@ DeadlinesUtil.prototype = {
         <sys_created_on>2020-12-03 16:03:47</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>12f75a2edb38a090389b84d868961930</sys_id>
-        <sys_mod_count>217</sys_mod_count>
+        <sys_mod_count>218</sys_mod_count>
         <sys_name>DeadlinesUtil</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_12f75a2edb38a090389b84d868961930</sys_update_name>
-        <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-05-28 12:50:38</sys_updated_on>
+        <sys_updated_by>xxmpurik</sys_updated_by>
+        <sys_updated_on>2021-06-01 12:20:05</sys_updated_on>
     </sys_script_include>
 </record_update>
