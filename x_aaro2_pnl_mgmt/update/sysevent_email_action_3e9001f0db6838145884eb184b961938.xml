@@ -20,7 +20,7 @@
         <digest_template/>
         <digest_text/>
         <digestable>false</digestable>
-        <event_name>x_aaro2_pnl_mgmt.answer_time_ended</event_name>
+        <event_name>x_aaro2_pnl_mgmt.answer_time_ended_last_</event_name>
         <event_parm_1>true</event_parm_1>
         <event_parm_2>false</event_parm_2>
         <exclude_delegates>false</exclude_delegates>
@@ -36,17 +36,17 @@
         <message_html><![CDATA[<p style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="font-size: 10.0pt; font-family: Arial, sans-serif; color: black;">P&amp;L question answers are available in PALMSnow for accounting period: <br /></span></p>
 <p>Fiscal Year: <span style="white-space: pre;">${year}<br /></span></p>
 <p><span style="white-space: pre;">Accounting Period: ${month} </span></p>
-<p><br /></p>
-<p>Any adjustments needed will be reflected in the ${mail_script:next_month_name} ${year} P&amp;Ls</p>
-<p style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="font-size: 12.0pt; color: black;">&nbsp;</span></p>
-<p style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="font-size: 10.0pt; font-family: Arial, sans-serif; color: black;">PALMSnow is available on ${mail_script:set_url_to_pnl_questions} </span></p>
+<p>&nbsp;</p>
+<p>Any adjustments needed will be made manually for ${mail_script:get_quarter} incentive calculations, as necessary.</p>
+<p>&nbsp;</p>
+<p style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="font-size: 10.0pt; font-family: Arial, sans-serif; color: black;">PALMSnow is available on ${mail_script:set_url_to_pnl_questions}</span></p>
 <p style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="font-size: 10.0pt; font-family: Arial, sans-serif; color: black;">&nbsp;</span></p>
 <p style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;"><strong><span style="font-size: 10.0pt; font-family: Arial, sans-serif; color: blue;">Please contact the NSC for any login issues at <a style="color: #0563c1; text-decoration: underline;" href="mailto:support@aarons.com"><span style="color: blue;">support@aarons.com</span></a> or call 678-402-0015</span></strong><br /></p>]]></message_html>
         <message_list/>
         <message_text/>
         <messaging_channels/>
         <messaging_content/>
-        <name>Question was answered</name>
+        <name>Question was answered - 3rd month</name>
         <omit_watermark>false</omit_watermark>
         <order>100</order>
         <push_message_only>false</push_message_only>
@@ -60,21 +60,21 @@
         <subject>${month} ${year} P&amp;L Questions - Answers Available  </subject>
         <subscribable>false</subscribable>
         <sys_class_name>sysevent_email_action</sys_class_name>
-        <sys_created_by>xxmpurik</sys_created_by>
-        <sys_created_on>2021-02-09 14:43:42</sys_created_on>
+        <sys_created_by>xxikochet</sys_created_by>
+        <sys_created_on>2021-06-02 08:41:01</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
-        <sys_id>686718e4db5a24105884eb184b96193a</sys_id>
-        <sys_mod_count>19</sys_mod_count>
-        <sys_name>Question was answered</sys_name>
+        <sys_id>3e9001f0db6838145884eb184b961938</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Question was answered - 3rd month</sys_name>
         <sys_overrides/>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name>sysevent_email_action_686718e4db5a24105884eb184b96193a</sys_update_name>
+        <sys_update_name>sysevent_email_action_3e9001f0db6838145884eb184b961938</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-06-02 09:19:41</sys_updated_on>
+        <sys_updated_on>2021-06-02 09:10:25</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>
