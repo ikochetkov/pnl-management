@@ -136,12 +136,13 @@ DeadlinesUtil.prototype = {
     while(dlGr.next()){
       deadlines.push({
         sys_id: dlGr.getUniqueValue(),
-        month: dlGr.getValue('month'),
+        month: Number(dlGr.getValue('month')),
         monthLabel: dlGr.getDisplayValue('month'),
         year: dlGr.getValue('year'),
         
       })
     }
+    return deadlines
   },
 	getDeadlines: function () {
 		var deadlines = {
@@ -276,15 +277,19 @@ DeadlinesUtil.prototype = {
 
 		return sneakPeek
 	},
+  getDeadLineBySysId: function (sys_id){
+    var gr = new GlideRecord(this.DEADLINES_TABLE)
+    gr.get(sys_id)
+    return this.__getDeadlineObject(gr, true)
+  },
 	__getDeadlineObject: function (deadlineGr, isGet) {
 		var deadline = {}
-		gs.info('__GETDEADLINEOBJECT')
 		if (deadlineGr.next() || isGet) {
 			var sys_id = deadlineGr.getUniqueValue()
 			deadline = {
-				reviewer_list: this.__getReviewingUsers(),
+				reviewer_list:  [],// this.__getReviewingUsers(),
 				notifications: new Utils().getNotifications(sys_id,deadlineGr.getValue('month')),
-				early_access_user_list: this.__getEarlyAccessParticipantsList(sys_id),
+				early_access_user_list: [],//this.__getEarlyAccessParticipantsList(sys_id),
 				early_access_participants: this.__getParticipants(this.EARLY_ACCESS_PARTICIPANT_TABLE, sys_id),
 				early_access_groups: this.__getGroups(sys_id),
 				early_access_end: deadlineGr.getValue('early_access_end') || '',
@@ -359,7 +364,7 @@ DeadlinesUtil.prototype = {
 		var gr = new GlideRecord(this.DEADLINES_TABLE);
 		gr.get(deadlineSysId);
 
-		return this.__getDeadlineObject(gr);
+		return this.__getDeadlineObject(gr, true);
 	},
 	__getStartOfMonth: function (date) {
 		var year = date.getYearUTC()
@@ -538,7 +543,7 @@ DeadlinesUtil.prototype = {
         <sys_created_on>2020-12-03 16:03:47</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>12f75a2edb38a090389b84d868961930</sys_id>
-        <sys_mod_count>220</sys_mod_count>
+        <sys_mod_count>223</sys_mod_count>
         <sys_name>DeadlinesUtil</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -546,6 +551,6 @@ DeadlinesUtil.prototype = {
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_12f75a2edb38a090389b84d868961930</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-06-02 13:07:55</sys_updated_on>
+        <sys_updated_on>2021-06-02 16:11:47</sys_updated_on>
     </sys_script_include>
 </record_update>
