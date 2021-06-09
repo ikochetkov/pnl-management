@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_application">
+    <sys_ui_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <hint/>
+        <name>Question History Set</name>
+        <order/>
+        <roles>x_aaro2_pnl_mgmt.question_history_set_user</roles>
+        <sys_class_name>sys_ui_application</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-06-07 11:08:54</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>2562535adbe07010f41dc15b1396192f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Question History Set</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name>sys_ui_application_2562535adbe07010f41dc15b1396192f</sys_update_name>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-06-07 11:08:54</sys_updated_on>
+    </sys_ui_application>
+</record_update>

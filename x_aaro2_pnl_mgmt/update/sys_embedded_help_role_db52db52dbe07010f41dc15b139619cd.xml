@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_aaro2_pnl_mgmt.question_history_set_user" name="x_aaro2_pnl_mgmt.question_history_set_user">d352db52dbe07010f41dc15b139619ca</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-06-07 11:08:44</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>db52db52dbe07010f41dc15b139619cd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>d352db52dbe07010f41dc15b139619ca</sys_name>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name>sys_embedded_help_role_db52db52dbe07010f41dc15b139619cd</sys_update_name>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-06-07 11:08:44</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_aaro2_pnl_mgmt.QuestionHistory</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>QuestionHistory</name>
+        <script><![CDATA[var QuestionHistory = Class.create();
+QuestionHistory.prototype = {
+  initialize: function () {
+    this.TRACK_FIELDS = gs.getProperty('x_aaro2_pnl_mgmt.question_history_tracked_fields').split(',')
+    this.HISTORY_SET_TABLE = 'x_aaro2_pnl_mgmt_question_history_set'
+    this.HISTORY_LINE_TABLE = 'x_aaro2_pnl_mgmt_question_history_line'
+  },
+
+  create: function (current) {
+    var iteration = 0
+    var setGr = new GlideRecord(this.HISTORY_SET_TABLE);
+    setGr.initialize();
+    setGr.setValue('record', current.getUniqueValue())
+    setGr.setValue('iteration', iteration);
+
+    var setSysId = setGr.insert()
+    var self = this;
+    self.TRACK_FIELDS.forEach(function (fieldName) {
+      self._createLine(setSysId, fieldName, current, null, iteration)
+    })
+  },
+
+  update: function (current, previous) {
+    var setGr = new GlideRecord(this.HISTORY_SET_TABLE);
+    if (!setGr.get('record', current.getUniqueValue())) {
+      return
+    }
+    var iteration = setGr.getValue('iteration') + 1
+    var self = this
+    self.TRACK_FIELDS.forEach(function (fieldName) {
+      if (current[fieldName].changes()) {
+        self._createLine(setGr.getUniqueValue(), fieldName, current, previous, iteration)
+      }
+    })
+  },
+  clear: function (sys_id) {
+    var setGr = new GlideRecord(this.HISTORY_SET_TABLE);
+
+    if (setGr.get('record', sys_id)) {
+      setId = setGr.getUniqueValue()
+      var lineGr = new GlideRecord(this.HISTORY_LINE_TABLE)
+      lineGr.addQuery('set', setId);
+      lineGr.query()
+      lineGr.deleteMultiple()
+      setGr.deleteRecord()
+    }
+
+  },
+
+  _createLine: function (setSysId, fieldName, current, prevoius, iteration) {
+    if (!current[fieldName].nil()) {
+      var lineGr = new GlideRecord(this.HISTORY_LINE_TABLE);
+      lineGr.initialize();
+      lineGr.setValue('set', setSysId)
+      lineGr.setValue('iteration', iteration);
+      lineGr.setValue('field_name', fieldName);
+      lineGr.setValue('field_display_name', current[fieldName].getLabel())
+      lineGr.setValue('new_value', current.getValue(fieldName))
+      lineGr.setValue('new_display_value', current.getDisplayValue(fieldName))
+      lineGr.setValue('user', gs.getUserID())
+      if (prevoius && !previous[fieldName].nil()) {
+        lineGr.setValue('old_value', prevoius.getValue(fieldName))
+        lineGr.setValue('old_display_value', prevoius.getDisplayValue(fieldName))
+      }
+      return lineGr.insert()
+    }
+  },
+  type: 'QuestionHistory'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-06-07 12:03:22</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>10be57d2dbe47010f41dc15b139619fb</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>QuestionHistory</sys_name>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name>sys_script_include_10be57d2dbe47010f41dc15b139619fb</sys_update_name>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-06-08 12:44:19</sys_updated_on>
+    </sys_script_include>
+</record_update>

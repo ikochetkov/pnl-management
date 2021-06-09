@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Question History Line" max_length="40" name="x_aaro2_pnl_mgmt_question_history_line" sizeclass="8" type="collection">
+        <element label="Field Display Name" max_length="40" name="field_display_name" type="string"/>
+        <element label="Field Name" max_length="40" name="field_name" type="string"/>
+        <element label="Iteration" max_length="40" name="iteration" type="integer"/>
+        <element label="New Display Value" max_length="1024" name="new_display_value" type="string"/>
+        <element label="New Value" max_length="1024" name="new_value" type="string"/>
+        <element label="Old Display Value" max_length="1024" name="old_display_value" type="string"/>
+        <element label="Old Value" max_length="1024" name="old_value" type="string"/>
+        <element label="Reference" max_length="80" name="reference" type="table_name"/>
+        <element label="Set" max_length="32" name="set" reference="x_aaro2_pnl_mgmt_question_history_set" type="reference"/>
+        <element label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="set"/>
+        </index>
+        <index name="index2">
+            <element name="user"/>
+        </index>
+    </element>
+</database>

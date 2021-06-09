@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update node_type="sys_portal_page" unload_date="2021-06-09 09:01:16">
+    <sys_portal_page action="INSERT_OR_UPDATE">
+        <layout/>
+        <order/>
+        <read_roles>snc_internal</read_roles>
+        <roles/>
+        <selectable>false</selectable>
+        <sys_class_name>sys_portal_page</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-06-04 14:17:52</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>64e0246ddb243854f41dc15b139619fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PA PALMSnow - New Tab</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name>sys_portal_page_64e0246ddb243854f41dc15b139619fd</sys_update_name>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-06-04 14:17:52</sys_updated_on>
+        <title>PA PALMSnow - New Tab</title>
+        <user/>
+        <view>pa_palmsnow_-_new_tab</view>
+        <related_items_node>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="PA PALMSnow - New Tab">64e0246ddb243854f41dc15b139619fd</page>
+                <summary>#New Report</summary>
+                <sys_created_by>xxamirony</sys_created_by>
+                <sys_created_on>2021-06-04 14:18:10</sys_created_on>
+                <sys_id>fcf0a82ddb243854f41dc15b139619fc</sys_id>
+                <sys_mod_count>1</sys_mod_count>
+                <sys_updated_by>xxamirony</sys_updated_by>
+                <sys_updated_on>2021-06-04 14:18:10</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2021-06-04 10:18:10 AM">fcf0a82ddb243854f41dc15b139619fc</portal_section>
+                        <sys_created_by>xxamirony</sys_created_by>
+                        <sys_created_on>2021-06-04 14:18:10</sys_created_on>
+                        <sys_id>30f0a82ddb243854f41dc15b139619ff</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>xxamirony</sys_updated_by>
+                        <sys_updated_on>2021-06-04 14:18:10</sys_updated_on>
+                        <value>#New Report</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2021-06-04 10:18:10 AM">fcf0a82ddb243854f41dc15b139619fc</portal_section>
+                        <sys_created_by>xxamirony</sys_created_by>
+                        <sys_created_on>2021-06-04 14:18:10</sys_created_on>
+                        <sys_id>7cf0a82ddb243854f41dc15b139619fe</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>xxamirony</sys_updated_by>
+                        <sys_updated_on>2021-06-04 14:18:10</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2021-06-04 10:18:10 AM">fcf0a82ddb243854f41dc15b139619fc</portal_section>
+                        <sys_created_by>xxamirony</sys_created_by>
+                        <sys_created_on>2021-06-04 14:18:10</sys_created_on>
+                        <sys_id>b8f0a82ddb243854f41dc15b139619fd</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>xxamirony</sys_updated_by>
+                        <sys_updated_on>2021-06-04 14:18:10</sys_updated_on>
+                        <value>-1</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2021-06-04 10:18:10 AM">fcf0a82ddb243854f41dc15b139619fc</portal_section>
+                        <sys_created_by>xxamirony</sys_created_by>
+                        <sys_created_on>2021-06-04 14:18:10</sys_created_on>
+                        <sys_id>b8f0a82ddb243854f41dc15b139619fe</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>xxamirony</sys_updated_by>
+                        <sys_updated_on>2021-06-04 14:18:10</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2021-06-04 10:18:10 AM">fcf0a82ddb243854f41dc15b139619fc</portal_section>
+                        <sys_created_by>xxamirony</sys_created_by>
+                        <sys_created_on>2021-06-04 14:18:10</sys_created_on>
+                        <sys_id>f4f0a82ddb243854f41dc15b139619fe</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>xxamirony</sys_updated_by>
+                        <sys_updated_on>2021-06-04 14:18:10</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+        </related_items_node>
+    </sys_portal_page>
+</record_update>

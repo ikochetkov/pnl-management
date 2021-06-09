@@ -14,8 +14,12 @@ PalmsnowActivityStream.prototype = {
     this.HISTORY_SET_TABLE = 'sys_history_set'
     this.HISTORY_LINE_TABLE = 'sys_history_line'
     this.JOURNAL_ENTRIES_TABLE = 'sys_journal_field'
+    this.QUESTION_HISTORY_SET_TABLE = 'x_aaro2_pnl_mgmt_question_history_set',
+    this.QUESTION_HISTORY_LINE_TABLE = 'x_aaro2_pnl_mgmt_question_history_line',
     this.ATTACHMENTS_TABLE = 'sys_attachment'
     this.AUDIT_TABLE = 'sys_audit'
+    this.USER_FIELDS = ['assigned_to', 'requested_by']
+    this.USER_FIELD_DISPLAY = {assigned_to: 'Assigned To', requested_by: 'Requested By'}
     this.HISTORY_TYPE = {
       FIELD: 'FIELD',
       ATTACHMENT: 'ATTACHMENT',
@@ -34,7 +38,49 @@ PalmsnowActivityStream.prototype = {
     this.HISTORY_SET_SYS_ID = historySetGr.getUniqueValue()
     return this._getActivityStream()
   },
-
+  _getQuestionHistoryRecords: function(){
+    var historyLines = []
+    var setGr = new GlideRecord(this.QUESTION_HISTORY_SET_TABLE)
+    setGr.get('record', this.RECORD_SYS_ID);
+    var lineGr = new GlideRecord(this.QUESTION_HISTORY_LINE_TABLE)
+    lineGr.addQuery('set', setGr.getUniqueValue())
+    lineGr.query()
+    while(lineGr.next()){
+      historyLines.push(
+        {
+          update: lineGr.getValue('iteration'),
+          type: this.HISTORY_TYPE.FIELD,
+          user: this._getUserBySysId(lineGr.getValue('user')),
+          label: lineGr.getValue('field_display_name'),
+          old_value: lineGr.getValue('old_display_value'),
+          old_display_value: lineGr.getValue('old_display_value'),
+          new_value: lineGr.getValue('new_display_value'),
+          new_display_value: lineGr.getValue('new_display_value'),
+          update_time: lineGr.getDisplayValue('sys_created_on')
+        }
+      )
+    }
+    var historyGroups = []
+    var indices = {}
+    historyLines.forEach(function (hl) {
+      if (!historyGroups[hl.update]) {
+        indices[hl.update] = historyGroups.length;
+        historyGroups[indices[hl.update]] = {
+          type: hl.type,
+          user: hl.user,
+          update_time: hl.update_time,
+          update_iteration: hl.update,
+          updates: []
+        }
+      }
+      historyGroups[indices[hl.update]].updates.push({
+        label: hl.label,
+        old_value: hl.old_value,
+        new_value: hl.new_value
+      })
+    })
+    return historyGroups.length ? historyGroups : false
+  },
   _getAuditRecords: function () {
     var auditRecords = []
     var auditGr = new GlideRecord('sys_audit')
@@ -44,9 +90,9 @@ PalmsnowActivityStream.prototype = {
     while (auditGr.next()) {
       auditRecords.push({
         update_time: auditGr.getValue('sys_created_on'),
-        user: this._getUserObject(auditGr.getValue('user')),
+        user: this._getUserById(auditGr.getValue('user')),
         updates: [
-          auditGr.getValue('fieldname')!=='assigned_to'?
+          !~this.USER_FIELDS.indexOf(auditGr.getValue('fieldname'))?
           {
             old_value: auditGr.getValue('oldvalue'),
             new_value: auditGr.getValue('newvalue'),
@@ -54,10 +100,10 @@ PalmsnowActivityStream.prototype = {
             label: auditGr.getDisplayValue('fieldname'),
           }:
           {
-            old_value: this._getUserBySysId(auditGr.getValue('oldvalue')),
-            new_value: this._getUserBySysId(auditGr.getValue('newvalue')),
+            old_value: this._getUserBySysId(auditGr.getValue('oldvalue')).name,
+            new_value: this._getUserBySysId(auditGr.getValue('newvalue')).name,
             field: auditGr.getValue('fieldname'),
-            label: auditGr.getDisplayValue('fieldname'),
+            label: this.USER_FIELD_DISPLAY[auditGr.getValue('fieldname')],
           }
         ],
         type: this.HISTORY_TYPE.FIELD
@@ -78,7 +124,7 @@ PalmsnowActivityStream.prototype = {
         {
           update: historyLineGr.getValue('update'),
           type: this.HISTORY_TYPE.FIELD,
-          user: this._getUserObject(historyLineGr.getValue('user_id')),
+          user: this._getUserById(historyLineGr.getValue('user_id')),
           label: historyLineGr.getValue('label'),
           old_value: historyLineGr.getValue('old'),
           new_value: historyLineGr.getValue('new'),
@@ -86,27 +132,24 @@ PalmsnowActivityStream.prototype = {
         }
       )
     }
-    gs.info('HISTORY_RECORD::' + this.RECORD_SYS_ID)
-    gs.info('HISTORY_LINES::' + JSON.stringify(historyLines, null, 2))
     var historyGroups = []
-    var indecies = {}
+    var indices = {}
     historyLines.forEach(function (hl) {
       if (!historyGroups[hl.update]) {
-        indecies[hl.update] = historyGroups.length;
-        historyGroups[indecies[hl.update]] = {
+        indices[hl.update] = historyGroups.length;
+        historyGroups[indices[hl.update]] = {
           type: hl.type,
           user: hl.user,
           update_time: hl.update_time,
           updates: []
         }
       }
-      historyGroups[indecies[hl.update]].updates.push({
+      historyGroups[indices[hl.update]].updates.push({
         label: hl.label,
         old_value: hl.old_value,
         new_value: hl.new_value
       })
     })
-    gs.info('HISTORY_GROUPS::' + JSON.stringify(historyGroups, null, 2))
     return historyGroups.length ? historyGroups : false
   },
   _getAttachmentHistory: function () {
@@ -118,7 +161,7 @@ PalmsnowActivityStream.prototype = {
     while (attGr.next()) {
       attachmentUpdates.push({
         type: this.HISTORY_TYPE.ATTACHMENT,
-        user: this._getUserObject(attGr.getValue('sys_created_by')),
+        user: this._getUserById(attGr.getValue('sys_created_by')),
         update_time: attGr.getValue('sys_updated_on'),
         updates: [
           {
@@ -144,7 +187,7 @@ PalmsnowActivityStream.prototype = {
     while (journalGr.next()) {
       var entry = {
         type: this.HISTORY_TYPE.JOURNAL,
-        user: this._getUserObject(journalGr.getValue('sys_created_by')),
+        user: this._getUserById(journalGr.getValue('sys_created_by')),
         update_time: journalGr.getValue('sys_created_on'),
         updates: [
           {
@@ -158,7 +201,7 @@ PalmsnowActivityStream.prototype = {
     return journalLines
   },
   _getActivityStream: function () {
-    var history = this._getHistoryLines() || this._getAuditRecords()
+    var history = this._getQuestionHistoryRecords() || this._getHistoryLines() || this._getAuditRecords()
     var activityStream = history
       .concat(this._getAttachmentHistory())
       .concat(this._getJournalLines())
@@ -175,16 +218,19 @@ PalmsnowActivityStream.prototype = {
   _getUserBySysId: function(sys_id){
     var userGr = new GlideRecord('sys_user');
     userGr.get(sys_id)
-    return userGr.getValue('name')
+    return this._getUserObject(userGr)
   },
-  _getUserObject: function (userid) {
+  _getUserById: function(sys_id){
     var userGr = new GlideRecord('sys_user');
-    userGr.get('user_name', userid)
+    userGr.get('user_name',sys_id)
+    return this._getUserObject(userGr)
+  },
+  _getUserObject: function (gr) {
     var userObj = {
-      id: userid,
-      name: userGr.getValue('name'),
-      avatar: userGr.getValue('avatar') || '',
-      email: userGr.getValue('email')
+      id: gr.getUniqueValue(),
+      name: gr.getValue('name'),
+      avatar: gr.getValue('avatar') || '',
+      email: gr.getValue('email')
     }
     return userObj;
   },
@@ -196,7 +242,7 @@ PalmsnowActivityStream.prototype = {
         <sys_created_on>2021-04-28 11:27:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>50d6d9addbf3e8d05884eb184b961953</sys_id>
-        <sys_mod_count>36</sys_mod_count>
+        <sys_mod_count>51</sys_mod_count>
         <sys_name>PalmsnowActivityStream</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -204,6 +250,6 @@ PalmsnowActivityStream.prototype = {
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_50d6d9addbf3e8d05884eb184b961953</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-05-14 11:46:57</sys_updated_on>
+        <sys_updated_on>2021-06-08 13:55:09</sys_updated_on>
     </sys_script_include>
 </record_update>

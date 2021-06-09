@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas_pane">
+    <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+        <grid_canvas display_value="PA PALMSnow - New Tab">ece0246ddb243854f41dc15b139619fe</grid_canvas>
+        <height>10</height>
+        <portal_widget display_value="Created 2021-06-04 10:18:10 AM">fcf0a82ddb243854f41dc15b139619fc</portal_widget>
+        <posx>0</posx>
+        <posy>0</posy>
+        <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-06-04 14:18:10</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>30f0e82ddb243854f41dc15b13961900</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ece0246ddb243854f41dc15b139619fe</sys_name>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name>sys_grid_canvas_pane_30f0e82ddb243854f41dc15b13961900</sys_update_name>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-06-04 14:18:10</sys_updated_on>
+        <width>12</width>
+    </sys_grid_canvas_pane>
+</record_update>
