@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="INSERT_OR_UPDATE">
+        <operation>read</operation>
+        <source_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>xxtjalman</sys_created_by>
+        <sys_created_on>2021-06-09 20:57:59</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>526c2f4fdba43c10f41dc15b139619ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_aaro2_ram_request</sys_name>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name>sys_scope_privilege_526c2f4fdba43c10f41dc15b139619ab</sys_update_name>
+        <sys_updated_by>xxtjalman</sys_updated_by>
+        <sys_updated_on>2021-06-09 20:57:59</sys_updated_on>
+        <target_name>x_aaro2_ram_request</target_name>
+        <target_scope display_value="Risk Acceptance Management">8cbc7b6edbfeb3c08f26550a4896197c</target_scope>
+        <target_type>sys_db_object</target_type>
+    </sys_scope_privilege>
+</record_update>

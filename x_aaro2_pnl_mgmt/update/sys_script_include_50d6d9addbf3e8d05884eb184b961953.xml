@@ -9,307 +9,34 @@
         <name>PalmsnowActivityStream</name>
         <script><![CDATA[var PalmsnowActivityStream = Class.create();
 PalmsnowActivityStream.prototype = {
-  initialize: function () {
-    this.QUESTIONS_TABLE = 'x_aaro2_pnl_mgmt_question'
-    this.HISTORY_SET_TABLE = 'sys_history_set'
-    this.HISTORY_LINE_TABLE = 'sys_history_line'
-    this.JOURNAL_ENTRIES_TABLE = 'sys_journal_field'
-    this.QUESTION_HISTORY_SET_TABLE = 'x_aaro2_pnl_mgmt_question_history_set',
-      this.QUESTION_HISTORY_LINE_TABLE = 'x_aaro2_pnl_mgmt_question_history_line',
-      this.ATTACHMENTS_TABLE = 'sys_attachment'
-    this.AUDIT_TABLE = 'sys_audit'
-    this.USER_FIELDS = ['assigned_to', 'requested_by']
-    this.TRUE_FALSE_FIELDS = ['is_generic', 'over_1k_reviewed', 'supervisor_reviewed', 'manager_reviewed', 'answer_released']
-    this.STATUSES = { '1': 'Saved', '2': 'Assigned', '4': 'Answered', '6': 'Unapproved', '0': 'Out of date', 'undefined': 'None' }
-    this.USER_FIELD_DISPLAY = { assigned_to: 'Assigned To', requested_by: 'Requested By' }
-    this.HISTORY_TYPE = {
-      FIELD: 'FIELD',
-      ATTACHMENT: 'ATTACHMENT',
-      JOURNAL: 'JOURNAL'
-    }
-
-
+  initialize: function (sys_id) {
+    var tracked_fields = this.TRACK_FIELDS = gs.getProperty('x_aaro2_pnl_mgmt.question_history_tracked_fields')
+    this.AUDIT_PROVIDER = new AuditHistoryProvider(sys_id, tracked_fields)
+    this.SYS_HISTORY_PROVIDER = new SysHistoryProvider(sys_id, tracked_fields)
+    this.QUESTION_HISTORY_PROVIDER = new QuestionHistoryProvider(sys_id, tracked_fields)
+    this.JOURNAL_HISTORY_PROVIDER = new JournalHistoryProvider(sys_id)
+    this.ATTACHMENT_HISTORY_PROVIDER = new AttachmentHistroyProvider(sys_id)
   },
 
-  get: function (sys_id) {
-    this.RECORD_SYS_ID = sys_id
-    return this._getHistoryRecords()
-  },
-
-  _getHistoryRecords: function () {
-    var historySetGr = new GlideRecord(this.HISTORY_SET_TABLE)
-    historySetGr.get('id', this.RECORD_SYS_ID)
-    this.HISTORY_SET_SYS_ID = historySetGr.getUniqueValue()
-    return this._getActivityStream()
-  },
-  _getQuestionHistoryRecords: function () {
-    var historyLines = []
-    var setGr = new GlideRecord(this.QUESTION_HISTORY_SET_TABLE)
-    setGr.get('record', this.RECORD_SYS_ID);
-    var lineGr = new GlideRecord(this.QUESTION_HISTORY_LINE_TABLE)
-    lineGr.addQuery('set', setGr.getUniqueValue())
-    lineGr.query()
-    while (lineGr.next()) {
-      historyLines.push(
-        {
-          update: lineGr.getValue('iteration'),
-          type: this.HISTORY_TYPE.FIELD,
-          user: this._getUserBySysId(lineGr.getValue('user')),
-          label: lineGr.getValue('field_display_name'),
-          old_value: lineGr.getValue('old_display_value'),
-          old_display_value: lineGr.getValue('old_display_value'),
-          new_value: lineGr.getValue('new_display_value'),
-          new_display_value: lineGr.getValue('new_display_value'),
-          update_time: lineGr.getDisplayValue('sys_created_on')
-        }
-      )
-    }
-    var historyGroups = []
-    var indices = {}
-    historyLines.forEach(function (hl) {
-      if (!historyGroups[hl.update]) {
-        indices[hl.update] = historyGroups.length;
-        historyGroups[indices[hl.update]] = {
-          type: hl.type,
-          user: hl.user,
-          update_time: hl.update_time,
-          update_iteration: hl.update,
-          updates: []
-        }
-      }
-      historyGroups[indices[hl.update]].updates.push({
-        label: hl.label,
-        old_value: hl.old_value,
-        new_value: hl.new_value
-      })
-    })
-    return historyGroups.length ? historyGroups : false
-  },
-  _getAuditRecords: function () {
-    var auditRecords = []
-    var auditGr = new GlideRecord('sys_audit')
-    auditGr.addQuery('documentkey', this.RECORD_SYS_ID);
-    auditGr.addEncodedQuery('fieldname!=watched_by^fieldname!=comments^fieldname!=email')
-    auditGr.query()
-    while (auditGr.next()) {
-
-      auditRecords.push({
-        update_time: auditGr.getValue('sys_created_on'),
-        user: this._getUserById(auditGr.getValue('user')),
-        updates: [
-          this._getAuditField(auditGr)
-        ],
-        type: this.HISTORY_TYPE.FIELD
-      })
-    }
-    return auditRecords;
-
-  },
-  _getAuditField: function (auditGr) {
-    var fieldName = auditGr.getValue('fieldname')
-    if (~this.USER_FIELDS.indexOf(fieldName))
-      return this._getAuditUserField(auditGr)
-
-    if (~this.TRUE_FALSE_FIELDS.indexOf(fieldName))
-      return this._getAuditBooleanField(auditGr)
-    
-    return {
-      old_value: auditGr.getValue('oldvalue'),
-      new_value: auditGr.getValue('newvalue'),
-      field: auditGr.getValue('fieldname'),
-      label: this.FIELD_LABELS[auditGr.getValue('fieldname')]
-    }
-  },
-  _getAuditUserField: function (auditGr) {
-    return {
-      old_value: this._getUserBySysId(auditGr.getValue('oldvalue')).name,
-      new_value: this._getUserBySysId(auditGr.getValue('newvalue')).name,
-      field: auditGr.getValue('fieldname'),
-      label: this.FIELD_LABELS[auditGr.getValue('fieldname')],
-    }
-  },
-  _getAuditBooleanField: function (auditGr) {
-    return {
-      old_value: auditGr.getValue('oldvalue') === '1' ? 'True' : 'False',
-      new_value: auditGr.getValue('newvalue') === '1' ? 'True' : 'False',
-      field: auditGr.getValue('fieldname'),
-      label: this.FIELD_LABELS[auditGr.getValue('fieldname')],
-    }
-  },
-  _getHistoryLines: function () {
-    var historyLines = []
-    var historyLineGr = new GlideRecord(this.HISTORY_LINE_TABLE)
-    historyLineGr.addQuery('set', this.HISTORY_SET_SYS_ID)
-    historyLineGr.addEncodedQuery('field!=watched_by^field!=comments^field!=email')
-    historyLineGr.query()
-
-    while (historyLineGr.next()) {
-      historyLines.push(
-        {
-          update: historyLineGr.getValue('update'),
-          type: this.HISTORY_TYPE.FIELD,
-          user: this._getUserById(historyLineGr.getValue('user_id')),
-          label: historyLineGr.getValue('label'),
-          old_value: historyLineGr.getValue('old'),
-          new_value: historyLineGr.getValue('new'),
-          update_time: historyLineGr.getDisplayValue('update_time')
-        }
-      )
-    }
-    var historyGroups = []
-    var indices = {}
-    historyLines.forEach(function (hl) {
-      if (!historyGroups[hl.update]) {
-        indices[hl.update] = historyGroups.length;
-        historyGroups[indices[hl.update]] = {
-          type: hl.type,
-          user: hl.user,
-          update_time: hl.update_time,
-          updates: []
-        }
-      }
-      historyGroups[indices[hl.update]].updates.push({
-        label: hl.label,
-        old_value: hl.old_value,
-        new_value: hl.new_value
-      })
-    })
-    return historyGroups.length ? historyGroups : false
-  },
-  _getAttachmentHistory: function () {
-    var attachmentUpdates = []
-    var attGr = new GlideRecord(this.ATTACHMENTS_TABLE)
-    attGr.addQuery('table_name', this.QUESTIONS_TABLE)
-    attGr.addQuery('table_sys_id', this.RECORD_SYS_ID)
-    attGr.query()
-    while (attGr.next()) {
-      attachmentUpdates.push({
-        type: this.HISTORY_TYPE.ATTACHMENT,
-        user: this._getUserById(attGr.getValue('sys_created_by')),
-        update_time: attGr.getValue('sys_updated_on'),
-        updates: [
-          {
-            new_value: {
-              name: attGr.getValue('file_name'),
-              sys_id: attGr.getUniqueValue(),
-              content_type: attGr.getValue('content_type'),
-            }
-          }
-        ]
-
-      })
-    }
-
-    return attachmentUpdates
-  },
-  _getJournalLines: function () {
-    var journalLines = []
-    var journalGr = new GlideRecord(this.JOURNAL_ENTRIES_TABLE);
-    journalGr.addQuery('element_id', this.RECORD_SYS_ID)
-    journalGr.query()
-
-    while (journalGr.next()) {
-      var entry = {
-        type: this.HISTORY_TYPE.JOURNAL,
-        user: this._getUserById(journalGr.getValue('sys_created_by')),
-        update_time: journalGr.getValue('sys_created_on'),
-        updates: [
-          {
-            new_value: journalGr.getValue('value')
-          }
-        ]
-      }
-      journalLines.push(entry)
-    }
-
-    return journalLines
-  },
-  _getActivityStream: function () {
-    var history = this._getQuestionHistoryRecords() || this._getHistoryLines() || this._getAuditRecords()
+  get: function () {
+    var history = this.QUESTION_HISTORY_PROVIDER.get() ||
+      this.SYS_HISTORY_PROVIDER.get() ||
+      this.AUDIT_PROVIDER.get()
+      
     var activityStream = history
-      .concat(this._getAttachmentHistory())
-      .concat(this._getJournalLines())
+      .concat(this.ATTACHMENT_HISTORY_PROVIDER.get())
+      .concat(this.JOURNAL_HISTORY_PROVIDER.get())
 
-    activityStream.sort(function (a, b) {
-      var gdta = new GlideDateTime(a.update_time)
-      var gdtb = new GlideDateTime(b.update_time)
-      return gdtb.getNumericValue() - gdta.getNumericValue()
-    })
+    activityStream.sort(this._historySort)
 
     return activityStream;
+  },
+  _historySort: function (a, b) {
+    var gdta = new GlideDateTime(a.update_time)
+    var gdtb = new GlideDateTime(b.update_time)
+    return gdtb.getNumericValue() - gdta.getNumericValue()
+  },
 
-  },
-  _getUserBySysId: function (sys_id) {
-    var userGr = new GlideRecord('sys_user');
-    userGr.get(sys_id)
-    return this._getUserObject(userGr)
-  },
-  _getUserById: function (sys_id) {
-    var userGr = new GlideRecord('sys_user');
-    userGr.get('user_name', sys_id)
-    return this._getUserObject(userGr)
-  },
-  _getUserObject: function (gr) {
-    var userObj = {
-      id: gr.getUniqueValue(),
-      name: gr.getValue('name'),
-      avatar: gr.getValue('avatar') || '',
-      email: gr.getValue('email')
-    }
-    return userObj;
-  },
-  FIELD_LABELS: {
-    "account": "Account",
-    "accounting_unit": "Accounting Unit",
-    "amount": "Amount",
-    "answer": "Answer",
-    "answer_released": "Answer Released",
-    "approval": "Approval",
-    "area": "Area",
-    "assigned_to": "Assigned To",
-    "base_accounting_unit": "Base Accounting Unit",
-    "comments": "Comments",
-    "company": "Company",
-    "description": "Description",
-    "division": "Division",
-    "group": "Group",
-    "invoice": "Invoice",
-    "invoice_date": "Invoice Date",
-    "invoice_image_url": "Invoice Image URL",
-    "is_generic": "Is Generic",
-    "journal": "Journal #",
-    "journal_company": "Company  (Journal)",
-    "journal_number": "Journal #",
-    "link_to_reference": "Link to Reference",
-    "manager_reviewed": "Manager Reviewed",
-    "number": "Number",
-    "over_1k": "Over 1K $",
-    "over_1k_reviewed": "Over $1K Reviewed",
-    "paid_date": "Paid Date",
-    "period": "Period",
-    "question": "Question",
-    "questionid": "QuestionID",
-    "reference": "Reference",
-    "reference_data": "Reference Data",
-    "reference_link_details": "Reference Link Details",
-    "region": "Region",
-    "requested_by": "Requested By",
-    "status": "Status",
-    "subunit": "ObjectID",
-    "sub_account": "Sub Account",
-    "supervisor_reviewed": "Supervisor Reviewed",
-    "sys_created_by": "Created by",
-    "sys_created_on": "Created",
-    "sys_id": "Sys ID",
-    "sys_mod_count": "Updates",
-    "sys_updated_by": "Updated by",
-    "sys_updated_on": "Updated",
-    "type": "Type",
-    "vendor": "Vendor",
-    "vendor_name": "Vendor Name",
-    "watched_by": "Watched by",
-    "year": "Year"
-  },
   type: 'PalmsnowActivityStream'
 };
 ]]></script>
@@ -318,7 +45,7 @@ PalmsnowActivityStream.prototype = {
         <sys_created_on>2021-04-28 11:27:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>50d6d9addbf3e8d05884eb184b961953</sys_id>
-        <sys_mod_count>54</sys_mod_count>
+        <sys_mod_count>55</sys_mod_count>
         <sys_name>PalmsnowActivityStream</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -326,6 +53,6 @@ PalmsnowActivityStream.prototype = {
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_50d6d9addbf3e8d05884eb184b961953</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-06-09 15:49:22</sys_updated_on>
+        <sys_updated_on>2021-06-10 11:57:09</sys_updated_on>
     </sys_script_include>
 </record_update>

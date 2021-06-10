@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_aaro2_pnl_mgmt.SysHistoryProvider</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>SysHistoryProvider</name>
+        <script><![CDATA[var SysHistoryProvider = Class.create();
+SysHistoryProvider.prototype = Object.extendsObject(AbstractHistoryProvider, {
+  initialize: function (sys_id, tracked_fields) {
+    AbstractHistoryProvider.prototype.initialize.call(this, sys_id, tracked_fields)
+    this.HISTORY_SET_TABLE = 'sys_history_set'
+    this.HISTORY_LINE_TABLE = 'sys_history_line'
+  },
+  get: function () {
+    var historySetGr = new GlideRecord(this.HISTORY_SET_TABLE)
+    historySetGr.get('id', this.RECORD_SYS_ID)
+    var historySetSysId = historySetGr.getUniqueValue()
+    var historyLines = []
+    var historyLineGr = new GlideRecord(this.HISTORY_LINE_TABLE)
+    historyLineGr.addQuery('set', historySetSysId)
+    historyLineGr.addEncodedQuery('fieldIN' + this.TRACKED_FIELDS)
+    historyLineGr.query()
+
+    while (historyLineGr.next()) {
+      historyLines.push(
+        {
+          update: historyLineGr.getValue('update'),
+          type: this.HISTORY_TYPE.FIELD,
+          user: this._getUserById(historyLineGr.getValue('user_id')),
+          label: historyLineGr.getValue('label'),
+          old_value: historyLineGr.getValue('old'),
+          new_value: historyLineGr.getValue('new'),
+          update_time: historyLineGr.getDisplayValue('update_time')
+        }
+      )
+    }
+    var historyGroups = []
+    var indices = {}
+    historyLines.forEach(function (hl) {
+      if (!historyGroups[hl.update]) {
+        indices[hl.update] = historyGroups.length;
+        historyGroups[indices[hl.update]] = {
+          type: hl.type,
+          user: hl.user,
+          update_time: hl.update_time,
+          updates: []
+        }
+      }
+      historyGroups[indices[hl.update]].updates.push({
+        label: hl.label,
+        old_value: hl.old_value,
+        new_value: hl.new_value
+      })
+    })
+    return historyGroups.length ? historyGroups : false
+  },
+  type: 'SysHistoryProvider'
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-06-10 08:52:01</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>9c1d4e1bdba8bc10f41dc15b139619ad</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>SysHistoryProvider</sys_name>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name>sys_script_include_9c1d4e1bdba8bc10f41dc15b139619ad</sys_update_name>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-06-10 12:16:20</sys_updated_on>
+    </sys_script_include>
+</record_update>

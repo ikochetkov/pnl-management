@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_aaro2_pnl_mgmt.QuestionHistoryProvider</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>QuestionHistoryProvider</name>
+        <script><![CDATA[var QuestionHistoryProvider = Class.create();
+QuestionHistoryProvider.prototype = Object.extendsObject(AbstractHistoryProvider, {
+  initialize: function (sys_id, tracked_fields) {
+    AbstractHistoryProvider.prototype.initialize.call(this, sys_id, tracked_fields)
+    this.QUESTION_HISTORY_SET_TABLE = 'x_aaro2_pnl_mgmt_question_history_set'
+    this.QUESTION_HISTORY_LINE_TABLE = 'x_aaro2_pnl_mgmt_question_history_line'
+  },
+  get: function () {
+    var history = []
+    var setGr = new GlideRecord(this.QUESTION_HISTORY_SET_TABLE)
+    setGr.get('record', this.RECORD_SYS_ID);
+    var lineGr = new GlideRecord(this.QUESTION_HISTORY_LINE_TABLE)
+    lineGr.addQuery('set', setGr.getUniqueValue())
+    lineGr.orderBy('iteration')
+    lineGr.query()
+    var history = []
+    var index = 0
+    while (lineGr.next()) {
+      if (lineGr.getValue('iteration') != index && history.length !== 0)
+        index++
+
+      if (!history[index])
+        history.push({
+          update: lineGr.getValue('iteration'),
+          type: this.HISTORY_TYPE.FIELD,
+          user: this._getUserBySysId(lineGr.getValue('user')),
+          update_time: lineGr.getDisplayValue('sys_created_on'),
+          updates: []
+        })
+
+      history[index].updates.push({
+        label: lineGr.getValue('field_display_name'),
+        old_value: lineGr.getValue('old_display_value'),
+        old_display_value: lineGr.getValue('old_display_value'),
+        new_value: lineGr.getValue('new_display_value'),
+        new_display_value: lineGr.getValue('new_display_value'),
+      })
+    }
+    return history.length ? history : false
+  },
+  type: 'QuestionHistoryProvider'
+
+})
+
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-06-10 09:57:21</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4ebe1ad7dbacbc10f41dc15b13961981</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>QuestionHistoryProvider</sys_name>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name>sys_script_include_4ebe1ad7dbacbc10f41dc15b13961981</sys_update_name>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-06-10 12:25:27</sys_updated_on>
+    </sys_script_include>
+</record_update>

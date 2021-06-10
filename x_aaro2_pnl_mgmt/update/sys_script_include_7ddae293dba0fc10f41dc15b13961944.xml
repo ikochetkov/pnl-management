@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_aaro2_pnl_mgmt.AttachmentHistroyProvider</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>AttachmentHistroyProvider</name>
+        <script><![CDATA[var AttachmentHistroyProvider = Class.create();
+AttachmentHistroyProvider.prototype = Object.extendsObject(AbstractHistoryProvider,{
+	initialize: function(sys_id) {
+		AbstractHistoryProvider.prototype.initialize.call(this,sys_id, null)
+		this.ATTACHMENTS_TABLE = 'sys_attachment'
+    this.QUESTIONS_TABLE = 'x_aaro2_pnl_mgmt_question'
+	},
+	get: function (){
+		var attachmentUpdates = []
+		var attGr = new GlideRecord(this.ATTACHMENTS_TABLE)
+		attGr.addQuery('table_name', this.QUESTIONS_TABLE)
+		attGr.addQuery('table_sys_id', this.RECORD_SYS_ID)
+		attGr.query()
+		while (attGr.next()) {
+			attachmentUpdates.push({
+				type: this.HISTORY_TYPE.ATTACHMENT,
+				user: this._getUserById(attGr.getValue('sys_created_by')),
+				update_time: attGr.getDisplayValue('sys_updated_on'),
+				updates: [
+					{
+						new_value: {
+							name: attGr.getValue('file_name'),
+							sys_id: attGr.getUniqueValue(),
+							content_type: attGr.getValue('content_type'),
+						}
+					}
+				]
+
+			})
+		}
+
+		return attachmentUpdates
+	},
+	type: 'AttachmentHistroyProvider'
+})]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>xxamirony</sys_created_by>
+        <sys_created_on>2021-06-10 10:54:26</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7ddae293dba0fc10f41dc15b13961944</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>AttachmentHistroyProvider</sys_name>
+        <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
+        <sys_update_name>sys_script_include_7ddae293dba0fc10f41dc15b13961944</sys_update_name>
+        <sys_updated_by>xxamirony</sys_updated_by>
+        <sys_updated_on>2021-06-10 12:26:52</sys_updated_on>
+    </sys_script_include>
+</record_update>
