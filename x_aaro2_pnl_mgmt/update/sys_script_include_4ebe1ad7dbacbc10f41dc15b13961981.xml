@@ -34,6 +34,7 @@ QuestionHistoryProvider.prototype = Object.extendsObject(AbstractHistoryProvider
           type: this.HISTORY_TYPE.FIELD,
           user: this._getUserBySysId(lineGr.getValue('user')),
           update_time: lineGr.getDisplayValue('sys_created_on'),
+          update_time_utc: lineGr.getValue('sys_created_on'),
           updates: []
         })
 
@@ -57,7 +58,7 @@ QuestionHistoryProvider.prototype = Object.extendsObject(AbstractHistoryProvider
         <sys_created_on>2021-06-10 09:57:21</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>4ebe1ad7dbacbc10f41dc15b13961981</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>QuestionHistoryProvider</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -65,6 +66,6 @@ QuestionHistoryProvider.prototype = Object.extendsObject(AbstractHistoryProvider
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_4ebe1ad7dbacbc10f41dc15b13961981</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-06-10 12:25:27</sys_updated_on>
+        <sys_updated_on>2021-06-10 19:08:27</sys_updated_on>
     </sys_script_include>
 </record_update>

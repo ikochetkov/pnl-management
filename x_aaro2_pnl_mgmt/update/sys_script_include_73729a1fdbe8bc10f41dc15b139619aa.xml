@@ -23,7 +23,8 @@ AuditHistoryProvider.prototype = Object.extendsObject(AbstractHistoryProvider, {
     while (auditGr.next()) {
 
       auditRecords.push({
-        update_time: auditGr.getValue('sys_created_on'),
+        update_time: auditGr.getDisplayValue('sys_created_on'),
+        update_time_utc: auditGr.getValue('sys_created_on'),
         user: this._getUserById(auditGr.getValue('user')),
         updates: [
           this._getAuditField(auditGr)
@@ -138,7 +139,7 @@ AuditHistoryProvider.prototype = Object.extendsObject(AbstractHistoryProvider, {
         <sys_created_on>2021-06-10 09:22:44</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>73729a1fdbe8bc10f41dc15b139619aa</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>AuditHistoryProvider</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -146,6 +147,6 @@ AuditHistoryProvider.prototype = Object.extendsObject(AbstractHistoryProvider, {
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_73729a1fdbe8bc10f41dc15b139619aa</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-06-10 12:15:45</sys_updated_on>
+        <sys_updated_on>2021-06-10 19:09:11</sys_updated_on>
     </sys_script_include>
 </record_update>
