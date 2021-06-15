@@ -40,7 +40,7 @@ AuditHistoryProvider.prototype = Object.extendsObject(AbstractHistoryProvider, {
     if (~this.USER_FIELDS.indexOf(fieldName))
       return this._getAuditUserField(auditGr)
 
-    if (~this.TRUE_FALSE_FIELDS.indexOf(fieldName))
+    if (~this.BOOLEAN_FIELDS.indexOf(fieldName))
       return this._getAuditBooleanField(auditGr)
 
     if (fieldName === 'status')
@@ -139,7 +139,7 @@ AuditHistoryProvider.prototype = Object.extendsObject(AbstractHistoryProvider, {
         <sys_created_on>2021-06-10 09:22:44</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>73729a1fdbe8bc10f41dc15b139619aa</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>AuditHistoryProvider</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -147,6 +147,6 @@ AuditHistoryProvider.prototype = Object.extendsObject(AbstractHistoryProvider, {
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_73729a1fdbe8bc10f41dc15b139619aa</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-06-10 19:09:11</sys_updated_on>
+        <sys_updated_on>2021-06-15 12:18:43</sys_updated_on>
     </sys_script_include>
 </record_update>
