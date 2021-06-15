@@ -15,12 +15,14 @@ SysHistoryProvider.prototype = Object.extendsObject(AbstractHistoryProvider, {
     this.HISTORY_LINE_TABLE = 'sys_history_line'
   },
   get: function () {
+    var historyLines = []
     var historySetGr = new GlideRecord(this.HISTORY_SET_TABLE)
     historySetGr.addQuery('id', this.RECORD_SYS_ID)
     historySetGr.query()
+    
     while (historySetGr.next()) {
       var historySetSysId = historySetGr.getUniqueValue()
-      var historyLines = []
+     
       var historyLineGr = new GlideRecord(this.HISTORY_LINE_TABLE)
       historyLineGr.addQuery('set', historySetSysId)
       historyLineGr.addEncodedQuery('fieldIN' + this.TRACKED_FIELDS)
@@ -70,7 +72,7 @@ SysHistoryProvider.prototype = Object.extendsObject(AbstractHistoryProvider, {
         <sys_created_on>2021-06-10 08:52:01</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>9c1d4e1bdba8bc10f41dc15b139619ad</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>SysHistoryProvider</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -78,6 +80,6 @@ SysHistoryProvider.prototype = Object.extendsObject(AbstractHistoryProvider, {
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_9c1d4e1bdba8bc10f41dc15b139619ad</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-06-15 13:24:38</sys_updated_on>
+        <sys_updated_on>2021-06-15 13:41:35</sys_updated_on>
     </sys_script_include>
 </record_update>
