@@ -16,27 +16,30 @@ SysHistoryProvider.prototype = Object.extendsObject(AbstractHistoryProvider, {
   },
   get: function () {
     var historySetGr = new GlideRecord(this.HISTORY_SET_TABLE)
-    historySetGr.get('id', this.RECORD_SYS_ID)
-    var historySetSysId = historySetGr.getUniqueValue()
-    var historyLines = []
-    var historyLineGr = new GlideRecord(this.HISTORY_LINE_TABLE)
-    historyLineGr.addQuery('set', historySetSysId)
-    historyLineGr.addEncodedQuery('fieldIN' + this.TRACKED_FIELDS)
-    historyLineGr.query()
+    historySetGr.addQuery('id', this.RECORD_SYS_ID)
+    historySetGr.query()
+    while (historySetGr.next()) {
+      var historySetSysId = historySetGr.getUniqueValue()
+      var historyLines = []
+      var historyLineGr = new GlideRecord(this.HISTORY_LINE_TABLE)
+      historyLineGr.addQuery('set', historySetSysId)
+      historyLineGr.addEncodedQuery('fieldIN' + this.TRACKED_FIELDS)
+      historyLineGr.query()
 
-    while (historyLineGr.next()) {
-      historyLines.push(
-        {
-          update: historyLineGr.getValue('update'),
-          type: this.HISTORY_TYPE.FIELD,
-          user: this._getUserById(historyLineGr.getValue('user_id')),
-          label: historyLineGr.getValue('label'),
-          old_value: historyLineGr.getValue('old'),
-          new_value: historyLineGr.getValue('new'),
-          update_time: historyLineGr.getDisplayValue('update_time'),
-          update_time_utc: historyLineGr.getValue('update_time')
-        }
-      )
+      while (historyLineGr.next()) {
+        historyLines.push(
+          {
+            update: historyLineGr.getValue('update'),
+            type: this.HISTORY_TYPE.FIELD,
+            user: this._getUserById(historyLineGr.getValue('user_id')),
+            label: historyLineGr.getValue('label'),
+            old_value: historyLineGr.getValue('old'),
+            new_value: historyLineGr.getValue('new'),
+            update_time: historyLineGr.getDisplayValue('update_time'),
+            update_time_utc: historyLineGr.getValue('update_time')
+          }
+        )
+      }
     }
     var historyGroups = []
     var indices = {}
@@ -67,7 +70,7 @@ SysHistoryProvider.prototype = Object.extendsObject(AbstractHistoryProvider, {
         <sys_created_on>2021-06-10 08:52:01</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>9c1d4e1bdba8bc10f41dc15b139619ad</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>SysHistoryProvider</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -75,6 +78,6 @@ SysHistoryProvider.prototype = Object.extendsObject(AbstractHistoryProvider, {
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_9c1d4e1bdba8bc10f41dc15b139619ad</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-06-10 19:08:29</sys_updated_on>
+        <sys_updated_on>2021-06-15 13:24:38</sys_updated_on>
     </sys_script_include>
 </record_update>
