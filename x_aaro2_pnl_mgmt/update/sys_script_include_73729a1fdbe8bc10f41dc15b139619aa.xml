@@ -10,137 +10,180 @@
         <script><![CDATA[var AuditHistoryProvider = Class.create();
 AuditHistoryProvider.prototype = Object.extendsObject(AbstractHistoryProvider, {
   initialize: function (sys_id, tracked_fields) {
-    AbstractHistoryProvider.prototype.initialize.call(this, sys_id, tracked_fields)
-    this.AUDIT_TABLE = 'sys_audit'
-  
+    AbstractHistoryProvider.prototype.initialize.call(
+      this,
+      sys_id,
+      tracked_fields
+    );
+    this.AUDIT_TABLE = "sys_audit";
+    this.SOURCE = 'AUDIT'
   },
-  get: function(){
-    var auditRecords = []
-    var auditGr = new GlideRecord('sys_audit')
-    auditGr.addQuery('documentkey', this.RECORD_SYS_ID);
-    auditGr.addEncodedQuery('fieldnameIN'+this.TRACKED_FIELDS)
-    auditGr.query()
-    while (auditGr.next()) {
+  //record_checkpoint
+  get: function () {
+    var auditRecords = [];
 
-      auditRecords.push({
-        update_time: auditGr.getDisplayValue('sys_created_on'),
-        update_time_utc: auditGr.getValue('sys_created_on'),
-        user: this._getUserById(auditGr.getValue('user')),
-        updates: [
-          this._getAuditField(auditGr)
-        ],
+    var auditGr = new GlideRecord("sys_audit");
+    auditGr.addQuery("documentkey", this.RECORD_SYS_ID);
+    auditGr.addEncodedQuery("fieldnameIN" + this.TRACKED_FIELDS);
+    auditGr.query();
+    while (auditGr.next()) {
+      var auditUpdate = this._getAuditField(auditGr)
+      var auditLine = {
+        update: auditGr.getValue("record_checkpoint"),
+        update_time: auditGr.getDisplayValue("sys_created_on"),
+        update_time_utc: auditGr.getValue("sys_created_on"),
+        user: this._getUserById(auditGr.getValue("user")),
         type: this.HISTORY_TYPE.FIELD,
-        source: 'audit'
-      })
+        source: this.SOURCE,
+        old_value: auditUpdate.old_value,
+        new_value: auditUpdate.new_value,
+        field: auditUpdate.field,
+        label: auditUpdate.label
+      };
+     
+      auditRecords.push(auditLine);
     }
-    return auditRecords.length ? auditRecords: false;
+    var historyGroups = []
+    var indices = {}
+    auditRecords.forEach(function (hl) {
+      if (!historyGroups[indices[hl.update]]) {
+        indices[hl.update] = historyGroups.length;
+        historyGroups.push({
+          type: hl.type,
+          user: hl.user,
+          update_time: hl.update_time,
+          update_time_utc: hl.update_time_utc,
+          source: hl.source,
+          updates: []
+        })
+      }
+      historyGroups[indices[hl.update]].updates.push({
+        label: hl.label,
+        old_value: hl.old_value,
+        new_value: hl.new_value
+      })
+    })
+    return historyGroups.length ? historyGroups : false;
   },
   _getAuditField: function (auditGr) {
-    var fieldName = auditGr.getValue('fieldname')
-    
+    var fieldName = auditGr.getValue("fieldname");
+
     if (~this.USER_FIELDS.indexOf(fieldName))
-      return this._getAuditUserField(auditGr)
+      return this._getAuditUserField(auditGr);
 
     if (~this.BOOLEAN_FIELDS.indexOf(fieldName))
-      return this._getAuditBooleanField(auditGr)
+      return this._getAuditBooleanField(auditGr);
 
-    if (fieldName === 'status')
-      return this._getStatusField(auditGr)
+    if (fieldName === "status") return this._getStatusField(auditGr);
 
     return {
-      old_value: auditGr.getValue('oldvalue'),
-      new_value: auditGr.getValue('newvalue'),
-      field: auditGr.getValue('fieldname'),
-      label: this.FIELD_LABELS[auditGr.getValue('fieldname')]
-    }
+      old_value: auditGr.getValue("oldvalue"),
+      new_value: auditGr.getValue("newvalue"),
+      field: auditGr.getValue("fieldname"),
+      label: this.FIELD_LABELS[auditGr.getValue("fieldname")],
+    };
   },
   _getAuditUserField: function (auditGr) {
     return {
-      old_value: this._getUserBySysId(auditGr.getValue('oldvalue')).name,
-      new_value: this._getUserBySysId(auditGr.getValue('newvalue')).name,
-      field: auditGr.getValue('fieldname'),
-      label: this.FIELD_LABELS[auditGr.getValue('fieldname')],
-    }
+      old_value: this._getUserBySysId(auditGr.getValue("oldvalue")).name,
+      new_value: this._getUserBySysId(auditGr.getValue("newvalue")).name,
+      field: auditGr.getValue("fieldname"),
+      label: this.FIELD_LABELS[auditGr.getValue("fieldname")],
+    };
   },
   _getAuditBooleanField: function (auditGr) {
     return {
-      old_value: auditGr.getValue('oldvalue') === '1' ? 'True' : 'False',
-      new_value: auditGr.getValue('newvalue') === '1' ? 'True' : 'False',
-      field: auditGr.getValue('fieldname'),
-      label: this.FIELD_LABELS[auditGr.getValue('fieldname')],
-    }
+      old_value: auditGr.getValue("oldvalue") === "1" ? "True" : "False",
+      new_value: auditGr.getValue("newvalue") === "1" ? "True" : "False",
+      field: auditGr.getValue("fieldname"),
+      label: this.FIELD_LABELS[auditGr.getValue("fieldname")],
+    };
   },
-  _getStatusField: function(auditGr){
+  _getStatusField: function (auditGr) {
     return {
-      old_value: this.STATUSES[auditGr.getValue('oldvalue')],
-      new_value: this.STATUSES[auditGr.getValue('newvalue')],
-      field: auditGr.getValue('fieldname'),
-      label: this.FIELD_LABELS[auditGr.getValue('fieldname')]
-    }
+      old_value: this.STATUSES[auditGr.getValue("oldvalue")],
+      new_value: this.STATUSES[auditGr.getValue("newvalue")],
+      field: auditGr.getValue("fieldname"),
+      label: this.FIELD_LABELS[auditGr.getValue("fieldname")],
+    };
   },
-  USER_FIELDS: ['assigned_to', 'requested_by'],
-  BOOLEAN_FIELDS: ['is_generic', 'over_1k_reviewed', 'supervisor_reviewed', 'manager_reviewed', 'answer_released'],
-  STATUSES: { '1': 'Saved', '2': 'Assigned', '4': 'Answered', '6': 'Unapproved', '0': 'Out of date', 'undefined': 'None' },
+  USER_FIELDS: ["assigned_to", "requested_by"],
+  BOOLEAN_FIELDS: [
+    "is_generic",
+    "over_1k_reviewed",
+    "supervisor_reviewed",
+    "manager_reviewed",
+    "answer_released",
+  ],
+  STATUSES: {
+    1: "Saved",
+    2: "Assigned",
+    4: "Answered",
+    6: "Unapproved",
+    0: "Out of date",
+    undefined: "None",
+  },
   FIELD_LABELS: {
-    "account": "Account",
-    "accounting_unit": "Accounting Unit",
-    "amount": "Amount",
-    "answer": "Answer",
-    "answer_released": "Answer Released",
-    "approval": "Approval",
-    "area": "Area",
-    "assigned_to": "Assigned To",
-    "base_accounting_unit": "Base Accounting Unit",
-    "comments": "Comments",
-    "company": "Company",
-    "description": "Description",
-    "division": "Division",
-    "group": "Group",
-    "invoice": "Invoice",
-    "invoice_date": "Invoice Date",
-    "invoice_image_url": "Invoice Image URL",
-    "is_generic": "Is Generic",
-    "journal": "Journal #",
-    "journal_company": "Company  (Journal)",
-    "journal_number": "Journal #",
-    "link_to_reference": "Link to Reference",
-    "manager_reviewed": "Manager Reviewed",
-    "number": "Number",
-    "over_1k": "Over 1K $",
-    "over_1k_reviewed": "Over $1K Reviewed",
-    "paid_date": "Paid Date",
-    "period": "Period",
-    "question": "Question",
-    "questionid": "QuestionID",
-    "reference": "Reference",
-    "reference_data": "Reference Data",
-    "reference_link_details": "Reference Link Details",
-    "region": "Region",
-    "requested_by": "Requested By",
-    "status": "Status",
-    "subunit": "ObjectID",
-    "sub_account": "Sub Account",
-    "supervisor_reviewed": "Supervisor Reviewed",
-    "sys_created_by": "Created by",
-    "sys_created_on": "Created",
-    "sys_id": "Sys ID",
-    "sys_mod_count": "Updates",
-    "sys_updated_by": "Updated by",
-    "sys_updated_on": "Updated",
-    "type": "Type",
-    "vendor": "Vendor",
-    "vendor_name": "Vendor Name",
-    "watched_by": "Watched by",
-    "year": "Year"
+    account: "Account",
+    accounting_unit: "Accounting Unit",
+    amount: "Amount",
+    answer: "Answer",
+    answer_released: "Answer Released",
+    approval: "Approval",
+    area: "Area",
+    assigned_to: "Assigned To",
+    base_accounting_unit: "Base Accounting Unit",
+    comments: "Comments",
+    company: "Company",
+    description: "Description",
+    division: "Division",
+    group: "Group",
+    invoice: "Invoice",
+    invoice_date: "Invoice Date",
+    invoice_image_url: "Invoice Image URL",
+    is_generic: "Is Generic",
+    journal: "Journal #",
+    journal_company: "Company  (Journal)",
+    journal_number: "Journal #",
+    link_to_reference: "Link to Reference",
+    manager_reviewed: "Manager Reviewed",
+    number: "Number",
+    over_1k: "Over 1K $",
+    over_1k_reviewed: "Over $1K Reviewed",
+    paid_date: "Paid Date",
+    period: "Period",
+    question: "Question",
+    questionid: "QuestionID",
+    reference: "Reference",
+    reference_data: "Reference Data",
+    reference_link_details: "Reference Link Details",
+    region: "Region",
+    requested_by: "Requested By",
+    status: "Status",
+    subunit: "ObjectID",
+    sub_account: "Sub Account",
+    supervisor_reviewed: "Supervisor Reviewed",
+    sys_created_by: "Created by",
+    sys_created_on: "Created",
+    sys_id: "Sys ID",
+    sys_mod_count: "Updates",
+    sys_updated_by: "Updated by",
+    sys_updated_on: "Updated",
+    type: "Type",
+    vendor: "Vendor",
+    vendor_name: "Vendor Name",
+    watched_by: "Watched by",
+    year: "Year",
   },
-  type: 'AuditHistoryProvider'
-});]]></script>
+  type: "AuditHistoryProvider",
+});
+]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>xxamirony</sys_created_by>
         <sys_created_on>2021-06-10 09:22:44</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>73729a1fdbe8bc10f41dc15b139619aa</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>AuditHistoryProvider</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -148,6 +191,6 @@ AuditHistoryProvider.prototype = Object.extendsObject(AbstractHistoryProvider, {
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_73729a1fdbe8bc10f41dc15b139619aa</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-06-15 12:48:45</sys_updated_on>
+        <sys_updated_on>2021-06-18 12:12:05</sys_updated_on>
     </sys_script_include>
 </record_update>
