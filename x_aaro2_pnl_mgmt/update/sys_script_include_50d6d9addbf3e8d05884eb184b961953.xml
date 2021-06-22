@@ -27,13 +27,13 @@ PalmsnowActivityStream.prototype = {
       .concat(this.ATTACHMENT_HISTORY_PROVIDER.get())
       .concat(this.JOURNAL_HISTORY_PROVIDER.get())
 
-    activityStream.sort(this._historySort)
+    var sorted  = activityStream.sort(this._historySort)
 
-    return activityStream;
+    return sorted;
   },
   _historySort: function (a, b) {
-    var gdta = new GlideDateTime(a.update_time)
-    var gdtb = new GlideDateTime(b.update_time)
+    var gdta = new GlideDateTime(a.update_time_utc)
+    var gdtb = new GlideDateTime(b.update_time_utc)
     return gdtb.getNumericValue() - gdta.getNumericValue()
   },
 
@@ -45,7 +45,7 @@ PalmsnowActivityStream.prototype = {
         <sys_created_on>2021-04-28 11:27:08</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>50d6d9addbf3e8d05884eb184b961953</sys_id>
-        <sys_mod_count>56</sys_mod_count>
+        <sys_mod_count>58</sys_mod_count>
         <sys_name>PalmsnowActivityStream</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -53,6 +53,6 @@ PalmsnowActivityStream.prototype = {
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_50d6d9addbf3e8d05884eb184b961953</sys_update_name>
         <sys_updated_by>xxamirony</sys_updated_by>
-        <sys_updated_on>2021-06-11 13:49:59</sys_updated_on>
+        <sys_updated_on>2021-06-22 15:45:09</sys_updated_on>
     </sys_script_include>
 </record_update>
