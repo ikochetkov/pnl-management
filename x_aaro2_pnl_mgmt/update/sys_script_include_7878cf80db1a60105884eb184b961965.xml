@@ -84,6 +84,7 @@ Utils.prototype = {
 		var answerTimeValid = this.timeValid(deadlineAnswerPeriod.start, deadlineAnswerPeriod.end);
 		var reviewTimeValid = this.timeValid(deadlineReviewPeriod.start, deadlineReviewPeriod.end);
 		var userIsAdmin = gs.getUser().hasRole('x_aaro2_pnl_mgmt.admin');
+		var userSysID = gs.getUserID();
 
 		var users = [];
 		var accountAssignmentGa = new GlideAggregate(this.ACCOUNT_ASSIGNMENT_TABLE);
@@ -120,7 +121,8 @@ Utils.prototype = {
 			review_time_valid: reviewTimeValid,
 			user_is_admin: userIsAdmin,
 			is_assignment_manager: this._isAssignmentManager(userSys_id),
-			attachments: this._getAttachments(sysID)
+			attachments: this._getAttachments(sysID),
+			user_sys_id: userSysID
 		};
 	},
 	_getAttachments: function (sys_id) {
@@ -135,9 +137,9 @@ Utils.prototype = {
 					content_type: attachment.getValue('content_type'),
 					sys_id: attachment.getUniqueValue()
 				}
-			)
+			);
 		}
-		return attachments
+		return attachments;
 	},
 	getJournal: function (sys_id) {
 		var je = new GlideRecord('sys_journal_field');
@@ -347,7 +349,7 @@ Utils.prototype = {
         <sys_created_on>2021-02-08 14:28:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>7878cf80db1a60105884eb184b961965</sys_id>
-        <sys_mod_count>159</sys_mod_count>
+        <sys_mod_count>160</sys_mod_count>
         <sys_name>Utils</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
@@ -355,6 +357,6 @@ Utils.prototype = {
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
         <sys_update_name>sys_script_include_7878cf80db1a60105884eb184b961965</sys_update_name>
         <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-06-23 09:31:17</sys_updated_on>
+        <sys_updated_on>2021-06-24 09:49:21</sys_updated_on>
     </sys_script_include>
 </record_update>
