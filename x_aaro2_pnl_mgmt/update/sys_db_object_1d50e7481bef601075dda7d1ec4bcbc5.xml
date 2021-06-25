@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
     <sys_db_object action="INSERT_OR_UPDATE">
         <access/>
-        <actions_access>false</actions_access>
-        <alter_access>false</alter_access>
+        <actions_access>true</actions_access>
+        <alter_access>true</alter_access>
         <caller_access/>
-        <client_scripts_access>false</client_scripts_access>
+        <client_scripts_access>true</client_scripts_access>
         <configuration_access>false</configuration_access>
-        <create_access>false</create_access>
+        <create_access>true</create_access>
         <create_access_controls>false</create_access_controls>
         <delete_access>false</delete_access>
         <extension_model/>
         <is_extendable>false</is_extendable>
-        <label>Question Data</label>
+        <label>Pnl Mgmt M2m Assign Manager</label>
         <live_feed_enabled>false</live_feed_enabled>
-        <name>x_aaro2_pnl_mgmt_question_data</name>
+        <name>x_aaro2_pnl_mgmt_m2m_assign_manager</name>
         <number_ref/>
         <provider_class/>
         <read_access>true</read_access>
         <scriptable_table>false</scriptable_table>
-        <super_class display_value="Import Set Row" name="sys_import_set_row">beec2d41bc3030003d782407ef4fb262</super_class>
+        <super_class/>
         <sys_class_code/>
         <sys_class_name>sys_db_object</sys_class_name>
         <sys_class_path/>
-        <sys_created_by>xxikochet</sys_created_by>
-        <sys_created_on>2021-04-02 08:29:25</sys_created_on>
+        <sys_created_by>xxmpurik</sys_created_by>
+        <sys_created_on>2021-03-31 12:35:23</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>b9f43e89db97e050f41dc15b1396191b</sys_id>
+        <sys_id>1d50e7481bef601075dda7d1ec4bcbc5</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Pnl Mgmt Question Data</sys_name>
+        <sys_name>Pnl Mgmt M2m Assign Manager</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name>sys_db_object_b9f43e89db97e050f41dc15b1396191b</sys_update_name>
-        <sys_updated_by>xxikochet</sys_updated_by>
-        <sys_updated_on>2021-04-02 08:29:25</sys_updated_on>
+        <sys_update_name>sys_db_object_1d50e7481bef601075dda7d1ec4bcbc5</sys_update_name>
+        <sys_updated_by>xxmpurik</sys_updated_by>
+        <sys_updated_on>2021-03-31 12:35:23</sys_updated_on>
         <u_description/>
-        <update_access>false</update_access>
+        <update_access>true</update_access>
         <user_role/>
         <ws_access>true</ws_access>
     </sys_db_object>

@@ -13,7 +13,7 @@
         <ih_action>false</ih_action>
         <internal_name>drop_previous_flow</internal_name>
         <label_cache>[{"name":"{{action.current}}","label":"action➛Current","type":"action","ref":""}]</label_cache>
-        <latest_snapshot>87a1789adbc320105884eb184b96191f</latest_snapshot>
+        <latest_snapshot>f96e530cdbc53010f41dc15b1396196c</latest_snapshot>
         <master_snapshot>d0dc81d8dbc6a050389b84d868961938</master_snapshot>
         <name>Drop previous flow</name>
         <natlang/>

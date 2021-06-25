@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Question History Line" max_length="40" name="x_aaro2_pnl_mgmt_question_history_line" sizeclass="96" type="collection">
+    <element label="Question History Line" max_length="40" name="x_aaro2_pnl_mgmt_question_history_line" type="collection">
         <element label="Field Display Name" max_length="40" name="field_display_name" type="string"/>
         <element label="Field Name" max_length="40" name="field_name" type="string"/>
         <element label="Iteration" max_length="40" name="iteration" type="integer"/>

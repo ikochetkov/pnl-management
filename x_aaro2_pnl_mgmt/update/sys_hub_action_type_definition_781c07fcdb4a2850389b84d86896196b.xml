@@ -13,7 +13,7 @@
         <ih_action>false</ih_action>
         <internal_name>get_current_date</internal_name>
         <label_cache>[{"name":"{{action.period}}","label":"action➛period","type":"action","ref":""},{"name":"{{action.period1}}","label":"action➛Period","type":"action","ref":""},{"name":"{{step[1e1eb8b5-d79b-4843-a326-c6f6b0b9a5e9].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[1e1eb8b5-d79b-4843-a326-c6f6b0b9a5e9].current_date}}","label":"step➛Script step➛Current date","type":"step","ref":""},{"name":"{{step[1e1eb8b5-d79b-4843-a326-c6f6b0b9a5e9].is_last_quarter_month}}","label":"step➛Script step➛is_last_quarter_month","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>f210cc64db287814f41dc15b139619ba</latest_snapshot>
+        <latest_snapshot>426e930cdbc53010f41dc15b1396195d</latest_snapshot>
         <master_snapshot>356c43b0db8a2850389b84d86896199a</master_snapshot>
         <name>Get Current Date</name>
         <natlang/>
@@ -1133,12 +1133,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>fc9b3b14dbe47814f41dc15b1396195e</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Period</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_781c07fcdb4a2850389b84d86896196b_period1_en</sys_update_name>
         <sys_updated_by>xxmpurik</sys_updated_by>
         <sys_updated_on>2021-06-01 09:00:57</sys_updated_on>
         <url/>
@@ -1159,7 +1159,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>416c03b0db8a2850389b84d8689619ef</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Current Date</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
@@ -1184,7 +1184,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>c23cb228db10f050f41dc15b1396192c</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Is Last Quarter Month</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
@@ -2348,12 +2348,12 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>16bb7754dbe47814f41dc15b1396193a</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Period</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="PALMSnow">58a846e1db14ec50389b84d868961919</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_356c43b0db8a2850389b84d86896199a_period1_en</sys_update_name>
         <sys_updated_by>xxmpurik</sys_updated_by>
         <sys_updated_on>2021-06-01 09:01:36</sys_updated_on>
         <url/>
@@ -2374,7 +2374,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>1f3c3628db10f050f41dc15b139619f0</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Is Last Quarter Month</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
@@ -2399,7 +2399,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_id>396c43b0db8a2850389b84d8689619af</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Current Date</sys_name>
         <sys_package display_value="PALMSnow" source="x_aaro2_pnl_mgmt">58a846e1db14ec50389b84d868961919</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
